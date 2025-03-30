@@ -1,0 +1,102 @@
+---
+layout: home
+title: 欢迎来到吉卜力小屋
+---
+
+<div class="welcome-section">
+  <div class="totoro-container floating">
+    <img src="/assets/images/totoro-welcome.png" alt="龙猫欢迎" class="totoro-image">
+  </div>
+  
+  <h1 class="welcome-title">欢迎来到吉卜力小屋</h1>
+  <p class="welcome-text">在这里，让我们一起探索充满温暖与梦想的世界</p>
+  
+  <div class="featured-posts">
+    <h2>最新文章</h2>
+    <div class="post-grid">
+      {% for post in site.posts limit:3 %}
+        <article class="post-card">
+          <h3 class="post-title">{{ post.title }}</h3>
+          <p class="post-excerpt">{{ post.excerpt }}</p>
+          <a href="{{ post.url | relative_url }}" class="button">阅读更多</a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+.welcome-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #F9F5E7;
+}
+
+.totoro-container {
+  margin-bottom: 30px;
+}
+
+.totoro-image {
+  max-width: 200px;
+  height: auto;
+}
+
+.welcome-title {
+  color: #7B9E87;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.welcome-text {
+  color: #2C3E50;
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.featured-posts {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.post-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-title {
+  color: #7B9E87;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.post-excerpt {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .welcome-title {
+    font-size: 2em;
+  }
+  
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style> 

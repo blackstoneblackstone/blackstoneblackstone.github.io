@@ -1,0 +1,116 @@
+@import "minima";
+
+// 吉卜力风格变量
+$totoro-green: #7B9E87;
+$warm-yellow: #F4D03F;
+$ghibli-red: #E74C3C;
+$warm-cream: #F9F5E7;
+$deep-blue: #2C3E50;
+
+// 全局样式
+body {
+  background-color: $warm-cream;
+  color: $deep-blue;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+// 头部样式
+.site-header {
+  background-color: $totoro-green;
+  border-top: 5px solid $warm-yellow;
+  
+  .site-title {
+    color: $warm-cream;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .site-nav {
+    .page-link {
+      color: $warm-cream;
+      &:hover {
+        color: $warm-yellow;
+      }
+    }
+  }
+}
+
+// 文章卡片样式
+.post {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  .post-title {
+    color: $totoro-green;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .post-meta {
+    color: #666;
+    font-size: 0.9em;
+  }
+}
+
+// 按钮样式
+.button {
+  background-color: $totoro-green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: darken($totoro-green, 10%);
+    transform: scale(1.05);
+  }
+}
+
+// 页脚样式
+.site-footer {
+  background-color: $totoro-green;
+  color: $warm-cream;
+  padding: 20px 0;
+  
+  .social-media-list {
+    li {
+      a {
+        color: $warm-cream;
+        &:hover {
+          color: $warm-yellow;
+        }
+      }
+    }
+  }
+}
+
+// 动画效果
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+// 响应式设计
+@media screen and (max-width: 800px) {
+  .site-header {
+    padding: 10px;
+  }
+  
+  .post {
+    padding: 15px;
+  }
+} 
