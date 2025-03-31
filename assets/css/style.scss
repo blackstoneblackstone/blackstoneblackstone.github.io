@@ -1,5 +1,35 @@
 @import "minima";
 
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --header-bg: #f8f9fa;
+  --border-color: #e9ecef;
+  --link-color: #0366d6;
+  --hover-color: #0245a3;
+  --neon-color1: #00ff00;
+  --neon-color2: #00ffff;
+  --neon-color3: #ff00ff;
+  --neon-shadow1: rgba(0, 255, 0, 0.8);
+  --neon-shadow2: rgba(0, 255, 255, 0.8);
+  --neon-shadow3: rgba(255, 0, 255, 0.8);
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --header-bg: #2d2d2d;
+  --border-color: #404040;
+  --link-color: #58a6ff;
+  --hover-color: #79b8ff;
+  --neon-color1: #00ff99;
+  --neon-color2: #00ffff;
+  --neon-color3: #ff00ff;
+  --neon-shadow1: rgba(0, 255, 153, 0.8);
+  --neon-shadow2: rgba(0, 255, 255, 0.8);
+  --neon-shadow3: rgba(255, 0, 255, 0.8);
+}
+
 // 吉卜力风格变量
 $totoro-green: #7B9E87;
 $warm-yellow: #F4D03F;
@@ -112,5 +142,110 @@ body {
   
   .post {
     padding: 15px;
+  }
+}
+
+.profile-section {
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.profile-image-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  padding: 4px;
+  animation: neon-pulse 4s ease-in-out infinite;
+  background: linear-gradient(45deg, 
+    var(--neon-color1),
+    var(--neon-color2),
+    var(--neon-color3),
+    var(--neon-color1));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite, neon-pulse 2s ease-in-out infinite;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  box-shadow: 
+    0 0 10px var(--neon-shadow1),
+    0 0 20px var(--neon-shadow2),
+    0 0 30px var(--neon-shadow3),
+    inset 0 0 15px var(--neon-shadow1);
+}
+
+.profile-image-container::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  background: linear-gradient(45deg,
+    var(--neon-color1) 0%,
+    var(--neon-color2) 33%,
+    var(--neon-color3) 66%,
+    var(--neon-color1) 100%);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite, rotate 8s linear infinite;
+  z-index: 0;
+  filter: blur(8px);
+}
+
+.profile-image-container::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  z-index: 0;
+}
+
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 15px var(--neon-shadow1),
+      0 0 25px var(--neon-shadow2),
+      0 0 35px var(--neon-shadow3);
+  }
+  50% {
+    box-shadow: 
+      0 0 25px var(--neon-shadow3),
+      0 0 35px var(--neon-shadow1),
+      0 0 45px var(--neon-shadow2);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 } 

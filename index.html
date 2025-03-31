@@ -5,7 +5,9 @@ title: Home
 
 <div class="home">
   <div class="profile-section">
-    <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" class="profile-image">
+    <div class="profile-image-container">
+      <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" class="profile-image">
+    </div>
     <h1>{{ site.author.name }}</h1>
     <p class="bio">{{ site.author.bio }}</p>
     <p class="location">{{ site.author.location }}</p>
