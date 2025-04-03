@@ -34,7 +34,6 @@ ref: home
   </div>
 
   <div class="recent-posts">
-    <h2>{% t latest_posts %}</h2>
     <ul class="post-list">
       {% assign posts=site.posts | where:"lang", page.lang %}
       {% for post in posts limit:5 %}

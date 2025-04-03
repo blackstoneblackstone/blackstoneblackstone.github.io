@@ -1,16 +1,17 @@
-source "https://rubygems.org"
+source "https://mirrors.tuna.tsinghua.edu.cn/rubygems/"
 
-gem "github-pages", group: :jekyll_plugins
-gem "jekyll-include-cache"
-gem "jemoji"
+# 明确指定与Ruby 2.6.10兼容的依赖版本
+gem "jekyll", "~> 3.9.0"
+gem "minima", "~> 2.5.1"
+gem "kramdown-parser-gfm", "~> 1.1.0"
 
+# 常用插件
 group :jekyll_plugins do
-  gem "jekyll-paginate"
-  gem "jekyll-sitemap"
-  gem "jekyll-gist"
-  gem "jekyll-feed"
-  gem "jemoji"
-  gem "jemoji"
+  gem "jekyll-feed", "~> 0.15.1"
+  gem "jekyll-seo-tag", "~> 2.7.1"
+  gem "jekyll-paginate", "~> 1.1.0"
+  gem "jekyll-sitemap", "~> 1.4.0"
+  gem "jemoji", "~> 0.12.0"
 end
 
 # Windows 和 JRuby 不支持这些平台
