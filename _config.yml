@@ -1,7 +1,7 @@
-title: 吉卜力小屋
-description: 一个充满温暖与梦想的博客空间
+title: 黑石的知识库
+description: AI、编程、产品、生活
 baseurl: ""
-url: "https://blackstoneblackstone.github.io"
+url: "http://yondu.vip"
 
 # Languages
 languages: ["en", "zh"]
@@ -23,9 +23,9 @@ plugins:
 author:
   name: Blackstone
   email: your.email@example.com
-  bio: 热爱吉卜力动画，热爱生活
-  location: 龙猫森林
-  avatar: /assets/images/totoro-avatar.png
+  bio: 热爱 IU
+  location: hangzhou
+  avatar: /assets/images/avatar.png
   links:
     - label: GitHub
       icon: fab fa-github
