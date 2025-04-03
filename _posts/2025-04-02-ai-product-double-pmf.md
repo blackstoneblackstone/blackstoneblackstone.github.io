@@ -4,6 +4,8 @@ title: AI Products Need to Break Through Two PMFs to Survive
 date: 2025-04-02 10:00:00 +0800
 categories: blog
 tags: [AI, Product, PMF]
+lang: en
+ref: ai-product-double-pmf
 ---
 
 # AI Products Need to Break Through Two PMFs to Survive

@@ -1,0 +1,57 @@
+---
+layout: home
+title: 首页
+lang: zh
+ref: home
+---
+
+<div class="home">
+  <div class="profile-section">
+    <div class="profile-image-container">
+      <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" class="profile-image">
+    </div>
+    <h1>{{ site.author.name }}</h1>
+    <p class="bio">13年工作经验的全栈工程师，专注于 AI Agent 研究与开发</p>
+    <p class="location">杭州</p>
+  </div>
+
+  <div class="expertise-section">
+    <h2>技术专长</h2>
+    <div class="expertise-grid">
+      <div class="expertise-item">
+        <h3>全栈开发</h3>
+        <p>13年全栈开发经验，精通前后端技术栈</p>
+      </div>
+      <div class="expertise-item">
+        <h3>AI Agent</h3>
+        <p>深入研究 AI Agent 技术，专注于智能体开发与应用</p>
+      </div>
+      <div class="expertise-item">
+        <h3>系统架构</h3>
+        <p>丰富的系统设计与架构经验，擅长高可用分布式系统</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="recent-posts">
+    <h2>{% t latest_posts %}</h2>
+    <ul class="post-list">
+      {% assign posts=site.posts | where:"lang", page.lang %}
+      {% for post in posts limit:5 %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {% if site.show_excerpts %}
+        <div class="post-excerpt">
+          {{ post.excerpt }}
+        </div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div> 

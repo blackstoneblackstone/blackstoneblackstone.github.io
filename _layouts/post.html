@@ -1,0 +1,133 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%Y-%m-%d" }}
+      </time>
+      {% if page.ref %}
+        <div class="post-translations">
+          {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+          {% for post in posts %}
+            {% if post.lang != page.lang %}
+              <a href="{{ post.url }}" class="{{ post.lang }}">{{ site.language_names[post.lang] }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <div class="post-tags">
+    {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+</article>
+
+<style>
+.post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.post-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-title {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.post-translations a {
+  margin-left: 10px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  background-color: var(--header-bg);
+  color: var(--link-color);
+}
+
+.post-content {
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.post-content h1, 
+.post-content h2, 
+.post-content h3, 
+.post-content h4, 
+.post-content h5, 
+.post-content h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.post-content p, 
+.post-content ul, 
+.post-content ol {
+  margin-bottom: 1.5rem;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.post-content pre {
+  background-color: var(--header-bg);
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.post-content code {
+  background-color: var(--header-bg);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.post-tags {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+</style> 

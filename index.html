@@ -1,6 +1,8 @@
 ---
 layout: home
 title: Home
+lang: en
+ref: home
 ---
 
 <div class="home">
@@ -32,9 +34,10 @@ title: Home
   </div>
 
   <div class="recent-posts">
-    <h2>Latest Posts</h2>
+    <h2>{% t latest_posts %}</h2>
     <ul class="post-list">
-      {% for post in paginator.posts %}
+      {% assign posts=site.posts | where:"lang", page.lang %}
+      {% for post in posts limit:5 %}
       <li>
         <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
         <h3>

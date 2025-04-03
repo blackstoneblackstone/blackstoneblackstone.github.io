@@ -3,6 +3,14 @@ description: A technical blog by a full-stack engineer, focusing on AI Agent res
 baseurl: ""
 url: "https://blackstoneblackstone.github.io"
 
+# Languages
+languages: ["en", "zh"]
+default_lang: "en"
+exclude_from_localizations: ["assets", "css", "js", "images", ".git", "CNAME"]
+language_names:
+  en: English
+  zh: 中文
+
 # Build settings
 markdown: kramdown
 theme: minima
