@@ -1,5 +1,5 @@
-title: Blackstone's Knowledge Base
-description: A technical blog by a full-stack engineer, focusing on AI Agent research and technology sharing
+title: 吉卜力小屋
+description: 一个充满温暖与梦想的博客空间
 baseurl: ""
 url: "https://blackstoneblackstone.github.io"
 
@@ -23,25 +23,25 @@ plugins:
 author:
   name: Blackstone
   email: your.email@example.com
-  bio: Full-stack engineer with 13 years of experience, specializing in AI Agent research and development
-  location: Hangzhou
-  avatar: /assets/images/avatar.png
+  bio: 热爱吉卜力动画，热爱生活
+  location: 龙猫森林
+  avatar: /assets/images/totoro-avatar.png
   links:
     - label: GitHub
       icon: fab fa-github
       url: https://github.com/blackstoneblackstone
-    - label: LinkedIn
-      icon: fab fa-linkedin
-      url: https://www.linkedin.com/in/your-profile
+    - label: Twitter
+      icon: fab fa-twitter
+      url: https://twitter.com/yourusername
+    - label: Instagram
+      icon: fab fa-instagram
+      url: https://instagram.com/yourusername
 
 # Social links
 social_links:
   - label: GitHub
     icon: fab fa-github
     url: https://github.com/blackstoneblackstone
-  - label: LinkedIn
-    icon: fab fa-linkedin
-    url: https://www.linkedin.com/in/your-profile
 
 # Pagination settings
 paginate: 5
@@ -49,11 +49,17 @@ paginate_path: "/page:num/"
 
 # Theme settings
 theme_settings:
-  primary_color: "#2C3E50"  # Dark blue-gray
-  secondary_color: "#3498DB"  # Blue
-  accent_color: "#E74C3C"  # Red
-  background_color: "#FFFFFF"  # White
-  text_color: "#2C3E50"  # Dark blue-gray
+  primary_color: "#7B9E87"  # 吉卜力森林绿
+  secondary_color: "#F4D03F"  # 温暖黄
+  accent_color: "#E74C3C"  # 吉卜力红
+  background_color: "#F9F5E7"  # 温暖米色
+  text_color: "#2C3E50"  # 深灰蓝
+
+# Header pages
+header_pages:
+  - about.md
+  - blog.md
+  - contact.md
 
 # Exclude files
 exclude:
@@ -61,4 +67,8 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
-  - .git/ 
+  - .git/
+
+# Extra resources
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css 
