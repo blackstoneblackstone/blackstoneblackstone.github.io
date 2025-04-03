@@ -1,74 +1,65 @@
-title: 黑石的知识库
-description: AI、编程、产品、生活
-baseurl: ""
-url: "http://yondu.vip"
+# Site
+name: 'Mundana'
+description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/favicon.ico'
+baseurl: '/mundana-theme-jekyll'
+disqus: 'demowebsite'
+email: 'wowthemesnet@gmail.com'
+mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
-# Languages
-languages: ["en", "zh"]
-default_lang: "en"
-exclude_from_localizations: ["assets", "css", "js", "images", ".git", "CNAME"]
-language_names:
-  en: English
-  zh: 中文
+include: ["_pages"]
+permalink: /:title/
 
-# Build settings
-markdown: kramdown
-theme: minima
-plugins:
+# Plugins
+plugins: 
   - jekyll-feed
-  - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-seo-tag
+  
+authors:
+    sal:
+      name:           Sal
+      site:           https://www.wowthemes.net
+      avatar:         /assets/images/avatar1.jpg
+      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
+      email:          wowthemesnet@gmail.com
+      twitter:        https://twitter.com/wowthemesnet
 
-# Author information
-author:
-  name: Blackstone
-  email: your.email@example.com
-  bio: 热爱 IU
-  location: hangzhou
-  avatar: /assets/images/avatar.png
-  links:
-    - label: GitHub
-      icon: fab fa-github
-      url: https://github.com/blackstoneblackstone
-    - label: Twitter
-      icon: fab fa-twitter
-      url: https://twitter.com/yourusername
-    - label: Instagram
-      icon: fab fa-instagram
-      url: https://instagram.com/yourusername
+    jane:
+      name:           Jane
+      site:           https://www.wowthemes.net
+      avatar:         /assets/images/avatar2.jpg
+      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
+      email:          fakemail@gmail.com
+      twitter:        https://twitter.com/wowthemesnet
+ 
+# Defaults
+defaults:
 
-# Social links
-social_links:
-  - label: GitHub
-    icon: fab fa-github
-    url: https://github.com/blackstoneblackstone
+  # all posts
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      author: sal
+      avatar: /assets/images/avatar1.jpg
+      
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+      
+# Syntax
+markdown: kramdown
+highlighter: rouge
 
-# Pagination settings
-paginate: 5
-paginate_path: "/page:num/"
+# Paginate
+paginate: 10
 
-# Theme settings
-theme_settings:
-  primary_color: "#7B9E87"  # 吉卜力森林绿
-  secondary_color: "#F4D03F"  # 温暖黄
-  accent_color: "#E74C3C"  # 吉卜力红
-  background_color: "#F9F5E7"  # 温暖米色
-  text_color: "#2C3E50"  # 深灰蓝
 
-# Header pages
-header_pages:
-  - about.md
-  - blog.md
-  - contact.md
 
-# Exclude files
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
-  - .git/
-
-# Extra resources
-extra_css:
-  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css 
+# Exclude metadata and development time dependencies (like Grunt plugins)
+exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
