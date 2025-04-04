@@ -3,10 +3,12 @@ name: '黑石的知识库'
 description: '黑石的知识库 - 分享知识和经验'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: '/'
-disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
+baseurl: ''
+disqus: ''
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+
+# 启用未来日期的文章
+future: true
 
 include: ["_pages"]
 permalink: /:title/
@@ -20,20 +22,12 @@ plugins:
   
 authors:
     sal:
-      name:           Sal
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
+      name:           黑石
+      site:           https://yondu.vip
+      avatar:         assets/images/avatar.png
+      bio:            "黑石的知识库 - 分享知识和经验"
+      twitter:        https://twitter.com/blackstone
 
-    jane:
-      name:           Jane
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
  
 # Defaults
 defaults:
@@ -43,8 +37,8 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
-      avatar: /assets/images/avatar1.jpg
+      author: 黑石
+      avatar: /assets/images/avatar.png
       
   # all pages
   - scope:

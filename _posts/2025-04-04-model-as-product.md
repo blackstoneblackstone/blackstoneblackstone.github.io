@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "模型即产品：AI产品形态的新思考"
+date: 2025-04-04 12:00:00 +0800
 categories: [ AI, 技术趋势 ]
-image: https://mmbiz.qpic.cn/sz_mmbiz_png/Sib7IezOlBcuVSl79FicUmbkGm99zHMReIS75R6M6fXGfWdhmSnFkr0W5tzKbFqU2hDWoPGRPoSdicSufRxsb07GQ/640?wx_fmt=png&from=appmsg
-date: 2025-04-04
+image: https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzMxMzB8MHwxfHNlYXJjaHw2fHxBSSUyMGJyYWluJTIwZGlnaXRhbCUyMGNvbmNlcHQlMjB0ZWNobm9sb2d5JTIwcHJvZHVjdCUyMG1vZGVsfGVufDB8fHx8MTc0Mzc4NTY3OXww&ixlib=rb-4.0.3&q=80&w=1080
 ---
 
 最近，AI圈子里有两个事值得关注：一个是GPT-4o推出了新的画图模型，另一个是豆包升级了"边搜边想"功能。这两个例子都指向了一个正在崛起的理念——"模型即产品"。它听起来有点抽象，但其实可能会影响未来 AI 产品的发展形态。那么 **"模型即产品"** 到底是什么意思，它跟传统的AI方式有什么不同，为什么它这么厉害但为什么又不够普及？
 
-![AI模型即产品概念图](https://mmbiz.qpic.cn/sz_mmbiz_png/Sib7IezOlBcuVSl79FicUmbkGm99zHMReIS75R6M6fXGfWdhmSnFkr0W5tzKbFqU2hDWoPGRPoSdicSufRxsb07GQ/640?wx_fmt=png&from=appmsg)
+![AI模型即产品概念图](https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzMxMzB8MHwxfHNlYXJjaHwzfHxkaWdpdGFsJTIwYnJhaW4lMjBBSSUyMG5ldXJhbCUyMG5ldHdvcmslMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc0Mzc4NTY5N3ww&ixlib=rb-4.0.3&q=80&w=750)
 
 ---
 
