@@ -3,6 +3,7 @@ layout: post
 title:  "AI编程入门：使用人工智能辅助软件开发"
 author: 黑石
 categories: [ AI Coding, 教程 ]
+tags: [sticky]
 image: assets/images/ai-coding.jpg
 ---
 

@@ -114,7 +114,7 @@ description: "黑石的知识库 - 分享知识和经验"
     
 <!-- Sticky - add sticky tag to the post you want to highlight here - tags: [sticky] -->
 {% for post in site.posts %} 
-{% if post.tags contains "sticky" and post.categories[0] != "AI Coding" and post.categories[0] != "AI Coding Tools" %}
+{% if post.tags contains "sticky" %}
 <div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightblue position-relative">
     <div class="pl-4 pr-0 h-100 tofront">
         <div class="row justify-content-between">
@@ -126,7 +126,7 @@ description: "黑石的知识库 - 分享知识和经验"
                 <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">Read More</a>
             </div>
             <div class="col-md-6 d-none d-md-block pr-0">
-                <div class="post-image" style="background-image: url('{{site.baseurl}}/{{ post.image }}')"></div>
+                <div class="post-image" style="background: url('{{site.baseurl}}/{{ post.image }}'); background-size: 100%;"></div>
             </div>
         </div>
     </div>

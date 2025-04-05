@@ -34,3 +34,6 @@
     text-decoration: none;
     color: inherit;
 } 
+.post-image {
+    height: 100%;
+}
