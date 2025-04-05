@@ -17,7 +17,7 @@ description: "黑石的知识库 - 分享知识和经验"
 <div class="row remove-site-content-margin">
     
     <!-- latest post -->
-    {% assign posts_without_ai = site.posts | where_exp: "post", "post.categories[0] != 'AI Coding' and post.categories[0] != 'AI Coding Tools'" %}
+    {% assign posts_without_ai = site.posts | where_exp: 'post', 'post.categories[0] != "AI Coding" and post.categories[0] != "AI Coding Tools"' %}
     {% assign latest_post = posts_without_ai[0] %}
     <div class="col-md-6">
     <div class="card border-0 mb-4 box-shadow">   
@@ -33,7 +33,7 @@ description: "黑石的知识库 - 分享知识和经验"
                 {% if second_post.image %}
                 <div class="col-md-4">
                 <a href="{{site.baseurl}}{{second_post.url}}">
-                 <img class="w-100" src="{% if second_post.image contains "://" %}{{ second_post.image }}{% else %}{{ second_post.image | absolute_url }}{% endif %}" alt="{{ second_post.title }}">
+                 <img class="w-100" src="{% if second_post.image contains '://' %}{{ second_post.image }}{% else %}{{ second_post.image | absolute_url }}{% endif %}" alt="{{ second_post.title }}">
                 </a>
                 </div>
                 {% endif %}                
@@ -60,7 +60,7 @@ description: "黑石的知识库 - 分享知识和经验"
                 {% if third_post.image %}
                 <div class="col-md-4">
                 <a href="{{site.baseurl}}{{third_post.url}}">
-                 <img class="w-100" src="{% if third_post.image contains "://" %}{{ third_post.image }}{% else %}{{site.baseurl}}/{{ third_post.image }}{% endif %}" alt="{{ third_post.title }}">
+                 <img class="w-100" src="{% if third_post.image contains '://' %}{{ third_post.image }}{% else %}{{site.baseurl}}/{{ third_post.image }}{% endif %}" alt="{{ third_post.title }}">
                 </a>
                 </div>
                 {% endif %}                
@@ -87,7 +87,7 @@ description: "黑石的知识库 - 分享知识和经验"
                 {% if fourth_post.image %}
                 <div class="col-md-4">
                 <a href="{{site.baseurl}}{{fourth_post.url}}">
-                <img class="w-100" src="{% if fourth_post.image contains "://" %}{{ fourth_post.image }}{% else %}{{site.baseurl}}/{{ fourth_post.image }}{% endif %}" alt="{{ fourth_post.title }}">
+                <img class="w-100" src="{% if fourth_post.image contains '://' %}{{ fourth_post.image }}{% else %}{{site.baseurl}}/{{ fourth_post.image }}{% endif %}" alt="{{ fourth_post.title }}">
                 </a>
                 </div>
                 {% endif %}                
@@ -150,7 +150,7 @@ description: "黑石的知识库 - 分享知识和经验"
         
         <h4 class="font-weight-bold spanborder"><span>全部文章</span></h4>
         
-        {% assign filtered_posts = paginator.posts | where_exp: "post", "post.categories[0] != 'AI Coding' and post.categories[0] != 'AI Coding Tools'" %}
+        {% assign filtered_posts = paginator.posts | where_exp: 'post', 'post.categories[0] != "AI Coding" and post.categories[0] != "AI Coding Tools"' %}
         {% for post in filtered_posts %}
         
             {% include main-loop-card.html %}
