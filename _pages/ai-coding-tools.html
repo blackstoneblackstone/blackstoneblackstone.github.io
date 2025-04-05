@@ -1,0 +1,46 @@
+---
+title: "AI Coding Tools"
+layout: default
+permalink: "/ai-coding-tools.html"
+---
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="font-weight-bold title h6 text-uppercase mb-4">AI Coding Tools</h1>
+            
+            <div class="row">
+                {% for post in site.posts %}
+                {% if post.categories contains "AI Coding Tools" %}
+                    <div class="col-md-4 mb-4">
+                        <a href="{{ post.url | relative_url }}" class="tool-link">
+                            <div class="card h-100 text-center tool-card">
+                                <div class="card-body">
+                                    {% if post.image %}
+                                    <div class="d-flex justify-content-center align-items-center mb-3 tool-logo-container">
+                                        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="tool-logo">
+                                    </div>
+                                    {% endif %}
+                                    <h5 class="card-title">{{ post.title }}</h5>
+                                    <p class="card-text small">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="sticky-top sticky-top-offset">
+                <h4 class="font-weight-bold spanborder"><span>AI 开发工具分类</span></h4>  
+                <div class="mb-4">
+                    <a href="#代码编辑器" class="btn btn-light btn-sm mb-2">代码编辑器</a>
+                    <a href="#自动化测试工具" class="btn btn-light btn-sm mb-2">自动化测试工具</a>
+                    <a href="#代码分析工具" class="btn btn-light btn-sm mb-2">代码分析工具</a>
+                    <a href="#生成设计稿" class="btn btn-light btn-sm mb-2">生成设计稿</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
