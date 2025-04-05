@@ -17,8 +17,14 @@ description: "黑石的知识库 - 分享知识和经验"
 <div class="row remove-site-content-margin">
     
     <!-- latest post -->
-    {% assign posts_without_ai = site.posts | where_exp: 'post', 'post.categories[0] != "AI Coding" and post.categories[0] != "AI Coding Tools"' %}
-    {% assign latest_post = posts_without_ai[0] %}
+    {% assign posts_without_ai = site.posts %}
+    {% assign filtered_posts = '' | split: '' %}
+    {% for post in posts_without_ai %}
+        {% unless post.categories contains 'AI Coding' or post.categories contains 'AI Coding Tools' %}
+            {% assign filtered_posts = filtered_posts | push: post %}
+        {% endunless %}
+    {% endfor %}
+    {% assign latest_post = filtered_posts[0] %}
     <div class="col-md-6">
     <div class="card border-0 mb-4 box-shadow">   
     <div class="topfirstimage" style="background-image: url(/assets/images/post1.png); height: 315px;    background-size: cover;    background-repeat: no-repeat;"></div>     
@@ -28,7 +34,7 @@ description: "黑石的知识库 - 分享知识和经验"
     <div class="col-md-6">
         
         <!-- second latest post -->
-        {%- assign second_post = posts_without_ai[1] -%}        
+        {%- assign second_post = filtered_posts[1] -%}        
         <div class="mb-3 d-flex align-items-center">                
                 {% if second_post.image %}
                 <div class="col-md-4">
@@ -55,7 +61,7 @@ description: "黑石的知识库 - 分享知识和经验"
             </div>
         
         <!-- third latest post -->
-        {%- assign third_post = posts_without_ai[2] -%}        
+        {%- assign third_post = filtered_posts[2] -%}        
         <div class="mb-3 d-flex align-items-center">                
                 {% if third_post.image %}
                 <div class="col-md-4">
@@ -82,7 +88,7 @@ description: "黑石的知识库 - 分享知识和经验"
             </div>
         
         <!-- fourth latest post -->
-        {%- assign fourth_post = posts_without_ai[3] -%}        
+        {%- assign fourth_post = filtered_posts[3] -%}        
         <div class="mb-3 d-flex align-items-center">                
                 {% if fourth_post.image %}
                 <div class="col-md-4">
@@ -150,8 +156,14 @@ description: "黑石的知识库 - 分享知识和经验"
         
         <h4 class="font-weight-bold spanborder"><span>全部文章</span></h4>
         
-        {% assign filtered_posts = paginator.posts | where_exp: 'post', 'post.categories[0] != "AI Coding" and post.categories[0] != "AI Coding Tools"' %}
-        {% for post in filtered_posts %}
+        {% assign all_posts = paginator.posts %}
+        {% assign filtered_paginated_posts = '' | split: '' %}
+        {% for post in all_posts %}
+            {% unless post.categories contains 'AI Coding' or post.categories contains 'AI Coding Tools' %}
+                {% assign filtered_paginated_posts = filtered_paginated_posts | push: post %}
+            {% endunless %}
+        {% endfor %}
+        {% for post in filtered_paginated_posts %}
         
             {% include main-loop-card.html %}
         
