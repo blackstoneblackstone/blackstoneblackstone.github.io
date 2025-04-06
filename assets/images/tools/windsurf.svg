@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="80" viewBox="0 0 300 80">
+  <rect width="300" height="80" fill="#ffffff"/>
+  <text x="150" y="45" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#0080ff" text-anchor="middle" dominant-baseline="middle">WINDSURF</text>
+  <path d="M50,20 Q100,60 150,20 T250,20" stroke="#0080ff" stroke-width="2" fill="none"/>
+  <path d="M70,30 Q120,70 170,30 T270,30" stroke="#66ccff" stroke-width="1.5" fill="none"/>
+</svg> 
