@@ -1,0 +1,60 @@
+---
+title: "独立开发"
+layout: default
+permalink: "/indie-dev.html"
+---
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <!-- 独立开发工具 -->
+            <h2 class="font-weight-bold spanborder mb-4"><span>独立开发工具</span></h2>
+            <div class="row">
+                {% for post in site.posts %}
+                {% if post.categories contains '独立开发工具' %}
+                    <div class="col-md-4 mb-4">
+                        <a href="{{ post.url | relative_url }}" class="tool-link">
+                            <div class="card h-100 text-center tool-card">
+                                <div class="card-body">
+                                    {% if post.image %}
+                                    <div class="d-flex justify-content-center align-items-center mb-3 tool-logo-container">
+                                        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="tool-logo">
+                                    </div>
+                                    {% endif %}
+                                    <h5 class="card-title">{{ post.title }}</h5>
+                                    <p class="card-text small">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            
+            <!-- 优秀项目 -->
+            <h2 class="font-weight-bold spanborder mb-4 mt-5"><span>优秀项目</span></h2>
+            <div class="row">
+                {% for post in site.posts %}
+                {% if post.categories contains '优秀项目' %}
+                    <div class="col-md-4 mb-4">
+                        <a href="{{ post.url | relative_url }}" class="tool-link">
+                            <div class="card h-100 text-center tool-card">
+                                <div class="card-body">
+                                    {% if post.image %}
+                                    <div class="d-flex justify-content-center align-items-center mb-3 tool-logo-container">
+                                        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="tool-logo">
+                                    </div>
+                                    {% endif %}
+                                    <h5 class="card-title">{{ post.title }}</h5>
+                                    <p class="card-text small">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        
+        
+    </div>
+</div> 
