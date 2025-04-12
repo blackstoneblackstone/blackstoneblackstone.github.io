@@ -37,3 +37,10 @@
 .post-image {
     height: 100%;
 }
+
+/* 菜单选中状态样式 */
+.navbar-nav .nav-link.active {
+    color: #007bff !important;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+}

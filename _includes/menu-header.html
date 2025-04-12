@@ -1,17 +1,17 @@
 <!--  Replace menu links here -->
 
 <li class="nav-item">
-<a class="nav-link" href="{{site.baseurl}}/index.html">首页</a>
+<a class="nav-link {% if page.url == '/index.html' or page.url == '/' %}active{% endif %}" href="{{site.baseurl}}/index.html">首页</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="{{site.baseurl}}/ai-coding-tools.html">AI Coding Tools</a>
+<a class="nav-link {% if page.url == '/ai-coding-tools.html' %}active{% endif %}" href="{{site.baseurl}}/ai-coding-tools.html">AI Coding Tools</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="{{site.baseurl}}/indie-dev.html">独立开发</a>
+<a class="nav-link {% if page.url == '/indie-dev.html' %}active{% endif %}" href="{{site.baseurl}}/indie-dev.html">独立开发</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="{{site.baseurl}}/authors-list.html">作者</a>
+<a class="nav-link {% if page.url == '/authors-list.html' %}active{% endif %}" href="{{site.baseurl}}/authors-list.html">作者</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="{{site.baseurl}}/contact.html">联系我们</a>
+<a class="nav-link {% if page.url == '/contact.html' %}active{% endif %}" href="{{site.baseurl}}/contact.html">联系我们</a>
 </li>

@@ -6,41 +6,148 @@ permalink: "/ai-coding-tools.html"
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h1 class="font-weight-bold title h6 text-uppercase mb-4">AI Coding Tools</h1>
+            {% comment %} 收集所有第二个分类 {% endcomment %}
+            {% assign subcategories = "" | split: "" %}
+            {% for post in site.posts %}
+              {% if post.categories contains 'AI Coding Tools' and post.categories.size > 1 %}
+                {% assign second_category = post.categories[1] %}
+                {% unless subcategories contains second_category %}
+                  {% assign subcategories = subcategories | push: second_category %}
+                {% endunless %}
+              {% endif %}
+            {% endfor %}
             
-            <div class="row">
-                {% for post in site.posts %}
-                {% if post.categories contains 'AI Coding Tools' %}
-                    <div class="col-md-4 mb-4">
+            {% comment %} 按照第二个分类分组展示文章 {% endcomment %}
+            {% for subcategory in subcategories %}
+              <div class="mb-5">
+                <h2 class="h5 font-weight-bold" id="{{ subcategory }}">{{ subcategory }}</h2>
+                <div class="row">
+                  {% for post in site.posts %}
+                    {% if post.categories contains 'AI Coding Tools' and post.categories contains subcategory %}
+                      <div class="col-md-4 mb-4">
                         <a href="{{ post.url | relative_url }}" class="tool-link">
-                            <div class="card h-100 text-center tool-card">
-                                <div class="card-body">
-                                    {% if post.image %}
-                                    <div class="d-flex justify-content-center align-items-center mb-3 tool-logo-container">
-                                        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="tool-logo">
-                                    </div>
-                                    {% endif %}
-                                    <h5 class="card-title">{{ post.title }}</h5>
-                                    <p class="card-text small">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-                                </div>
+                          <div class="card h-100 text-center tool-card">
+                            <div class="card-body">
+                              {% if post.image %}
+                              <div class="d-flex justify-content-center align-items-center mb-3 tool-logo-container">
+                                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="tool-logo">
+                              </div>
+                              {% endif %}
+                              <h5 class="card-title">{{ post.title }}</h5>
+                              <p class="card-text small">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
                             </div>
+                          </div>
                         </a>
-                    </div>
-                {% endif %}
-                {% endfor %}
-            </div>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            {% endfor %}
+            
+            {% comment %} 展示只有一个分类的文章 {% endcomment %}
+            {% assign single_category_posts = false %}
+            {% for post in site.posts %}
+              {% if post.categories contains 'AI Coding Tools' and post.categories.size == 1 %}
+                {% assign single_category_posts = true %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+            
+            {% if single_category_posts %}
+              <div class="mb-5">
+                <h2 class="h5 font-weight-bold" id="其他工具">其他工具</h2>
+                <div class="row">
+                  {% for post in site.posts %}
+                    {% if post.categories contains 'AI Coding Tools' and post.categories.size == 1 %}
+                      <div class="col-md-4 mb-4">
+                        <a href="{{ post.url | relative_url }}" class="tool-link">
+                          <div class="card h-100 text-center tool-card">
+                            <div class="card-body">
+                              {% if post.image %}
+                              <div class="d-flex justify-content-center align-items-center mb-3 tool-logo-container">
+                                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="tool-logo">
+                              </div>
+                              {% endif %}
+                              <h5 class="card-title">{{ post.title }}</h5>
+                              <p class="card-text small">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
         </div>
         
         <div class="col-md-4">
             <div class="sticky-top sticky-top-offset">
                 <h4 class="font-weight-bold spanborder"><span>AI 开发工具分类</span></h4>  
                 <div class="mb-4">
-                    <a href="#代码编辑器" class="btn btn-light btn-sm mb-2">代码编辑器</a>
-                    <a href="#自动化测试工具" class="btn btn-light btn-sm mb-2">自动化测试工具</a>
-                    <a href="#代码分析工具" class="btn btn-light btn-sm mb-2">代码分析工具</a>
-                    <a href="#生成设计稿" class="btn btn-light btn-sm mb-2">生成设计稿</a>
+                  {% for subcategory in subcategories %}
+                    <a href="#{{ subcategory }}" class="btn btn-light btn-sm mb-2">{{ subcategory }}</a>
+                  {% endfor %}
+                  
+                  {% if single_category_posts %}
+                    <a href="#其他工具" class="btn btn-light btn-sm mb-2">其他工具</a>
+                  {% endif %}
                 </div>
             </div>
         </div>
     </div>
-</div> 
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // 为所有分类链接添加平滑滚动效果
+    document.querySelectorAll('.sticky-top-offset a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          // 平滑滚动到目标元素
+          window.scrollTo({
+            top: targetElement.offsetTop - 80, // 减去80px以避免导航栏遮挡
+            behavior: 'smooth'
+          });
+          
+          // 添加高亮效果
+          const allCategories = document.querySelectorAll('.h5.font-weight-bold');
+          allCategories.forEach(cat => {
+            cat.classList.remove('highlight-category');
+          });
+          
+          targetElement.classList.add('highlight-category');
+          
+          // 3秒后移除高亮效果
+          setTimeout(() => {
+            targetElement.classList.remove('highlight-category');
+          }, 3000);
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .highlight-category {
+    background-color: rgba(255, 243, 205, 0.5);
+    transition: background-color 0.5s ease;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .tool-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+</style> 
