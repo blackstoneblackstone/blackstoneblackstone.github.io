@@ -3,7 +3,7 @@ layout: post
 title:  "AI Coding 的发展现状"
 author: 黑石
 categories: [ AI, 编程, 技术趋势 ]
-image: assets/images/post1.png
+image: assets/images/ai-coding-state.jpeg
 ---
 
 ## AI编程：从辅助到自主的转变

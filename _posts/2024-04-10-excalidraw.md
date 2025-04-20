@@ -2,7 +2,7 @@
 layout: post
 title:  "Excalidraw"
 author: 黑石
-categories: [ 独立开发工具 ]
+categories: [ One, 独立开发工具 ]
 image: assets/images/tools/excalidraw.svg
 excerpt: 开源的手绘风格白板工具，支持协作和实时分享
 ---

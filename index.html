@@ -20,7 +20,7 @@ description: "黑石的知识库 - 分享知识和经验"
     {% assign posts_without_ai = site.posts %}
     {% assign filtered_posts = '' | split: '' %}
     {% for post in posts_without_ai %}
-        {% unless post.categories contains 'AI Coding' or post.categories contains 'AI Coding Tools' %}
+        {% unless post.categories contains 'One' or post.categories contains 'AI Coding Tools' %}
             {% assign filtered_posts = filtered_posts | push: post %}
         {% endunless %}
     {% endfor %}
@@ -157,7 +157,7 @@ description: "黑石的知识库 - 分享知识和经验"
         {% assign all_posts = paginator.posts %}
         {% assign filtered_paginated_posts = '' | split: '' %}
         {% for post in all_posts %}
-            {% unless post.categories contains 'AI Coding' or post.categories contains 'AI Coding Tools' %}
+            {% unless post.categories contains 'One' or post.categories contains 'AI Coding Tools' %}
                 {% assign filtered_paginated_posts = filtered_paginated_posts | push: post %}
             {% endunless %}
         {% endfor %}
