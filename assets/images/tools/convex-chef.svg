@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 厨师帽 -->
+  <path d="M256 50C188 50 132 90 132 140C132 160 142 178 160 192C120 212 100 250 100 300C100 350 232 380 256 380C280 380 412 350 412 300C412 250 392 212 352 192C370 178 380 160 380 140C380 90 324 50 256 50Z" fill="white" stroke="#333" stroke-width="8"/>
+  
+  <!-- Convex 标志 (简化版) -->
+  <path d="M210 310L256 230L302 310H210Z" fill="#8D2676"/>
+  <path d="M210 310L256 230L190 270L210 310Z" fill="#EE342F"/>
+  <path d="M302 310L256 230L322 270L302 310Z" fill="#F3B01C"/>
+  
+  <!-- 厨师帽细节 -->
+  <path d="M190 140C190 160 220 180 256 180C292 180 322 160 322 140C322 120 292 100 256 100C220 100 190 120 190 140Z" fill="#f5f5f5" stroke="#333" stroke-width="4"/>
+  <path d="M180 192C150 220 150 260 150 260" stroke="#333" stroke-width="6" stroke-linecap="round"/>
+  <path d="M332 192C362 220 362 260 362 260" stroke="#333" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- 文字：CHEF -->
+  <text x="256" y="350" font-family="Arial" font-weight="bold" font-size="48" text-anchor="middle" fill="#333">CHEF</text>
+</svg> 
