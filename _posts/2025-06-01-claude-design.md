@@ -8,6 +8,7 @@ excerpt: 如何利用Claude强大的理解力和创造力辅助设计过程
 ---
 
 ## Claude AI：设计师的得力助手
+地址：<a href="https://ew6rccvpnmz.feishu.cn/wiki/ILO2waqXLi1EvqkuKHvcceMOnVd?fromScene=spaceOverview&login_redirect_times=1">飞书地址</a>
 
 在AI快速发展的今天，Claude已经成为了设计师的得力助手。作为一个强大的AI大语言模型，Claude不仅能够理解复杂的设计需求，还能根据设计师的输入提供创意灵感、生成设计方案、优化设计流程。
 
