@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "用Claude生成设计稿"
+title:  "AI 生成设计稿"
 author: 黑石
 categories: [ AI Coding Tools, 生成设计稿 ]
 image: assets/images/tools/claude-design.png
-excerpt: 如何利用Claude强大的理解力和创造力辅助设计过程
+excerpt: 通过 Claude 生成 SVG 或者 HTML
 ---
 
 ## Claude AI：设计师的得力助手
