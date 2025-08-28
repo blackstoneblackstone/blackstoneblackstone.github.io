@@ -15,6 +15,7 @@ vendor/
 
 # 操作系统生成的文件
 .DS_Store
+
 .DS_Store?
 ._*
 .Spotlight-V100
@@ -32,5 +33,4 @@ Thumbs.db
 
 # 日志文件
 *.log 
-
-.DS_Store
+assets/.DS_Store
