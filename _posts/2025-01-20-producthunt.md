@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "Product Hunt"
 categories: [独立开发工具]
-excerpt: "发现最新的 AI 产品和科技趋势，Product Hunt 是独立开发者和产品爱好者的必访平台"
-image: /assets/images/tools/producthunt.png
+excerpt: "了解下最新的产品，找找创意"
+image: /assets/images/tools/product.svg
 date: 2025-01-20
 ---
 
