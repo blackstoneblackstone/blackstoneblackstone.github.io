@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#4A90E2" stroke="#2E5BBA" stroke-width="2"/>
+  
+  <!-- Play button icon -->
+  <path d="M24 20L24 44L44 32L24 20Z" fill="white"/>
+  
+  <!-- Sound waves -->
+  <path d="M48 24C50 26 50 30 48 32" stroke="white" stroke-width="2" fill="none"/>
+  <path d="M50 20C53 23 53 29 50 32" stroke="white" stroke-width="2" fill="none"/>
+  <path d="M52 16C56 20 56 28 52 32" stroke="white" stroke-width="2" fill="none"/>
+  
+  <!-- Text "You" -->
+  <text x="32" y="50" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white" text-anchor="middle">You</text>
+</svg>
