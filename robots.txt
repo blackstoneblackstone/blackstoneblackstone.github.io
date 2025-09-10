@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# 允许所有搜索引擎抓取
+Allow: /assets/
+Allow: /_posts/
+Allow: /_pages/
+
+# 禁止抓取的文件和目录
+Disallow: /_site/
+Disallow: /vendor/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /Gemfile
+Disallow: /Gemfile.lock
+Disallow: /_config.yml
+Disallow: /docker-compose.yml
+
+# 站点地图
+Sitemap: https://blackstoneblackstone.github.io/sitemap.xml
+
+# 爬取延迟（可选）
+Crawl-delay: 1

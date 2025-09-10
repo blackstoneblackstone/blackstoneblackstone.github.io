@@ -31,6 +31,36 @@ layout: default
         
 		<div class="col-md-24 col-lg-24">
             
+            <!-- 面包屑导航 -->
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb" style="background-color: transparent; padding: 0;" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="{{ site.baseurl }}/" itemprop="item">
+                            <span itemprop="name">首页</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="{{ site.baseurl }}/categories.html" itemprop="item">
+                            <span itemprop="name">分类</span>
+                        </a>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                    {% for category in page.categories %}
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="{{ site.baseurl }}/categories.html#{{ category | downcase }}" itemprop="item">
+                            <span itemprop="name">{{ category }}</span>
+                        </a>
+                        <meta itemprop="position" content="{{ forloop.index | plus: 2 }}" />
+                    </li>
+                    {% endfor %}
+                    <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">{{ page.title }}</span>
+                        <meta itemprop="position" content="{{ page.categories.size | plus: 3 }}" />
+                    </li>
+                </ol>
+            </nav>
+            
             <!-- Article -->
 			<article class="article-post">                
 			{{ content }}                

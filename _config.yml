@@ -1,11 +1,29 @@
 # Site
 name: '黑石的知识库'
-description: '黑石的知识库 - 分享知识和经验'
+title: '黑石的知识库 - AI编程、技术分享与开发经验'
+description: '黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。'
+keywords: 'AI编程,全栈开发,技术博客,AI Agent,编程技巧,技术分享,黑石,开发经验'
+author: '黑石'
+url: 'https://blackstoneblackstone.github.io'
+baseurl: ''
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: ''
 disqus: ''
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+
+# SEO 配置
+lang: 'zh-CN'
+timezone: 'Asia/Shanghai'
+google_site_verification: ''  # 添加您的 Google Search Console 验证码
+google_analytics: ''  # 添加您的 Google Analytics ID
+google_adsense: ''  # 添加您的 Google AdSense ID
+
+# 社交媒体
+social:
+  name: '黑石'
+  links:
+    - 'https://github.com/blackstoneblackstone'
+    - 'https://twitter.com/blackstone'
 
 # Giscus Comments
 giscus:
@@ -34,6 +52,20 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-robots
+  - jekyll-redirect-from
+
+# Sitemap 配置
+sitemap:
+  changefreq: weekly
+  priority: 0.7
+  lastmod: true
+  exclude: 
+    - /404.html
+    - /robots.txt
+    - /Gemfile
+    - /Gemfile.lock
+    - /docker-compose.yml
   
 authors:
     sal:

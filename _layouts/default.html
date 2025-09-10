@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{{ site.lang | default: 'zh-CN' }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{page.title}} | {{site.name}}</title>
+    
+    <!-- 基础 SEO 标签 -->
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title | default: site.name }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+    <meta name="author" content="{{ site.author | default: site.name }}">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="{{ site.lang | default: 'zh-CN' }}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    
+    <!-- Open Graph 标签 -->
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:locale" content="zh_CN">
+    {% if page.image %}
+    <meta property="og:image" content="{{ page.image | absolute_url }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    {% elsif site.logo %}
+    <meta property="og:image" content="{{ site.logo | absolute_url }}">
+    {% endif %}
+    
+    <!-- Twitter Card 标签 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    {% if page.image %}
+    <meta name="twitter:image" content="{{ page.image | absolute_url }}">
+    {% elsif site.logo %}
+    <meta name="twitter:image" content="{{ site.logo | absolute_url }}">
+    {% endif %}
+    
+    <!-- 文章特定标签 -->
+    {% if page.layout == 'post' %}
+    <meta property="article:author" content="{{ site.author | default: site.name }}">
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    <meta property="article:modified_time" content="{{ page.last_modified_at | default: page.date | date_to_xmlschema }}">
+    {% for tag in page.tags %}
+    <meta property="article:tag" content="{{ tag }}">
+    {% endfor %}
+    {% endif %}
 
     {% seo %}
 
@@ -25,6 +70,10 @@
     
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/custom.css">
+    
+    <!-- Prism.js 代码高亮 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
 
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
@@ -33,6 +82,59 @@
     crossorigin="anonymous"></script>
 
     {% include tracking-header.html %}
+    
+    <!-- Google Search Console 验证 -->
+    {% if site.google_site_verification %}
+    <meta name="google-site-verification" content="{{ site.google_site_verification }}">
+    {% endif %}
+    
+    <!-- Google Analytics -->
+    {% if site.google_analytics %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
+    
+    <!-- 结构化数据 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "{% if page.layout == 'post' %}BlogPosting{% else %}WebSite{% endif %}",
+        "name": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
+        "description": "{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}",
+        "url": "{{ page.url | absolute_url }}",
+        "author": {
+            "@type": "Person",
+            "name": "{{ site.author | default: site.name }}",
+            "url": "{{ site.url }}"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "{{ site.name }}",
+            "url": "{{ site.url }}",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{ site.logo | absolute_url }}"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ page.url | absolute_url }}"
+        }
+        {% if page.layout == 'post' %},
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+        "headline": "{{ page.title }}",
+        "image": "{% if page.image %}{{ page.image | absolute_url }}{% elsif site.logo %}{{ site.logo | absolute_url }}{% endif %}",
+        "keywords": "{% if page.tags %}{{ page.tags | join: ', ' }}{% endif %}"
+        {% endif %}
+    }
+    </script>
 
 
 </head>
@@ -67,6 +169,12 @@
         {{ content }}
     </main>
 
+    <!-- 图片查看器 -->
+    <div class="image-viewer" id="imageViewer">
+        <button class="close-btn" id="closeImageViewer">&times;</button>
+        <img id="viewerImage" src="" alt="">
+    </div>
+
 
     <!-- Scripts: popper, bootstrap, theme, lunr -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -74,6 +182,51 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
     <script src="{{site.baseurl}}/assets/js/theme.js"></script>
+    
+    <!-- Prism.js 代码高亮脚本 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <!-- 图片查看器脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageViewer = document.getElementById('imageViewer');
+            const viewerImage = document.getElementById('viewerImage');
+            const closeBtn = document.getElementById('closeImageViewer');
+            
+            // 为所有文章中的图片添加点击事件
+            const articleImages = document.querySelectorAll('article img');
+            
+            articleImages.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    viewerImage.src = this.src;
+                    viewerImage.alt = this.alt;
+                    imageViewer.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // 防止背景滚动
+                });
+            });
+            
+            // 关闭图片查看器
+            function closeViewer() {
+                imageViewer.classList.remove('active');
+                document.body.style.overflow = 'auto'; // 恢复滚动
+            }
+            
+            closeBtn.addEventListener('click', closeViewer);
+            imageViewer.addEventListener('click', function(e) {
+                if (e.target === imageViewer) {
+                    closeViewer();
+                }
+            });
+            
+            // ESC 键关闭
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && imageViewer.classList.contains('active')) {
+                    closeViewer();
+                }
+            });
+        });
+    </script>
 
 
     <!-- Footer -->

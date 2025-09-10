@@ -53,3 +53,401 @@ article:first-letter {
     margin: 0 !important;
     vertical-align: baseline !important;
 }
+
+/* Markdown 内容样式优化 - GitHub 风格主题 */
+article {
+    line-height: 1.6;
+    color: #24292e;
+    max-width: none;
+}
+
+/* 标题样式优化 - GitHub 风格 */
+article h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #24292e;
+    margin: 24px 0 16px 0;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eaecef;
+}
+
+article h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #24292e;
+    margin: 24px 0 16px 0;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eaecef;
+}
+
+article h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #24292e;
+    margin: 24px 0 16px 0;
+}
+
+article h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #24292e;
+    margin: 24px 0 16px 0;
+}
+
+article h5 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #24292e;
+    margin: 24px 0 16px 0;
+}
+
+article h6 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #586069;
+    margin: 24px 0 16px 0;
+}
+
+/* 段落样式 - GitHub 风格 */
+article p {
+    margin-bottom: 16px;
+    word-wrap: break-word;
+}
+
+/* 列表样式优化 - GitHub 风格 */
+article ul, article ol {
+    margin: 0 0 16px 0;
+    padding-left: 2em;
+}
+
+article li {
+    margin-bottom: 0.25em;
+    line-height: 1.6;
+}
+
+article ul li {
+    list-style-type: disc;
+}
+
+article ol li {
+    list-style-type: decimal;
+}
+
+/* 嵌套列表 */
+article ul ul, article ol ol, article ul ol, article ol ul {
+    margin: 0.25em 0;
+}
+
+/* 表格样式优化 - GitHub 风格 */
+article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+article th, article td {
+    padding: 6px 13px;
+    text-align: left;
+    border-bottom: 1px solid #d0d7de;
+}
+
+article th {
+    background-color: #f6f8fa;
+    font-weight: 600;
+    color: #24292e;
+}
+
+article tr:last-child td {
+    border-bottom: none;
+}
+
+article tr:nth-child(2n) {
+    background-color: #f6f8fa;
+}
+
+/* 引用块样式优化 - GitHub 风格 */
+article blockquote {
+    margin: 16px 0;
+    padding: 0 1em;
+    color: #656d76;
+    border-left: 0.25em solid #d0d7de;
+    background-color: transparent;
+    font-style: normal;
+    position: relative;
+}
+
+article blockquote:before {
+    display: none;
+}
+
+/* 代码块样式优化 - GitHub 风格 */
+article pre {
+    background-color: #f6f8fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 16px;
+    overflow-x: auto;
+    margin: 16px 0;
+    font-size: 85%;
+    line-height: 1.45;
+}
+
+article code {
+    background-color: rgba(27, 31, 35, 0.05);
+    color: #24292e;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 85%;
+}
+
+article pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+    font-size: 100%;
+}
+
+/* Prism.js 主题覆盖 */
+article pre[class*="language-"] {
+    background-color: #f6f8fa;
+    border: 1px solid #e1e4e8;
+}
+
+article pre[class*="language-"] code {
+    background-color: transparent;
+    color: #24292e;
+}
+
+/* 链接样式优化 - GitHub 风格 */
+article a {
+    color: #0969da;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+article a:hover {
+    color: #0969da;
+    text-decoration: underline;
+}
+
+/* 图片样式优化 - GitHub 风格 */
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 16px 0;
+    display: block;
+    box-shadow: none;
+    border: 1px solid #d0d7de;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+article img:hover {
+    border-color: #0969da;
+    box-shadow: 0 4px 12px rgba(9, 105, 218, 0.15);
+    transform: scale(1.02);
+}
+
+/* 水平分割线 - GitHub 风格 */
+article hr {
+    border: none;
+    height: 0.25em;
+    background-color: #d0d7de;
+    margin: 24px 0;
+    border-radius: 1px;
+}
+
+/* 强调文本 - GitHub 风格 */
+article strong {
+    font-weight: 600;
+    color: #24292e;
+}
+
+article em {
+    font-style: italic;
+    color: #24292e;
+}
+
+/* 删除线 - GitHub 风格 */
+article del {
+    text-decoration: line-through;
+    color: #656d76;
+}
+
+/* 标记文本 - GitHub 风格 */
+article mark {
+    background-color: #fff8c5;
+    padding: 0.1em 0.2em;
+    border-radius: 3px;
+}
+
+/* 图片查看器样式 */
+.image-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.image-viewer.active {
+    display: flex;
+}
+
+.image-viewer img {
+    max-width: 90%;
+    max-height: 90%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    cursor: default;
+    transform: none;
+}
+
+.image-viewer .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10000;
+    background: none;
+    border: none;
+    padding: 0;
+    line-height: 1;
+}
+
+.image-viewer .close-btn:hover {
+    color: #ccc;
+}
+
+/* SEO 优化样式 */
+.breadcrumb {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb a {
+    color: #0969da;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: #6c757d;
+}
+
+/* 文章阅读时间显示 */
+.reading-time {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+/* 相关文章推荐 */
+.related-posts {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.related-posts h4 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.related-posts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.related-posts li {
+    margin-bottom: 0.5rem;
+}
+
+.related-posts a {
+    color: #0969da;
+    text-decoration: none;
+}
+
+.related-posts a:hover {
+    text-decoration: underline;
+}
+
+/* 标签云样式 */
+.tag-cloud {
+    margin: 1rem 0;
+}
+
+.tag-cloud a {
+    display: inline-block;
+    margin: 0.2rem 0.3rem 0.2rem 0;
+    padding: 0.3rem 0.6rem;
+    background-color: #f1f3f4;
+    color: #24292e;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.tag-cloud a:hover {
+    background-color: #0969da;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    article {
+        font-size: 16px;
+    }
+    
+    article h1 {
+        font-size: 1.8rem;
+    }
+    
+    article h2 {
+        font-size: 1.5rem;
+    }
+    
+    article h3 {
+        font-size: 1.3rem;
+    }
+    
+    article table {
+        font-size: 0.85rem;
+    }
+    
+    article th, article td {
+        padding: 8px 12px;
+    }
+    
+    .image-viewer .close-btn {
+        top: 10px;
+        right: 15px;
+        font-size: 1.5rem;
+    }
+    
+    .breadcrumb {
+        font-size: 0.8rem;
+    }
+}
