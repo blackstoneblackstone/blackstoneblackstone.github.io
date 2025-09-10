@@ -49,7 +49,7 @@
   box-sizing: border-box; }
 
 html {
-  font-family: sans-serif;
+  font-family: "LXGW WenKai Lite", sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -64,7 +64,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Segoe UI", "Helvetica Neue", "Arial";
+  font-family: "LXGW WenKai Lite", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
@@ -168,7 +168,6 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em; }
 
 pre {
@@ -7080,9 +7079,6 @@ button.bg-lightblue:focus {
   .ml-xl-auto,
   .mx-xl-auto {
     margin-left: auto !important; } }
-
-.text-monospace {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 .text-justify {
   text-align: justify !important; }

@@ -1,51 +1,66 @@
-# Jekyll Theme - Mundana by WowThemes.net
+# 黑石的知识库
 
-[Live Demo](https://wowthemesnet.github.io/mundana-theme-jekyll/) &nbsp; | &nbsp; 
-[Download](https://github.com/wowthemesnet/mundana-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; 
-[Buy me a coffe](https://www.wowthemes.net/donate/) &nbsp; | &nbsp; [Documentation](https://bootstrapstarter.com/mundana-theme-jekyll/) &nbsp; | &nbsp; 
-[WordPress version](https://www.wowthemes.net/themes/mundana-wordpress/) 
+黑石的知识库是一个分享知识和经验的博客网站，主要关注AI开发工具、独立开发等相关内容。
 
-![mundana jekyll theme screenshot](assets/images/screenshot.jpg)
+## 关于本站
 
-### Documentation
+这是一个基于 Jekyll 的静态网站，使用了 Mundana 主题。网站主要用于分享各种技术知识、工具介绍和实践经验，特别是AI编程工具和独立开发相关内容。
 
-[How to install & use](https://bootstrapstarter.com/bootstrap-templates/mundana-theme-jekyll/)
+### 主要内容分类
 
-### Contribute to Mundana repository
+- **AI Coding Tools**: 介绍各种AI驱动的编程工具，如Claude Code、Cursor、Windsurf等
+- **独立开发工具**: 为独立开发者推荐的工具和资源
+- **优秀项目**: 分享值得关注的开源项目和产品
 
-1. In the top-right corner of this page, click **Fork**.
+### 特色页面
 
-2. Clone a copy of your fork on your local, replacing *YOUR-USERNAME* with your Github username.
+- [AI开发工具页面](https://yondu.vip/ai-coding-tools.html) - 按类别整理的AI开发工具大全
+- [独立开发页面](https://yondu.vip/indie-dev.html) - 专为独立开发者准备的工具和项目资源
 
-   `git clone https://github.com/YOUR-USERNAME/mundana-theme-jekyll.git`
+## 本地开发
 
-3. **Create a branch**: 
+```bash
+# 安装依赖
+bundle install
 
-   `git checkout -b <my-new-feature-or-fix>`
+# 启动本地服务器
+bundle exec jekyll serve
 
-4. **Make necessary changes and commit those changes**:
+# 访问 http://localhost:4000 查看网站
+```
 
-   `git add .`
+## 内容贡献
 
-   `git commit -m "new feature or fix"`
+欢迎贡献内容！如果您想分享相关知识或工具，请按照以下步骤操作：
 
-5. **Push changes**, replacing `<add-your-branch-name>` with the name of the branch you created earlier at step #3. :
+1. Fork 此仓库
+2. 在 `_posts` 目录下创建新的文章文件，文件名格式为 `YYYY-MM-DD-title.md`
+3. 按照现有文章的格式编写内容
+4. 提交 Pull Request
 
-   `git push origin <add-your-branch-name>`
+### 文章格式要求
 
-6. Submit your changes for review. Go to your repository on GitHub, you'll see a **Compare & pull request** button. Click on that button. Now submit the pull request.
+所有文章都需要包含以下 front matter:
 
-That's it! Soon I'll be merging your changes into the master branch of this project. You will get a notification email once the changes have been merged. Thank you for your contribution.
+```yaml
+---
+layout: post
+title: "文章标题"
+date: YYYY-MM-DD HH:MM:SS +/-TTTT
+categories: [分类1, 分类2]
+tags: [标签1, 标签2]
+image: /assets/images/文章相关图片.png
+author: 黑石
+excerpt: 文章摘要，用于在列表页显示
+---
+```
 
+## 部署
 
-### Copyright
+本站使用 GitHub Pages 自动部署，推送到 main 分支后会自动更新网站。
 
-Copyright (C) 2019 WowThemes.net.
+## 版权信息
 
-Theme designed and developed by [Sal](https://www.wowthemes.net), *free* under MIT license. 
+主题基于 [Mundana by WowThemes.net](https://wowthemes.net) 修改，原主题遵循 MIT 许可证。
 
-<a href="https://www.wowthemes.net/donate/" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-
-### Live Demo
-
-[Live Demo](https://wowthemesnet.github.io/mundana-theme-jekyll/)
+内容由黑石创作，保留所有权利。
