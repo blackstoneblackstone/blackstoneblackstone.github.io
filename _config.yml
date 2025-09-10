@@ -7,6 +7,21 @@ baseurl: ''
 disqus: ''
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
+# Giscus Comments
+giscus:
+  repo: 'blackstoneblackstone/blackstoneblackstone.github.io'
+  repo_id: 'R_kgDOORMv6Q'  # 请访问 https://giscus.app/zh-CN 获取正确的 repo-id
+  category: 'Announcements'
+  category_id: 'DIC_kwDOORMv6c4CvOy7'  # 请访问 https://giscus.app/zh-CN 获取正确的 category-id
+  mapping: 'pathname'
+  strict: '0'
+  reactions_enabled: '1'
+  emit_metadata: '0'
+  input_position: 'bottom'
+  theme: 'light'
+  lang: 'zh-CN'
+  loading: 'lazy'
+
 # 启用未来日期的文章
 future: true
 

@@ -2,73 +2,74 @@
 title: "黑石的知识库"
 layout: default
 pagination:
-    enabled: true
+  enabled: true
 description: "黑石的知识库 - 分享知识和经验"
 ---
 
-
 <div class="container">
-    
-{%- if page.url == '/' -%}
-    
-        
-    
-<!-- Begin post excerpts, let's highlight the first 4 posts on top -->
-<div class="row remove-site-content-margin">
-    
+  {%- if page.url == '/' -%}
+
+  <!-- Begin post excerpts, let's highlight the first 4 posts on top -->
+  <div class="row remove-site-content-margin">
     <!-- latest post -->
-    {% assign posts_without_ai = site.posts %}
-    {% assign filtered_posts = '' | split: '' %}
-    {% for post in posts_without_ai %}
-        {% unless post.categories contains 'One' or post.categories contains 'AI Coding Tools' %}
-            {% assign filtered_posts = filtered_posts | push: post %}
-        {% endunless %}
-    {% endfor %}
+    {% assign posts_without_ai = site.posts %} {% assign filtered_posts = '' |
+    split: '' %} {% for post in posts_without_ai %} {% unless post.categories
+    contains 'One' or post.categories contains 'AI Coding Tools' %} {% assign
+    filtered_posts = filtered_posts | push: post %} {% endunless %} {% endfor %}
     {% assign latest_post = filtered_posts[0] %}
+    <!-- 个人介绍区域 -->
     <div class="col-md-12">
-        <img src="/assets/images/post1.png" alt="{{ latest_post.title }}" class="w-100">
-    </div>
-</div>
-    
-
-{% endif %} <!--endif page url is / -->
-    
-
-
-<!-- Now the rest of the posts with the usual loop but with an offset:4 on the first page so we can skeep the first 4 posts displayed above -->
-    
-<div class="row mt-3">
-   
-    <div class="col-md-8 main-loop">
-        
-        <h4 class="font-weight-bold spanborder"><span>全部文章</span></h4>
-        
-        {% assign all_posts = site.posts %}
-        {% assign filtered_paginated_posts = '' | split: '' %}
-        {% for post in all_posts %}
-            {% if post.categories contains '文章' %}
-                {% assign filtered_paginated_posts = filtered_paginated_posts | push: post %}
-            {% endif %}
-        {% endfor %}
-        
-        {% for post in filtered_paginated_posts %}
-        <div class="mb-3 pb-3 border-bottom">
-            <h5 class="mb-2">
-                <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
-            </h5>
-            <small class="text-muted">
-                {{ post.date | date: '%Y年%m月%d日' }}
-            </small>
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+              <img
+                src="/assets/images/me.png"
+                alt="黑石个人资料"
+                class="img-fluid rounded-circle"
+                style="max-width: 200px"
+              />
+            </div>
+            <div class="col-md-8">
+              <h2 class="mb-3 text-primary">黑石</h2>
+              <p class="lead mb-2">13年全栈开发经验</p>
+              <p class="lead mb-2">AI Agent 开发者</p>
+              <p class="lead mb-2">AI 编程研究员</p>
+              <p class="lead mb-0">善思考,勤读书</p>
+            </div>
+          </div>
         </div>
-        {% endfor %}
+      </div>
     </div>
-    
-    <div class="col-md-4">
-        {% include sidebar-featured.html %}    
+  </div>
+
+  {% endif %}
+  <!--endif page url is / -->
+
+  <!-- Now the rest of the posts with the usual loop but with an offset:4 on the first page so we can skeep the first 4 posts displayed above -->
+
+  <div class="row mt-3">
+    <div class="col-md-8 main-loop">
+      <h4 class="font-weight-bold spanborder"><span>全部文章</span></h4>
+
+      {% assign all_posts = site.posts %} {% assign filtered_paginated_posts =
+      '' | split: '' %} {% for post in all_posts %} {% if post.categories
+      contains '文章' %} {% assign filtered_paginated_posts =
+      filtered_paginated_posts | push: post %} {% endif %} {% endfor %} {% for
+      post in filtered_paginated_posts %}
+      <div class="mb-3 pb-3 border-bottom">
+        <h5 class="mb-2">
+          <a class="text-dark" href="{{site.baseurl}}{{post.url}}"
+            >{{ post.title }}</a
+          >
+        </h5>
+        <small class="text-muted">
+          {{ post.date | date: '%Y年%m月%d日' }}
+        </small>
+      </div>
+      {% endfor %}
     </div>
-    
-</div>
 
-
-
+    <div class="col-md-4">{% include sidebar-featured.html %}</div>
+  </div>
 </div>

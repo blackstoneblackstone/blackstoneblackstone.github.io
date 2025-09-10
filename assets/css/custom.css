@@ -44,3 +44,12 @@
     font-weight: bold;
     border-bottom: 2px solid #007bff;
 }
+
+/* 移除文章首字母大字母样式 */
+article:first-letter {
+    float: none !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    margin: 0 !important;
+    vertical-align: baseline !important;
+}

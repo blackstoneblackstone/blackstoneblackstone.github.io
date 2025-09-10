@@ -1,21 +1,28 @@
 <div class="sticky-top sticky-top-offset">
-    <h4 class="font-weight-bold spanborder"><span>热门标签</span></h4>  
-    <ol class="list-featured">				
-        {% for post in site.tags.featured %}                
-            <li class="mb-4">
+    <h4 class="font-weight-bold spanborder"><span>优秀博客推荐</span></h4>  
+    <ol class="list-featured">
+        <!-- Lee Robinson 博客推荐 -->
+        <li class="mb-4">
             <span>
                 <h6 class="font-weight-bold">
-                    <a href="{{site.baseurl}}{{ post.url }}" class="text-dark">{{ post.title }}</a>
+                    <a href="https://leerob.com/" class="text-dark" target="_blank">Lee Robinson</a>
                 </h6>
                 <span class="d-block text-muted">
-                    In <span class="catlist">
-                    {% for category in post.categories %}
-                    <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
-                    {% endfor %}
-                    </span>
+                    前 Vercel 副总裁，现 Cursor 开发者
                 </span>
             </span>
-            </li>                
-        {% endfor %}   
+        </li>
+        
+        <!-- Guangzheng Li 博客推荐 -->
+        <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="https://guangzhengli.com/" class="text-dark" target="_blank">Guangzheng Li</a>
+                </h6>
+                <span class="d-block text-muted">
+                    独立开发者，专注 AI 编程工具与 Next.js
+                </span>
+            </span>
+        </li> 
     </ol>
 </div> 
