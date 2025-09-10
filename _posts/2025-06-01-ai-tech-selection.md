@@ -2,7 +2,7 @@
 layout: post
 title:  "面向AI时代的技术选型：如何为AI驱动项目选择最佳技术栈"
 author: 黑石
-categories: [ AI Coding, 架构设计 ]
+categories: [ 文章 ]
 image: assets/images/ai-tech-selection.jpg
 ---
 

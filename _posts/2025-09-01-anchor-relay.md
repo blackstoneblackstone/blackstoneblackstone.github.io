@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Anchor Relay"
-categories: [独立开发工具, 网络安全]
+categories: [独立开发工具]
 excerpt: "免费生成HTTPS证书的独立开发工具"
 image: assets/images/tools/anchor-relay.svg
 date: 2025-09-01
