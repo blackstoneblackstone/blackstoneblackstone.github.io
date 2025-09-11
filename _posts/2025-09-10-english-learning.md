@@ -17,6 +17,8 @@ date: 2025-09-10
 ## 游戏化英文读写工具
 
 - [句乐部](https://julebu.co/)：通过游戏化方式反复练习英文句子，提升读写能力，趣味性强，适合长期坚持。
+<img src="https://i.ibb.co/p6VJ20vT/image.png" alt="image" border="0">
+<img src="https://i.ibb.co/215jbQZR/image.png" alt="image" border="0">
 
 ## 李笑来的英语学习方法
 

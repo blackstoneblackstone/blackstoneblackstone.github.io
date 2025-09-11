@@ -52,8 +52,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-robots
-  - jekyll-redirect-from
 
 # Sitemap 配置
 sitemap:
