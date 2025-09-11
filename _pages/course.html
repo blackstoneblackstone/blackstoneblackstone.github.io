@@ -7,8 +7,8 @@ permalink: "/course.html"
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-12">
-      <h1 class="mb-4 text-center">我的慕课网课程</h1>
-      <p class="text-center mb-5">在这里展示我在慕课网发布的课程，分享我的知识和经验。</p>
+      <h1 class="mb-4 text-center">我的课程</h1>
+      <p class="text-center mb-5">在这里展示我在慕课网、九章算法发布的课程，分享我的知识和经验。</p>
       
       <div class="row">
         <!-- 课程卡片 1 -->
@@ -48,6 +48,24 @@ permalink: "/course.html"
             </div>
           </div>
         </div>
+        
+        <!-- 课程卡片 3 -->
+        <div class="col-md-6 col-lg-6 mb-4">
+          <div class="card h-100 course-card">
+            <img src="https://i.ibb.co/d4hFPQGS/origin-img-v2-19a5fe44-c187-45ab-9b81-1af10adffecg.png" class="card-img-top course-image" alt="Twitter/微博前端 - React 项目实战">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Twitter/微博前端 - React 项目实战</h5>
+              <p class="card-text flex-grow-1">10年技术专家，从0-1完成前端工业级项目搭建，4周完成简历镀金</p>
+              <div class="course-details mb-2">
+                <span class="badge badge-success">已完结</span>
+                <span class="badge badge-warning">高级</span>
+                <span class="badge badge-info">4周</span>
+                <span class="badge badge-primary">工业级项目</span>
+              </div>
+              <a href="https://www.jiuzhang.com/course/119" class="btn btn-primary mt-auto" target="_blank">查看详情</a>
+            </div>
+          </div>
+        </div>
       </div>
       
       <div class="mt-5">
@@ -82,14 +100,18 @@ permalink: "/course.html"
 
 <style>
   .course-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     border: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
   }
   
   .course-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-color: rgba(0,0,0,0);
   }
   
   .course-image {
@@ -97,33 +119,66 @@ permalink: "/course.html"
     object-fit: cover;
   }
   
-  .feature-card {
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+  .card-body {
+    padding: 1.5rem;
   }
   
-  .feature-card:hover {
-    background-color: #e9ecef;
-  }
-  
-  .feature-card i {
+  .card-title {
     color: #ff5c58;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+  
+  .card-text {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .course-details {
+    margin-bottom: 1.5rem;
   }
   
   .course-details .badge {
     margin-right: 5px;
-    font-size: 0.7rem;
+    margin-bottom: 5px;
+    font-size: 0.75rem;
+    padding: 0.4em 0.6em;
+    border-radius: 15px;
   }
   
   .btn-primary {
     background-color: #ff5c58;
     border-color: #ff5c58;
+    font-weight: 500;
+    padding: 0.5rem 1.25rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
   }
   
   .btn-primary:hover {
     background-color: #e04a47;
     border-color: #e04a47;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 92, 88, 0.3);
+  }
+  
+  .feature-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+  
+  .feature-card:hover {
+    background-color: #e9ecef;
+    transform: translateY(-5px);
+  }
+  
+  .feature-card i {
+    color: #ff5c58;
   }
   
   .badge-success {
@@ -147,7 +202,27 @@ permalink: "/course.html"
     background-color: #343a40;
   }
   
-  .card-title {
+  h1 {
+    color: #333;
+    font-weight: 700;
+  }
+  
+  h2 {
     color: #ff5c58;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+  }
+  
+  h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ff5c58;
+    border-radius: 3px;
   }
 </style>
