@@ -1,0 +1,79 @@
+---
+title: "营销工具"
+layout: default
+permalink: "/marketing-tools.html"
+---
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="mb-4 text-center">营销工具</h1>
+            <p class="text-center mb-5">在这里分享我在数字营销领域的经验和工具推荐，帮助你提升营销效率。</p>
+            
+            {% comment %} 收集营销工具分类的文章 {% endcomment %}
+            {% assign marketing_posts = '' | split: '' %}
+            {% for post in site.posts %}
+              {% if post.categories contains '营销工具' %}
+                {% assign marketing_posts = marketing_posts | push: post %}
+              {% endif %}
+            {% endfor %}
+            
+            {% if marketing_posts.size > 0 %}
+              {% for post in marketing_posts %}
+                <div class="mb-5">
+                  <div class="row">
+                    <div class="col-md-4">
+                      {% if post.image %}
+                        <a href="{{ post.url | relative_url }}">
+                          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="img-fluid rounded">
+                        </a>
+                      {% endif %}
+                    </div>
+                    <div class="col-md-8">
+                      <h3 class="h5 font-weight-bold mb-2">
+                        <a href="{{ post.url | relative_url }}" class="text-dark">{{ post.title }}</a>
+                      </h3>
+                      <p class="text-muted small mb-2">
+                        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日" }}</time>
+                      </p>
+                      <p class="mb-3">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                      <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-outline-primary">阅读全文</a>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+              {% endfor %}
+            {% else %}
+              <div class="text-center py-5">
+                <p class="text-muted">暂无营销工具相关文章</p>
+              </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<style>
+  .sticky-top-offset {
+    top: 80px;
+  }
+  
+  .btn-outline-primary {
+    border-radius: 30px;
+    padding: 0.375rem 1.25rem;
+  }
+  
+  .btn-outline-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,123,255,0.15);
+  }
+  
+  h1 {
+    color: #333;
+    font-weight: 700;
+  }
+  
+  h3 a:hover {
+    color: #ff5c58 !important;
+    text-decoration: none;
+  }
+</style>
