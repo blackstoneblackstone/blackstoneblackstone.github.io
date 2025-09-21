@@ -1,5 +1,5 @@
 ---
-title: "AI Coding Tools"
+title: "AI Coding"
 layout: default
 permalink: "/ai-coding-tools.html"
 ---
@@ -9,7 +9,7 @@ permalink: "/ai-coding-tools.html"
             {% comment %} 收集所有第二个分类 {% endcomment %}
             {% assign subcategories = "" | split: "" %}
             {% for post in site.posts %}
-              {% if post.categories contains 'AI Coding Tools' and post.categories.size > 1 %}
+              {% if post.categories contains 'AI Coding' and post.categories.size > 1 %}
                 {% assign second_category = post.categories[1] %}
                 {% unless subcategories contains second_category %}
                   {% assign subcategories = subcategories | push: second_category %}
@@ -23,7 +23,7 @@ permalink: "/ai-coding-tools.html"
                 <h2 class="h5 font-weight-bold" id="{{ subcategory }}">{{ subcategory }}</h2>
                 <div class="row">
                   {% for post in site.posts %}
-                    {% if post.categories contains 'AI Coding Tools' and post.categories contains subcategory %}
+                    {% if post.categories contains 'AI Coding' and post.categories contains subcategory %}
                       <div class="col-md-4 mb-4">
                         <a href="{{ post.url | relative_url }}" class="tool-link">
                           <div class="card h-100 text-center tool-card">
@@ -48,7 +48,7 @@ permalink: "/ai-coding-tools.html"
             {% comment %} 展示只有一个分类的文章 {% endcomment %}
             {% assign single_category_posts = false %}
             {% for post in site.posts %}
-              {% if post.categories contains 'AI Coding Tools' and post.categories.size == 1 %}
+              {% if post.categories contains 'AI Coding' and post.categories.size == 1 %}
                 {% assign single_category_posts = true %}
                 {% break %}
               {% endif %}
@@ -59,7 +59,7 @@ permalink: "/ai-coding-tools.html"
                 <h2 class="h5 font-weight-bold" id="其他工具">其他工具</h2>
                 <div class="row">
                   {% for post in site.posts %}
-                    {% if post.categories contains 'AI Coding Tools' and post.categories.size == 1 %}
+                    {% if post.categories contains 'AI Coding' and post.categories.size == 1 %}
                       <div class="col-md-4 mb-4">
                         <a href="{{ post.url | relative_url }}" class="tool-link">
                           <div class="card h-100 text-center tool-card">

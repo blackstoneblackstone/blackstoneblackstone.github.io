@@ -2,7 +2,7 @@
 layout: post
 title:  "Convex Chef"
 author: 黑石
-categories: [ AI Coding Tools, 生成代码 ]
+categories: [ AI Coding, 生成代码 ]
 image: assets/images/tools/convex-chef.svg
 excerpt: AI驱动的全栈应用构建工具
 ---

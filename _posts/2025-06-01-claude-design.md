@@ -2,7 +2,7 @@
 layout: post
 title:  "AI 生成设计稿"
 author: 黑石
-categories: [ AI Coding Tools, 生成设计稿 ]
+categories: [ AI Coding, 生成设计稿 ]
 image: assets/images/tools/claude-design.png
 excerpt: 通过 Claude 生成 SVG 或者 HTML
 ---

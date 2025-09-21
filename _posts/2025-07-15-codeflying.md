@@ -2,7 +2,7 @@
 layout: post
 title:  "码上飞"
 author: 黑石
-categories: [ AI Coding Tools, AI 程序员 ]
+categories: [ AI Coding, AI 程序员 ]
 image: assets/images/tools/codeflying.png
 ---
 

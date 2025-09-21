@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code"
-categories: [AI Coding Tools, Code CLI]
+categories: [AI Coding, Code CLI]
 excerpt: "Anthropic推出的AI驱动代码工具"
 image: assets/images/tools/claude.svg
 date: 2025-08-28 17:12:15 +0800

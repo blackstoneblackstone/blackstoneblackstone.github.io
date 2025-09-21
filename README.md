@@ -8,7 +8,7 @@
 
 ### 主要内容分类
 
-- **AI Coding Tools**: 介绍各种AI驱动的编程工具，如Claude Code、Cursor、Windsurf等
+- **AI Coding**: 介绍各种AI驱动的编程工具，如Claude Code、Cursor、Windsurf等
 - **独立开发工具**: 为独立开发者推荐的工具和资源
 - **优秀项目**: 分享值得关注的开源项目和产品
 

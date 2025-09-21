@@ -14,7 +14,7 @@ description: "黑石的知识库 - 分享知识和经验"
     <!-- latest post -->
     {% assign posts_without_ai = site.posts %} {% assign filtered_posts = '' |
     split: '' %} {% for post in posts_without_ai %} {% unless post.categories
-    contains 'One' or post.categories contains 'AI Coding Tools' %} {% assign
+    contains 'One' or post.categories contains 'AI Coding' %} {% assign
     filtered_posts = filtered_posts | push: post %} {% endunless %} {% endfor %}
     {% assign latest_post = filtered_posts[0] %}
     <!-- 个人介绍区域 -->
