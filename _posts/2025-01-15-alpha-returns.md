@@ -2,7 +2,7 @@
 layout: post
 title:  "获得 α 收益"
 author: 黑石
-categories: [ 投资, 金融 ]
+categories: [ 文章 ]
 image: assets/images/post1.png
 ---
 

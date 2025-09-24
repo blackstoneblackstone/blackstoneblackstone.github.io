@@ -2,7 +2,7 @@
 layout: post
 title:  "Prompt Engineering"
 author: 黑石
-categories: [ AI Coding, 提示词工程 ]
+categories: [ 文章 ]
 image: assets/images/tools/prompt-engineering.png
 excerpt: 系统全面的Prompt工程师技能培训指南，助你掌握AI提示词编写技巧
 ---
