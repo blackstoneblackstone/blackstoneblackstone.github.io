@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Claude Code - 重新定义AI编程体验的智能助手"
+title: "Claude Code"
 author: 黑石
 categories: [ AI Coding, Code CLI ]
-excerpt: Claude Code 是 Anthropic 推出的革命性 AI 编程工具，结合了强大的代码理解和生成能力，让编程变得更加智能和高效。
+excerpt: Anthropic 推出的革命性 AI 编程工具。
 image: assets/images/tools/claude.svg
 date: 2025-08-28 17:12:15 +0800
 ---
