@@ -1,0 +1,16 @@
+# Development environment configuration
+# This file is used for local development
+
+# Override base configuration for development
+baseurl: ""
+url: "http://localhost:4000"
+
+# Development settings
+incremental: true
+safe: false
+livereload: true
+
+# Disable some features for faster development
+sass:
+  style: :expanded
+  sourcemap: true

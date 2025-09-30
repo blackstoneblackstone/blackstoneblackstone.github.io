@@ -4,14 +4,19 @@ compatibility_date = "2024-01-01"
 [env.production]
 name = "blackstoneblackstone-github-io"
 
-[[pages_builds]]
+# Pages configuration
+[pages]
 source = "."
 destination = "_site"
 
+# Build configuration
 [build]
-command = "bundle exec jekyll build"
+command = "bundle exec jekyll build --safe --trace"
 cwd = "."
+watch = false
 
+# Environment variables
 [build.environment_variables]
 RUBY_VERSION = "3.4.4"
 BUNDLER_VERSION = "2.5.0"
+JEKYLL_ENV = "production"

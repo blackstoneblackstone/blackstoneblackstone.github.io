@@ -11,20 +11,17 @@ ruby "3.4.4"
 #
 
 # Use Jekyll version compatible with Ruby 3.4+
-gem "jekyll", "~> 4.3.0"
+gem "jekyll", ">= 4.4.0"
 
 # If you have any plugins, put them here!
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 group :jekyll_plugins do
-    gem 'jekyll-feed', '~> 0.15'
-    gem 'jekyll-sitemap', '~> 1.4'
-    gem 'jekyll-paginate', '~> 1.1'
-    gem 'jekyll-seo-tag', '~> 2.8'
+    gem 'jekyll-feed'
+    gem 'jekyll-sitemap'
+    gem 'jekyll-paginate'
+    gem 'jekyll-seo-tag'
 end
 
 # Markdown parser
-gem "kramdown-parser-gfm", "~> 1.1"
-
-# Bundler version compatible with Ruby 3.4+
-gem "bundler", "~> 2.5"
+gem "kramdown-parser-gfm"

@@ -65,8 +65,9 @@ kramdown:
     block:
       line_numbers: true
 
-# Ruby 3.4+ compatibility
+# Ruby 3.4+ and Jekyll 4.4+ compatibility
 safe: false
+incremental: false
 
 # Sitemap 配置
 sitemap:

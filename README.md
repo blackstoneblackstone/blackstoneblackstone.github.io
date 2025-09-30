@@ -14,8 +14,8 @@
 
 ### 特色页面
 
-- [AI开发工具页面](https://yondu.vip/ai-coding-tools.html) - 按类别整理的AI开发工具大全
-- [独立开发页面](https://yondu.vip/indie-dev.html) - 专为独立开发者准备的工具和项目资源
+- [AI开发工具页面](https://blackstones.xyz/ai-coding-tools.html) - 按类别整理的AI开发工具大全
+- [独立开发页面](https://blackstones.xyz/indie-dev.html) - 专为独立开发者准备的工具和项目资源
 
 ## 本地开发
 
