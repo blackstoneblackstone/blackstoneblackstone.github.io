@@ -1,5 +1,7 @@
 source "https://rubygems.org"
-ruby RUBY_VERSION
+
+# Specify Ruby version for better compatibility
+ruby "3.1.0"
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -8,15 +10,21 @@ ruby RUBY_VERSION
 #     bundle exec jekyll serve
 #
 
-# Use older Jekyll version for better Apple Silicon compatibility
-gem "jekyll", "~> 3.9.0"
+# Use Jekyll version compatible with Ruby 3.1+
+gem "jekyll", "~> 4.3.0"
 
 # If you have any plugins, put them here!
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
 group :jekyll_plugins do
-    gem 'jekyll-feed'
-    gem 'jekyll-sitemap'
-    gem 'jekyll-paginate'
-    gem 'jekyll-seo-tag'
+    gem 'jekyll-feed', '~> 0.15'
+    gem 'jekyll-sitemap', '~> 1.4'
+    gem 'jekyll-paginate', '~> 1.1'
+    gem 'jekyll-seo-tag', '~> 2.8'
 end
+
+# Markdown parser
 gem "kramdown-parser-gfm", "~> 1.1"
+
+# Bundler version
+gem "bundler", "~> 2.4"

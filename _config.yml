@@ -53,6 +53,18 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
 
+# Jekyll 4.x compatibility
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: true
+    block:
+      line_numbers: true
+
 # Sitemap 配置
 sitemap:
   changefreq: weekly
@@ -104,7 +116,11 @@ sass:
 # Paginate
 paginate: 10
 
-
+busuanzi:
+  enable: true
+  site_uv: true
+  site_pv: true
+  page_pv: true
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
 exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules, vendor]
