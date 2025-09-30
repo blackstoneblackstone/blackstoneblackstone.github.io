@@ -1,0 +1,17 @@
+name = "blackstoneblackstone-github-io"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "blackstoneblackstone-github-io"
+
+[[pages_builds]]
+source = "."
+destination = "_site"
+
+[build]
+command = "bundle exec jekyll build"
+cwd = "."
+
+[build.environment_variables]
+RUBY_VERSION = "3.4.4"
+BUNDLER_VERSION = "2.5.0"

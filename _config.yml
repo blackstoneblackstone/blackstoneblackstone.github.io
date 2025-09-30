@@ -65,6 +65,9 @@ kramdown:
     block:
       line_numbers: true
 
+# Ruby 3.4+ compatibility
+safe: false
+
 # Sitemap 配置
 sitemap:
   changefreq: weekly

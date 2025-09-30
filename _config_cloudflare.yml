@@ -1,0 +1,18 @@
+# Cloudflare Pages specific configuration
+# This file is used when building on Cloudflare Pages
+
+# Override base configuration for Cloudflare Pages
+baseurl: ""
+url: "https://blackstoneblackstone.github.io"
+
+# Cloudflare Pages build settings
+build:
+  command: "bundle exec jekyll build"
+  publish_directory: "_site"
+
+# Ruby version for Cloudflare Pages
+ruby_version: "3.4.4"
+
+# Bundler settings
+bundler:
+  version: "2.5.0"

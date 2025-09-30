@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-# Specify Ruby version for better compatibility
-ruby "3.1.0"
+# Specify Ruby version for Cloudflare Pages compatibility
+ruby "3.4.4"
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -10,7 +10,7 @@ ruby "3.1.0"
 #     bundle exec jekyll serve
 #
 
-# Use Jekyll version compatible with Ruby 3.1+
+# Use Jekyll version compatible with Ruby 3.4+
 gem "jekyll", "~> 4.3.0"
 
 # If you have any plugins, put them here!
@@ -26,5 +26,5 @@ end
 # Markdown parser
 gem "kramdown-parser-gfm", "~> 1.1"
 
-# Bundler version
-gem "bundler", "~> 2.4"
+# Bundler version compatible with Ruby 3.4+
+gem "bundler", "~> 2.5"
