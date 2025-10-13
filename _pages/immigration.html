@@ -1,0 +1,78 @@
+---
+title: "移民"
+layout: default
+permalink: "/immigration.html"
+---
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            {% comment %} 收集所有 immigration 分类的文章 {% endcomment %}
+            {% assign immigration_posts = "" | split: "" %}
+            {% for post in site.posts %}
+              {% if post.categories contains '移民' %}
+                {% assign immigration_posts = immigration_posts | push: post %}
+              {% endif %}
+            {% endfor %}
+            
+            {% comment %} 按日期倒序排列 {% endcomment %}
+            {% assign sorted_posts = immigration_posts | sort: 'date' | reverse %}
+            
+            {% for post in sorted_posts %}
+              <div class="mb-4 pb-3 border-bottom">
+                <div class="row align-items-center">
+                  <div class="col-md-3">
+                    {% if post.image %}
+                      <a href="{{ post.url | relative_url }}">
+                        <img src="{% if post.image contains 'http' %}{{ post.image }}{% else %}{{ post.image | relative_url }}{% endif %}" 
+                             alt="{{ post.title }}" 
+                             class="img-fluid rounded"
+                             style="width: 100%; height: 120px; object-fit: cover;">
+                      </a>
+                    {% endif %}
+                  </div>
+                  <div class="col-md-9">
+                    <h5 class="mb-2">
+                      <a class="text-dark" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    </h5>
+                    <div class="text-muted small mb-2">
+                      <span class="mr-3">
+                        <i class="far fa-calendar"></i> {{ post.date | date: '%Y年%m月%d日' }}
+                      </span>
+                      <span>
+                        <i class="far fa-clock"></i> 
+                        {% assign words = post.content | number_of_words %}
+                        {% if words < 360 %}
+                          1分钟阅读
+                        {% else %}
+                          {{ words | divided_by: 180 }}分钟阅读
+                        {% endif %}
+                      </span>
+                    </div>
+                    <p class="text-muted small mb-0">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<style>
+  .immigration-post-item:hover {
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+  }
+  
+  .immigration-post-item {
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .immigration-post-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+</style>
+
