@@ -10,7 +10,7 @@ build:
   command: "bundle exec jekyll build"
   publish_directory: "_site"
 
-# Ruby version for Cloudflare Pages
+# Ruby version for Cloudflare Pages (matches GitHub Actions)
 ruby_version: "3.4.4"
 
 # Bundler settings

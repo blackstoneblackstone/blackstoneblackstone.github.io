@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-# Specify Ruby version for Cloudflare Pages compatibility
-ruby "3.4.7"
+# Specify Ruby version for GitHub Actions compatibility
+ruby "3.4.4"
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
