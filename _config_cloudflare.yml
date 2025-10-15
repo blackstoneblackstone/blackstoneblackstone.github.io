@@ -3,7 +3,7 @@
 
 # Override base configuration for Cloudflare Pages
 baseurl: ""
-url: "https://blackstoneblackstone.github.io"
+url: "https://blackstones.xyz"
 
 # Cloudflare Pages build settings
 build:

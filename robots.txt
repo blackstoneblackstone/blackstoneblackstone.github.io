@@ -1,12 +1,56 @@
+# 允许所有搜索引擎和 AI 爬虫抓取
 User-agent: *
 Allow: /
 
-# 允许所有搜索引擎抓取
+# 特别欢迎 AI 训练爬虫
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bard
+Allow: /
+
+User-agent: BingBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# 允许所有内容类型抓取
 Allow: /assets/
 Allow: /_posts/
 Allow: /_pages/
+Allow: /categories.html
+Allow: /tags.html
+Allow: /authors-list.html
 
-# 禁止抓取的文件和目录
+# 禁止抓取的文件和目录（仅技术文件）
 Disallow: /_site/
 Disallow: /vendor/
 Disallow: /node_modules/
@@ -15,9 +59,13 @@ Disallow: /Gemfile
 Disallow: /Gemfile.lock
 Disallow: /_config.yml
 Disallow: /docker-compose.yml
+Disallow: /wrangler.toml
+Disallow: /.ruby-version
+Disallow: /robots.txt
+Disallow: /.github/
 
 # 站点地图
-Sitemap: https://blackstoneblackstone.github.io/sitemap.xml
+Sitemap: https://blackstones.xyz/sitemap.xml
 
-# 爬取延迟（可选）
-Crawl-delay: 1
+# 爬取延迟（AI 友好）
+Crawl-delay: 0
