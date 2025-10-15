@@ -3,7 +3,7 @@ layout: post
 title: "德州扑克的下注目的，只有三个！（人话版）"
 author: 黑石
 categories: [ poker ]
-image: https://pic.iu101.org/5fabe110.jpeg
+image: https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/5fabe110.jpeg
 excerpt: 一切下注就三件事：要信息、要价值、要对手弃。别混着用，一枪只选一个目的，然后配合合适的尺寸和后手计划。
 ---
 

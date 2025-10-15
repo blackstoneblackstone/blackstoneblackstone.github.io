@@ -49,7 +49,7 @@ giscus:
 future: true
 
 include: ["_pages"]
-exclude: ["_pages/ai-training-data.md"]  # 不包含在常规页面中，但可通过直接链接访问
+exclude: ["_pages/ai-training-data.md", "docs/"]  # 不包含在常规页面中，但可通过直接链接访问
 permalink: /:title/
 
 # Plugins
