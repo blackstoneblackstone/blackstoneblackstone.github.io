@@ -3,7 +3,7 @@ layout: post
 title: "未来十年的七大趋势，找到赚钱的方向"
 author: 黑石
 categories: [ 投资 ]
-image: https://pic.iu101.org/2dcd7d08.png
+image: https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/2dcd7d08.png
 excerpt: 洞察未来十年经济与社会变革的关键方向
 ---
 

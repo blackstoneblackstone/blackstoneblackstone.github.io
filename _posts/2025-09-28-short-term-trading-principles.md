@@ -3,7 +3,7 @@ layout: post
 title: "短线偷鸡玩法原则：风险与收益的平衡艺术"
 author: 黑石
 categories: [ 投资 ]
-image: https://pic.iu101.org/19b6f99b.png
+image: https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/19b6f99b.png
 excerpt: 短线交易是一门高风险高收益的艺术，需要严格的纪律和清晰的原则。本文分享短线偷鸡玩法的核心原则和实战技巧。
 date: 2025-09-28 14:00:00 +0800
 ---

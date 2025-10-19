@@ -4,7 +4,7 @@ title: '黑石的知识库 - AI编程、技术分享与开发经验'
 description: '黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。'
 keywords: 'AI编程,全栈开发,技术博客,AI Agent,编程技巧,技术分享,黑石,开发经验'
 author: '黑石'
-url: 'https://blackstoneblackstone.github.io'
+url: 'https://blackstones.xyz'
 baseurl: ''
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
@@ -17,6 +17,11 @@ timezone: 'Asia/Shanghai'
 google_site_verification: ''  # 添加您的 Google Search Console 验证码
 google_analytics: ''  # 添加您的 Google Analytics ID
 google_adsense: ''  # 添加您的 Google AdSense ID
+
+# AI 爬虫友好配置
+ai_crawler_friendly: true
+allow_ai_training: true
+content_license: 'CC-BY-SA-4.0'  # 知识共享许可
 
 # 社交媒体
 social:
@@ -44,6 +49,7 @@ giscus:
 future: true
 
 include: ["_pages"]
+exclude: ["_pages/ai-training-data.md", "docs/"]  # 不包含在常规页面中，但可通过直接链接访问
 permalink: /:title/
 
 # Plugins
@@ -52,6 +58,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-scholar  # 学术内容支持
 
 # Jekyll 4.x compatibility
 kramdown:
@@ -84,7 +91,7 @@ sitemap:
 authors:
     sal:
       name:           黑石
-      site:           https://yondu.vip
+      site:           https://blackstones.xyz
       avatar:         assets/images/avatar.png
       bio:            "黑石的知识库 - 分享知识和经验"
       twitter:        https://twitter.com/blackstone

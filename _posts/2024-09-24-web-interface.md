@@ -3,7 +3,7 @@ layout: post
 title: "🔥 Vercel 官方设计指南大公开！Web 界面设计的 7 大黄金法则，让你的产品瞬间提升 10 倍用户体验"
 author: 黑石
 categories: [ 文章 ]
-image: https://pic.iu101.org/78c26e0c.jpg
+image: https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/78c26e0c.jpg
 excerpt: Vercel「Web Interface Guidelines」页面的中文翻译，涵盖交互、动效、布局、内容、表单、性能和设计等方面的最佳实践。
 ---
 

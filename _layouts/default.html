@@ -13,6 +13,14 @@
     <meta name="robots" content="index, follow">
     <meta name="language" content="{{ site.lang | default: 'zh-CN' }}">
     
+    <!-- AI 爬虫友好标签 -->
+    {% if site.ai_crawler_friendly %}
+    <meta name="ai-crawler" content="allowed">
+    <meta name="ai-training" content="permitted">
+    <meta name="content-license" content="{{ site.content_license | default: 'CC-BY-SA-4.0' }}">
+    <meta name="ai-usage" content="training, indexing, analysis">
+    {% endif %}
+    
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     

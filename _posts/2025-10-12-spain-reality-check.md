@@ -3,7 +3,7 @@ layout: post
 title: "缺点：住久了才发现的西班牙缺点与挑战"
 date: 2025-10-12 10:00:00 +0800
 categories: [移民]
-image: https://pic.iu101.org/8aaacd7e.png
+image: https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/8aaacd7e.png
 author: 黑石
 ---
 

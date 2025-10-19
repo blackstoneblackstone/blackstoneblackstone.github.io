@@ -3,13 +3,13 @@ layout: post
 title: "为什么 Vibe Coding 在设计稿的还原度上那么差？"
 author: 黑石
 categories: [ 文章 ]
-image: https://pic.iu101.org/vibe-coding-logo.png
+image: https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/vibe-coding-logo.png
 excerpt: 分析 Vibe Coding 在设计稿还原度方面存在的问题，探讨 AI 代码生成工具在设计到代码转换过程中的技术挑战。
 ---
 
 ## 为什么 Vibe Coding 在设计稿还原度那么差？
 
-![Vibe coding](https://pic.iu101.org/d98691d8.png)
+![Vibe coding](https://pic.iu101.org/cdn-cgi/image/width=1200,quality=90,format=webp/d98691d8.png)
 
 
 从技术原理上来说，这涉及到几个层面的根本差异：
