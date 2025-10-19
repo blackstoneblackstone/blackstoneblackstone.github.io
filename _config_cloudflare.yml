@@ -15,4 +15,4 @@ ruby_version: "3.3.4"
 
 # Bundler settings
 bundler:
-  version: "2.5.0"
+  version: "2.6.9"

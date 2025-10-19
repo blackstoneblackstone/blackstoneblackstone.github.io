@@ -1,5 +1,6 @@
 name = "blackstoneblackstone-github-io"
 compatibility_date = "2024-01-01"
+pages_build_output_dir = "_site"
 
 [env.production]
 name = "blackstoneblackstone-github-io"
@@ -18,5 +19,5 @@ watch = false
 # Environment variables
 [build.environment_variables]
 RUBY_VERSION = "3.3.4"
-BUNDLER_VERSION = "2.5.0"
+BUNDLER_VERSION = "2.6.9"
 JEKYLL_ENV = "production"
