@@ -17,6 +17,6 @@ watch = false
 
 # Environment variables
 [build.environment_variables]
-RUBY_VERSION = "3.4.4"
+RUBY_VERSION = "3.3.4"
 BUNDLER_VERSION = "2.5.0"
 JEKYLL_ENV = "production"

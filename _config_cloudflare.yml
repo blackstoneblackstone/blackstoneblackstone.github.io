@@ -11,7 +11,7 @@ build:
   publish_directory: "_site"
 
 # Ruby version for Cloudflare Pages
-ruby_version: "3.4.4"
+ruby_version: "3.3.4"
 
 # Bundler settings
 bundler:

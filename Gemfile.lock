@@ -79,6 +79,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin
+  x86_64-linux
 
 DEPENDENCIES
   jekyll (>= 4.4.0)
@@ -89,7 +90,7 @@ DEPENDENCIES
   kramdown-parser-gfm
 
 RUBY VERSION
-   ruby 3.4.7p58
+   ruby 3.3.4p0
 
 BUNDLED WITH
    2.6.9
