@@ -58,7 +58,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-scholar  # 学术内容支持
 
 # Jekyll 4.x compatibility
 kramdown:
