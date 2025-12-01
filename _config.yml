@@ -58,7 +58,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-scholar  # 学术内容支持
 
 # Jekyll 4.x compatibility
 kramdown:
@@ -72,7 +71,7 @@ kramdown:
     block:
       line_numbers: true
 
-# Ruby 3.4+ and Jekyll 4.4+ compatibility
+# Ruby 3.3+ and Jekyll 4.4+ compatibility
 safe: false
 incremental: false
 
