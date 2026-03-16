@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/trae.svg"
+            alt="Trae"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,176 +290,149 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#代码编辑器" itemprop="item"><span itemprop="name">代码编辑器</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Trae</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#代码编辑器" itemprop="item"><span itemprop="name">代码编辑器</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Trae</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="trae---字节跳动出品的海外版ai代码编辑器">Trae - 字节跳动出品的海外版AI代码编辑器</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Trae - 字节跳动出品的海外版AI代码编辑器</h2>
 <p><a href="https://www.trae.ai/">Trae</a> 是字节跳动推出的海外版AI代码编辑器，定位为”你的10x AI工程师”，能够独立构建软件解决方案。作为字节跳动在AI编程工具领域的重要布局，Trae致力于为开发者提供更流畅的编程体验和更快的开发效率。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
-<h3 id="智能代码生成">智能代码生成</h3>
-
+<h2>核心功能</h2>
+<h3>智能代码生成</h3>
 <p>Trae基于先进的大型语言模型，能够理解开发者的自然语言描述，自动生成高质量的代码实现。无论是简单的函数还是复杂的系统架构，都能快速响应并提供解决方案。</p>
-
-<h3 id="独立软件构建">独立软件构建</h3>
-
+<h3>独立软件构建</h3>
 <p>Trae的独特之处在于能够”独立”构建软件解决方案，这意味着它不仅能生成代码片段，还能理解整个项目的上下文，提供完整的功能实现和架构设计。</p>
-
-<h3 id="协作式智能开发">协作式智能开发</h3>
-
+<h3>协作式智能开发</h3>
 <p>Trae强调”与智能协作”的理念，通过AI助手与开发者的深度配合，实现理解需求、执行开发、交付成果的完整流程。</p>
-
-<h3 id="快速响应优化">快速响应优化</h3>
-
+<h3>快速响应优化</h3>
 <p>Trae在最新版本中特别强调了”更流畅的体验和更快的请求”，通过技术优化显著提升了AI响应的速度和稳定性。</p>
-
-<h2 id="技术特色">技术特色</h2>
-
-<h3 id="字节跳动技术实力">字节跳动技术实力</h3>
-
+<h2>技术特色</h2>
+<h3>字节跳动技术实力</h3>
 <p>作为字节跳动出品的产品，Trae继承了字节跳动在AI技术、大数据处理等方面的技术积累，在模型训练、推理优化等方面具有显著优势。</p>
-
-<h3 id="海外市场定位">海外市场定位</h3>
-
+<h3>海外市场定位</h3>
 <p>Trae专门针对海外市场设计，在界面设计、功能特性、用户体验等方面都考虑了国际开发者的使用习惯和需求。</p>
-
-<h3 id="多平台支持">多平台支持</h3>
-
+<h3>多平台支持</h3>
 <p>Trae提供多平台下载支持，包括桌面端应用，确保开发者能够在不同操作系统上获得一致的开发体验。</p>
-
-<h2 id="适用场景">适用场景</h2>
-
-<h3 id="快速原型开发">快速原型开发</h3>
-
+<h2>适用场景</h2>
+<h3>快速原型开发</h3>
 <p>当需要快速验证产品想法时，Trae能够根据需求描述快速生成可运行的原型代码，大幅缩短从概念到实现的时间。</p>
-
-<h3 id="全栈应用开发">全栈应用开发</h3>
-
+<h3>全栈应用开发</h3>
 <p>Trae支持前后端全栈开发，能够处理从数据库设计到前端界面的完整开发流程，特别适合独立开发者和小团队。</p>
-
-<h3 id="代码重构与优化">代码重构与优化</h3>
-
+<h3>代码重构与优化</h3>
 <p>对于现有项目，Trae能够分析代码结构，提供重构建议和优化方案，帮助提升代码质量和性能。</p>
-
-<h3 id="学习新技术">学习新技术</h3>
-
+<h3>学习新技术</h3>
 <p>当需要学习新的编程语言或框架时，Trae能够提供示例代码和详细解释，加速学习过程。</p>
-
-<h2 id="与其他ai编辑器的对比">与其他AI编辑器的对比</h2>
-
+<h2>与其他AI编辑器的对比</h2>
 <table>
-  <thead>
-    <tr>
-      <th>特性</th>
-      <th>Trae</th>
-      <th>Cursor</th>
-      <th>Windsurf</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>厂商背景</td>
-      <td>字节跳动</td>
-      <td>独立团队</td>
-      <td>独立团队</td>
-    </tr>
-    <tr>
-      <td>市场定位</td>
-      <td>海外市场</td>
-      <td>全球市场</td>
-      <td>全球市场</td>
-    </tr>
-    <tr>
-      <td>核心特色</td>
-      <td>独立软件构建</td>
-      <td>AI代码生成</td>
-      <td>心流状态设计</td>
-    </tr>
-    <tr>
-      <td>响应速度</td>
-      <td>优化中</td>
-      <td>良好</td>
-      <td>良好</td>
-    </tr>
-    <tr>
-      <td>技术实力</td>
-      <td>大厂支持</td>
-      <td>创新驱动</td>
-      <td>创新驱动</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特性</th>
+<th>Trae</th>
+<th>Cursor</th>
+<th>Windsurf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>厂商背景</td>
+<td>字节跳动</td>
+<td>独立团队</td>
+<td>独立团队</td>
+</tr>
+<tr>
+<td>市场定位</td>
+<td>海外市场</td>
+<td>全球市场</td>
+<td>全球市场</td>
+</tr>
+<tr>
+<td>核心特色</td>
+<td>独立软件构建</td>
+<td>AI代码生成</td>
+<td>心流状态设计</td>
+</tr>
+<tr>
+<td>响应速度</td>
+<td>优化中</td>
+<td>良好</td>
+<td>良好</td>
+</tr>
+<tr>
+<td>技术实力</td>
+<td>大厂支持</td>
+<td>创新驱动</td>
+<td>创新驱动</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="发展前景">发展前景</h2>
-
-<h3 id="技术优势">技术优势</h3>
-
+<h2>发展前景</h2>
+<h3>技术优势</h3>
 <p>字节跳动在AI技术方面的投入和积累为Trae提供了强大的技术支撑，特别是在模型训练、推理优化、多模态处理等方面具有显著优势。</p>
-
-<h3 id="市场机会">市场机会</h3>
-
+<h3>市场机会</h3>
 <p>随着AI编程工具的快速发展，海外市场对高质量AI编程工具的需求持续增长，Trae凭借字节跳动的技术实力有望在竞争中占据一席之地。</p>
-
-<h3 id="生态建设">生态建设</h3>
-
+<h3>生态建设</h3>
 <p>字节跳动拥有丰富的产品生态和开发者社区，这为Trae的推广和生态建设提供了有力支持。</p>
-
-<h2 id="使用建议">使用建议</h2>
-
-<h3 id="适合人群">适合人群</h3>
-
+<h2>使用建议</h2>
+<h3>适合人群</h3>
 <ul>
-  <li>独立开发者和小团队</li>
-  <li>需要快速原型开发的创业者</li>
-  <li>希望提升编程效率的开发者</li>
-  <li>对AI编程工具感兴趣的技术爱好者</li>
+<li>独立开发者和小团队</li>
+<li>需要快速原型开发的创业者</li>
+<li>希望提升编程效率的开发者</li>
+<li>对AI编程工具感兴趣的技术爱好者</li>
 </ul>
-
-<h3 id="最佳实践">最佳实践</h3>
-
+<h3>最佳实践</h3>
 <ol>
-  <li><strong>明确需求描述</strong>：使用自然语言清晰描述功能需求，有助于Trae生成更准确的代码</li>
-  <li><strong>渐进式开发</strong>：从简单功能开始，逐步构建复杂系统</li>
-  <li><strong>代码审查</strong>：虽然AI生成的代码质量较高，但仍建议进行人工审查和测试</li>
-  <li><strong>持续学习</strong>：关注Trae的更新和功能改进，充分利用新特性</li>
+<li><strong>明确需求描述</strong>：使用自然语言清晰描述功能需求，有助于Trae生成更准确的代码</li>
+<li><strong>渐进式开发</strong>：从简单功能开始，逐步构建复杂系统</li>
+<li><strong>代码审查</strong>：虽然AI生成的代码质量较高，但仍建议进行人工审查和测试</li>
+<li><strong>持续学习</strong>：关注Trae的更新和功能改进，充分利用新特性</li>
 </ol>
-
-<h2 id="访问地址">访问地址</h2>
-
+<h2>访问地址</h2>
 <p><a href="https://www.trae.ai/">Trae官网</a></p>
-
 <hr />
-
 <p><em>Trae作为字节跳动在AI编程工具领域的重要布局，凭借强大的技术实力和海外市场定位，为开发者提供了全新的编程体验。无论是快速原型开发还是复杂系统构建，Trae都能成为你的得力助手。</em></p>
 
+					</div>
 				</article>
 
 				
@@ -518,11 +501,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -533,18 +515,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -554,7 +529,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -567,6 +542,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

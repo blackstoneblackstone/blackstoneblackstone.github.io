@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/convex-chef.svg"
+            alt="Convex Chef"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,179 +290,150 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#生成代码" itemprop="item"><span itemprop="name">生成代码</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Convex Chef</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#生成代码" itemprop="item"><span itemprop="name">生成代码</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Convex Chef</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="convex-chef---懂后端的ai应用构建工具">Convex Chef - 懂后端的AI应用构建工具</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Convex Chef - 懂后端的AI应用构建工具</h2>
 <p>在AI应用开发工具层出不穷的今天，<a href="https://chef.convex.dev/">Convex Chef</a>脱颖而出，成为第一个真正懂后端的AI应用构建工具。这款革命性工具不仅能生成前端代码，更在后端数据库、认证和实时更新等方面表现出色，让全栈应用开发变得前所未有的简单。</p>
-
-<h2 id="核心优势">核心优势</h2>
-
-<h3 id="掌握后端开发的ai工具">掌握后端开发的AI工具</h3>
-
+<h2>核心优势</h2>
+<h3>掌握后端开发的AI工具</h3>
 <p>Convex Chef最突出的特点是对后端开发的深刻理解。传统AI工具在处理数据库、并发性、一致性和缓存等”三C”问题时往往力不从心，而Chef凭借Convex的特制TypeScript API，轻松应对这些挑战，使AI应用开发更加可靠。</p>
-
-<h3 id="完整的全栈功能集">完整的全栈功能集</h3>
-
+<h3>完整的全栈功能集</h3>
 <p>Convex Chef提供了构建现代应用所需的所有元素：</p>
-
 <ol>
-  <li><strong>内置数据库和边缘函数</strong>：无需配置，Chef项目自动成为Convex项目</li>
-  <li><strong>零配置认证</strong>：简单可靠的身份验证系统</li>
-  <li><strong>文件上传支持</strong>：轻松实现图片上传、个人资料照片等功能</li>
-  <li><strong>实时UI更新</strong>：所有Convex构建的内容都支持实时数据同步</li>
-  <li><strong>后台工作流</strong>：利用Convex的后台调度器执行AI服务调用、发送邮件或触发定时提醒</li>
+<li><strong>内置数据库和边缘函数</strong>：无需配置，Chef项目自动成为Convex项目</li>
+<li><strong>零配置认证</strong>：简单可靠的身份验证系统</li>
+<li><strong>文件上传支持</strong>：轻松实现图片上传、个人资料照片等功能</li>
+<li><strong>实时UI更新</strong>：所有Convex构建的内容都支持实时数据同步</li>
+<li><strong>后台工作流</strong>：利用Convex的后台调度器执行AI服务调用、发送邮件或触发定时提醒</li>
 </ol>
-
-<h2 id="开发者体验">开发者体验</h2>
-
+<h2>开发者体验</h2>
 <p>Chef提供了卓越的开发者体验，主要特点包括：</p>
-
-<h3 id="强大的仪表盘集成">强大的仪表盘集成</h3>
-
+<h3>强大的仪表盘集成</h3>
 <p>构建界面中直接嵌入Convex的仪表盘，让开发者轻松查看和管理后端数据和功能。</p>
-
-<h3 id="分屏预览功能">分屏预览功能</h3>
-
+<h3>分屏预览功能</h3>
 <p>支持分屏预览，允许开发者在构建过程中试用多用户应用，验证实时交互功能。</p>
-
-<h3 id="即时部署能力">即时部署能力</h3>
-
+<h3>即时部署能力</h3>
 <p>应用在几秒钟内就能上线并对真实用户开放，大大缩短从开发到上线的时间。</p>
-
-<h3 id="项目共享机制">项目共享机制</h3>
-
+<h3>项目共享机制</h3>
 <p>支持通过简单链接分享项目，让其他开发者能够克隆会话并增强您的创意。</p>
-
-<h2 id="技术原理">技术原理</h2>
-
+<h2>技术原理</h2>
 <p>Convex Chef的强大源于其对大型语言模型(LLM)的优化训练和Convex平台的特性结合：</p>
-
 <ol>
-  <li><strong>专用API设计</strong>：Convex的TypeScript API专为AI代码生成优化，解决了传统后端编程中的复杂性</li>
-  <li><strong>上下文训练</strong>：通过Convex特定的上下文训练，AI模型变得越来越善于解决现实世界问题</li>
-  <li><strong>持续优化</strong>：Chef始终运行最新版本的训练模型，确保生成的代码质量和效率</li>
+<li><strong>专用API设计</strong>：Convex的TypeScript API专为AI代码生成优化，解决了传统后端编程中的复杂性</li>
+<li><strong>上下文训练</strong>：通过Convex特定的上下文训练，AI模型变得越来越善于解决现实世界问题</li>
+<li><strong>持续优化</strong>：Chef始终运行最新版本的训练模型，确保生成的代码质量和效率</li>
 </ol>
-
-<h2 id="适用场景">适用场景</h2>
-
+<h2>适用场景</h2>
 <p>Convex Chef特别适合以下应用场景：</p>
-
-<h3 id="多人实时应用">多人实时应用</h3>
-
+<h3>多人实时应用</h3>
 <p>得益于Convex的实时特性，Chef特别适合构建多用户游戏、聊天应用等需要实时数据同步的项目。</p>
-
-<h3 id="社交和通讯平台">社交和通讯平台</h3>
-
+<h3>社交和通讯平台</h3>
 <p>Chef对后端和文件存储的强大支持，使其成为开发社交网络、消息传递平台等复杂应用的理想选择。</p>
-
-<h3 id="ai驱动的代理应用">AI驱动的代理应用</h3>
-
+<h3>AI驱动的代理应用</h3>
 <p>Chef能够轻松集成AI服务，是构建智能代理和AI辅助工具的绝佳选择。</p>
-
-<h3 id="快速原型开发">快速原型开发</h3>
-
+<h3>快速原型开发</h3>
 <p>对于需要快速验证创意的团队，Chef可以在几分钟内从构思转变为可用的产品原型。</p>
-
-<h2 id="与传统开发对比">与传统开发对比</h2>
-
+<h2>与传统开发对比</h2>
 <p>相比传统开发方式，Convex Chef带来了显著优势：</p>
-
 <table>
-  <thead>
-    <tr>
-      <th>特点</th>
-      <th>传统开发</th>
-      <th>Convex Chef</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>后端配置</td>
-      <td>复杂且耗时</td>
-      <td>自动处理，零配置</td>
-    </tr>
-    <tr>
-      <td>实时功能</td>
-      <td>需要专门实现</td>
-      <td>内置支持</td>
-    </tr>
-    <tr>
-      <td>认证系统</td>
-      <td>配置复杂</td>
-      <td>零配置即用</td>
-    </tr>
-    <tr>
-      <td>开发周期</td>
-      <td>数周或数月</td>
-      <td>数小时或数天</td>
-    </tr>
-    <tr>
-      <td>全栈一致性</td>
-      <td>需要手动维护</td>
-      <td>自动保证</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特点</th>
+<th>传统开发</th>
+<th>Convex Chef</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>后端配置</td>
+<td>复杂且耗时</td>
+<td>自动处理，零配置</td>
+</tr>
+<tr>
+<td>实时功能</td>
+<td>需要专门实现</td>
+<td>内置支持</td>
+</tr>
+<tr>
+<td>认证系统</td>
+<td>配置复杂</td>
+<td>零配置即用</td>
+</tr>
+<tr>
+<td>开发周期</td>
+<td>数周或数月</td>
+<td>数小时或数天</td>
+</tr>
+<tr>
+<td>全栈一致性</td>
+<td>需要手动维护</td>
+<td>自动保证</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="实际应用案例">实际应用案例</h2>
-
-<h3 id="派对规划应用">派对规划应用</h3>
-
+<h2>实际应用案例</h2>
+<h3>派对规划应用</h3>
 <p>Chef能够快速构建包含用户管理、活动创建、实时聊天和提醒功能的完整派对规划应用，这在传统AI工具中很难实现。</p>
-
-<h3 id="instagram克隆">Instagram克隆</h3>
-
+<h3>Instagram克隆</h3>
 <p>利用Chef的文件存储和实时更新功能，开发者可以快速创建类似Instagram的照片分享应用，完整支持图片上传和社交互动。</p>
-
-<h3 id="实时多人游戏">实时多人游戏</h3>
-
+<h3>实时多人游戏</h3>
 <p>Chef的实时数据同步能力使其成为构建简单多人游戏的理想工具，无需复杂的游戏服务器配置。</p>
-
-<h2 id="未来发展">未来发展</h2>
-
+<h2>未来发展</h2>
 <p>随着AI技术和Convex平台的不断进步，Chef计划在以下方面持续创新：</p>
-
 <ol>
-  <li><strong>更多行业模板</strong>：针对特定行业提供专门的解决方案模板</li>
-  <li><strong>更深入的AI集成</strong>：增强与其他AI服务的集成能力</li>
-  <li><strong>更强大的协作功能</strong>：改进团队协作体验</li>
-  <li><strong>更广泛的开发工具集成</strong>：与更多开发工具实现无缝对接</li>
+<li><strong>更多行业模板</strong>：针对特定行业提供专门的解决方案模板</li>
+<li><strong>更深入的AI集成</strong>：增强与其他AI服务的集成能力</li>
+<li><strong>更强大的协作功能</strong>：改进团队协作体验</li>
+<li><strong>更广泛的开发工具集成</strong>：与更多开发工具实现无缝对接</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Convex Chef代表了AI应用构建工具的新一代，它不仅理解前端，更真正掌握了后端开发的复杂性。通过将Convex的强大后端功能与先进的AI代码生成能力相结合，Chef让全栈应用开发变得前所未有的简单和高效。</p>
-
 <p>无论您是经验丰富的开发者还是刚刚入门的新手，都可以利用Chef快速构建功能强大的全栈应用。访问<a href="https://chef.convex.dev/">Convex Chef官网</a>，体验真正懂后端的AI应用构建工具。</p>
 
+					</div>
 				</article>
 
 				
@@ -521,11 +502,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -536,18 +516,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -557,7 +530,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -570,6 +543,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

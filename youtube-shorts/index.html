@@ -59,8 +59,8 @@
 <meta property="og:title" content="YouTube 短视频创作指南" />
 <meta name="author" content="黑石" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="为什么要做直播切片？" />
-<meta property="og:description" content="为什么要做直播切片？" />
+<meta name="description" content="黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。" />
+<meta property="og:description" content="黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。" />
 <link rel="canonical" href="https://blackstones.xyz/youtube-shorts/" />
 <meta property="og:url" content="https://blackstones.xyz/youtube-shorts/" />
 <meta property="og:site_name" content="黑石的知识库 - AI编程、技术分享与开发经验" />
@@ -72,7 +72,7 @@
 <meta property="twitter:title" content="YouTube 短视频创作指南" />
 <meta name="google-site-verification" content="" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"黑石"},"dateModified":"2025-10-10T20:00:00+08:00","datePublished":"2025-10-10T20:00:00+08:00","description":"为什么要做直播切片？","headline":"YouTube 短视频创作指南","image":"https://blackstones.xyz/assets/images/ai-tools.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://blackstones.xyz/youtube-shorts/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://blackstones.xyz/assets/images/logo.png"},"name":"黑石"},"url":"https://blackstones.xyz/youtube-shorts/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"黑石"},"dateModified":"2025-10-10T20:00:00+08:00","datePublished":"2025-10-10T20:00:00+08:00","description":"黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。","headline":"YouTube 短视频创作指南","image":"https://blackstones.xyz/assets/images/ai-tools.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://blackstones.xyz/youtube-shorts/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://blackstones.xyz/assets/images/logo.png"},"name":"黑石"},"url":"https://blackstones.xyz/youtube-shorts/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="/assets/images/ai-tools.jpg"
+            alt="YouTube 短视频创作指南"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -278,338 +288,290 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#文章" itemprop="item"><span itemprop="name">文章</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">YouTube 短视频创作指南</span>
-							<meta itemprop="position" content="4" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#文章" itemprop="item"><span itemprop="name">文章</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">YouTube 短视频创作指南</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="为什么要做直播切片">为什么要做直播切片？</h2>
-
-<h2 id="youtube-shorts-的核心机制">YouTube Shorts 的核心机制</h2>
-
-<h3 id="算法逻辑前-3-秒决定一切">算法逻辑：前 3 秒决定一切</h3>
-
+					<div id="article-body" class="markdown-body">
+						<h2>为什么要做直播切片？</h2>
+<h2>YouTube Shorts 的核心机制</h2>
+<h3>算法逻辑：前 3 秒决定一切</h3>
 <p>YouTube Shorts 的推荐算法与长视频截然不同。它更像是一场残酷的筛选游戏：</p>
-
 <ol>
-  <li><strong>初始流量池</strong> - 你的视频会先推送给一小批用户（通常 100-500 人）</li>
-  <li><strong>关键指标测试</strong> - 算法会追踪完播率、点赞率、评论率、分享率</li>
-  <li><strong>流量放大</strong> - 如果初始数据优秀，视频会被推送到更大的流量池</li>
-  <li><strong>持续迭代</strong> - 这个过程会不断重复，直到数据下滑</li>
+<li><strong>初始流量池</strong> - 你的视频会先推送给一小批用户（通常 100-500 人）</li>
+<li><strong>关键指标测试</strong> - 算法会追踪完播率、点赞率、评论率、分享率</li>
+<li><strong>流量放大</strong> - 如果初始数据优秀，视频会被推送到更大的流量池</li>
+<li><strong>持续迭代</strong> - 这个过程会不断重复，直到数据下滑</li>
 </ol>
-
 <p>这意味着什么？<strong>前 3 秒的吸引力决定了你的视频能走多远。</strong></p>
-
-<h3 id="竖屏思维的转变">竖屏思维的转变</h3>
-
+<h3>竖屏思维的转变</h3>
 <p>许多传统视频创作者在制作 Shorts 时犯的最大错误，是简单地把横屏内容裁剪成竖屏。这完全误解了短视频的本质。</p>
-
 <p>竖屏不仅是格式的改变，更是叙事方式的革命：</p>
 <ul>
-  <li><strong>全屏沉浸</strong> - 用户的注意力 100% 集中在你的内容上</li>
-  <li><strong>移动优先</strong> - 大多数观看发生在碎片时间</li>
-  <li><strong>快速消费</strong> - 用户期待即时满足感</li>
+<li><strong>全屏沉浸</strong> - 用户的注意力 100% 集中在你的内容上</li>
+<li><strong>移动优先</strong> - 大多数观看发生在碎片时间</li>
+<li><strong>快速消费</strong> - 用户期待即时满足感</li>
 </ul>
-
-<h2 id="制作-youtube-shorts-的系统方法">制作 YouTube Shorts 的系统方法</h2>
-
-<h3 id="第一步选题策略">第一步：选题策略</h3>
-
+<h2>制作 YouTube Shorts 的系统方法</h2>
+<h3>第一步：选题策略</h3>
 <p>好的选题是成功的一半。以下是几种高效的选题方法：</p>
-
-<h4 id="1-钩子式选题">1. 钩子式选题</h4>
+<h4>1. 钩子式选题</h4>
 <p>用一个反直觉的观点或令人震惊的事实开头：</p>
 <ul>
-  <li>“你以为的 XX，其实是错的”</li>
-  <li>“99% 的人不知道的 XX 秘密”</li>
-  <li>“这个方法让我在 30 天内…”</li>
+<li>“你以为的 XX，其实是错的”</li>
+<li>“99% 的人不知道的 XX 秘密”</li>
+<li>“这个方法让我在 30 天内…”</li>
 </ul>
-
-<h4 id="2-情绪共鸣式">2. 情绪共鸣式</h4>
+<h4>2. 情绪共鸣式</h4>
 <p>触及用户的痛点或渴望：</p>
 <ul>
-  <li>焦虑（”还在为 XX 烦恼？”）</li>
-  <li>好奇（”如果我告诉你…“）</li>
-  <li>FOMO（”所有人都在做，你还不知道？”）</li>
+<li>焦虑（“还在为 XX 烦恼？”）</li>
+<li>好奇（“如果我告诉你…”）</li>
+<li>FOMO（“所有人都在做，你还不知道？”）</li>
 </ul>
-
-<h4 id="3-实用价值式">3. 实用价值式</h4>
+<h4>3. 实用价值式</h4>
 <p>提供立即可用的技巧或知识：</p>
 <ul>
-  <li>“3 个技巧让你的 XX 提升 10 倍”</li>
-  <li>“这样做 XX，省时又高效”</li>
-  <li>“我用这个方法解决了 XX 问题”</li>
+<li>“3 个技巧让你的 XX 提升 10 倍”</li>
+<li>“这样做 XX，省时又高效”</li>
+<li>“我用这个方法解决了 XX 问题”</li>
 </ul>
-
-<h3 id="第二步脚本设计">第二步：脚本设计</h3>
-
+<h3>第二步：脚本设计</h3>
 <p>优秀的 Shorts 脚本遵循一个黄金公式：</p>
-
 <p><strong>钩子（3秒） → 价值承诺（5秒） → 内容展开（40秒） → 行动号召（12秒）</strong></p>
-
-<h4 id="钩子阶段">钩子阶段</h4>
+<h4>钩子阶段</h4>
 <ul>
-  <li>使用视觉冲击或语言冲击</li>
-  <li>制造悬念或提出问题</li>
-  <li>展示结果预览</li>
+<li>使用视觉冲击或语言冲击</li>
+<li>制造悬念或提出问题</li>
+<li>展示结果预览</li>
 </ul>
-
-<h4 id="价值承诺">价值承诺</h4>
+<h4>价值承诺</h4>
 <ul>
-  <li>明确告诉观众能获得什么</li>
-  <li>给出观看的理由</li>
-  <li>建立期待感</li>
+<li>明确告诉观众能获得什么</li>
+<li>给出观看的理由</li>
+<li>建立期待感</li>
 </ul>
-
-<h4 id="内容展开">内容展开</h4>
+<h4>内容展开</h4>
 <ul>
-  <li>快节奏，不拖沓</li>
-  <li>每 10 秒一个小高潮</li>
-  <li>使用视觉变化维持注意力</li>
+<li>快节奏，不拖沓</li>
+<li>每 10 秒一个小高潮</li>
+<li>使用视觉变化维持注意力</li>
 </ul>
-
-<h4 id="行动号召">行动号召</h4>
+<h4>行动号召</h4>
 <ul>
-  <li>引导点赞、评论、关注</li>
-  <li>提示下滑观看更多内容</li>
-  <li>创造互动话题</li>
+<li>引导点赞、评论、关注</li>
+<li>提示下滑观看更多内容</li>
+<li>创造互动话题</li>
 </ul>
-
-<h3 id="第三步拍摄技巧">第三步：拍摄技巧</h3>
-
-<h4 id="设备选择">设备选择</h4>
-<p><strong>好消息是：你不需要昂贵的设备。</strong>一部智能手机足够了。</p>
-
+<h3>第三步：拍摄技巧</h3>
+<h4>设备选择</h4>
+<p>**好消息是：你不需要昂贵的设备。**一部智能手机足够了。</p>
 <p>关键在于：</p>
 <ul>
-  <li><strong>稳定性</strong> - 使用手机稳定器或三脚架</li>
-  <li><strong>光线</strong> - 自然光是最好的，或使用补光灯</li>
-  <li><strong>清晰度</strong> - 确保对焦准确，至少 1080p 分辨率</li>
+<li><strong>稳定性</strong> - 使用手机稳定器或三脚架</li>
+<li><strong>光线</strong> - 自然光是最好的，或使用补光灯</li>
+<li><strong>清晰度</strong> - 确保对焦准确，至少 1080p 分辨率</li>
 </ul>
-
-<h4 id="构图原则">构图原则</h4>
+<h4>构图原则</h4>
 <ul>
-  <li><strong>三分法</strong> - 将画面分成 9 等份，重要元素放在交叉点</li>
-  <li><strong>视线空间</strong> - 如果人物看向一侧，该侧要留出空间</li>
-  <li><strong>垂直优先</strong> - 充分利用竖屏的高度，重要信息放在中上部</li>
+<li><strong>三分法</strong> - 将画面分成 9 等份，重要元素放在交叉点</li>
+<li><strong>视线空间</strong> - 如果人物看向一侧，该侧要留出空间</li>
+<li><strong>垂直优先</strong> - 充分利用竖屏的高度，重要信息放在中上部</li>
 </ul>
-
-<h4 id="拍摄技巧">拍摄技巧</h4>
+<h4>拍摄技巧</h4>
 <ol>
-  <li><strong>多机位切换</strong> - 即使只有一台设备，也可以分段拍摄不同角度</li>
-  <li><strong>B-roll 素材</strong> - 准备丰富的辅助画面，避免单调</li>
-  <li><strong>眼神交流</strong> - 看镜头说话，建立与观众的连接</li>
+<li><strong>多机位切换</strong> - 即使只有一台设备，也可以分段拍摄不同角度</li>
+<li><strong>B-roll 素材</strong> - 准备丰富的辅助画面，避免单调</li>
+<li><strong>眼神交流</strong> - 看镜头说话，建立与观众的连接</li>
 </ol>
-
-<h3 id="第四步剪辑要点">第四步：剪辑要点</h3>
-
-<h4 id="节奏控制">节奏控制</h4>
+<h3>第四步：剪辑要点</h3>
+<h4>节奏控制</h4>
 <ul>
-  <li><strong>快速剪切</strong> - 每 2-3 秒换一个镜头</li>
-  <li><strong>跳剪技术</strong> - 去掉说话的停顿和犹豫</li>
-  <li><strong>音乐配合</strong> - 剪辑点与音乐节拍同步</li>
+<li><strong>快速剪切</strong> - 每 2-3 秒换一个镜头</li>
+<li><strong>跳剪技术</strong> - 去掉说话的停顿和犹豫</li>
+<li><strong>音乐配合</strong> - 剪辑点与音乐节拍同步</li>
 </ul>
-
-<h4 id="视觉元素">视觉元素</h4>
+<h4>视觉元素</h4>
 <ul>
-  <li><strong>字幕必备</strong> - 70% 的用户静音观看</li>
-  <li><strong>动态文字</strong> - 关键词放大、高亮</li>
-  <li><strong>表情符号</strong> - 适当使用增强情感表达</li>
-  <li><strong>转场效果</strong> - 简洁有力，不要过度</li>
+<li><strong>字幕必备</strong> - 70% 的用户静音观看</li>
+<li><strong>动态文字</strong> - 关键词放大、高亮</li>
+<li><strong>表情符号</strong> - 适当使用增强情感表达</li>
+<li><strong>转场效果</strong> - 简洁有力，不要过度</li>
 </ul>
-
-<h4 id="推荐工具">推荐工具</h4>
+<h4>推荐工具</h4>
 <ul>
-  <li><strong>手机端</strong>：CapCut、InShot、Adobe Premiere Rush</li>
-  <li><strong>电脑端</strong>：DaVinci Resolve（免费）、Final Cut Pro、Adobe Premiere Pro</li>
+<li><strong>手机端</strong>：CapCut、InShot、Adobe Premiere Rush</li>
+<li><strong>电脑端</strong>：DaVinci Resolve（免费）、Final Cut Pro、Adobe Premiere Pro</li>
 </ul>
-
-<h3 id="第五步优化发布">第五步：优化发布</h3>
-
-<h4 id="标题策略">标题策略</h4>
+<h3>第五步：优化发布</h3>
+<h4>标题策略</h4>
 <ul>
-  <li>前 5 个字最重要（在缩略图上可见）</li>
-  <li>包含关键词，利于搜索</li>
-  <li>制造好奇心，但不要标题党</li>
+<li>前 5 个字最重要（在缩略图上可见）</li>
+<li>包含关键词，利于搜索</li>
+<li>制造好奇心，但不要标题党</li>
 </ul>
-
-<h4 id="描述和标签">描述和标签</h4>
+<h4>描述和标签</h4>
 <ul>
-  <li>前 2 行是预览内容，要写清楚核心价值</li>
-  <li>添加相关话题标签 #Shorts #YourNiche</li>
-  <li>包含时间戳和章节（如适用）</li>
-  <li>添加相关链接（其他视频、社交媒体）</li>
+<li>前 2 行是预览内容，要写清楚核心价值</li>
+<li>添加相关话题标签 #Shorts #YourNiche</li>
+<li>包含时间戳和章节（如适用）</li>
+<li>添加相关链接（其他视频、社交媒体）</li>
 </ul>
-
-<h4 id="发布时间">发布时间</h4>
+<h4>发布时间</h4>
 <p>根据你的目标受众选择：</p>
 <ul>
-  <li><strong>北美受众</strong> - 美东时间下午 2-4 点，晚上 7-9 点</li>
-  <li><strong>中文受众</strong> - 北京时间晚上 7-9 点，午休时间 12-1 点</li>
-  <li><strong>全球受众</strong> - 美东时间上午 9-11 点</li>
+<li><strong>北美受众</strong> - 美东时间下午 2-4 点，晚上 7-9 点</li>
+<li><strong>中文受众</strong> - 北京时间晚上 7-9 点，午休时间 12-1 点</li>
+<li><strong>全球受众</strong> - 美东时间上午 9-11 点</li>
 </ul>
-
 <p>建议：持续发布一段时间后，在 YouTube Studio 的分析数据中查看”观众活跃时段”。</p>
-
-<h2 id="高级策略让算法为你工作">高级策略：让算法为你工作</h2>
-
-<h3 id="利用首发流量">利用首发流量</h3>
+<h2>高级策略：让算法为你工作</h2>
+<h3>利用首发流量</h3>
 <p>YouTube 会给新内容一个”新鲜度加成”。在发布后的前 1 小时内：</p>
 <ul>
-  <li>在其他社交媒体平台分享</li>
-  <li>通知你的核心粉丝观看和互动</li>
-  <li>积极回复评论，提升互动率</li>
+<li>在其他社交媒体平台分享</li>
+<li>通知你的核心粉丝观看和互动</li>
+<li>积极回复评论，提升互动率</li>
 </ul>
-
-<h3 id="创造系列内容">创造系列内容</h3>
+<h3>创造系列内容</h3>
 <p>算法喜欢能让用户持续观看的创作者：</p>
 <ul>
-  <li>设计可延续的主题（”XX 技巧第 1 集”）</li>
-  <li>在视频结尾预告下期内容</li>
-  <li>保持一致的视觉风格和节奏</li>
+<li>设计可延续的主题（“XX 技巧第 1 集”）</li>
+<li>在视频结尾预告下期内容</li>
+<li>保持一致的视觉风格和节奏</li>
 </ul>
-
-<h3 id="ab-测试">A/B 测试</h3>
+<h3>A/B 测试</h3>
 <p>不要盲目猜测，用数据说话：</p>
 <ul>
-  <li>测试不同的钩子开场</li>
-  <li>尝试不同的标题和缩略图</li>
-  <li>对比不同的发布时间</li>
+<li>测试不同的钩子开场</li>
+<li>尝试不同的标题和缩略图</li>
+<li>对比不同的发布时间</li>
 </ul>
-
-<h3 id="观众互动技巧">观众互动技巧</h3>
+<h3>观众互动技巧</h3>
 <p>算法重视互动率：</p>
 <ul>
-  <li>在视频中提出问题，引导评论</li>
-  <li>设计有争议的观点（适度）</li>
-  <li>创建投票和社区贴文</li>
-  <li>迅速回复评论，尤其是前 24 小时</li>
+<li>在视频中提出问题，引导评论</li>
+<li>设计有争议的观点（适度）</li>
+<li>创建投票和社区贴文</li>
+<li>迅速回复评论，尤其是前 24 小时</li>
 </ul>
-
-<h2 id="常见误区与避坑指南">常见误区与避坑指南</h2>
-
-<h3 id="误区一追求完美主义">误区一：追求完美主义</h3>
-<p>很多人第一条视频就想做到完美，结果一拖再拖。记住：<strong>完成比完美更重要。</strong>YouTube Shorts 的制作周期应该是快速迭代的。</p>
-
-<h3 id="误区二忽视数据分析">误区二：忽视数据分析</h3>
+<h2>常见误区与避坑指南</h2>
+<h3>误区一：追求完美主义</h3>
+<p>很多人第一条视频就想做到完美，结果一拖再拖。记住：**完成比完美更重要。**YouTube Shorts 的制作周期应该是快速迭代的。</p>
+<h3>误区二：忽视数据分析</h3>
 <p>拍完发布就结束了？大错特错。进入 YouTube Studio，认真研究：</p>
 <ul>
-  <li>平均观看时长（最重要的指标）</li>
-  <li>观众流失点（在哪里用户停止观看）</li>
-  <li>流量来源</li>
-  <li>受众人群特征</li>
+<li>平均观看时长（最重要的指标）</li>
+<li>观众流失点（在哪里用户停止观看）</li>
+<li>流量来源</li>
+<li>受众人群特征</li>
 </ul>
-
-<h3 id="误区三内容同质化">误区三：内容同质化</h3>
+<h3>误区三：内容同质化</h3>
 <p>不要盲目模仿爆款。找到你的独特角度：</p>
 <ul>
-  <li>你的专业知识</li>
-  <li>你的个人风格</li>
-  <li>你的独特观点</li>
+<li>你的专业知识</li>
+<li>你的个人风格</li>
+<li>你的独特观点</li>
 </ul>
-
-<h3 id="误区四忽视长期价值">误区四：忽视长期价值</h3>
+<h3>误区四：忽视长期价值</h3>
 <p>Shorts 不仅是流量工具，更是品牌建设的途径：</p>
 <ul>
-  <li>保持内容质量的底线</li>
-  <li>建立个人 IP 和识别度</li>
-  <li>引导观众到你的长视频或其他平台</li>
+<li>保持内容质量的底线</li>
+<li>建立个人 IP 和识别度</li>
+<li>引导观众到你的长视频或其他平台</li>
 </ul>
-
-<h2 id="变现策略">变现策略</h2>
-
+<h2>变现策略</h2>
 <p>当你的 Shorts 开始获得流量后，如何变现？</p>
-
-<h3 id="直接收益">直接收益</h3>
+<h3>直接收益</h3>
 <ul>
-  <li><strong>YouTube 合作伙伴计划</strong> - 达到 1000 订阅和 1000 万 Shorts 观看量</li>
-  <li><strong>广告收益</strong> - Shorts 的收益相对较低，但量大可弥补</li>
+<li><strong>YouTube 合作伙伴计划</strong> - 达到 1000 订阅和 1000 万 Shorts 观看量</li>
+<li><strong>广告收益</strong> - Shorts 的收益相对较低，但量大可弥补</li>
 </ul>
-
-<h3 id="间接收益">间接收益</h3>
+<h3>间接收益</h3>
 <ul>
-  <li><strong>引流到长视频</strong> - 在 Shorts 中推荐你的深度内容</li>
-  <li><strong>联盟营销</strong> - 在描述中添加产品链接</li>
-  <li><strong>赞助合作</strong> - 品牌植入和产品推广</li>
-  <li><strong>导流到付费产品</strong> - 课程、咨询、电商</li>
+<li><strong>引流到长视频</strong> - 在 Shorts 中推荐你的深度内容</li>
+<li><strong>联盟营销</strong> - 在描述中添加产品链接</li>
+<li><strong>赞助合作</strong> - 品牌植入和产品推广</li>
+<li><strong>导流到付费产品</strong> - 课程、咨询、电商</li>
 </ul>
-
-<h3 id="个人品牌价值">个人品牌价值</h3>
+<h3>个人品牌价值</h3>
 <ul>
-  <li>建立专家形象</li>
-  <li>扩大影响力</li>
-  <li>开拓商业机会</li>
+<li>建立专家形象</li>
+<li>扩大影响力</li>
+<li>开拓商业机会</li>
 </ul>
-
-<h2 id="成功案例分析">成功案例分析</h2>
-
+<h2>成功案例分析</h2>
 <p>让我们看看几个不同领域的成功案例：</p>
-
-<h3 id="教育类ali-abdaal">教育类：Ali Abdaal</h3>
+<h3>教育类：Ali Abdaal</h3>
 <ul>
-  <li><strong>策略</strong>：将复杂概念简化为 60 秒解释</li>
-  <li><strong>特点</strong>：高信息密度 + 快节奏剪辑 + 清晰字幕</li>
-  <li><strong>结果</strong>：单条 Shorts 超 1000 万播放</li>
+<li><strong>策略</strong>：将复杂概念简化为 60 秒解释</li>
+<li><strong>特点</strong>：高信息密度 + 快节奏剪辑 + 清晰字幕</li>
+<li><strong>结果</strong>：单条 Shorts 超 1000 万播放</li>
 </ul>
-
-<h3 id="生活类matt-davella">生活类：Matt D’Avella</h3>
+<h3>生活类：Matt D’Avella</h3>
 <ul>
-  <li><strong>策略</strong>：极简主义生活方式分享</li>
-  <li><strong>特点</strong>：高质量画面 + 故事化叙事 + 情感共鸣</li>
-  <li><strong>结果</strong>：稳定的观看量和订阅增长</li>
+<li><strong>策略</strong>：极简主义生活方式分享</li>
+<li><strong>特点</strong>：高质量画面 + 故事化叙事 + 情感共鸣</li>
+<li><strong>结果</strong>：稳定的观看量和订阅增长</li>
 </ul>
-
-<h3 id="技术类fireship">技术类：Fireship</h3>
+<h3>技术类：Fireship</h3>
 <ul>
-  <li><strong>策略</strong>：100 秒讲清一个技术概念</li>
-  <li><strong>特点</strong>：快速切换 + 幽默感 + 视觉信息丰富</li>
-  <li><strong>结果</strong>：成为编程学习的首选短视频来源</li>
+<li><strong>策略</strong>：100 秒讲清一个技术概念</li>
+<li><strong>特点</strong>：快速切换 + 幽默感 + 视觉信息丰富</li>
+<li><strong>结果</strong>：成为编程学习的首选短视频来源</li>
 </ul>
-
-<h2 id="持续成长的心态">持续成长的心态</h2>
-
+<h2>持续成长的心态</h2>
 <p>制作 YouTube Shorts 是一场马拉松，不是短跑：</p>
-
 <ol>
-  <li><strong>保持频率</strong> - 至少每周 3-5 条，持续 90 天</li>
-  <li><strong>快速迭代</strong> - 从每条视频中学习，不断优化</li>
-  <li><strong>关注趋势</strong> - 但不盲目跟风，结合自己的定位</li>
-  <li><strong>建立系统</strong> - 选题、拍摄、剪辑、发布形成流水线</li>
-  <li><strong>享受过程</strong> - 如果你不享受创作，观众也感受不到热情</li>
+<li><strong>保持频率</strong> - 至少每周 3-5 条，持续 90 天</li>
+<li><strong>快速迭代</strong> - 从每条视频中学习，不断优化</li>
+<li><strong>关注趋势</strong> - 但不盲目跟风，结合自己的定位</li>
+<li><strong>建立系统</strong> - 选题、拍摄、剪辑、发布形成流水线</li>
+<li><strong>享受过程</strong> - 如果你不享受创作，观众也感受不到热情</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>YouTube Shorts 不是运气游戏，而是一门可以学习和掌握的技能。它要求你理解算法机制，掌握视觉叙事，保持持续创作，并从数据中学习。</p>
-
 <p>最重要的是：<strong>现在就开始。</strong></p>
-
 <p>不要等到你”准备好了”，不要等到你有了”完美的设备”，不要等到你”想到了绝佳的创意”。每个成功的创作者都是从第一条笨拙的视频开始的。</p>
-
 <p>拿起你的手机，拍摄你的第一条 Shorts。然后是第二条，第三条…在这个过程中，你会找到自己的声音，建立自己的受众，创造你的影响力。</p>
-
 <p>短视频的浪潮已经到来，现在是上船的最好时机。你准备好了吗？</p>
 
-
+					</div>
 				</article>
 
 				
@@ -678,11 +640,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -693,18 +654,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -714,7 +668,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -727,6 +681,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

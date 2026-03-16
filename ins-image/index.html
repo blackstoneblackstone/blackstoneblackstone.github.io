@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/instagram-brightness.jpg"
+            alt="Instagram 图片为什么总是那么亮？揭秘背后的技术真相"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -278,140 +288,121 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#文章" itemprop="item"><span itemprop="name">文章</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Instagram 图片为什么总是那么亮？揭秘背后的技术真相</span>
-							<meta itemprop="position" content="4" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#文章" itemprop="item"><span itemprop="name">文章</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Instagram 图片为什么总是那么亮？揭秘背后的技术真相</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h1 id="instagram-图片为什么总是那么亮揭秘背后的技术真相">Instagram 图片为什么总是那么亮？揭秘背后的技术真相</h1>
-
+					<div id="article-body" class="markdown-body">
+						<h1>Instagram 图片为什么总是那么亮？揭秘背后的技术真相</h1>
 <p>你是否曾经疑惑过，为什么 Instagram 上的图片总是显得格外亮眼？这种”闪瞎眼”的视觉效果背后，隐藏着三个技术因素的复杂叠加，而不仅仅是简单的滤镜效果。</p>
-
-<h2 id="-现象分析">🔍 现象分析</h2>
-
+<h2>🔍 现象分析</h2>
 <p>Instagram 上的图片之所以”格外亮”，并不是统一加了某种滤镜，而是三个技术/行为因素叠加造成的视觉印象：</p>
-
-<h2 id="1--hdr-播放自动拉高屏幕亮度">1. 📱 HDR 播放自动拉高屏幕亮度</h2>
-
+<h2>1. 📱 HDR 播放自动拉高屏幕亮度</h2>
 <p><strong>硬件层面的亮度提升</strong></p>
-
 <p>2024 年以后，iOS/Android 端 Instagram 会把上传时带 HDR10/HLG 信息的帖子标记为 HDR。当用户滑动到这类帖子时，系统会临时把屏幕激发亮度拉到 <strong>800–1600 nit</strong>，瞬间比周围 SDR 内容亮一截，给人”闪瞎眼”的感觉。</p>
-
 <blockquote>
-  <p><strong>关键点</strong>：这是硬件行为，不是图片本身变亮，而是屏幕硬件的临时亮度提升。</p>
+<p><strong>关键点</strong>：这是硬件行为，不是图片本身变亮，而是屏幕硬件的临时亮度提升。</p>
 </blockquote>
-
-<h2 id="2--高亮度高对比已成流量密码">2. 📈 高亮度+高对比已成”流量密码”</h2>
-
+<h2>2. 📈 高亮度+高对比已成”流量密码”</h2>
 <p><strong>算法驱动的视觉偏好</strong></p>
-
 <p>2025 年两份针对 <strong>200 万+ IG 帖子</strong> 的数据研究都发现：</p>
 <ul>
-  <li>亮度高于中值、同时保留阴影细节的片子</li>
-  <li>点赞率平均高出 <strong>19–38%</strong></li>
+<li>亮度高于中值、同时保留阴影细节的片子</li>
+<li>点赞率平均高出 <strong>19–38%</strong></li>
 </ul>
-
 <p>创作者知道这一规律后，会主动：</p>
 <ul>
-  <li>把曝光、高光拉上去</li>
-  <li>再用轻度阴影拉回层次</li>
-  <li>形成”亮而不曝”的糖水质感</li>
+<li>把曝光、高光拉上去</li>
+<li>再用轻度阴影拉回层次</li>
+<li>形成”亮而不曝”的糖水质感</li>
 </ul>
-
-<h2 id="3-️-平台后期工具默认加亮">3. 🛠️ 平台后期工具默认”加亮”</h2>
-
+<h2>3. 🛠️ 平台后期工具默认”加亮”</h2>
 <p><strong>工具设计引导用户行为</strong></p>
-
 <p>Instagram 的内建编辑器存在设计偏向：</p>
 <ul>
-  <li><strong>Brightness 0 点</strong>设在相机原始曝光偏暗一侧</li>
-  <li>滑块默认就往右偏</li>
-  <li><strong>Lux 功能</strong>更是一键同时提亮度、提对比、提饱和</li>
+<li><strong>Brightness 0 点</strong>设在相机原始曝光偏暗一侧</li>
+<li>滑块默认就往右偏</li>
+<li><strong>Lux 功能</strong>更是一键同时提亮度、提对比、提饱和</li>
 </ul>
-
 <p>很多用户随手一点就发布，导致整体内容池趋向更亮。</p>
-
-<h2 id="-三重叠加效应">🔄 三重叠加效应</h2>
-
+<h2>🔄 三重叠加效应</h2>
 <p>因此，你在时间轴里刷到的”格外亮”其实是：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre>HDR 触发硬件亮度飙升 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HDR 触发硬件亮度飙升 
     ↓
 高亮高对比内容本身更容易被算法推荐 
     ↓
 创作者和平台工具又进一步推高了亮度
     ↓
 三重叠加，让 IG 看起来"比别处亮"
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h2 id="-技术洞察">💡 技术洞察</h2>
-
-<h3 id="硬件层面">硬件层面</h3>
+</code></pre></div></div>
+<h2>💡 技术洞察</h2>
+<h3>硬件层面</h3>
 <ul>
-  <li><strong>HDR 技术</strong>：现代手机屏幕支持 HDR 显示</li>
-  <li><strong>动态亮度</strong>：系统根据内容自动调整屏幕亮度</li>
-  <li><strong>峰值亮度</strong>：HDR 内容可达到 800-1600 nit</li>
+<li><strong>HDR 技术</strong>：现代手机屏幕支持 HDR 显示</li>
+<li><strong>动态亮度</strong>：系统根据内容自动调整屏幕亮度</li>
+<li><strong>峰值亮度</strong>：HDR 内容可达到 800-1600 nit</li>
 </ul>
-
-<h3 id="算法层面">算法层面</h3>
+<h3>算法层面</h3>
 <ul>
-  <li><strong>推荐机制</strong>：高亮度内容获得更多曝光</li>
-  <li><strong>用户行为</strong>：点赞、评论、分享数据驱动算法</li>
-  <li><strong>内容优化</strong>：创作者主动适应算法偏好</li>
+<li><strong>推荐机制</strong>：高亮度内容获得更多曝光</li>
+<li><strong>用户行为</strong>：点赞、评论、分享数据驱动算法</li>
+<li><strong>内容优化</strong>：创作者主动适应算法偏好</li>
 </ul>
-
-<h3 id="工具层面">工具层面</h3>
+<h3>工具层面</h3>
 <ul>
-  <li><strong>默认设置</strong>：编辑器默认偏向高亮度</li>
-  <li><strong>一键优化</strong>：Lux 等工具简化了亮度调整</li>
-  <li><strong>用户习惯</strong>：简单操作导致内容同质化</li>
+<li><strong>默认设置</strong>：编辑器默认偏向高亮度</li>
+<li><strong>一键优化</strong>：Lux 等工具简化了亮度调整</li>
+<li><strong>用户习惯</strong>：简单操作导致内容同质化</li>
 </ul>
-
-<h2 id="-对创作者的启示">🎯 对创作者的启示</h2>
-
+<h2>🎯 对创作者的启示</h2>
 <ol>
-  <li><strong>理解技术原理</strong>：掌握 HDR 和屏幕亮度的工作原理</li>
-  <li><strong>优化内容策略</strong>：在保持视觉质量的前提下适度提升亮度</li>
-  <li><strong>避免过度依赖</strong>：不要完全依赖平台工具的默认设置</li>
-  <li><strong>保持创意平衡</strong>：在算法友好和艺术表达之间找到平衡</li>
+<li><strong>理解技术原理</strong>：掌握 HDR 和屏幕亮度的工作原理</li>
+<li><strong>优化内容策略</strong>：在保持视觉质量的前提下适度提升亮度</li>
+<li><strong>避免过度依赖</strong>：不要完全依赖平台工具的默认设置</li>
+<li><strong>保持创意平衡</strong>：在算法友好和艺术表达之间找到平衡</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Instagram 的”格外亮”现象是技术、算法和用户行为共同作用的结果。理解这些背后的原理，不仅有助于我们更好地使用平台，也能为内容创作提供新的思路。</p>
-
 <p>在追求视觉效果的同时，我们也要记住：真正好的内容，应该是在技术优化和艺术表达之间找到完美平衡。</p>
-
 <hr />
-
 <p><em>本文基于 2025 年最新的技术研究和数据分析，揭示了 Instagram 视觉效果的深层技术原理。</em></p>
 
+					</div>
 				</article>
 
 				
@@ -480,11 +471,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -495,18 +485,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -516,7 +499,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -529,6 +512,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/prompt-engineering.png"
+            alt="Prompt Engineering"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -278,215 +288,186 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#文章" itemprop="item"><span itemprop="name">文章</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Prompt Engineering</span>
-							<meta itemprop="position" content="4" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#文章" itemprop="item"><span itemprop="name">文章</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Prompt Engineering</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="prompt-engineering培训手册---系统掌握ai提示词编写技巧">Prompt Engineering培训手册 - 系统掌握AI提示词编写技巧</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Prompt Engineering培训手册 - 系统掌握AI提示词编写技巧</h2>
 <p><a href="https://xiangyangqiaomu.feishu.cn/wiki/JrRbwYr1QiRpUwkx4xdcw3Bsn9d">Prompt Engineering培训手册</a>是一份全面的学习资源，旨在帮助开发者、内容创作者和AI爱好者系统地掌握提示词工程技术。随着大语言模型(LLM)的普及，掌握如何有效与AI沟通的能力已成为现代技能的关键组成部分。这份培训手册涵盖了从基础到高级的各种提示词编写技巧和策略。</p>
-
-<h2 id="核心内容">核心内容</h2>
-
-<h3 id="1-提示词基础知识">1. 提示词基础知识</h3>
-
+<h2>核心内容</h2>
+<h3>1. 提示词基础知识</h3>
 <p>培训手册从基础概念出发，系统性地介绍提示词工程的关键要素：</p>
-
 <ul>
-  <li><strong>提示词结构</strong>：有效提示词的基本组成部分</li>
-  <li><strong>上下文设计</strong>：如何提供充分而精确的背景信息</li>
-  <li><strong>指令明确性</strong>：编写清晰、无歧义指令的方法</li>
-  <li><strong>角色设定</strong>：为AI赋予适当角色以获得期望输出</li>
+<li><strong>提示词结构</strong>：有效提示词的基本组成部分</li>
+<li><strong>上下文设计</strong>：如何提供充分而精确的背景信息</li>
+<li><strong>指令明确性</strong>：编写清晰、无歧义指令的方法</li>
+<li><strong>角色设定</strong>：为AI赋予适当角色以获得期望输出</li>
 </ul>
-
-<h3 id="2-高级提示技巧">2. 高级提示技巧</h3>
-
+<h3>2. 高级提示技巧</h3>
 <p>深入探讨提升AI响应质量的进阶技巧：</p>
-
 <ul>
-  <li><strong>Chain-of-Thought</strong>：引导AI展示推理过程的技术</li>
-  <li><strong>Few-Shot Learning</strong>：通过示例引导AI理解任务需求</li>
-  <li><strong>思维框架设计</strong>：构建结构化思考模式提升输出质量</li>
-  <li><strong>约束与引导</strong>：有效限制AI输出范围的策略</li>
+<li><strong>Chain-of-Thought</strong>：引导AI展示推理过程的技术</li>
+<li><strong>Few-Shot Learning</strong>：通过示例引导AI理解任务需求</li>
+<li><strong>思维框架设计</strong>：构建结构化思考模式提升输出质量</li>
+<li><strong>约束与引导</strong>：有效限制AI输出范围的策略</li>
 </ul>
-
-<h3 id="3-专业领域应用">3. 专业领域应用</h3>
-
+<h3>3. 专业领域应用</h3>
 <p>针对不同场景的专业提示词技术：</p>
-
 <ul>
-  <li><strong>代码生成优化</strong>：获得高质量代码输出的专用技巧</li>
-  <li><strong>内容创作指南</strong>：创意写作、营销文案等内容生成策略</li>
-  <li><strong>数据分析提示</strong>：用于数据解释和分析的提示词模板</li>
-  <li><strong>教育培训应用</strong>：针对学习辅助和教学设计的提示策略</li>
+<li><strong>代码生成优化</strong>：获得高质量代码输出的专用技巧</li>
+<li><strong>内容创作指南</strong>：创意写作、营销文案等内容生成策略</li>
+<li><strong>数据分析提示</strong>：用于数据解释和分析的提示词模板</li>
+<li><strong>教育培训应用</strong>：针对学习辅助和教学设计的提示策略</li>
 </ul>
-
-<h3 id="4-实战案例与模板">4. 实战案例与模板</h3>
-
+<h3>4. 实战案例与模板</h3>
 <p>大量可直接使用的模板和案例分析：</p>
-
 <ul>
-  <li><strong>通用模板库</strong>：常见场景的即用型提示词模板</li>
-  <li><strong>案例解析</strong>：成功提示词的详细分解与分析</li>
-  <li><strong>失败案例研究</strong>：常见错误提示及改进方法</li>
-  <li><strong>A/B测试技巧</strong>：如何对提示词进行系统化优化</li>
+<li><strong>通用模板库</strong>：常见场景的即用型提示词模板</li>
+<li><strong>案例解析</strong>：成功提示词的详细分解与分析</li>
+<li><strong>失败案例研究</strong>：常见错误提示及改进方法</li>
+<li><strong>A/B测试技巧</strong>：如何对提示词进行系统化优化</li>
 </ul>
-
-<h2 id="技术特色">技术特色</h2>
-
+<h2>技术特色</h2>
 <p>这份培训手册具有几个突出特点：</p>
-
 <ol>
-  <li><strong>系统性</strong>：按逻辑递进方式组织知识，从基础到高级</li>
-  <li><strong>实用性</strong>：注重实际应用，提供大量可直接使用的模板</li>
-  <li><strong>最新性</strong>：持续更新，跟进最新的提示词技术发展</li>
-  <li><strong>跨模型适用</strong>：涵盖适用于不同大语言模型的通用技巧</li>
+<li><strong>系统性</strong>：按逻辑递进方式组织知识，从基础到高级</li>
+<li><strong>实用性</strong>：注重实际应用，提供大量可直接使用的模板</li>
+<li><strong>最新性</strong>：持续更新，跟进最新的提示词技术发展</li>
+<li><strong>跨模型适用</strong>：涵盖适用于不同大语言模型的通用技巧</li>
 </ol>
-
-<h2 id="适用人群">适用人群</h2>
-
+<h2>适用人群</h2>
 <p>培训手册为多种不同用户提供价值：</p>
-
-<h3 id="开发人员">开发人员</h3>
-
+<h3>开发人员</h3>
 <ul>
-  <li><strong>AI集成开发</strong>：将AI功能整合到应用程序中</li>
-  <li><strong>自动化工作流</strong>：构建基于AI的自动化解决方案</li>
-  <li><strong>工具开发</strong>：创建专业的AI辅助工具</li>
-  <li><strong>API调用优化</strong>：提高API使用效率和成本控制</li>
+<li><strong>AI集成开发</strong>：将AI功能整合到应用程序中</li>
+<li><strong>自动化工作流</strong>：构建基于AI的自动化解决方案</li>
+<li><strong>工具开发</strong>：创建专业的AI辅助工具</li>
+<li><strong>API调用优化</strong>：提高API使用效率和成本控制</li>
 </ul>
-
-<h3 id="内容创作者">内容创作者</h3>
-
+<h3>内容创作者</h3>
 <ul>
-  <li><strong>写作辅助</strong>：利用AI提升内容创作效率和质量</li>
-  <li><strong>创意激发</strong>：使用AI进行头脑风暴和创意拓展</li>
-  <li><strong>内容多样化</strong>：生成多种风格和形式的内容</li>
-  <li><strong>编辑优化</strong>：借助AI进行内容润色和改进</li>
+<li><strong>写作辅助</strong>：利用AI提升内容创作效率和质量</li>
+<li><strong>创意激发</strong>：使用AI进行头脑风暴和创意拓展</li>
+<li><strong>内容多样化</strong>：生成多种风格和形式的内容</li>
+<li><strong>编辑优化</strong>：借助AI进行内容润色和改进</li>
 </ul>
-
-<h3 id="产品经理">产品经理</h3>
-
+<h3>产品经理</h3>
 <ul>
-  <li><strong>需求分析</strong>：使用AI辅助需求收集和分析</li>
-  <li><strong>用户研究</strong>：生成用户画像和场景模拟</li>
-  <li><strong>原型设计</strong>：快速构建产品概念和交互流程</li>
-  <li><strong>市场调研</strong>：自动化收集和分析市场信息</li>
+<li><strong>需求分析</strong>：使用AI辅助需求收集和分析</li>
+<li><strong>用户研究</strong>：生成用户画像和场景模拟</li>
+<li><strong>原型设计</strong>：快速构建产品概念和交互流程</li>
+<li><strong>市场调研</strong>：自动化收集和分析市场信息</li>
 </ul>
-
-<h3 id="ai研究学习者">AI研究学习者</h3>
-
+<h3>AI研究学习者</h3>
 <ul>
-  <li><strong>理论学习</strong>：系统了解提示工程的理论基础</li>
-  <li><strong>技能提升</strong>：循序渐进掌握提示词编写能力</li>
-  <li><strong>实验探索</strong>：通过实践案例理解AI能力边界</li>
-  <li><strong>前沿跟踪</strong>：了解提示工程领域的最新发展</li>
+<li><strong>理论学习</strong>：系统了解提示工程的理论基础</li>
+<li><strong>技能提升</strong>：循序渐进掌握提示词编写能力</li>
+<li><strong>实验探索</strong>：通过实践案例理解AI能力边界</li>
+<li><strong>前沿跟踪</strong>：了解提示工程领域的最新发展</li>
 </ul>
-
-<h2 id="学习路径">学习路径</h2>
-
+<h2>学习路径</h2>
 <p>培训手册提供清晰的学习进阶路径：</p>
-
 <ol>
-  <li><strong>入门基础</strong>：提示词基本概念与结构</li>
-  <li><strong>实践应用</strong>：基础提示模板使用与调整</li>
-  <li><strong>进阶技术</strong>：复杂任务的提示设计与优化</li>
-  <li><strong>专业领域</strong>：特定场景下的专业提示策略</li>
-  <li><strong>创新探索</strong>：开发个性化提示技术和方法</li>
+<li><strong>入门基础</strong>：提示词基本概念与结构</li>
+<li><strong>实践应用</strong>：基础提示模板使用与调整</li>
+<li><strong>进阶技术</strong>：复杂任务的提示设计与优化</li>
+<li><strong>专业领域</strong>：特定场景下的专业提示策略</li>
+<li><strong>创新探索</strong>：开发个性化提示技术和方法</li>
 </ol>
-
-<h2 id="与其他资源对比">与其他资源对比</h2>
-
+<h2>与其他资源对比</h2>
 <p>相比其他学习资源，这份培训手册具有独特优势：</p>
-
 <table>
-  <thead>
-    <tr>
-      <th>特点</th>
-      <th>Prompt Engineering培训手册</th>
-      <th>一般教程</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>知识体系</td>
-      <td>系统完整</td>
-      <td>通常零散</td>
-    </tr>
-    <tr>
-      <td>实用案例</td>
-      <td>丰富多样</td>
-      <td>有限或缺乏</td>
-    </tr>
-    <tr>
-      <td>更新频率</td>
-      <td>定期更新</td>
-      <td>经常过时</td>
-    </tr>
-    <tr>
-      <td>适用范围</td>
-      <td>多场景多模型</td>
-      <td>通常局限特定场景</td>
-    </tr>
-    <tr>
-      <td>中文内容</td>
-      <td>原生中文优化</td>
-      <td>常见翻译问题</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特点</th>
+<th>Prompt Engineering培训手册</th>
+<th>一般教程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>知识体系</td>
+<td>系统完整</td>
+<td>通常零散</td>
+</tr>
+<tr>
+<td>实用案例</td>
+<td>丰富多样</td>
+<td>有限或缺乏</td>
+</tr>
+<tr>
+<td>更新频率</td>
+<td>定期更新</td>
+<td>经常过时</td>
+</tr>
+<tr>
+<td>适用范围</td>
+<td>多场景多模型</td>
+<td>通常局限特定场景</td>
+</tr>
+<tr>
+<td>中文内容</td>
+<td>原生中文优化</td>
+<td>常见翻译问题</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="实际应用效果">实际应用效果</h2>
-
-<h3 id="开发效率提升">开发效率提升</h3>
-
+<h2>实际应用效果</h2>
+<h3>开发效率提升</h3>
 <p>某软件开发团队通过应用培训手册中的代码生成提示技术，将日常开发任务效率提升30%，特别是在编写样板代码和单元测试方面获得显著改进。</p>
-
-<h3 id="内容创作突破">内容创作突破</h3>
-
+<h3>内容创作突破</h3>
 <p>内容创作者使用手册中的创意写作技巧，成功克服创作瓶颈，产出质量和数量均有提升，同时保持了个人风格的一致性。</p>
-
-<h3 id="教育培训革新">教育培训革新</h3>
-
+<h3>教育培训革新</h3>
 <p>教育工作者采用手册中的教学设计提示方法，开发出针对不同学习风格的个性化学习材料，提高了学生的参与度和学习效果。</p>
-
-<h2 id="未来发展">未来发展</h2>
-
+<h2>未来发展</h2>
 <p>培训手册计划在以下方面持续发展：</p>
-
 <ol>
-  <li><strong>多模态提示</strong>：拓展到图像、音频等多模态AI的提示技术</li>
-  <li><strong>行业专用版</strong>：开发针对特定行业的专业提示工程指南</li>
-  <li><strong>工具集成</strong>：提供与常用AI工具无缝衔接的提示模板</li>
-  <li><strong>社区共创</strong>：建立用户贡献和分享机制，丰富资源库</li>
+<li><strong>多模态提示</strong>：拓展到图像、音频等多模态AI的提示技术</li>
+<li><strong>行业专用版</strong>：开发针对特定行业的专业提示工程指南</li>
+<li><strong>工具集成</strong>：提供与常用AI工具无缝衔接的提示模板</li>
+<li><strong>社区共创</strong>：建立用户贡献和分享机制，丰富资源库</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Prompt Engineering培训手册为所有希望掌握AI提示词技术的学习者提供了系统、实用的学习资源。通过这份培训手册，你将能够系统地学习如何与AI进行有效沟通，将AI的强大能力充分应用到工作和生活中的各个方面。无论你是希望提升工作效率的专业人士，还是对AI技术充满好奇的爱好者，这份培训手册都能帮助你在提示词工程领域获得扎实的技能和知识。</p>
-
 <p>访问<a href="https://xiangyangqiaomu.feishu.cn/wiki/JrRbwYr1QiRpUwkx4xdcw3Bsn9d">Prompt Engineering培训手册</a>，开始你的提示词工程学习之旅，掌握与AI沟通的艺术。</p>
 
+					</div>
 				</article>
 
 				
@@ -555,11 +536,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -570,18 +550,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -591,7 +564,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -604,6 +577,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

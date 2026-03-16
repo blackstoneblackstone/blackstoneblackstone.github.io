@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/mgx.svg"
+            alt="MGX"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,186 +290,160 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai 程序员" itemprop="item"><span itemprop="name">AI 程序员</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">MGX</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai 程序员" itemprop="item"><span itemprop="name">AI 程序员</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">MGX</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="mgx---重新定义开发环境">MGX - 重新定义开发环境</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>MGX - 重新定义开发环境</h2>
 <p><a href="https://mgx.dev/">MGX</a> 是一款面向未来的开发环境，它以极简设计和强大功能重新定义了现代编程体验。MGX 打破了传统开发环境的局限，提供了一个流畅、高效且充满创新的编程工作流。</p>
-
-<h2 id="核心特性">核心特性</h2>
-
+<h2>核心特性</h2>
 <p>MGX 的设计理念围绕简洁与效率展开，同时不牺牲功能强大性：</p>
-
-<h3 id="1-极简用户界面">1. 极简用户界面</h3>
-
+<h3>1. 极简用户界面</h3>
 <p>MGX 采用极简主义设计哲学，移除了所有不必要的干扰元素，让开发者可以专注于代码本身。优雅的暗色界面和精心设计的排版带来舒适的编码体验。</p>
-
-<h3 id="2-无缝开发流程">2. 无缝开发流程</h3>
-
+<h3>2. 无缝开发流程</h3>
 <p>MGX 无需复杂的配置过程，支持即开即用的开发体验。项目启动、测试运行和部署过程被简化为几个直观操作，大幅提高开发效率。</p>
-
-<h3 id="3-智能代码辅助">3. 智能代码辅助</h3>
-
+<h3>3. 智能代码辅助</h3>
 <p>内置先进的代码补全和智能建议功能，MGX 能够理解开发者的意图，提供上下文相关的代码片段和解决方案，让编码过程更加流畅。</p>
-
-<h3 id="4-跨平台兼容性">4. 跨平台兼容性</h3>
-
+<h3>4. 跨平台兼容性</h3>
 <p>MGX 设计为在所有主流操作系统上提供一致的体验，无论是 macOS、Windows 还是 Linux，都能享受相同的高效工作流。</p>
-
-<h3 id="5-模块化扩展系统">5. 模块化扩展系统</h3>
-
+<h3>5. 模块化扩展系统</h3>
 <p>MGX 的核心设计支持丰富的扩展生态系统，开发者可以根据自己的需求定制工作环境，添加额外功能而不影响系统性能。</p>
-
-<h2 id="技术优势">技术优势</h2>
-
+<h2>技术优势</h2>
 <p>MGX 在技术实现上拥有多项创新：</p>
-
 <ol>
-  <li><strong>高性能引擎</strong> - 基于现代技术栈构建，即使处理大型项目和复杂代码库也能保持流畅响应</li>
-  <li><strong>实时协作</strong> - 内置的协作功能允许团队成员在同一代码库上实时协作，无需额外工具</li>
-  <li><strong>智能上下文感知</strong> - 先进的代码分析能力使 MGX 能够理解项目整体结构和上下文关系</li>
-  <li><strong>云端同步</strong> - 无缝集成云存储，实现工作环境和项目设置的自动同步</li>
-  <li><strong>可扩展 API</strong> - 强大的 API 使开发者和团队可以根据特定需求扩展和自定义 MGX</li>
+<li><strong>高性能引擎</strong> - 基于现代技术栈构建，即使处理大型项目和复杂代码库也能保持流畅响应</li>
+<li><strong>实时协作</strong> - 内置的协作功能允许团队成员在同一代码库上实时协作，无需额外工具</li>
+<li><strong>智能上下文感知</strong> - 先进的代码分析能力使 MGX 能够理解项目整体结构和上下文关系</li>
+<li><strong>云端同步</strong> - 无缝集成云存储，实现工作环境和项目设置的自动同步</li>
+<li><strong>可扩展 API</strong> - 强大的 API 使开发者和团队可以根据特定需求扩展和自定义 MGX</li>
 </ol>
-
-<h2 id="适用场景">适用场景</h2>
-
+<h2>适用场景</h2>
 <p>MGX 在各种开发场景中表现出色：</p>
-
-<h3 id="前端开发">前端开发</h3>
-
+<h3>前端开发</h3>
 <p>对于前端开发者，MGX 提供了优秀的 HTML、CSS 和 JavaScript/TypeScript 支持，内置的实时预览和调试工具大大简化了 UI 开发流程。</p>
-
-<h3 id="后端与服务端开发">后端与服务端开发</h3>
-
+<h3>后端与服务端开发</h3>
 <p>MGX 对主流后端语言和框架提供深度集成，内置的服务测试和部署工具减少了开发到上线的摩擦。</p>
-
-<h3 id="全栈应用开发">全栈应用开发</h3>
-
+<h3>全栈应用开发</h3>
 <p>得益于其灵活的项目管理和多语言支持，MGX 是全栈开发者的理想选择，能够在一个环境中无缝切换前后端开发任务。</p>
-
-<h3 id="移动应用开发">移动应用开发</h3>
-
+<h3>移动应用开发</h3>
 <p>MGX 为移动应用开发提供了专门优化，支持主流移动开发框架和跨平台技术，集成模拟器和测试工具。</p>
-
-<h2 id="用户体验">用户体验</h2>
-
+<h2>用户体验</h2>
 <p>MGX 的设计核心是卓越的用户体验：</p>
-
 <ol>
-  <li><strong>即时启动</strong> - 优化的启动性能使 MGX 能在几秒内完成加载</li>
-  <li><strong>直观操作</strong> - 精心设计的用户界面让即使是首次使用的开发者也能迅速上手</li>
-  <li><strong>智能工作流</strong> - MGX 学习开发者的习惯，提供个性化的工作流建议</li>
-  <li><strong>无干扰模式</strong> - 专注模式移除所有非必要元素，创造沉浸式编码环境</li>
+<li><strong>即时启动</strong> - 优化的启动性能使 MGX 能在几秒内完成加载</li>
+<li><strong>直观操作</strong> - 精心设计的用户界面让即使是首次使用的开发者也能迅速上手</li>
+<li><strong>智能工作流</strong> - MGX 学习开发者的习惯，提供个性化的工作流建议</li>
+<li><strong>无干扰模式</strong> - 专注模式移除所有非必要元素，创造沉浸式编码环境</li>
 </ol>
-
-<h2 id="与竞品对比">与竞品对比</h2>
-
+<h2>与竞品对比</h2>
 <p>相比其他开发工具，MGX 在多个方面展现独特优势：</p>
-
 <table>
-  <thead>
-    <tr>
-      <th>特性</th>
-      <th>MGX</th>
-      <th>传统 IDE</th>
-      <th>轻量编辑器</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>启动速度</td>
-      <td>极快</td>
-      <td>较慢</td>
-      <td>快速</td>
-    </tr>
-    <tr>
-      <td>资源占用</td>
-      <td>极低</td>
-      <td>高</td>
-      <td>低到中等</td>
-    </tr>
-    <tr>
-      <td>扩展性</td>
-      <td>高度模块化</td>
-      <td>插件系统</td>
-      <td>有限扩展</td>
-    </tr>
-    <tr>
-      <td>智能功能</td>
-      <td>先进且节能</td>
-      <td>功能全但重</td>
-      <td>基础功能</td>
-    </tr>
-    <tr>
-      <td>协作能力</td>
-      <td>原生支持</td>
-      <td>需插件</td>
-      <td>有限支持</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特性</th>
+<th>MGX</th>
+<th>传统 IDE</th>
+<th>轻量编辑器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>启动速度</td>
+<td>极快</td>
+<td>较慢</td>
+<td>快速</td>
+</tr>
+<tr>
+<td>资源占用</td>
+<td>极低</td>
+<td>高</td>
+<td>低到中等</td>
+</tr>
+<tr>
+<td>扩展性</td>
+<td>高度模块化</td>
+<td>插件系统</td>
+<td>有限扩展</td>
+</tr>
+<tr>
+<td>智能功能</td>
+<td>先进且节能</td>
+<td>功能全但重</td>
+<td>基础功能</td>
+</tr>
+<tr>
+<td>协作能力</td>
+<td>原生支持</td>
+<td>需插件</td>
+<td>有限支持</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="社区反馈">社区反馈</h2>
-
+<h2>社区反馈</h2>
 <p>MGX 已在开发者社区获得积极评价：</p>
-
 <blockquote>
-  <p>“MGX 彻底改变了我的编码方式，它既有轻量编辑器的速度，又有全功能 IDE 的能力。” — 全栈开发者</p>
+<p>“MGX 彻底改变了我的编码方式，它既有轻量编辑器的速度，又有全功能 IDE 的能力。” — 全栈开发者</p>
 </blockquote>
-
 <blockquote>
-  <p>“使用 MGX 一个月后，回到其他工具感觉像是回到了过去。它的设计真正以开发者为中心。” — 前端架构师</p>
+<p>“使用 MGX 一个月后，回到其他工具感觉像是回到了过去。它的设计真正以开发者为中心。” — 前端架构师</p>
 </blockquote>
-
 <blockquote>
-  <p>“MGX 的协作功能让我们团队的效率提升了 30%，特别是在远程工作环境下。” — 技术团队负责人</p>
+<p>“MGX 的协作功能让我们团队的效率提升了 30%，特别是在远程工作环境下。” — 技术团队负责人</p>
 </blockquote>
-
-<h2 id="未来发展">未来发展</h2>
-
+<h2>未来发展</h2>
 <p>MGX 的开发团队承诺持续创新，计划中的功能包括：</p>
-
 <ol>
-  <li><strong>AI 辅助编程</strong> - 更深入的人工智能集成，提供更智能的代码生成和优化建议</li>
-  <li><strong>增强现实编程界面</strong> - 探索 AR/VR 技术在代码可视化和团队协作中的应用</li>
-  <li><strong>跨设备无缝体验</strong> - 进一步优化在移动设备上的开发体验</li>
-  <li><strong>开源生态系统</strong> - 扩大开源社区参与，丰富扩展和工具生态</li>
+<li><strong>AI 辅助编程</strong> - 更深入的人工智能集成，提供更智能的代码生成和优化建议</li>
+<li><strong>增强现实编程界面</strong> - 探索 AR/VR 技术在代码可视化和团队协作中的应用</li>
+<li><strong>跨设备无缝体验</strong> - 进一步优化在移动设备上的开发体验</li>
+<li><strong>开源生态系统</strong> - 扩大开源社区参与，丰富扩展和工具生态</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>MGX 代表了开发环境的未来方向—简洁、高效且智能。它不仅是一个代码编辑工具，更是一个重新思考开发者与工具交互方式的平台。无论是个人开发者还是大型团队，MGX 都能提供卓越的编程体验和生产力提升。</p>
-
 <p>探索 <a href="https://mgx.dev/">MGX.dev</a> 官网，体验这款面向未来的开发环境，重新定义你的编程工作流。</p>
 
+					</div>
 				</article>
 
 				
@@ -528,11 +512,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -543,18 +526,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -564,7 +540,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -577,6 +553,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/uizard.svg"
+            alt="Uizard"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,199 +290,175 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#生成设计稿" itemprop="item"><span itemprop="name">生成设计稿</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Uizard</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#生成设计稿" itemprop="item"><span itemprop="name">生成设计稿</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Uizard</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="uizard---ai驱动的界面设计工具">Uizard - AI驱动的界面设计工具</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Uizard - AI驱动的界面设计工具</h2>
 <p><a href="https://uizard.com/">Uizard</a>是一款革命性的AI设计工具，它能够帮助开发者、设计师和产品经理快速将创意转化为可视化的界面设计。无论是创建移动应用、网站还是桌面软件的原型，Uizard都能通过AI技术大幅简化设计流程。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
-<h3 id="1-ai设计生成">1. AI设计生成</h3>
-
+<h2>核心功能</h2>
+<h3>1. AI设计生成</h3>
 <p>Uizard的核心优势在于其强大的AI设计生成能力：</p>
-
 <ul>
-  <li><strong>草图转设计</strong>：将手绘草图自动转换为精美界面</li>
-  <li><strong>文本到UI</strong>：通过文字描述生成完整界面设计</li>
-  <li><strong>智能主题</strong>：自动应用一致的设计风格和品牌元素</li>
-  <li><strong>多平台支持</strong>：同时支持移动应用、网页和桌面应用设计</li>
+<li><strong>草图转设计</strong>：将手绘草图自动转换为精美界面</li>
+<li><strong>文本到UI</strong>：通过文字描述生成完整界面设计</li>
+<li><strong>智能主题</strong>：自动应用一致的设计风格和品牌元素</li>
+<li><strong>多平台支持</strong>：同时支持移动应用、网页和桌面应用设计</li>
 </ul>
-
-<h3 id="2-丰富的组件库">2. 丰富的组件库</h3>
-
+<h3>2. 丰富的组件库</h3>
 <p>提供全面的设计组件满足各种需求：</p>
-
 <ul>
-  <li><strong>UI控件</strong>：按钮、表单、导航栏等标准控件</li>
-  <li><strong>设计模式</strong>：常用界面模式和布局</li>
-  <li><strong>主题模板</strong>：预设的设计风格和配色方案</li>
-  <li><strong>图标库</strong>：丰富的图标和视觉元素</li>
+<li><strong>UI控件</strong>：按钮、表单、导航栏等标准控件</li>
+<li><strong>设计模式</strong>：常用界面模式和布局</li>
+<li><strong>主题模板</strong>：预设的设计风格和配色方案</li>
+<li><strong>图标库</strong>：丰富的图标和视觉元素</li>
 </ul>
-
-<h3 id="3-协作功能">3. 协作功能</h3>
-
+<h3>3. 协作功能</h3>
 <p>支持团队协作和共享：</p>
-
 <ul>
-  <li><strong>实时协作</strong>：多人同时编辑同一项目</li>
-  <li><strong>评论反馈</strong>：直接在设计上添加评论和建议</li>
-  <li><strong>版本管理</strong>：跟踪设计变更和历史版本</li>
-  <li><strong>共享选项</strong>：灵活的项目共享和权限设置</li>
+<li><strong>实时协作</strong>：多人同时编辑同一项目</li>
+<li><strong>评论反馈</strong>：直接在设计上添加评论和建议</li>
+<li><strong>版本管理</strong>：跟踪设计变更和历史版本</li>
+<li><strong>共享选项</strong>：灵活的项目共享和权限设置</li>
 </ul>
-
-<h3 id="4-导出与集成">4. 导出与集成</h3>
-
+<h3>4. 导出与集成</h3>
 <p>完善的输出和开发集成选项：</p>
-
 <ul>
-  <li><strong>代码导出</strong>：自动生成HTML/CSS代码</li>
-  <li><strong>设计规范</strong>：导出设计系统和组件规范</li>
-  <li><strong>原型交互</strong>：创建可交互的演示原型</li>
-  <li><strong>设计工具集成</strong>：与主流设计工具的兼容性</li>
+<li><strong>代码导出</strong>：自动生成HTML/CSS代码</li>
+<li><strong>设计规范</strong>：导出设计系统和组件规范</li>
+<li><strong>原型交互</strong>：创建可交互的演示原型</li>
+<li><strong>设计工具集成</strong>：与主流设计工具的兼容性</li>
 </ul>
-
-<h2 id="技术特点">技术特点</h2>
-
+<h2>技术特点</h2>
 <p>Uizard采用先进的AI技术构建：</p>
-
 <ol>
-  <li><strong>计算机视觉</strong>：精准识别手绘元素和界面结构</li>
-  <li><strong>生成式AI</strong>：根据描述智能生成符合需求的界面</li>
-  <li><strong>模式识别</strong>：理解常见UI模式和最佳实践</li>
-  <li><strong>自适应设计</strong>：自动调整布局适应不同屏幕尺寸</li>
+<li><strong>计算机视觉</strong>：精准识别手绘元素和界面结构</li>
+<li><strong>生成式AI</strong>：根据描述智能生成符合需求的界面</li>
+<li><strong>模式识别</strong>：理解常见UI模式和最佳实践</li>
+<li><strong>自适应设计</strong>：自动调整布局适应不同屏幕尺寸</li>
 </ol>
-
-<h2 id="适用场景">适用场景</h2>
-
+<h2>适用场景</h2>
 <p>Uizard在多种场景下表现出色：</p>
-
-<h3 id="产品原型设计">产品原型设计</h3>
-
+<h3>产品原型设计</h3>
 <ul>
-  <li><strong>概念验证</strong>：快速将想法可视化，验证产品概念</li>
-  <li><strong>用户测试</strong>：创建交互原型进行早期用户测试</li>
-  <li><strong>投资路演</strong>：制作精美演示材料争取投资</li>
-  <li><strong>需求沟通</strong>：改善团队间的设计需求沟通</li>
+<li><strong>概念验证</strong>：快速将想法可视化，验证产品概念</li>
+<li><strong>用户测试</strong>：创建交互原型进行早期用户测试</li>
+<li><strong>投资路演</strong>：制作精美演示材料争取投资</li>
+<li><strong>需求沟通</strong>：改善团队间的设计需求沟通</li>
 </ul>
-
-<h3 id="开发前准备">开发前准备</h3>
-
+<h3>开发前准备</h3>
 <ul>
-  <li><strong>设计规范</strong>：建立统一的设计系统和组件库</li>
-  <li><strong>开发参考</strong>：为开发团队提供精确的视觉参考</li>
-  <li><strong>响应式规划</strong>：规划不同设备的界面适配方案</li>
-  <li><strong>交互说明</strong>：明确界面交互逻辑和用户流程</li>
+<li><strong>设计规范</strong>：建立统一的设计系统和组件库</li>
+<li><strong>开发参考</strong>：为开发团队提供精确的视觉参考</li>
+<li><strong>响应式规划</strong>：规划不同设备的界面适配方案</li>
+<li><strong>交互说明</strong>：明确界面交互逻辑和用户流程</li>
 </ul>
-
-<h3 id="非设计师使用">非设计师使用</h3>
-
+<h3>非设计师使用</h3>
 <ul>
-  <li><strong>快速设计</strong>：无需专业设计技能也能创建高质量界面</li>
-  <li><strong>创意探索</strong>：快速尝试不同设计方向和风格</li>
-  <li><strong>方案对比</strong>：并行展示多种设计方案便于选择</li>
-  <li><strong>设计学习</strong>：了解现代界面设计原则和趋势</li>
+<li><strong>快速设计</strong>：无需专业设计技能也能创建高质量界面</li>
+<li><strong>创意探索</strong>：快速尝试不同设计方向和风格</li>
+<li><strong>方案对比</strong>：并行展示多种设计方案便于选择</li>
+<li><strong>设计学习</strong>：了解现代界面设计原则和趋势</li>
 </ul>
-
-<h2 id="使用体验">使用体验</h2>
-
+<h2>使用体验</h2>
 <p>Uizard提供直观的使用体验：</p>
-
 <ol>
-  <li><strong>零基础上手</strong>：无需设计背景也能创建专业设计</li>
-  <li><strong>拖放操作</strong>：简单直观的拖放式界面构建</li>
-  <li><strong>智能辅助</strong>：AI提供设计建议和改进方案</li>
-  <li><strong>快速迭代</strong>：支持设计的快速调整和优化</li>
+<li><strong>零基础上手</strong>：无需设计背景也能创建专业设计</li>
+<li><strong>拖放操作</strong>：简单直观的拖放式界面构建</li>
+<li><strong>智能辅助</strong>：AI提供设计建议和改进方案</li>
+<li><strong>快速迭代</strong>：支持设计的快速调整和优化</li>
 </ol>
-
-<h2 id="与传统设计工具对比">与传统设计工具对比</h2>
-
+<h2>与传统设计工具对比</h2>
 <p>相比传统设计工具，Uizard具有独特优势：</p>
-
 <table>
-  <thead>
-    <tr>
-      <th>特点</th>
-      <th>Uizard</th>
-      <th>传统设计工具</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>学习曲线</td>
-      <td>平缓，易于上手</td>
-      <td>陡峭，需专业训练</td>
-    </tr>
-    <tr>
-      <td>设计速度</td>
-      <td>数分钟完成原型</td>
-      <td>数小时至数天</td>
-    </tr>
-    <tr>
-      <td>AI辅助</td>
-      <td>全流程AI支持</td>
-      <td>有限或无AI功能</td>
-    </tr>
-    <tr>
-      <td>代码生成</td>
-      <td>自动生成前端代码</td>
-      <td>通常需手动实现</td>
-    </tr>
-    <tr>
-      <td>适用人群</td>
-      <td>设计师及非设计师</td>
-      <td>主要面向专业设计师</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特点</th>
+<th>Uizard</th>
+<th>传统设计工具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>学习曲线</td>
+<td>平缓，易于上手</td>
+<td>陡峭，需专业训练</td>
+</tr>
+<tr>
+<td>设计速度</td>
+<td>数分钟完成原型</td>
+<td>数小时至数天</td>
+</tr>
+<tr>
+<td>AI辅助</td>
+<td>全流程AI支持</td>
+<td>有限或无AI功能</td>
+</tr>
+<tr>
+<td>代码生成</td>
+<td>自动生成前端代码</td>
+<td>通常需手动实现</td>
+</tr>
+<tr>
+<td>适用人群</td>
+<td>设计师及非设计师</td>
+<td>主要面向专业设计师</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="实际应用案例">实际应用案例</h2>
-
-<h3 id="创业团队快速原型">创业团队快速原型</h3>
-
+<h2>实际应用案例</h2>
+<h3>创业团队快速原型</h3>
 <p>某创业团队使用Uizard在一周内完成了产品原型设计，大大缩短了从创意到可演示产品的时间。</p>
-
-<h3 id="开发团队内部设计">开发团队内部设计</h3>
-
+<h3>开发团队内部设计</h3>
 <p>开发团队使用Uizard自主完成界面设计，无需等待专业设计师资源，加快了开发周期。</p>
-
-<h3 id="产品经理需求阐述">产品经理需求阐述</h3>
-
+<h3>产品经理需求阐述</h3>
 <p>产品经理利用Uizard将产品需求转化为可视化界面，大幅提升了与开发团队的沟通效率。</p>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Uizard作为一款AI驱动的界面设计工具，正在改变传统的设计流程和思路。它让设计变得更加民主化、高效和创新，使更多人能够参与到产品设计过程中。无论是专业设计师寻求效率提升，还是非设计背景人员需要创建界面原型，Uizard都能提供强大而直观的解决方案。</p>
-
 <p>访问<a href="https://uizard.com/">Uizard官网</a>，探索AI设计的无限可能，让你的创意更快地变为现实。</p>
 
+					</div>
 				</article>
 
 				
@@ -541,11 +527,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -556,18 +541,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -577,7 +555,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -590,6 +568,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

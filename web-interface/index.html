@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/78c26e0c.jpg"
+            alt="🔥 Vercel 官方设计指南大公开！Web 界面设计的 7 大黄金法则，让你的产品瞬间提升 10 倍用户体验"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -278,357 +288,207 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#文章" itemprop="item"><span itemprop="name">文章</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">🔥 Vercel 官方设计指南大公开！Web 界面设计的 7 大黄金法则，让你的产品瞬间提升 10 倍用户体验</span>
-							<meta itemprop="position" content="4" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#文章" itemprop="item"><span itemprop="name">文章</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">🔥 Vercel 官方设计指南大公开！Web 界面设计的 7 大黄金法则，让你的产品瞬间提升 10 倍用户体验</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h1 id="web-界面指南">Web 界面指南</h1>
-
+					<div id="article-body" class="markdown-body">
+						<h1>Web 界面指南</h1>
 <p>界面的成功来自成百上千个抉择。此清单是持续更新的、非穷尽的实践集合。多数指南与框架无关，部分条目针对 React/Next.js。欢迎反馈。</p>
-
-<h2 id="交互interactions">交互（Interactions）</h2>
-
+<h2>交互（Interactions）</h2>
 <ul>
-  <li>键盘无处不在：所有流程都需可用键盘操作，并遵循 WAI-ARIA Authoring Patterns。</li>
-  <li>清晰的焦点：所有可聚焦元素都要显示可见的焦点环；优先用 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>:focus-visible
-</pre></td></tr></tbody></table></code>，成组控件可用 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>:focus-within
-</pre></td></tr></tbody></table></code>。</li>
-  <li>管理焦点：使用焦点陷阱，按 WAI-ARIA 规范移动并归还焦点。</li>
-  <li>视觉与点击目标一致：若视觉目标 &lt; 24px，扩大命中区域 ≥ 24px；在移动端最小 44px。</li>
-  <li>移动端输入字号：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;input&gt;
-</pre></td></tr></tbody></table></code> 在移动端字体 ≥ 16px 以避免 iOS Safari 聚焦时自动放大；或设置 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>meta viewport
-</pre></td></tr></tbody></table></code> 限制缩放。</li>
-  <li>尊重缩放：不要禁用浏览器缩放。</li>
-  <li>水合安全输入：水合后输入框不应丢失焦点或值。</li>
-  <li>允许粘贴：不要禁用 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;input&gt;
-</pre></td></tr></tbody></table></code>/<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;textarea&gt;
-</pre></td></tr></tbody></table></code> 的粘贴。</li>
-  <li>按钮加载态：显示加载指示器并保留原标签文案。</li>
-  <li>最小加载显示时长：给骨架/菊花添加 150–300ms 的显示延迟与 300–500ms 的最小可见时长，避免闪烁；React 的 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;Suspense&gt;
-</pre></td></tr></tbody></table></code> 会自动处理。</li>
-  <li>URL 即状态：把状态持久化到 URL，支持分享/刷新/前进后退（例如 nuqs）。</li>
-  <li>乐观更新：成功概率高时先更新 UI；待服务端回应再对账；失败则提示错误并回滚或提供撤销。</li>
-  <li>省略号规则：会引出后续输入的菜单项以”…”结尾（如”重命名…”）。</li>
-  <li>破坏性操作需确认：要求确认或提供可撤销窗口。</li>
-  <li>阻止控件双击放大：设置 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>touch-action: manipulation
-</pre></td></tr></tbody></table></code>。</li>
-  <li>点击高亮可控：设置 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>-webkit-tap-highlight-color
-</pre></td></tr></tbody></table></code>。</li>
-  <li>宽容交互：更大命中区、清晰可供性、可预测交互（如”预测锥”）。</li>
-  <li>提示气泡时序：一组内首个延迟，后续同组不延迟。</li>
-  <li>过滚动行为：在模态/抽屉等场景有意设置 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>overscroll-behavior: contain
-</pre></td></tr></tbody></table></code>。</li>
-  <li>滚动位置持久：前进/后退应恢复上次滚动。</li>
-  <li>自动聚焦提速：桌面端且只有一个主要输入时自动聚焦；移动端很少自动聚焦以免键盘导致布局移动。</li>
-  <li>无”死区”：看起来可点的区域都应可点。</li>
-  <li>深链一切：筛选、标签页、分页、展开面板，凡是用 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>useState
-</pre></td></tr></tbody></table></code> 的状态都可深链。</li>
-  <li>干净拖拽：拖拽时禁用文本选择并应用 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>inert
-</pre></td></tr></tbody></table></code>，避免同时触发选中/悬停。</li>
-  <li>链接就是链接：导航使用 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;a&gt;
-</pre></td></tr></tbody></table></code>/<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;Link&gt;
-</pre></td></tr></tbody></table></code>，不要用 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;button&gt;
-</pre></td></tr></tbody></table></code>/<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;div&gt;
-</pre></td></tr></tbody></table></code> 代替，以保留新开标签等浏览器行为。</li>
-  <li>公告异步更新：对吐司/行内校验用礼貌的 aria-live。</li>
-  <li>本地化快捷键：适配非 QWERTY 键位并显示平台符号。</li>
+<li>键盘无处不在：所有流程都需可用键盘操作，并遵循 WAI-ARIA Authoring Patterns。</li>
+<li>清晰的焦点：所有可聚焦元素都要显示可见的焦点环；优先用 <code>:focus-visible</code>，成组控件可用 <code>:focus-within</code>。</li>
+<li>管理焦点：使用焦点陷阱，按 WAI-ARIA 规范移动并归还焦点。</li>
+<li>视觉与点击目标一致：若视觉目标 &lt; 24px，扩大命中区域 ≥ 24px；在移动端最小 44px。</li>
+<li>移动端输入字号：<code>&lt;input&gt;</code> 在移动端字体 ≥ 16px 以避免 iOS Safari 聚焦时自动放大；或设置 <code>meta viewport</code> 限制缩放。</li>
+<li>尊重缩放：不要禁用浏览器缩放。</li>
+<li>水合安全输入：水合后输入框不应丢失焦点或值。</li>
+<li>允许粘贴：不要禁用 <code>&lt;input&gt;</code>/<code>&lt;textarea&gt;</code> 的粘贴。</li>
+<li>按钮加载态：显示加载指示器并保留原标签文案。</li>
+<li>最小加载显示时长：给骨架/菊花添加 150–300ms 的显示延迟与 300–500ms 的最小可见时长，避免闪烁；React 的 <code>&lt;Suspense&gt;</code> 会自动处理。</li>
+<li>URL 即状态：把状态持久化到 URL，支持分享/刷新/前进后退（例如 nuqs）。</li>
+<li>乐观更新：成功概率高时先更新 UI；待服务端回应再对账；失败则提示错误并回滚或提供撤销。</li>
+<li>省略号规则：会引出后续输入的菜单项以”…“结尾（如”重命名…”）。</li>
+<li>破坏性操作需确认：要求确认或提供可撤销窗口。</li>
+<li>阻止控件双击放大：设置 <code>touch-action: manipulation</code>。</li>
+<li>点击高亮可控：设置 <code>-webkit-tap-highlight-color</code>。</li>
+<li>宽容交互：更大命中区、清晰可供性、可预测交互（如”预测锥”）。</li>
+<li>提示气泡时序：一组内首个延迟，后续同组不延迟。</li>
+<li>过滚动行为：在模态/抽屉等场景有意设置 <code>overscroll-behavior: contain</code>。</li>
+<li>滚动位置持久：前进/后退应恢复上次滚动。</li>
+<li>自动聚焦提速：桌面端且只有一个主要输入时自动聚焦；移动端很少自动聚焦以免键盘导致布局移动。</li>
+<li>无”死区”：看起来可点的区域都应可点。</li>
+<li>深链一切：筛选、标签页、分页、展开面板，凡是用 <code>useState</code> 的状态都可深链。</li>
+<li>干净拖拽：拖拽时禁用文本选择并应用 <code>inert</code>，避免同时触发选中/悬停。</li>
+<li>链接就是链接：导航使用 <code>&lt;a&gt;</code>/<code>&lt;Link&gt;</code>，不要用 <code>&lt;button&gt;</code>/<code>&lt;div&gt;</code> 代替，以保留新开标签等浏览器行为。</li>
+<li>公告异步更新：对吐司/行内校验用礼貌的 aria-live。</li>
+<li>本地化快捷键：适配非 QWERTY 键位并显示平台符号。</li>
 </ul>
-
-<h2 id="动效animations">动效（Animations）</h2>
-
+<h2>动效（Animations）</h2>
 <ul>
-  <li>尊重 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>prefers-reduced-motion
-</pre></td></tr></tbody></table></code>，提供低动效版本。</li>
-  <li>实现优先级：首选 CSS，其次 Web Animations API，再次 JS 库。</li>
-  <li>复合层友好：优先 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>transform
-</pre></td></tr></tbody></table></code>/<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>opacity
-</pre></td></tr></tbody></table></code>，避免触发布局/重绘的属性。</li>
-  <li>必要性检查：只在澄清因果或带来”恰到好处的愉悦”时使用动效。</li>
-  <li>缓动契合对象：根据变化的内容选择缓动。</li>
-  <li>可打断：用户输入可取消动画。</li>
-  <li>输入驱动：避免自动播放，响应用户动作。</li>
-  <li>正确的变换原点：从”物理上”的起点出发。</li>
-  <li>禁用 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>transition: all
-</pre></td></tr></tbody></table></code>：只列出需要的属性（常见为 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>opacity
-</pre></td></tr></tbody></table></code>、<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>transform
-</pre></td></tr></tbody></table></code>）。</li>
-  <li>跨浏览器 SVG 变换：对 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;g&gt;
-</pre></td></tr></tbody></table></code> 外包一层并设置 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>transform-box: fill-box; transform-origin: center;
-</pre></td></tr></tbody></table></code>。</li>
+<li>尊重 <code>prefers-reduced-motion</code>，提供低动效版本。</li>
+<li>实现优先级：首选 CSS，其次 Web Animations API，再次 JS 库。</li>
+<li>复合层友好：优先 <code>transform</code>/<code>opacity</code>，避免触发布局/重绘的属性。</li>
+<li>必要性检查：只在澄清因果或带来”恰到好处的愉悦”时使用动效。</li>
+<li>缓动契合对象：根据变化的内容选择缓动。</li>
+<li>可打断：用户输入可取消动画。</li>
+<li>输入驱动：避免自动播放，响应用户动作。</li>
+<li>正确的变换原点：从”物理上”的起点出发。</li>
+<li>禁用 <code>transition: all</code>：只列出需要的属性（常见为 <code>opacity</code>、<code>transform</code>）。</li>
+<li>跨浏览器 SVG 变换：对 <code>&lt;g&gt;</code> 外包一层并设置 <code>transform-box: fill-box; transform-origin: center;</code>。</li>
 </ul>
-
-<h2 id="布局layout">布局（Layout）</h2>
-
+<h2>布局（Layout）</h2>
 <ul>
-  <li><strong>光学对齐</strong>：当感知优于几何时，允许 ±1px 的微调。</li>
-  <li><strong>有意对齐</strong>：每个元素都与某个网格/基线/边缘/视觉中心对齐，避免偶然摆放。</li>
-  <li><strong>锁定组合的对比平衡</strong>：图标与文字并列时调节粗细/大小/间距/颜色以避免冲突。</li>
-  <li><strong>响应式覆盖</strong>：在手机/笔电/超宽屏都验证；超宽用 50% 缩放模拟。</li>
-  <li><strong>安全区</strong>：考虑刘海与内边距（safe-area 变量）。</li>
-  <li><strong>避免多余滚动条</strong>：修正溢出，只渲染有用滚动条；macOS 可设”始终显示”以模拟 Windows。</li>
-  <li><strong>让浏览器决定尺寸</strong>：优先 flex/grid/内在布局，避免 JS 测量引发抖动。</li>
+<li><strong>光学对齐</strong>：当感知优于几何时，允许 ±1px 的微调。</li>
+<li><strong>有意对齐</strong>：每个元素都与某个网格/基线/边缘/视觉中心对齐，避免偶然摆放。</li>
+<li><strong>锁定组合的对比平衡</strong>：图标与文字并列时调节粗细/大小/间距/颜色以避免冲突。</li>
+<li><strong>响应式覆盖</strong>：在手机/笔电/超宽屏都验证；超宽用 50% 缩放模拟。</li>
+<li><strong>安全区</strong>：考虑刘海与内边距（safe-area 变量）。</li>
+<li><strong>避免多余滚动条</strong>：修正溢出，只渲染有用滚动条；macOS 可设”始终显示”以模拟 Windows。</li>
+<li><strong>让浏览器决定尺寸</strong>：优先 flex/grid/内在布局，避免 JS 测量引发抖动。</li>
 </ul>
-
-<h2 id="内容content">内容（Content）</h2>
-
+<h2>内容（Content）</h2>
 <ul>
-  <li><strong>优先行内帮助</strong>：工具提示是下下策。</li>
-  <li><strong>稳定骨架屏</strong>：骨架应与最终内容结构一致，避免布局跳动。</li>
-  <li><strong>精准页面标题</strong>：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;title&gt;
-</pre></td></tr></tbody></table></code> 需反映当前上下文。</li>
-  <li><strong>无死路</strong>：每个页面都提供下一步或补救路径。</li>
-  <li><strong>所有状态都设计</strong>：空/稀疏/密集/错误态。</li>
-  <li><strong>引号</strong>：优先弯引号（” “）。</li>
-  <li><strong>避免”寡行/孤行”</strong>：整理换行与参差边。</li>
-  <li><strong>比较用等宽数字</strong>：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>font-variant-numeric: tabular-nums
-</pre></td></tr></tbody></table></code> 或使用等宽字体（如 Geist Mono）。</li>
-  <li><strong>冗余状态提示</strong>：不要只靠颜色，还要有文字标签。</li>
-  <li><strong>图标配标签</strong>：给非视力用户提供文本等价。</li>
-  <li><strong>不要把”无障碍语义”漏掉</strong>：视觉可省标签，但无障碍名/标签仍需存在。</li>
-  <li><strong>使用省略号字符</strong>：用 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>…
-</pre></td></tr></tbody></table></code> 而不是 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>...
-</pre></td></tr></tbody></table></code>。</li>
-  <li><strong>锚点标题</strong>：为可链接的标题设置 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>scroll-margin-top
-</pre></td></tr></tbody></table></code>。</li>
-  <li><strong>适应用户生成内容</strong>：布局能处理短/中/极长文本。</li>
-  <li><strong>本地化格式</strong>：日期/时间/数字/分隔符/货币按用户本地化。</li>
-  <li><strong>语言优先于位置</strong>：通过 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>Accept-Language
-</pre></td></tr></tbody></table></code> 与 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>navigator.languages
-</pre></td></tr></tbody></table></code> 检测语言，不要靠 IP/GPS。</li>
-  <li><strong>无障碍内容</strong>：准确设置 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>aria-label
-</pre></td></tr></tbody></table></code>，装饰性元素用 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>aria-hidden
-</pre></td></tr></tbody></table></code>，并在可访问性树中验证。</li>
-  <li><strong>仅图标按钮要命名</strong>：提供描述性的 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>aria-label
-</pre></td></tr></tbody></table></code>。</li>
-  <li><strong>语义优先于 ARIA</strong>：优先原生元素（<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>button
-</pre></td></tr></tbody></table></code>/<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>a
-</pre></td></tr></tbody></table></code>/<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>label
-</pre></td></tr></tbody></table></code>/<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>table
-</pre></td></tr></tbody></table></code>）。</li>
-  <li><strong>标题层级与跳转链接</strong>：正确使用 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;h1–h6&gt;
-</pre></td></tr></tbody></table></code>，提供”跳至内容”链接。</li>
-  <li><strong>从 Logo 获取品牌资源</strong>：右击导航 Logo 可快速获取品牌资产。</li>
-  <li><strong>不换行空格</strong>：单位、快捷键、名称用 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&amp;nbsp;
-</pre></td></tr></tbody></table></code> 粘连（如 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>10&amp;nbsp;MB
-</pre></td></tr></tbody></table></code>、<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>⌘&amp;nbsp;+&amp;nbsp;K
-</pre></td></tr></tbody></table></code>、<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>Vercel&amp;nbsp;SDK
-</pre></td></tr></tbody></table></code>）；不加空格可用 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&amp;#x2060;
-</pre></td></tr></tbody></table></code>。</li>
+<li><strong>优先行内帮助</strong>：工具提示是下下策。</li>
+<li><strong>稳定骨架屏</strong>：骨架应与最终内容结构一致，避免布局跳动。</li>
+<li><strong>精准页面标题</strong>：<code>&lt;title&gt;</code> 需反映当前上下文。</li>
+<li><strong>无死路</strong>：每个页面都提供下一步或补救路径。</li>
+<li><strong>所有状态都设计</strong>：空/稀疏/密集/错误态。</li>
+<li><strong>引号</strong>：优先弯引号（” “）。</li>
+<li><strong>避免”寡行/孤行”</strong>：整理换行与参差边。</li>
+<li><strong>比较用等宽数字</strong>：<code>font-variant-numeric: tabular-nums</code> 或使用等宽字体（如 Geist Mono）。</li>
+<li><strong>冗余状态提示</strong>：不要只靠颜色，还要有文字标签。</li>
+<li><strong>图标配标签</strong>：给非视力用户提供文本等价。</li>
+<li><strong>不要把”无障碍语义”漏掉</strong>：视觉可省标签，但无障碍名/标签仍需存在。</li>
+<li><strong>使用省略号字符</strong>：用 <code>…</code> 而不是 <code>...</code>。</li>
+<li><strong>锚点标题</strong>：为可链接的标题设置 <code>scroll-margin-top</code>。</li>
+<li><strong>适应用户生成内容</strong>：布局能处理短/中/极长文本。</li>
+<li><strong>本地化格式</strong>：日期/时间/数字/分隔符/货币按用户本地化。</li>
+<li><strong>语言优先于位置</strong>：通过 <code>Accept-Language</code> 与 <code>navigator.languages</code> 检测语言，不要靠 IP/GPS。</li>
+<li><strong>无障碍内容</strong>：准确设置 <code>aria-label</code>，装饰性元素用 <code>aria-hidden</code>，并在可访问性树中验证。</li>
+<li><strong>仅图标按钮要命名</strong>：提供描述性的 <code>aria-label</code>。</li>
+<li><strong>语义优先于 ARIA</strong>：优先原生元素（<code>button</code>/<code>a</code>/<code>label</code>/<code>table</code>）。</li>
+<li><strong>标题层级与跳转链接</strong>：正确使用 <code>&lt;h1–h6&gt;</code>，提供”跳至内容”链接。</li>
+<li><strong>从 Logo 获取品牌资源</strong>：右击导航 Logo 可快速获取品牌资产。</li>
+<li><strong>不换行空格</strong>：单位、快捷键、名称用 <code>&amp;nbsp;</code> 粘连（如 <code>10&amp;nbsp;MB</code>、<code>⌘&amp;nbsp;+&amp;nbsp;K</code>、<code>Vercel&amp;nbsp;SDK</code>）；不加空格可用 <code>&amp;#x2060;</code>。</li>
 </ul>
-
-<h2 id="表单forms">表单（Forms）</h2>
-
+<h2>表单（Forms）</h2>
 <ul>
-  <li><strong>Enter 提交</strong>：文本输入聚焦时，回车提交。</li>
-  <li><strong>文本域行为</strong>：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>⌘/Ctrl+Enter
-</pre></td></tr></tbody></table></code> 提交；单独 Enter 换行。</li>
-  <li><strong>标签无处不在</strong>：每个控件都有 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;label&gt;
-</pre></td></tr></tbody></table></code> 或等效关联。</li>
-  <li><strong>点击标签聚焦控件</strong>。</li>
-  <li><strong>提交规则</strong>：提交开始前保持可点击；请求在途时禁用并显示加载，包含等幂键。</li>
-  <li><strong>不要阻断输入</strong>：即便只接受数字也允许任意键入，再做校验反馈。</li>
-  <li><strong>不要预先禁用提交</strong>：允许提交不完整表单以暴露校验。</li>
-  <li><strong>控件无”死区”</strong>：复选/单选的控件与标签合并成大命中区。</li>
-  <li><strong>错误就地显示</strong>：在字段旁显示；提交后聚焦首个错误。</li>
-  <li><strong>自动填充</strong>：设置合适的 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>autocomplete
-</pre></td></tr></tbody></table></code> 与有意义的 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>name
-</pre></td></tr></tbody></table></code>。</li>
-  <li><strong>选择性拼写检查</strong>：对邮箱、代码、用户名等禁用拼写检查。</li>
-  <li><strong>正确的 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>type
-</pre></td></tr></tbody></table></code>/<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>inputmode
-</pre></td></tr></tbody></table></code></strong>：获得更好的键盘与校验。</li>
-  <li><strong>占位符表示”空”</strong>：以省略号结尾。</li>
-  <li><strong>占位符示例值</strong>：放示例或模式（如电话号码、API Key）。</li>
-  <li><strong>未保存更改</strong>：离开前警告可能丢失数据。</li>
-  <li><strong>密码管理器与 2FA</strong>：确保兼容，允许粘贴一次性验证码。</li>
-  <li><strong>不要误触发密码管理器</strong>：搜索等非认证字段避免保留名；用 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>autocomplete="off"
-</pre></td></tr></tbody></table></code> 或更具体的 token（如 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>one-time-code
-</pre></td></tr></tbody></table></code>）。</li>
-  <li><strong>文本替换/扩展</strong>：某些输入法会加尾随空格；应自动裁剪避免造成误报。</li>
-  <li><strong>Windows 的 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;select&gt;
-</pre></td></tr></tbody></table></code> 背景</strong>：显式设置 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>background-color
-</pre></td></tr></tbody></table></code> 与 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>color
-</pre></td></tr></tbody></table></code> 以避免暗色模式对比度问题。</li>
+<li><strong>Enter 提交</strong>：文本输入聚焦时，回车提交。</li>
+<li><strong>文本域行为</strong>：<code>⌘/Ctrl+Enter</code> 提交；单独 Enter 换行。</li>
+<li><strong>标签无处不在</strong>：每个控件都有 <code>&lt;label&gt;</code> 或等效关联。</li>
+<li><strong>点击标签聚焦控件</strong>。</li>
+<li><strong>提交规则</strong>：提交开始前保持可点击；请求在途时禁用并显示加载，包含等幂键。</li>
+<li><strong>不要阻断输入</strong>：即便只接受数字也允许任意键入，再做校验反馈。</li>
+<li><strong>不要预先禁用提交</strong>：允许提交不完整表单以暴露校验。</li>
+<li><strong>控件无”死区”</strong>：复选/单选的控件与标签合并成大命中区。</li>
+<li><strong>错误就地显示</strong>：在字段旁显示；提交后聚焦首个错误。</li>
+<li><strong>自动填充</strong>：设置合适的 <code>autocomplete</code> 与有意义的 <code>name</code>。</li>
+<li><strong>选择性拼写检查</strong>：对邮箱、代码、用户名等禁用拼写检查。</li>
+<li><strong>正确的 <code>type</code>/<code>inputmode</code></strong>：获得更好的键盘与校验。</li>
+<li><strong>占位符表示”空”</strong>：以省略号结尾。</li>
+<li><strong>占位符示例值</strong>：放示例或模式（如电话号码、API Key）。</li>
+<li><strong>未保存更改</strong>：离开前警告可能丢失数据。</li>
+<li><strong>密码管理器与 2FA</strong>：确保兼容，允许粘贴一次性验证码。</li>
+<li><strong>不要误触发密码管理器</strong>：搜索等非认证字段避免保留名；用 <code>autocomplete=&quot;off&quot;</code> 或更具体的 token（如 <code>one-time-code</code>）。</li>
+<li><strong>文本替换/扩展</strong>：某些输入法会加尾随空格；应自动裁剪避免造成误报。</li>
+<li><strong>Windows 的 <code>&lt;select&gt;</code> 背景</strong>：显式设置 <code>background-color</code> 与 <code>color</code> 以避免暗色模式对比度问题。</li>
 </ul>
-
-<h2 id="性能performance">性能（Performance）</h2>
-
+<h2>性能（Performance）</h2>
 <ul>
-  <li><strong>设备/浏览器矩阵</strong>：测试 iOS 省电模式与 macOS Safari。</li>
-  <li><strong>可靠测量</strong>：禁用会增加开销或改变运行时的扩展。</li>
-  <li><strong>追踪重渲染</strong>：最小化并加速重渲染（用 React DevTools/React Scan）。</li>
-  <li><strong>降速剖析</strong>：对 CPU/网络做限速测试。</li>
-  <li><strong>最小化布局工作量</strong>：批量读/写，避免不必要回流/重绘。</li>
-  <li><strong>网络时延预算</strong>：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>POST/PATCH/DELETE
-</pre></td></tr></tbody></table></code> &lt; 500ms 完成。</li>
-  <li><strong>按键成本</strong>：优先非受控输入；若受控，保证回路足够便宜。</li>
-  <li><strong>大列表</strong>：虚拟化（如 virtua 或 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>content-visibility: auto
-</pre></td></tr></tbody></table></code>）。</li>
-  <li><strong>明智预加载</strong>：首屏图片预加载，其余延迟加载。</li>
-  <li><strong>图片不引发 CLS</strong>：为图片设置明确尺寸并预留空间。</li>
-  <li><strong>预连接</strong>：对资源/CDN 域使用 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;link rel="preconnect"&gt;
-</pre></td></tr></tbody></table></code>（必要时加 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>crossorigin
-</pre></td></tr></tbody></table></code>）以降低 DNS/TLS 延迟。</li>
-  <li><strong>预加载字体</strong>：为关键文本预加载以避免闪烁与布局移位。</li>
-  <li><strong>字体子集化</strong>：只运送需要的字符范围/变量轴以缩小体积。</li>
-  <li><strong>避免主线程重活</strong>：把超长任务移到 Web Workers，别阻塞交互。</li>
+<li><strong>设备/浏览器矩阵</strong>：测试 iOS 省电模式与 macOS Safari。</li>
+<li><strong>可靠测量</strong>：禁用会增加开销或改变运行时的扩展。</li>
+<li><strong>追踪重渲染</strong>：最小化并加速重渲染（用 React DevTools/React Scan）。</li>
+<li><strong>降速剖析</strong>：对 CPU/网络做限速测试。</li>
+<li><strong>最小化布局工作量</strong>：批量读/写，避免不必要回流/重绘。</li>
+<li><strong>网络时延预算</strong>：<code>POST/PATCH/DELETE</code> &lt; 500ms 完成。</li>
+<li><strong>按键成本</strong>：优先非受控输入；若受控，保证回路足够便宜。</li>
+<li><strong>大列表</strong>：虚拟化（如 virtua 或 <code>content-visibility: auto</code>）。</li>
+<li><strong>明智预加载</strong>：首屏图片预加载，其余延迟加载。</li>
+<li><strong>图片不引发 CLS</strong>：为图片设置明确尺寸并预留空间。</li>
+<li><strong>预连接</strong>：对资源/CDN 域使用 <code>&lt;link rel=&quot;preconnect&quot;&gt;</code>（必要时加 <code>crossorigin</code>）以降低 DNS/TLS 延迟。</li>
+<li><strong>预加载字体</strong>：为关键文本预加载以避免闪烁与布局移位。</li>
+<li><strong>字体子集化</strong>：只运送需要的字符范围/变量轴以缩小体积。</li>
+<li><strong>避免主线程重活</strong>：把超长任务移到 Web Workers，别阻塞交互。</li>
 </ul>
-
-<h2 id="设计design">设计（Design）</h2>
-
+<h2>设计（Design）</h2>
 <ul>
-  <li><strong>分层阴影</strong>：用至少两层模拟环境光+直射光。</li>
-  <li><strong>清晰边界</strong>：边框与阴影配合；半透明边框可增强边缘清晰度。</li>
-  <li><strong>半径内外嵌</strong>：子元素圆角 ≤ 父元素且同心。</li>
-  <li><strong>色相一致</strong>：非中性背景上，边框/阴影/文字往同一色相微调。</li>
-  <li><strong>无障碍图表</strong>：使用色盲友好调色板。</li>
-  <li><strong>最小对比</strong>：更偏好 APCA 而非 WCAG 2 以获得更符合感知的对比。</li>
-  <li><strong>交互态提高对比</strong>：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>:hover
-</pre></td></tr></tbody></table></code>/<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>:active
-</pre></td></tr></tbody></table></code>/<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>:focus
-</pre></td></tr></tbody></table></code> 比静止态更高对比。</li>
-  <li><strong>浏览器 UI 与背景一致</strong>：设置 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;meta name="theme-color"&gt;
-</pre></td></tr></tbody></table></code> 与页面背景对齐。</li>
-  <li><strong>设置 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>color-scheme
-</pre></td></tr></tbody></table></code></strong>：暗色主题在 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>&lt;html&gt;
-</pre></td></tr></tbody></table></code> 上设 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>color-scheme: dark
-</pre></td></tr></tbody></table></code> 以匹配滚动条等设备 UI。</li>
-  <li><strong>文本抗锯齿与变换</strong>：缩放文本会改变平滑；优先给包装容器做动画；必要时 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>translateZ(0)
-</pre></td></tr></tbody></table></code>/<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>will-change
-</pre></td></tr></tbody></table></code> 升层。</li>
-  <li><strong>避免渐变断带</strong>：必要时用遮罩改善。</li>
+<li><strong>分层阴影</strong>：用至少两层模拟环境光+直射光。</li>
+<li><strong>清晰边界</strong>：边框与阴影配合；半透明边框可增强边缘清晰度。</li>
+<li><strong>半径内外嵌</strong>：子元素圆角 ≤ 父元素且同心。</li>
+<li><strong>色相一致</strong>：非中性背景上，边框/阴影/文字往同一色相微调。</li>
+<li><strong>无障碍图表</strong>：使用色盲友好调色板。</li>
+<li><strong>最小对比</strong>：更偏好 APCA 而非 WCAG 2 以获得更符合感知的对比。</li>
+<li><strong>交互态提高对比</strong>：<code>:hover</code>/<code>:active</code>/<code>:focus</code> 比静止态更高对比。</li>
+<li><strong>浏览器 UI 与背景一致</strong>：设置 <code>&lt;meta name=&quot;theme-color&quot;&gt;</code> 与页面背景对齐。</li>
+<li><strong>设置 <code>color-scheme</code></strong>：暗色主题在 <code>&lt;html&gt;</code> 上设 <code>color-scheme: dark</code> 以匹配滚动条等设备 UI。</li>
+<li><strong>文本抗锯齿与变换</strong>：缩放文本会改变平滑；优先给包装容器做动画；必要时 <code>translateZ(0)</code>/<code>will-change</code> 升层。</li>
+<li><strong>避免渐变断带</strong>：必要时用遮罩改善。</li>
 </ul>
-
-<h1 id="vercel-特定偏好vercel-specific">Vercel 特定偏好（Vercel-specific）</h1>
-
+<h1>Vercel 特定偏好（Vercel-specific）</h1>
 <blockquote>
-  <p>这些偏好反映 Vercel 的品牌与产品选择，不是通用准则。</p>
+<p>这些偏好反映 Vercel 的品牌与产品选择，不是通用准则。</p>
 </blockquote>
-
-<h2 id="文案copywriting">文案（Copywriting）</h2>
-
+<h2>文案（Copywriting）</h2>
 <ul>
-  <li><strong>主动语态</strong>（例：”安装 CLI”，而非”CLI 将被安装”）。</li>
-  <li><strong>标题/按钮用标题式大小写</strong>（Chicago）；营销页用句式大小写。</li>
-  <li><strong>清晰、简洁、最少用词</strong>。</li>
-  <li><strong>优先用”&amp;”而非”and”</strong>。</li>
-  <li><strong>行动导向</strong>（例：”安装 CLI…”，而非”你将需要 CLI…”）。</li>
-  <li><strong>名词一致，减少术语数量</strong>。</li>
-  <li><strong>第二人称写作，避免第一人称</strong>。</li>
-  <li><strong>占位符一致</strong>：字符串 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>YOUR_API_TOKEN_HERE
-</pre></td></tr></tbody></table></code>；数字 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>0123456789
-</pre></td></tr></tbody></table></code>。</li>
-  <li><strong>计数用阿拉伯数字</strong>（如”8 次部署”）。</li>
-  <li><strong>货币格式一致</strong>：同一上下文中要么 0 小数位，要么 2 位，不能混用。</li>
-  <li><strong>数字与单位留空格</strong>（用不换行空格）：如 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>10 MB
-</pre></td></tr></tbody></table></code>。</li>
-  <li><strong>默认积极表述</strong>：即便报错也用鼓励/可解的问题表述（如”出错了——重试或联系支持”）。</li>
-  <li><strong>错误信息引导解决</strong>：不仅说明错在哪，还告诉如何修（如”API Key 不正确或过期，请在账号设置生成新 Key”），并配合明确的按钮/链接。</li>
-  <li><strong>避免歧义</strong>：标签具体清晰（如用”保存 API Key”，别用”继续”）。</li>
+<li><strong>主动语态</strong>（例：“安装 CLI”，而非”CLI 将被安装”）。</li>
+<li><strong>标题/按钮用标题式大小写</strong>（Chicago）；营销页用句式大小写。</li>
+<li><strong>清晰、简洁、最少用词</strong>。</li>
+<li><strong>优先用”&amp;“而非”and”</strong>。</li>
+<li><strong>行动导向</strong>（例：“安装 CLI…”，而非”你将需要 CLI…”）。</li>
+<li><strong>名词一致，减少术语数量</strong>。</li>
+<li><strong>第二人称写作，避免第一人称</strong>。</li>
+<li><strong>占位符一致</strong>：字符串 <code>YOUR_API_TOKEN_HERE</code>；数字 <code>0123456789</code>。</li>
+<li><strong>计数用阿拉伯数字</strong>（如”8 次部署”）。</li>
+<li><strong>货币格式一致</strong>：同一上下文中要么 0 小数位，要么 2 位，不能混用。</li>
+<li><strong>数字与单位留空格</strong>（用不换行空格）：如 <code>10 MB</code>。</li>
+<li><strong>默认积极表述</strong>：即便报错也用鼓励/可解的问题表述（如”出错了——重试或联系支持”）。</li>
+<li><strong>错误信息引导解决</strong>：不仅说明错在哪，还告诉如何修（如”API Key 不正确或过期，请在账号设置生成新 Key”），并配合明确的按钮/链接。</li>
+<li><strong>避免歧义</strong>：标签具体清晰（如用”保存 API Key”，别用”继续”）。</li>
 </ul>
-
-<h1 id="与-agent-集成integrate-with-agents">与 Agent 集成（Integrate with Agents）</h1>
-
-<p>提供一份 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>AGENTS.md
-</pre></td></tr></tbody></table></code> 供 Agent 使用。将此文件与 Agent 搭配，以确保自动生成的界面遵循这些指南；建议审计所有生成的界面。页面提供下载链接。</p>
-
+<h1>与 Agent 集成（Integrate with Agents）</h1>
+<p>提供一份 <code>AGENTS.md</code> 供 Agent 使用。将此文件与 Agent 搭配，以确保自动生成的界面遵循这些指南；建议审计所有生成的界面。页面提供下载链接。</p>
 <p><a href="https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/refs/heads/main/AGENTS.md">Agent.md 下载</a></p>
-
-<h1 id="参考">参考</h1>
+<h1>参考</h1>
 <p><a href="https://vercel.com/design/guidelines">Web Interface Guidelines</a></p>
 
+					</div>
 				</article>
 
 				
@@ -697,11 +557,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -712,18 +571,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -733,7 +585,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -746,6 +598,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

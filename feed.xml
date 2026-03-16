@@ -1,381 +1,229 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://blackstones.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blackstones.xyz/" rel="alternate" type="text/html" hreflang="zh-CN" /><updated>2026-03-16T19:52:49+08:00</updated><id>https://blackstones.xyz/feed.xml</id><title type="html">黑石的知识库 - AI编程、技术分享与开发经验</title><subtitle>黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。</subtitle><author><name>黑石</name></author><entry><title type="html">AI 吸血鬼：为什么效率越高，反而越忙碌</title><link href="https://blackstones.xyz/ai-vampire-efficiency-paradox/" rel="alternate" type="text/html" title="AI 吸血鬼：为什么效率越高，反而越忙碌" /><published>2026-03-16T10:30:00+08:00</published><updated>2026-03-16T10:30:00+08:00</updated><id>https://blackstones.xyz/ai-vampire-efficiency-paradox</id><content type="html" xml:base="https://blackstones.xyz/ai-vampire-efficiency-paradox/"><![CDATA[<h2 id="困在效率里">困在效率里</h2>
-
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://blackstones.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blackstones.xyz/" rel="alternate" type="text/html" hreflang="zh-CN" /><updated>2026-03-16T21:46:32+08:00</updated><id>https://blackstones.xyz/feed.xml</id><title type="html">黑石的知识库 - AI编程、技术分享与开发经验</title><subtitle>黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。</subtitle><author><name>黑石</name></author><entry><title type="html">AI 吸血鬼：为什么效率越高，反而越忙碌</title><link href="https://blackstones.xyz/ai-vampire-efficiency-paradox/" rel="alternate" type="text/html" title="AI 吸血鬼：为什么效率越高，反而越忙碌" /><published>2026-03-16T10:30:00+08:00</published><updated>2026-03-16T10:30:00+08:00</updated><id>https://blackstones.xyz/ai-vampire-efficiency-paradox</id><content type="html" xml:base="https://blackstones.xyz/ai-vampire-efficiency-paradox/"><![CDATA[<h2>困在效率里</h2>
 <p>2026年的春天，我们正经历着一场看似矛盾的科技现实。</p>
-
 <p>作为一名软件工程师，我必须承认：像 Claude Code 搭配 Opus 4.6 这样的新一代 AI 编程工具，确实将我的工作效率推向了前所未有的高度。曾经那些关于「AI 到底有没有用」的争论早已失去意义，因为「10 倍生产力」已经从一句空洞的口号，变成了我每天真实的键盘敲击声。</p>
-
 <p>但诡异的是，在这场效率的狂欢中，我和我身边的同事们却被一种前所未有的疲惫感死死笼罩。有时在白天，我会毫无预兆地在电脑前陷入极度的疲倦——拥有40年硅谷软件工程经验，曾任职于谷歌、亚马逊的史蒂夫·耶格（Steve Yegge）将这种状态精准地概括为「AI 吸血鬼效应」：AI 并没有吸食我们的鲜血，只要和它待在同一个工作流里，它就在悄无声息地抽干我们的精力，这个概念灵感来自美剧《吸血鬼生活》里专吸能量的角色科林·罗宾逊，不少工程师甚至会毫无预兆地在白天突然陷入”瞌睡攻击”。</p>
-
 <p><img src="https://pub-48e519ba51484a31972fff75f6b1ae16.r2.dev/2026/03/ai-vampire/01-scene-ai-vampire-effect.png" alt="AI 吸血鬼效应 - 疲惫的工程师被 AI 能量体包围" /></p>
-
 <hr />
-
-<h2 id="从深度潜水者到流水线质检员">从「深度潜水者」到「流水线质检员」</h2>
-
+<h2>从「深度潜水者」到「流水线质检员」</h2>
 <p>在我还没有大规模引入 AI 的时候，我的工作方式是深度专注的：我会用一整天的时间去「啃」一个单一的技术问题，大脑有其自然的思考节奏，发现问题，分析问题，解决问题，解开一个个 bug 后，还能迎来片刻的放松与多巴胺分泌。</p>
-
 <p>但现在，一切都变了：</p>
-
 <ul>
-  <li>
-    <p>AI 显著降低了从「定义问题」到「产出代码」的转换成本。以前需要几周的任务，现在几个小时就能跑通；代价就是，我现在一天之内需要并行处理五到六个完全不同的问题域，问题之间的频繁切换，构成了巨大的认知负荷——我的大脑并不像 GPU 那样可以无限扩展：AI 不会因为连续提出一百个解决方案而感到累，但我会。</p>
-  </li>
-  <li>
-    <p>更让我窒息的是角色的本质转变：我本以为会成为指挥千军万马的代码将军，实际上却变成了一个极其疲惫的「流水线质检员」。我不会 一直盯着 AI 干，而是开多个窗口，让多个 agent 同时干活。AI 像一台不知疲倦的高速生产机器，疯狂地向我递送代码拉取请求（PR）和解决方案；整个工作流从未中断，而我被死死钉在「审判席」上——每一行生成的代码，最终的判断、决策、盖章确认，依然需要我来完成，最终的责任也全部由我承担。</p>
-  </li>
+<li>
+<p>AI 显著降低了从「定义问题」到「产出代码」的转换成本。以前需要几周的任务，现在几个小时就能跑通；代价就是，我现在一天之内需要并行处理五到六个完全不同的问题域，问题之间的频繁切换，构成了巨大的认知负荷——我的大脑并不像 GPU 那样可以无限扩展：AI 不会因为连续提出一百个解决方案而感到累，但我会。</p>
+</li>
+<li>
+<p>更让我窒息的是角色的本质转变：我本以为会成为指挥千军万马的代码将军，实际上却变成了一个极其疲惫的「流水线质检员」。我不会 一直盯着 AI 干，而是开多个窗口，让多个 agent 同时干活。AI 像一台不知疲倦的高速生产机器，疯狂地向我递送代码拉取请求（PR）和解决方案；整个工作流从未中断，而我被死死钉在「审判席」上——每一行生成的代码，最终的判断、决策、盖章确认，依然需要我来完成，最终的责任也全部由我承担。</p>
+</li>
 </ul>
-
 <p>我的工作不再是创造性的探索，而是高强度、高频率的决策判断。每一秒都在紧绷，疲惫感呈几何级数增长。另一位工程师希特·卡雷记录下了共同的体验：上季度他的代码交付量达到职业生涯峰值，精神疲惫也拉满到了前所未有的状态，他同样发出灵魂拷问：AI本应该提高生产力，为什么我们反而更累了？</p>
-
 <hr />
-
-<h2 id="越高效越忙碌掉入工作量蔓延陷阱">越高效，越忙碌：掉入「工作量蔓延」陷阱</h2>
-
+<h2>越高效，越忙碌：掉入「工作量蔓延」陷阱</h2>
 <p>这种疲惫不仅来源于工作密度的增加，还来源于被无限拉高的期望。</p>
-
 <p>哈佛商业评论2026年最新的实证研究精准击中了我正在经历的痛点，通过对200名员工的长期跟踪观察，发现了清晰的连锁反应：AI 在初期确实提升了我的任务完成速度，但这直接推高了管理层对我们交付周期的预期。老板们理所当然地认为：「既然有了 AI，你肯定能做更多。」</p>
-
 <p>为了满足这种不断膨胀的预期，我只能更加深度地依赖 AI 工具，试图处理更广范围的任务。在没有老板明确下达加班指令的情况下，我在 AI 的效率加持下不自觉地承担了更多工作，彻底陷入了「工作量蔓延」的恶性循环——这是一个效率提升和组织预期调整之间，反复自我强化的过程，根本不需要老板主动施压。</p>
-
 <p>这种现象不止出现在编程领域：数字产品设计师萨默·克罗夫茨分享了设计行业的同样困境。社交媒体上那些「一分钟生成10个UI方案」「一个人顶一个团队」的炫技视频，更是在塑造一种不切实际的行业「美丽标准」：大家只看到了 AI 最光鲜的生成环节，却刻意忽视了后续由人类承担的筛选、落地和跨部门协调的巨大成本，还让没法高效用AI的从业者产生强烈的被淘汰焦虑，进一步加剧了精神压力。</p>
-
 <p><img src="https://pub-48e519ba51484a31972fff75f6b1ae16.r2.dev/2026/03/ai-vampire/02-infographic-efficiency-paradox.png" alt="效率悖论循环图 - AI 效率提升导致工作量蔓延的恶性循环" /></p>
-
 <hr />
-
-<h2 id="九倍增量去哪了我们成为了技术的燃料">九倍增量去哪了？我们成为了技术的「燃料」</h2>
-
+<h2>九倍增量去哪了？我们成为了技术的「燃料」</h2>
 <p>夜深人静时，我常常会想起耶格在二十多年前提出的那个简单公式：</p>
-
 <blockquote>
-  <p>实际时薪 = 薪酬 ÷ 工作时长 ($/hour)</p>
+<p>实际时薪 = 薪酬 ÷ 工作时长 ($/hour)</p>
 </blockquote>
-
 <p>如果在 AI 的帮助下，我的单位产出提升到了原来的 10 倍，那么多出来的 9 倍价值去哪了？耶格用两个简单情景，说清了当前AI时代价值分配的本质：</p>
-
 <ol>
-  <li>
-    <p><strong>被榨干的情景（绝大多数人的现状）</strong>：我依然保持着每天 8 小时的传统工作制，将 AI 带来的所有增量产出全部交付给了雇主。公司以不变的人力成本获得了惊人的利润，我的薪水并没有翻倍，但我所承担的劳动强度和精神消耗却直线上升。</p>
-  </li>
-  <li>
-    <p><strong>个体收益的情景（理想状态）</strong>：工程师仅用原10%的工作时间，就能完成和过去相当的产出，AI增量价值全部由个人获得，可以拥有更多闲暇平衡工作生活，但这种模式在当前的市场竞争环境下难以持久。</p>
-  </li>
+<li>
+<p><strong>被榨干的情景（绝大多数人的现状）</strong>：我依然保持着每天 8 小时的传统工作制，将 AI 带来的所有增量产出全部交付给了雇主。公司以不变的人力成本获得了惊人的利润，我的薪水并没有翻倍，但我所承担的劳动强度和精神消耗却直线上升。</p>
+</li>
+<li>
+<p><strong>个体收益的情景（理想状态）</strong>：工程师仅用原10%的工作时间，就能完成和过去相当的产出，AI增量价值全部由个人获得，可以拥有更多闲暇平衡工作生活，但这种模式在当前的市场竞争环境下难以持久。</p>
+</li>
 </ol>
-
 <p>耶格早在2001年在亚马逊工作时，就提出了这个公式的核心启示：短期里薪酬（分子）很难快速改变，但工作时长（分母）由我们自己掌控——在薪酬不变的情况下，缩短工作时长本质就是提高实际时薪，帮我们从高强度工作中解脱。只是AI放大了这个公式的影响，但我们对工作时长的控制力，反而变得更弱了。</p>
-
 <hr />
-
-<h2 id="寻找出口重新定义-ai-时代的有效工作日">寻找出口：重新定义 AI 时代的「有效工作日」</h2>
-
+<h2>寻找出口：重新定义 AI 时代的「有效工作日」</h2>
 <p>AI 剥离了大量机械的执行性工作，把最消耗注意力和情绪资源的高阶认知活动（决策、判断、架构设计）全部留给了我们。但人类的生理极限决定了：我们无法长时间处于这种高强度的深度决策状态。</p>
-
 <p>创意领域的研究早就证明：人类每日有效的深度工作时长通常不超过 3 到 4 个小时，其余的时间必须用于休息、恢复和吸收新灵感。LinkedIn用户约瑟夫·埃默森也观察到：所有能在创意领域持续取得成就的从业者，每日有效工作时长都不超过4小时，剩下的时间必须用来恢复认知资源——就像肌肉会疲劳，大脑的注意力也需要不断补充。因此我开始清醒地认识到：<strong>在 AI 时代，依然保持每天 8 小时的高强度运转是完全不可持续的。</strong></p>
-
 <p>我们还要警惕一个容易被忽视的陷阱：行业大牛们的极致工作状态并不具备普适性。耶格自己也坦诚：作为拥有40年经验的从业者，他可以连续几十小时用AI构建系统，但这种产出节奏被传播后，会让管理者误以为所有员工都能达到这个标准，进一步拉高了不切实际的预期，本质上是我们每个人都需要认清自己的能力下限。</p>
-
 <p>更深层的，其实人机边界的问题本质是我们自身的边界能力：不少人本就不会在人际互动中拒绝不合理要求，这种能力缺失直接平移到了人机关系里。AI不会主动停下感知你的疲惫，如果我们自己不会设定边界，就会一直被AI的高速节奏带着走，最终陷入无尽疲惫。</p>
-
 <p>我开始尝试自救：我不再追求每一条可见的技术赛道，不再试图用 AI 填满每一分钟的缝隙；我学会了给自己设限，在下午强迫自己合上电脑，去散步，去放空，去陪伴家人。</p>
-
 <p>AI 是一把极其锋利的工具，它缩短了任务的执行路径，但并没有改变人类的生理与认知极限。在不断被机器催促着「更快、更多」的今天，我们必须有勇气问一句：<strong>我可以更慢一点吗？</strong></p>
-
-<p>唯有守住人类的本质，守住工作与生活的边界，我们才能真正驾驭这股技术洪流，让 AI 成为我们得力的「最佳拍档」，而不是一只吸干我们灵魂的吸血鬼。✨</p>]]></content><author><name>黑石</name></author><category term="AI" /><category term="效率" /><category term="思考" /><category term="AI" /><summary type="html"><![CDATA[当 AI 将效率推向极致，我们却陷入了前所未有的疲惫。这是一场关于「AI 吸血鬼效应」的深度反思。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://pub-48e519ba51484a31972fff75f6b1ae16.r2.dev/2026/03/ai-vampire/01-scene-ai-vampire-effect.png" /><media:content medium="image" url="https://pub-48e519ba51484a31972fff75f6b1ae16.r2.dev/2026/03/ai-vampire/01-scene-ai-vampire-effect.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">OpenClaw 飞书机器人对接完全指南</title><link href="https://blackstones.xyz/openclaw-feishu-integration-guide/" rel="alternate" type="text/html" title="OpenClaw 飞书机器人对接完全指南" /><published>2026-03-11T21:59:00+08:00</published><updated>2026-03-11T21:59:00+08:00</updated><id>https://blackstones.xyz/openclaw-feishu-integration-guide</id><content type="html" xml:base="https://blackstones.xyz/openclaw-feishu-integration-guide/"><![CDATA[<h2 id="前言">前言</h2>
-
-<p>在生成式人工智能从单纯的”对话框”向能够执行复杂任务的”自主代理（Agent）”演进的当下，<strong>OpenClaw</strong>（原名 Clawdbot）作为一个开源的、本地优先的 AI 代理网关，正在重塑个人与 AI 的交互范式。</p>
-
+<p>唯有守住人类的本质，守住工作与生活的边界，我们才能真正驾驭这股技术洪流，让 AI 成为我们得力的「最佳拍档」，而不是一只吸干我们灵魂的吸血鬼。✨</p>]]></content><author><name>黑石</name></author><category term="文章" /><category term="AI" /><summary type="html"><![CDATA[当 AI 将效率推向极致，我们却陷入了前所未有的疲惫。这是一场关于「AI 吸血鬼效应」的深度反思。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://pub-48e519ba51484a31972fff75f6b1ae16.r2.dev/2026/03/ai-vampire/cover.png" /><media:content medium="image" url="https://pub-48e519ba51484a31972fff75f6b1ae16.r2.dev/2026/03/ai-vampire/cover.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">OpenClaw 飞书机器人对接完全指南</title><link href="https://blackstones.xyz/openclaw-feishu-integration-guide/" rel="alternate" type="text/html" title="OpenClaw 飞书机器人对接完全指南" /><published>2026-03-11T21:59:00+08:00</published><updated>2026-03-11T21:59:00+08:00</updated><id>https://blackstones.xyz/openclaw-feishu-integration-guide</id><content type="html" xml:base="https://blackstones.xyz/openclaw-feishu-integration-guide/"><![CDATA[<h2>前言</h2>
+<p>在生成式人工智能从单纯的”对话框”向能够执行复杂任务的”自主代理（Agent）“演进的当下，<strong>OpenClaw</strong>（原名 Clawdbot）作为一个开源的、本地优先的 AI 代理网关，正在重塑个人与 AI 的交互范式。</p>
 <p>不同于 ChatGPT 或 Claude 等依赖云端托管的 SaaS 服务，OpenClaw 通过独特的 Gateway-Node 架构，将大模型的推理能力下沉至用户私有硬件，并通过标准化的协议连接至飞书、Telegram、Discord 等主流即时通讯平台。</p>
-
 <p>本文将系统讲解 OpenClaw 的安装配置，并一步步教你如何接入飞书，打造属于自己的 AI 助手。</p>
-
-<h2 id="一前置准备">一、前置准备</h2>
-
-<h3 id="环境要求">环境要求</h3>
-
+<h2>一、前置准备</h2>
+<h3>环境要求</h3>
 <table>
-  <thead>
-    <tr>
-      <th>项目</th>
-      <th>要求</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Node.js</td>
-      <td>≥ 22.x</td>
-    </tr>
-    <tr>
-      <td>操作系统</td>
-      <td>macOS / Linux / Windows (WSL2)</td>
-    </tr>
-    <tr>
-      <td>内存</td>
-      <td>≥ 2GB 可用</td>
-    </tr>
-    <tr>
-      <td>AI API</td>
-      <td>您常用的模型的 API Key</td>
-    </tr>
-    <tr>
-      <td>Docker</td>
-      <td>可选，用于容器化部署</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>项目</th>
+<th>要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node.js</td>
+<td>≥ 22.x</td>
+</tr>
+<tr>
+<td>操作系统</td>
+<td>macOS / Linux / Windows (WSL2)</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>≥ 2GB 可用</td>
+</tr>
+<tr>
+<td>AI API</td>
+<td>您常用的模型的 API Key</td>
+</tr>
+<tr>
+<td>Docker</td>
+<td>可选，用于容器化部署</td>
+</tr>
+</tbody>
 </table>
-
-<h3 id="第一步全局安装-openclaw">第一步：全局安装 OpenClaw</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>npm <span class="nb">install</span> <span class="nt">-g</span> openclaw
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h3 id="第二步运行配置向导">第二步：运行配置向导</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw config
-</pre></td></tr></tbody></table></code></pre></div></div>
-
+<h3>第一步：全局安装 OpenClaw</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">npm <span class="nb">install</span> <span class="nt">-g</span> openclaw
+</code></pre></div></div>
+<h3>第二步：运行配置向导</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">openclaw config
+</code></pre></div></div>
 <p>向导会引导你完成：</p>
 <ul>
-  <li><strong>AI 模型配置</strong> – 输入 API Key</li>
-  <li><strong>工作目录设置</strong> – 默认 ~/openclaw</li>
-  <li><strong>渠道启用</strong> – 选择要连接的聊天平台（选择 Feishu/Lark）</li>
-  <li><strong>守护进程安装</strong> – 让 Gateway 后台持续运行</li>
+<li><strong>AI 模型配置</strong> – 输入 API Key</li>
+<li><strong>工作目录设置</strong> – 默认 ~/openclaw</li>
+<li><strong>渠道启用</strong> – 选择要连接的聊天平台（选择 Feishu/Lark）</li>
+<li><strong>守护进程安装</strong> – 让 Gateway 后台持续运行</li>
 </ul>
-
-<h3 id="第三步验证安装">第三步：验证安装</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw <span class="nt">--version</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h2 id="二常用-skills-配置">二、常用 Skills 配置</h2>
-
+<h3>第三步：验证安装</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">openclaw <span class="nt">--version</span>
+</code></pre></div></div>
+<h2>二、常用 Skills 配置</h2>
 <p>OpenClaw 的强大之处在于可扩展的 Skills 系统。以下是几个实用的 Skills：</p>
-
-<h3 id="网页搜索-skill">网页搜索 Skill</h3>
-
+<h3>网页搜索 Skill</h3>
 <p>配置后 OpenClaw 可以搜索实时网络信息回答问题。</p>
-
 <p><strong>方式一：通过 ClawdHub 安装（推荐）</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>npx skills add @openclaw/web-search
-</pre></td></tr></tbody></table></code></pre></div></div>
-
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">npx skills add @openclaw/web-search
+</code></pre></div></div>
 <p><strong>方式二：手动下载</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="c"># 下载技能到 skills 目录</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash"><span class="c"># 下载技能到 skills 目录</span>
+</code></pre></div></div>
 <blockquote>
-  <p>若无海外信用卡注册 Brave Search，也可以使用火山云「融合信息搜索 API」</p>
+<p>若无海外信用卡注册 Brave Search，也可以使用火山云「融合信息搜索 API」</p>
 </blockquote>
-
-<h3 id="文件操作-skill">文件操作 Skill</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>npx skills add @openclaw/file-operations
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h3 id="其他实用-skills">其他实用 Skills</h3>
-
+<h3>文件操作 Skill</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">npx skills add @openclaw/file-operations
+</code></pre></div></div>
+<h3>其他实用 Skills</h3>
 <ul>
-  <li><strong>self-improving-agent</strong>：让 AI 记录错误和经验，转化为长期记忆</li>
-  <li><strong>find-skills</strong>：帮助用户发现并安装代理技能</li>
-  <li><strong>humanizer</strong>：去除文本中 AI 生成痕迹</li>
+<li><strong>self-improving-agent</strong>：让 AI 记录错误和经验，转化为长期记忆</li>
+<li><strong>find-skills</strong>：帮助用户发现并安装代理技能</li>
+<li><strong>humanizer</strong>：去除文本中 AI 生成痕迹</li>
 </ul>
-
 <p><strong>关键命令：</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre>npx skills find <span class="o">[</span>query]          <span class="c"># 搜索技能</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">npx skills find <span class="o">[</span>query]          <span class="c"># 搜索技能</span>
 npx skills add &lt;package&gt;         <span class="c"># 安装技能</span>
 npx skills check                 <span class="c"># 检查技能更新</span>
 npx skills update                <span class="c"># 更新所有已安装的技能</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h2 id="三飞书应用配置">三、飞书应用配置</h2>
-
-<h3 id="方式一通过安装向导添加推荐">方式一：通过安装向导添加（推荐）</h3>
-
+</code></pre></div></div>
+<h2>三、飞书应用配置</h2>
+<h3>方式一：通过安装向导添加（推荐）</h3>
 <p>如果您刚安装完 OpenClaw，可以直接运行向导添加飞书：</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw channels add
-</pre></td></tr></tbody></table></code></pre></div></div>
-
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">openclaw channels add
+</code></pre></div></div>
 <p>向导会引导您完成：</p>
 <ul>
-  <li>创建飞书应用并获取凭证</li>
-  <li>配置应用凭证</li>
-  <li>启动网关</li>
+<li>创建飞书应用并获取凭证</li>
+<li>配置应用凭证</li>
+<li>启动网关</li>
 </ul>
-
 <p>✅ 完成配置后，使用以下命令检查网关状态：</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre>openclaw gateway status        <span class="c"># 查看网关运行状态</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">openclaw gateway status        <span class="c"># 查看网关运行状态</span>
 openclaw logs <span class="nt">--follow</span>         <span class="c"># 查看实时日志</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h3 id="方式二通过命令行添加">方式二：通过命令行添加</h3>
-
+</code></pre></div></div>
+<h3>方式二：通过命令行添加</h3>
 <p>如果您已经完成了初始安装，可以用以下命令添加飞书渠道：</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw channels add feishu
-</pre></td></tr></tbody></table></code></pre></div></div>
-
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">openclaw channels add feishu
+</code></pre></div></div>
 <p>然后根据交互式提示输入 App ID 和 App Secret 即可。</p>
-
-<h2 id="四飞书机器人对接详细步骤">四、飞书机器人对接详细步骤</h2>
-
-<h3 id="1️⃣-进入飞书应用中心">1️⃣ 进入飞书应用中心</h3>
-
+<h2>四、飞书机器人对接详细步骤</h2>
+<h3>1️⃣ 进入飞书应用中心</h3>
 <p>访问：<strong><a href="https://open.feishu.cn/app">开发者后台 - 飞书开放平台</a></strong></p>
-
 <ul>
-  <li>使用飞书账号登录</li>
-  <li>Lark（国际版）请使用 https://open.larksuite.com/app，并在配置中设置 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>domain: "lark"
-</pre></td></tr></tbody></table></code></li>
+<li>使用飞书账号登录</li>
+<li>Lark（国际版）请使用 <a href="https://open.larksuite.com/app%EF%BC%8C%E5%B9%B6%E5%9C%A8%E9%85%8D%E7%BD%AE%E4%B8%AD%E8%AE%BE%E7%BD%AE">https://open.larksuite.com/app，并在配置中设置</a> <code>domain: &quot;lark&quot;</code></li>
 </ul>
-
-<h3 id="2️⃣-新建企业自建应用">2️⃣ 新建企业自建应用</h3>
-
+<h3>2️⃣ 新建企业自建应用</h3>
 <p><strong>路径：</strong> 创建应用 → 企业自建应用</p>
-
 <p>基础信息按提示填写即可（名称、描述等），完成后进入应用详情页。</p>
-
-<h3 id="3️⃣-启用机器人能力">3️⃣ 启用机器人能力</h3>
-
+<h3>3️⃣ 启用机器人能力</h3>
 <p>在 <strong>添加应用能力 &gt; 机器人</strong> 页面：</p>
 <ol>
-  <li>开启机器人能力</li>
-  <li>配置机器人相关设置</li>
+<li>开启机器人能力</li>
+<li>配置机器人相关设置</li>
 </ol>
-
-<h3 id="4️⃣-配置应用权限">4️⃣ 配置应用权限</h3>
-
+<h3>4️⃣ 配置应用权限</h3>
 <p>在 <strong>权限管理</strong> 页面，点击 <strong>批量导入</strong> 按钮，粘贴以下 JSON 配置一键导入所需权限：</p>
-
 <p><strong>基础权限：</strong></p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="nl">"im:message"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="nl">"im:chat"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="nl">"bot"</span><span class="p">:</span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-
+</span></code></pre></div></div>
 <p><strong>可选全功能权限：</strong></p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="nl">"im:message"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="nl">"im:chat"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="nl">"bot"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message:send_as_bot"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="nl">"group:manage"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-
+</span></code></pre></div></div>
 <blockquote>
-  <p>确保消息、机器人、事件订阅等相关权限均已开启。</p>
+<p>确保消息、机器人、事件订阅等相关权限均已开启。</p>
 </blockquote>
-
-<h3 id="5️⃣-更新应用-token">5️⃣ 更新应用 Token</h3>
-
+<h3>5️⃣ 更新应用 Token</h3>
 <p>回到 <strong>凭证与基础信息</strong> 页面，将黄色区域中的以下信息同步更新到 OpenClaw 配置中：</p>
 <ul>
-  <li><strong>App ID</strong></li>
-  <li><strong>App Secret</strong></li>
-  <li><strong>Token</strong></li>
+<li><strong>App ID</strong></li>
+<li><strong>App Secret</strong></li>
+<li><strong>Token</strong></li>
 </ul>
-
 <p>然后运行命令重启：</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw gateway restart
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h3 id="6️⃣-设置事件回调callback">6️⃣ 设置事件回调（Callback）</h3>
-
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">openclaw gateway restart
+</code></pre></div></div>
+<h3>6️⃣ 设置事件回调（Callback）</h3>
 <p>⚠️ <strong>重要提醒：</strong> 在配置事件订阅前，请务必确保已完成以下步骤：</p>
 <ul>
-  <li>运行 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw channels add
-</pre></td></tr></tbody></table></code> 添加了 Feishu 渠道</li>
-  <li>网关处于启动状态（可通过 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw gateway status
-</pre></td></tr></tbody></table></code> 检查状态）</li>
+<li>运行 <code>openclaw channels add</code> 添加了 Feishu 渠道</li>
+<li>网关处于启动状态（可通过 <code>openclaw gateway status</code> 检查状态）</li>
 </ul>
-
 <p>在 <strong>事件订阅</strong> 页面：</p>
 <ul>
-  <li>选择 <strong>使用长连接接收事件（WebSocket 模式）</strong></li>
-  <li>添加事件：<strong><code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>im.message.receive_v1
-</pre></td></tr></tbody></table></code></strong>（接收消息）</li>
+<li>选择 <strong>使用长连接接收事件（WebSocket 模式）</strong></li>
+<li>添加事件：<strong><code>im.message.receive_v1</code></strong>（接收消息）</li>
 </ul>
-
 <blockquote>
-  <p>⚠️ 注意：如果网关未启动或渠道未添加，长连接设置将保存失败。</p>
+<p>⚠️ 注意：如果网关未启动或渠道未添加，长连接设置将保存失败。</p>
 </blockquote>
-
-<h3 id="7️⃣-发布应用">7️⃣ 发布应用</h3>
-
+<h3>7️⃣ 发布应用</h3>
 <p>在 <strong>版本管理与发布</strong> 页面：</p>
 <ul>
-  <li>创建版本</li>
-  <li>提交审核并发布</li>
-  <li>等待管理员审批（企业自建应用通常自动通过）</li>
+<li>创建版本</li>
+<li>提交审核并发布</li>
+<li>等待管理员审批（企业自建应用通常自动通过）</li>
 </ul>
-
-<h3 id="8️⃣-发送测试消息">8️⃣ 发送测试消息</h3>
-
+<h3>8️⃣ 发送测试消息</h3>
 <p>在飞书中找到您创建的机器人，发送一条消息。</p>
-
-<h3 id="9️⃣-配对授权">9️⃣ 配对授权</h3>
-
+<h3>9️⃣ 配对授权</h3>
 <p>默认情况下，机器人会回复一个配对码。您需要批准此代码：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>配对码：XXXXXX
-</pre></td></tr></tbody></table></code></pre></div></div>
-
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>配对码：XXXXXX
+</code></pre></div></div>
 <p>批准后即可正常对话！🎉</p>
-
-<h2 id="五常用管理命令">五、常用管理命令</h2>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-</pre></td><td class="rouge-code"><pre><span class="c"># 查看网关状态</span>
+<h2>五、常用管理命令</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash"><span class="c"># 查看网关状态</span>
 openclaw gateway status
 
 <span class="c"># 重启网关</span>
@@ -392,1766 +240,1367 @@ openclaw channels list
 
 <span class="c"># 删除渠道</span>
 openclaw channels remove &lt;channel-id&gt;
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h2 id="六常见问题">六、常见问题</h2>
-
-<h3 id="网关无法启动">网关无法启动</h3>
+</code></pre></div></div>
+<h2>六、常见问题</h2>
+<h3>网关无法启动</h3>
 <ul>
-  <li>检查 Node.js 版本是否 ≥ 22.x</li>
-  <li>检查端口是否被占用（默认端口 18789）</li>
-  <li>查看日志：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw logs --follow
-</pre></td></tr></tbody></table></code></li>
+<li>检查 Node.js 版本是否 ≥ 22.x</li>
+<li>检查端口是否被占用（默认端口 18789）</li>
+<li>查看日志：<code>openclaw logs --follow</code></li>
 </ul>
-
-<h3 id="飞书机器人不回复消息">飞书机器人不回复消息</h3>
+<h3>飞书机器人不回复消息</h3>
 <ul>
-  <li>确认事件订阅已配置（<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>im.message.receive_v1
-</pre></td></tr></tbody></table></code>）</li>
-  <li>确认网关正在运行</li>
-  <li>检查权限是否已正确配置</li>
-  <li>确认机器人已发布并添加到群聊</li>
+<li>确认事件订阅已配置（<code>im.message.receive_v1</code>）</li>
+<li>确认网关正在运行</li>
+<li>检查权限是否已正确配置</li>
+<li>确认机器人已发布并添加到群聊</li>
 </ul>
-
-<h3 id="配对码无效">配对码无效</h3>
+<h3>配对码无效</h3>
 <ul>
-  <li>确认机器人配置中的 App ID / App Secret 正确</li>
-  <li>重启网关：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw gateway restart
-</pre></td></tr></tbody></table></code></li>
-  <li>重新发送消息触发配对</li>
+<li>确认机器人配置中的 App ID / App Secret 正确</li>
+<li>重启网关：<code>openclaw gateway restart</code></li>
+<li>重新发送消息触发配对</li>
 </ul>
-
-<h2 id="总结">总结</h2>
-
+<h2>总结</h2>
 <p>OpenClaw 通过本地优先的架构设计，让用户能够完全掌控自己的 AI 助手。相比云端 SaaS 服务，它具有以下优势：</p>
-
 <ul>
-  <li><strong>数据隐私</strong>：所有对话记录和上下文存储在本地</li>
-  <li><strong>自主控制</strong>：可自定义 Skills，扩展 AI 能力边界</li>
-  <li><strong>成本可控</strong>：只需支付 API 调用费用，无订阅费</li>
-  <li><strong>灵活部署</strong>：支持 Mac Mini、Linux 服务器、树莓派等多种硬件</li>
+<li><strong>数据隐私</strong>：所有对话记录和上下文存储在本地</li>
+<li><strong>自主控制</strong>：可自定义 Skills，扩展 AI 能力边界</li>
+<li><strong>成本可控</strong>：只需支付 API 调用费用，无订阅费</li>
+<li><strong>灵活部署</strong>：支持 Mac Mini、Linux 服务器、树莓派等多种硬件</li>
 </ul>
-
 <p>通过飞书集成，你可以随时随地在熟悉的办公环境中与 AI 对话，让 OpenClaw 成为真正的”数字副驾驶”。</p>
-
-<h2 id="参考资料">参考资料</h2>
-
+<h2>参考资料</h2>
 <ul>
-  <li><a href="https://github.com/OpenClaw">OpenClaw 官方文档</a></li>
-  <li><a href="https://open.feishu.cn/">飞书开放平台</a></li>
-  <li><a href="https://clawdhub.example.com">ClawdHub 技能市场</a></li>
+<li><a href="https://github.com/OpenClaw">OpenClaw 官方文档</a></li>
+<li><a href="https://open.feishu.cn/">飞书开放平台</a></li>
+<li><a href="https://clawdhub.example.com">ClawdHub 技能市场</a></li>
 </ul>
-
 <hr />
-
-<p><em>本文内容整理自飞书官网 - 《一文完全搞懂 OpenClaw（Clawdbot）附飞书对接教程！》</em></p>]]></content><author><name>黑石</name></author><category term="AI 编程，OpenClaw" /><category term="AI 编程，飞书机器人，OpenClaw，Clawdbot，自动化" /><summary type="html"><![CDATA[从安装配置到飞书对接，一步步教你部署 OpenClaw 个人 AI 操作系统，实现飞书机器人智能对话。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blackstones.xyz/assets/images/openclaw-feishu.png" /><media:content medium="image" url="https://blackstones.xyz/assets/images/openclaw-feishu.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Google Design</title><link href="https://blackstones.xyz/google-design/" rel="alternate" type="text/html" title="Google Design" /><published>2026-01-20T00:00:00+08:00</published><updated>2026-01-20T00:00:00+08:00</updated><id>https://blackstones.xyz/google-design</id><content type="html" xml:base="https://blackstones.xyz/google-design/"><![CDATA[<p>地址：<a href="https://design.google/">https://design.google/</a></p>
-
-<h2 id="google-design-简介">Google Design 简介</h2>
-
+<p><em>本文内容整理自飞书官网 - 《一文完全搞懂 OpenClaw（Clawdbot）附飞书对接教程！》</em></p>]]></content><author><name>黑石</name></author><category term="文章" /><category term="AI 编程，飞书机器人，OpenClaw，Clawdbot，自动化" /><summary type="html"><![CDATA[从安装配置到飞书对接，一步步教你部署 OpenClaw 个人 AI 操作系统，实现飞书机器人智能对话。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blackstones.xyz/assets/images/openclaw-feishu.png" /><media:content medium="image" url="https://blackstones.xyz/assets/images/openclaw-feishu.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Google Design</title><link href="https://blackstones.xyz/google-design/" rel="alternate" type="text/html" title="Google Design" /><published>2026-01-20T00:00:00+08:00</published><updated>2026-01-20T00:00:00+08:00</updated><id>https://blackstones.xyz/google-design</id><content type="html" xml:base="https://blackstones.xyz/google-design/"><![CDATA[<p>地址：<!-- raw HTML omitted --><a href="https://design.google/">https://design.google/</a><!-- raw HTML omitted --></p>
+<h2>Google Design 简介</h2>
 <p>Google Design 是 Google 官方的设计网站，汇集了 Google 在产品设计领域的经验、最佳实践和设计资源。作为全球领先科技公司的设计团队，Google Design 为独立开发者和设计师提供了宝贵的设计指导和灵感来源。</p>
-
-<h2 id="核心内容">核心内容</h2>
-
-<h3 id="material-design-设计系统">Material Design 设计系统</h3>
-
+<h2>核心内容</h2>
+<h3>Material Design 设计系统</h3>
 <p>Material Design 是 Google 创建的综合性设计系统，提供了：</p>
-
 <ul>
-  <li><strong>设计原则</strong>：深度、动效、响应式设计等核心概念</li>
-  <li><strong>组件库</strong>：按钮、卡片、导航、表单等常用 UI 组件</li>
-  <li><strong>配色方案</strong>：完整的色彩系统和无障碍配色建议</li>
-  <li><strong>排版指南</strong>：字体层级、行高、字重等排版规范</li>
-  <li><strong>图标资源</strong>：高质量的 Material 图标库</li>
+<li><strong>设计原则</strong>：深度、动效、响应式设计等核心概念</li>
+<li><strong>组件库</strong>：按钮、卡片、导航、表单等常用 UI 组件</li>
+<li><strong>配色方案</strong>：完整的色彩系统和无障碍配色建议</li>
+<li><strong>排版指南</strong>：字体层级、行高、字重等排版规范</li>
+<li><strong>图标资源</strong>：高质量的 Material 图标库</li>
 </ul>
-
-<h3 id="设计文章与案例">设计文章与案例</h3>
-
+<h3>设计文章与案例</h3>
 <p>网站发布大量高质量的设计文章，包括：</p>
-
 <ul>
-  <li><strong>设计思维</strong>：探讨设计背后的思考过程和方法论</li>
-  <li><strong>案例研究</strong>：Google 产品设计决策的深度解析</li>
-  <li><strong>用户体验</strong>：关于可用性、可访问性的最佳实践</li>
-  <li><strong>品牌设计</strong>：Google 品牌设计的历史和演进</li>
+<li><strong>设计思维</strong>：探讨设计背后的思考过程和方法论</li>
+<li><strong>案例研究</strong>：Google 产品设计决策的深度解析</li>
+<li><strong>用户体验</strong>：关于可用性、可访问性的最佳实践</li>
+<li><strong>品牌设计</strong>：Google 品牌设计的历史和演进</li>
 </ul>
-
-<h3 id="工具与资源">工具与资源</h3>
-
+<h3>工具与资源</h3>
 <ul>
-  <li><strong>Material Theme Builder</strong>：在线主题定制工具</li>
-  <li><strong>Icons</strong>：可直接使用的 Material 图标库</li>
-  <li><strong>Fonts</strong>：Google Fonts 字体的设计应用指南</li>
-  <li><strong>Dev Resources</strong>：面向开发者的设计实现资源</li>
+<li><strong>Material Theme Builder</strong>：在线主题定制工具</li>
+<li><strong>Icons</strong>：可直接使用的 Material 图标库</li>
+<li><strong>Fonts</strong>：Google Fonts 字体的设计应用指南</li>
+<li><strong>Dev Resources</strong>：面向开发者的设计实现资源</li>
 </ul>
-
-<h2 id="对独立开发者的价值">对独立开发者的价值</h2>
-
+<h2>对独立开发者的价值</h2>
 <ol>
-  <li><strong>专业设计指南</strong>：获得世界级设计团队的设计指导</li>
-  <li><strong>提升产品品质</strong>：遵循成熟的设计系统，避免常见设计错误</li>
-  <li><strong>提高开发效率</strong>：设计系统提供现成的组件和规范</li>
-  <li><strong>学习设计思维</strong>：了解大厂如何思考和解决设计问题</li>
-  <li><strong>保持设计一致性</strong>：确保产品各模块风格统一</li>
+<li><strong>专业设计指南</strong>：获得世界级设计团队的设计指导</li>
+<li><strong>提升产品品质</strong>：遵循成熟的设计系统，避免常见设计错误</li>
+<li><strong>提高开发效率</strong>：设计系统提供现成的组件和规范</li>
+<li><strong>学习设计思维</strong>：了解大厂如何思考和解决设计问题</li>
+<li><strong>保持设计一致性</strong>：确保产品各模块风格统一</li>
 </ol>
-
-<h2 id="特色栏目">特色栏目</h2>
-
+<h2>特色栏目</h2>
 <ul>
-  <li><strong>Podcasts</strong>：设计对话播客，邀请知名设计师分享经验</li>
-  <li><strong>Perspectives</strong>：深度设计思考文章</li>
-  <li><strong>Guides</strong>：实用的设计教程和指南</li>
-  <li><strong>Spotlight</strong>：重点产品设计的深度解析</li>
+<li><strong>Podcasts</strong>：设计对话播客，邀请知名设计师分享经验</li>
+<li><strong>Perspectives</strong>：深度设计思考文章</li>
+<li><strong>Guides</strong>：实用的设计教程和指南</li>
+<li><strong>Spotlight</strong>：重点产品设计的深度解析</li>
 </ul>
-
-<p>Google Design 不仅是设计资源库，更是一个学习和提升设计能力的平台。无论你是开发者还是设计师，都能从中获得有价值的洞察和灵感。</p>]]></content><author><name>黑石</name></author><category term="优秀项目" /><summary type="html"><![CDATA[Google 官方设计网站，提供 Material Design 设计系统、最佳实践和设计资源]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blackstones.xyz/assets/images/tools/google-design.svg" /><media:content medium="image" url="https://blackstones.xyz/assets/images/tools/google-design.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AiWind</title><link href="https://blackstones.xyz/aiwind/" rel="alternate" type="text/html" title="AiWind" /><published>2025-12-01T00:00:00+08:00</published><updated>2025-12-01T00:00:00+08:00</updated><id>https://blackstones.xyz/aiwind</id><content type="html" xml:base="https://blackstones.xyz/aiwind/"><![CDATA[<h1 id="aiwind---让ai图片生成不再词穷">AiWind - 让AI图片生成不再”词穷”</h1>
-
+<p>Google Design 不仅是设计资源库，更是一个学习和提升设计能力的平台。无论你是开发者还是设计师，都能从中获得有价值的洞察和灵感。</p>]]></content><author><name>黑石</name></author><category term="优秀项目" /><summary type="html"><![CDATA[Google 官方设计网站，提供 Material Design 设计系统、最佳实践和设计资源]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blackstones.xyz/assets/images/tools/google-design.svg" /><media:content medium="image" url="https://blackstones.xyz/assets/images/tools/google-design.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AiWind</title><link href="https://blackstones.xyz/aiwind/" rel="alternate" type="text/html" title="AiWind" /><published>2025-12-01T00:00:00+08:00</published><updated>2025-12-01T00:00:00+08:00</updated><id>https://blackstones.xyz/aiwind</id><content type="html" xml:base="https://blackstones.xyz/aiwind/"><![CDATA[<h1>AiWind - 让AI图片生成不再”词穷”</h1>
 <p>你是否曾在Midjourney或Stable Diffusion面前，明明心中有画面，却不知如何用文字描述？你是否翻遍各种提示词网站，却发现它们要么分类混乱，要么质量参差不齐？<a href="https://www.aiwind.org/">AiWind</a>的出现，正在悄然改变这种创作困境。</p>
-
-<p>这个由独立开发者精心打造的AI图片提示词库，不仅仅是一个简单的词汇集合，更是一座连接创意与技术的桥梁。它深知，在AI绘画的世界里，提示词的质量直接决定了作品的成败。正如一位资深AI艺术家所说：”好的提示词是成功的一半，而另一半在于如何组合它们。”AiWind正是基于这样的洞察，将散落各处的优质提示词系统化、分类化，让每一个创作者都能快速找到适合自己项目的表达方式。</p>
-
+<p>这个由独立开发者精心打造的AI图片提示词库，不仅仅是一个简单的词汇集合，更是一座连接创意与技术的桥梁。它深知，在AI绘画的世界里，提示词的质量直接决定了作品的成败。正如一位资深AI艺术家所说：“好的提示词是成功的一半，而另一半在于如何组合它们。“AiWind正是基于这样的洞察，将散落各处的优质提示词系统化、分类化，让每一个创作者都能快速找到适合自己项目的表达方式。</p>
 <p>从二次元到写实风格，从赛博朋克到3D渲染，从品牌设计到风景摄影，AiWind覆盖了几乎所有主流的AI绘画场景。更难得的是，它不仅仅提供提示词，还针对不同的AI模型——Midjourney、Stable Diffusion、Nanobanana等——进行了优化适配。这种细致入微的考虑，体现了一个真正理解创作者需求的产品应有的温度。</p>
-
 <p>在信息爆炸的时代，我们需要的不是更多的信息，而是更好的组织方式。AiWind通过清晰的分类、强大的搜索功能和直观的展示界面，将海量的提示词资源转化为可用的创作工具。每一个提示词卡片都像是一把钥匙，打开通往特定视觉风格的大门。这种设计哲学，让即使是AI绘画的新手，也能快速上手，创作出令人惊艳的作品。</p>
-
-<p>对于独立开发者而言，AiWind的价值不仅在于使用，更在于学习。它展示了如何将看似简单的需求——”我需要一个提示词库”——转化为一个真正有价值的产品。从用户体验的打磨，到内容的持续更新，再到多平台的支持，每一个细节都体现着产品思维的成熟。这种将工具性与艺术性完美结合的能力，正是当下独立开发者最应该学习的。</p>
-
+<p>对于独立开发者而言，AiWind的价值不仅在于使用，更在于学习。它展示了如何将看似简单的需求——“我需要一个提示词库”——转化为一个真正有价值的产品。从用户体验的打磨，到内容的持续更新，再到多平台的支持，每一个细节都体现着产品思维的成熟。这种将工具性与艺术性完美结合的能力，正是当下独立开发者最应该学习的。</p>
 <p>更重要的是，AiWind代表了一种新的创作范式：在AI时代，创作者的核心竞争力不再是掌握所有技术细节，而是如何更好地与AI协作，如何用更精准的语言引导AI实现自己的创意。正如平台所展示的那样，优秀的提示词往往能够跨越模型的限制，在不同的AI工具间通用，这种”可迁移性”正是未来AI创作工具应该具备的特质。</p>
-
 <p>站在2025年的节点回望，AI绘画已经从技术演示走向了实际应用。无论是品牌设计、内容创作，还是个人艺术表达，AI生成图片正在成为越来越多人的选择。而在这个过程中，像AiWind这样的工具，正在降低创作的门槛，让更多人能够参与到这场视觉革命中来。它告诉我们，在AI辅助创作的时代，真正稀缺的不是技术，而是如何将技术与创意完美结合的智慧。</p>
-
 <p>如果你正在寻找灵感，或者想要提升自己的AI绘画水平，不妨打开AiWind，让那些精心整理的提示词成为你创作路上的明灯。毕竟，在这个人人都能成为创作者的时代，工具的选择往往决定了你能走多远。</p>
-
 <p>访问地址：<a href="https://www.aiwind.org/">AiWind</a></p>
-
 <hr />
-
-<p><em>AiWind不仅仅是一个提示词库，更是AI时代创作者的工具箱。它用系统化的方式解决了”词穷”的痛点，让每一个有创意的人都能用AI实现自己的视觉想象。</em></p>]]></content><author><name>黑石</name></author><category term="独立开发" /><category term="优秀项目" /><summary type="html"><![CDATA[AI图片提示词库，激发创作灵感]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blackstones.xyz/assets/images/tools/product.svg" /><media:content medium="image" url="https://blackstones.xyz/assets/images/tools/product.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">OpenSpec：让 AI 编码回归规格驱动</title><link href="https://blackstones.xyz/openspec/" rel="alternate" type="text/html" title="OpenSpec：让 AI 编码回归规格驱动" /><published>2025-11-23T00:00:00+08:00</published><updated>2025-11-23T00:00:00+08:00</updated><id>https://blackstones.xyz/openspec</id><content type="html" xml:base="https://blackstones.xyz/openspec/"><![CDATA[<p>当我们用 AI 助手写代码时，需求常常只存在于对话里，结果是“写完才发现不对”。<a href="https://github.com/Fission-AI/OpenSpec">OpenSpec</a> 通过一套轻量、可审计的规格驱动流程，把“先对齐、再编码”变成标准动作，不需要 API Key，也不强绑特定工具。</p>
-
-<h2 id="核心理念把意图锁定在规格里">核心理念：把意图锁定在规格里</h2>
+<p><em>AiWind不仅仅是一个提示词库，更是AI时代创作者的工具箱。它用系统化的方式解决了”词穷”的痛点，让每一个有创意的人都能用AI实现自己的视觉想象。</em></p>]]></content><author><name>黑石</name></author><category term="独立开发" /><category term="优秀项目" /><summary type="html"><![CDATA[AI图片提示词库，激发创作灵感]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blackstones.xyz/assets/images/tools/product.svg" /><media:content medium="image" url="https://blackstones.xyz/assets/images/tools/product.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">OpenSpec：让 AI 编码回归规格驱动</title><link href="https://blackstones.xyz/openspec/" rel="alternate" type="text/html" title="OpenSpec：让 AI 编码回归规格驱动" /><published>2025-11-23T00:00:00+08:00</published><updated>2025-11-23T00:00:00+08:00</updated><id>https://blackstones.xyz/openspec</id><content type="html" xml:base="https://blackstones.xyz/openspec/"><![CDATA[<p>当我们用 AI 助手写代码时，需求常常只存在于对话里，结果是「写完才发现不对」。<a href="https://github.com/Fission-AI/OpenSpec">OpenSpec</a> 通过一套轻量、可审计的规格驱动流程，把「先对齐、再编码」变成标准动作，不需要 API Key，也不强绑特定工具。</p>
+<p><img src="https://pub-48e519ba51484a31972fff75f6b1ae16.r2.dev/2025/11/openspec/cover.png" alt="OpenSpec 封面 - 开发者与 AI 协作的规格驱动开发" /></p>
+<h2>核心理念：把意图锁定在规格里</h2>
+<p><img src="https://pub-48e519ba51484a31972fff75f6b1ae16.r2.dev/2025/11/openspec/layers.png" alt="分层管理概念图 - specs 和 changes 文件夹的组织方式" /></p>
 <ul>
-  <li><strong>分层管理</strong>：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openspec/specs/
-</pre></td></tr></tbody></table></code> 是当前生效的规格；<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openspec/changes/
-</pre></td></tr></tbody></table></code> 存放提案与任务，批准后再归档回 specs。</li>
-  <li><strong>双向对齐</strong>：人类和 AI 先讨论、修改提案，确认 scope 后再让 AI 执行对应任务。</li>
-  <li><strong>透明可追溯</strong>：每个变更都有提案、任务、规格差异，方便审查和复盘。</li>
+<li><strong>分层管理</strong>：<code>openspec/specs/</code> 存放当前生效的规格；<code>openspec/changes/</code> 存放提案与任务，批准后再归档回 specs。</li>
+<li><strong>双向对齐</strong>：人类和 AI 先讨论、修改提案，确认 scope 后再让 AI 执行对应任务。</li>
+<li><strong>透明可追溯</strong>：每个变更都有提案、任务、规格差异，方便审查和复盘。</li>
 </ul>
-
-<h2 id="工作流一览">工作流一览</h2>
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>草拟提案 → 评审&amp;对齐 → 执行任务 → 归档并更新规格
-</pre></td></tr></tbody></table></code></pre></div></div>
+<h2>工作流一览</h2>
+<p><img src="https://pub-48e519ba51484a31972fff75f6b1ae16.r2.dev/2025/11/openspec/workflow.png" alt="OpenSpec 工作流程 - 从提案到归档的四个步骤" /></p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="text">草拟提案 → 评审与对齐 → 执行任务 → 归档并更新规格
+</code></pre></div></div>
 <ul>
-  <li><strong>Proposal</strong>：描述要改动的功能/行为，以及预期的规格变更。</li>
-  <li><strong>Tasks</strong>：可执行的工作清单，指向已对齐的规格。</li>
-  <li><strong>Archive</strong>：完成后归档，自动把通过的 delta 合并到 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openspec/specs/
-</pre></td></tr></tbody></table></code>。</li>
+<li><strong>Proposal</strong>：描述要改动的功能/行为，以及预期的规格变更。</li>
+<li><strong>Tasks</strong>：可执行的工作清单，指向已对齐的规格。</li>
+<li><strong>Archive</strong>：完成后归档，自动把通过的 delta 合并到 <code>openspec/specs/</code>。</li>
 </ul>
-
-<h2 id="支持的-ai-工具">支持的 AI 工具</h2>
-<p>内置 slash command 的工具（选段）：Claude Code、Cursor、Windsurf、GitHub Copilot、Amazon Q、Gemini CLI、Codex、RooCode、Qoder 等。<br />
-不支持指令的工具也能通过 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openspec/AGENTS.md
-</pre></td></tr></tbody></table></code> 获取规则，手动让模型遵循该流程即可。</p>
-
-<h2 id="快速上手">快速上手</h2>
-<p>1) 安装 CLI（需 Node.js ≥ 20.19）</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre>npm <span class="nb">install</span> <span class="nt">-g</span> @fission-ai/openspec@latest
+<h2>支持的 AI 工具</h2>
+<p>内置 slash command 的工具（部分）：Claude Code、Cursor、Windsurf、GitHub Copilot、Amazon Q、Gemini CLI、Codex、RooCode、Qoder 等。</p>
+<p>不支持指令的工具也可通过 <code>openspec/AGENTS.md</code> 获取规则，手动让模型遵循该流程即可。</p>
+<h2>快速上手</h2>
+<h3>1. 安装 CLI（需 Node.js ≥ 20.19）</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">npm <span class="nb">install</span> <span class="nt">-g</span> @fission-ai/openspec@latest
 openspec <span class="nt">--version</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-<p>2) 初始化项目</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="nb">cd </span>your-project
+</code></pre></div></div>
+<h3>2. 初始化项目</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash"><span class="nb">cd </span>your-project
 openspec init
-</pre></td></tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
+<p>选择正在使用的 AI 工具，OpenSpec 会自动生成对应的命令模板并写入 <code>openspec/AGENTS.md</code>。</p>
+<h3>3. 让 AI 生成首个变更</h3>
 <ul>
-  <li>选择正在使用的 AI 工具，OpenSpec 会自动生成对应的命令模板并写入 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openspec/AGENTS.md
-</pre></td></tr></tbody></table></code>。<br />
-3) 让 AI 生成首个变更</li>
-  <li>在支持 slash command 的工具中输入 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>/openspec:proposal add-profile-filters
-</pre></td></tr></tbody></table></code></li>
-  <li>或直接对模型说：“用 OpenSpec 创建 add-profile-filters 提案并生成 tasks、spec delta”
-4) 在本地检查与评审
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre>openspec list                   <span class="c"># 查看现有变更</span>
+<li>在支持 slash command 的工具中输入：<code>/openspec:proposal add-profile-filters</code></li>
+<li>或直接对模型说：「用 OpenSpec 创建 add-profile-filters 提案并生成 tasks、spec delta」</li>
+</ul>
+<h3>4. 在本地检查与评审</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">openspec list                   <span class="c"># 查看现有变更</span>
 openspec show add-profile-filters
 openspec validate add-profile-filters
-</pre></td></tr></tbody></table></code></pre></div>    </div>
-    <p>5) 让 AI 按任务执行，完成后归档</p>
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openspec archive add-profile-filters <span class="nt">--yes</span>
-</pre></td></tr></tbody></table></code></pre></div>    </div>
-  </li>
-</ul>
-
-<h2 id="目录结构示例">目录结构示例</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre></td><td class="rouge-code"><pre>openspec/
-├─ AGENTS.md          # 给所有 AI 助手的统一指引
-├─ project.md         # 项目约定、架构、技术栈
-├─ specs/             # 当前生效的规格
-└─ changes/
-   └─ add-profile-filters/
-      ├─ proposal.md  # 需求与变更意图
-      ├─ tasks.md     # 执行清单
-      └─ specs/       # 与源规格的差异（delta）
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h2 id="适用场景">适用场景</h2>
+</code></pre></div></div>
+<h3>5. 让 AI 按任务执行，完成后归档</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">openspec archive add-profile-filters <span class="nt">--yes</span>
+</code></pre></div></div>
+<h2>目录结构示例</h2>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="text">openspec/
+├── AGENTS.md          # 给所有 AI 助手的统一指引
+├── project.md         # 项目约定、架构、技术栈
+├── specs/             # 当前生效的规格
+└── changes/
+   └── add-profile-filters/
+      ├── proposal.md  # 需求与变更意图
+      ├── tasks.md     # 执行清单
+      └── specs/       # 与源规格的差异（delta）
+</code></pre></div></div>
+<h2>适用场景</h2>
 <ul>
-  <li><strong>存量项目迭代</strong>：已上线系统做 1→n 变更时，保持行为差异的可控与可审计。</li>
-  <li><strong>多助手/多人协作</strong>：统一的 AGENTS.md 和变更文件夹避免信息碎片化。</li>
-  <li><strong>安全或合规要求高</strong>：把“意图—实现—归档”链路留档，满足审计需求。</li>
+<li><strong>存量项目迭代</strong>：已上线系统做 1→n 变更时，保持行为差异可控、可审计。</li>
+<li><strong>多助手/多人协作</strong>：统一的 AGENTS.md 和变更文件夹，避免信息碎片化。</li>
+<li><strong>安全或合规要求高</strong>：把「意图—实现—归档」链路留档，满足审计需求。</li>
 </ul>
-
-<h2 id="使用心得与提示">使用心得与提示</h2>
+<h2>使用心得与提示</h2>
 <ul>
-  <li>让 AI 先读 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openspec/project.md
-</pre></td></tr></tbody></table></code> 和相关 specs，再写 proposal，减少反复。</li>
-  <li>在提案阶段就要求 AI 写出规格 delta（对比现有行为），方便评审。</li>
-  <li>归档前跑 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openspec validate
-</pre></td></tr></tbody></table></code>，确保格式和引用无误。</li>
-  <li>若编辑器的 slash command 未出现，重启即可加载生成的命令文件。</li>
+<li>让 AI 先读 <code>openspec/project.md</code> 和相关 specs，再写 proposal，减少反复。</li>
+<li>在提案阶段就要求 AI 写出规格 delta（对比现有行为），方便评审。</li>
+<li>归档前跑 <code>openspec validate</code>，确保格式和引用无误。</li>
+<li>若编辑器的 slash command 未出现，重启即可加载生成的命令文件。</li>
 </ul>
-
-<p>OpenSpec 不替代你的框架或测试体系，而是用“先规格、后编码”的最小闭环，把 AI 助手纳入同一套工程化流程，让需求对齐、范围控制和可追溯性变得简单。当前工具链已覆盖主流 AI IDE/CLI，值得在团队中尝试落地。</p>]]></content><author><name>黑石</name></author><category term="文章" /><summary type="html"><![CDATA[轻量化的规格驱动流程，帮你和 AI 助手先对齐需求再写代码。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://raw.githubusercontent.com/Fission-AI/OpenSpec/main/assets/openspec_dashboard.png" /><media:content medium="image" url="https://raw.githubusercontent.com/Fission-AI/OpenSpec/main/assets/openspec_dashboard.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">缺点：住久了才发现的西班牙缺点与挑战</title><link href="https://blackstones.xyz/spain-reality-check/" rel="alternate" type="text/html" title="缺点：住久了才发现的西班牙缺点与挑战" /><published>2025-10-12T10:00:00+08:00</published><updated>2025-10-12T10:00:00+08:00</updated><id>https://blackstones.xyz/spain-reality-check</id><content type="html" xml:base="https://blackstones.xyz/spain-reality-check/"><![CDATA[<p>距离登陆西班牙已过去一个月，从初来的兴奋到逐渐熟悉，这篇笔记想聊聊生活中遇到的真实问题——没有完美的居住地，只有适合自己的选择。以下是基于我所在城市（非马德里/巴塞罗那）的观察，供参考：</p>
-
-<h2 id="一经济与就业想赚钱先掂量这几点">一、经济与就业：想赚钱？先掂量这几点</h2>
-
-<h3 id="工作机会有限">工作机会有限</h3>
+<hr />
+<p>OpenSpec 不替代你的框架或测试体系，而是用「先规格、后编码」的最小闭环，把 AI 助手纳入同一套工程化流程，让需求对齐、范围控制和可追溯性变得简单。当前工具链已覆盖主流 AI IDE/CLI，值得在团队中尝试落地。</p>]]></content><author><name>黑石</name></author><category term="文章" /><summary type="html"><![CDATA[轻量化的规格驱动流程，帮你和 AI 助手先对齐需求再写代码。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://pub-48e519ba51484a31972fff75f6b1ae16.r2.dev/2025/11/openspec/cover.png" /><media:content medium="image" url="https://pub-48e519ba51484a31972fff75f6b1ae16.r2.dev/2025/11/openspec/cover.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">缺点：住久了才发现的西班牙缺点与挑战</title><link href="https://blackstones.xyz/spain-reality-check/" rel="alternate" type="text/html" title="缺点：住久了才发现的西班牙缺点与挑战" /><published>2025-10-12T10:00:00+08:00</published><updated>2025-10-12T10:00:00+08:00</updated><id>https://blackstones.xyz/spain-reality-check</id><content type="html" xml:base="https://blackstones.xyz/spain-reality-check/"><![CDATA[<p>距离登陆西班牙已过去一个月，从初来的兴奋到逐渐熟悉，这篇笔记想聊聊生活中遇到的真实问题——没有完美的居住地，只有适合自己的选择。以下是基于我所在城市（非马德里/巴塞罗那）的观察，供参考：</p>
+<h2>一、经济与就业：想赚钱？先掂量这几点</h2>
+<h3>工作机会有限</h3>
 <p>本地青年失业率高达25.3%（2024年12月数据），外国人还需面对签证和语言门槛。华人岗位常存在工时过长、权益保障不足的问题。</p>
-
-<h3 id="工资水平偏低">工资水平偏低</h3>
+<h3>工资水平偏低</h3>
 <p>2025年最低工资为 <strong>1184欧元/月（14薪制）</strong>，约¥9,235/月，仅为德国（2222欧元，约¥17,332）的一半。若按12薪计算则为1381欧元（约¥10,772），但实际生活成本并不低。</p>
-
-<h3 id="对比参考">对比参考</h3>
+<h3>对比参考</h3>
 <p>欧洲范围内，卢森堡（2637欧元，约¥20,569）、爱尔兰（2281欧元，约¥17,792）等国薪资明显更高（数据截至2025年2月）。</p>
-
 <p><strong>现实提醒</strong>：如果你的移民目标是追求更高收入，西班牙可能不是最佳选择。</p>
-
-<h2 id="二物价与生活成本钱包在悄悄缩水">二、物价与生活成本：钱包在悄悄”缩水”</h2>
-
-<h3 id="能源与食品涨价">能源与食品涨价</h3>
+<h2>二、物价与生活成本：钱包在悄悄”缩水”</h2>
+<h3>能源与食品涨价</h3>
 <ul>
-  <li><strong>电费</strong>近期涨幅明显</li>
-  <li><strong>超市食品</strong>：西兰花从1欧元/公斤涨到2欧元+</li>
-  <li><strong>日常商品</strong>：橄榄油、面包等价格持续走高</li>
+<li><strong>电费</strong>近期涨幅明显</li>
+<li><strong>超市食品</strong>：西兰花从1欧元/公斤涨到2欧元+</li>
+<li><strong>日常商品</strong>：橄榄油、面包等价格持续走高</li>
 </ul>
-
-<h3 id="房租压力大">房租压力大</h3>
+<h3>房租压力大</h3>
 <ul>
-  <li><strong>马德里</strong>：单人间月租从几年前200欧元涨至400欧元+（约¥3,120+）</li>
-  <li><strong>小城市</strong>：也要300-400欧元（约¥2,340-3,120）</li>
-  <li><strong>个人案例</strong>：目前250欧元（约¥1,950）的房租得益于”未到期老合同”，到期后可能面临涨价</li>
+<li><strong>马德里</strong>：单人间月租从几年前200欧元涨至400欧元+（约¥3,120+）</li>
+<li><strong>小城市</strong>：也要300-400欧元（约¥2,340-3,120）</li>
+<li><strong>个人案例</strong>：目前250欧元（约¥1,950）的房租得益于”未到期老合同”，到期后可能面临涨价</li>
 </ul>
-
 <p><strong>财务警示</strong>：即使是”低成本”欧洲国家，通胀压力同样存在，预算需留有余地。</p>
-
-<h2 id="三语言别指望环境自动教会你">三、语言：别指望”环境自动教会你”</h2>
-
-<h3 id="英语普及度低">英语普及度低</h3>
+<h2>三、语言：别指望”环境自动教会你”</h2>
+<h3>英语普及度低</h3>
 <p>除大城市和旅游区，日常沟通几乎依赖西班牙语。手机翻译器能应付短期需求，但长期会因”沟通受挫”陷入社交封闭。</p>
-
-<h3 id="学习需主动">学习需主动</h3>
+<h3>学习需主动</h3>
 <p>身边有在法20年仍不会法语的案例，<strong>语言环境≠自动提升</strong>，需刻意练习。</p>
-
 <p><strong>实用建议</strong>：</p>
 <ol>
-  <li>从日常场景开始积累词汇（超市、租房、问路）</li>
-  <li>不要依赖华人圈，强迫自己用西语交流</li>
-  <li>参加语言交换活动（Intercambio）</li>
-  <li>看西语字幕的电视剧和新闻</li>
+<li>从日常场景开始积累词汇（超市、租房、问路）</li>
+<li>不要依赖华人圈，强迫自己用西语交流</li>
+<li>参加语言交换活动（Intercambio）</li>
+<li>看西语字幕的电视剧和新闻</li>
 </ol>
-
 <p><strong>心理准备</strong>：前3-6个月是语言焦虑的高峰期，需要极大的耐心和勇气。</p>
-
-<h2 id="四居住环境密集噪音你能忍多久">四、居住环境：密集+噪音，你能忍多久？</h2>
-
-<h3 id="人口拥挤">人口拥挤</h3>
+<h2>四、居住环境：密集+噪音，你能忍多久？</h2>
+<h3>人口拥挤</h3>
 <p>市中心密度堪比国内，早晚高峰人流量大，偏爱安静者需慎选核心区。</p>
-
-<h3 id="房屋隔音差">房屋隔音差</h3>
+<h3>房屋隔音差</h3>
 <ul>
-  <li><strong>建筑特点</strong>：传统建筑注重通风散热，砖墙薄、地板多为瓷砖</li>
-  <li><strong>噪音问题</strong>：隔壁看电视、走路声清晰可闻</li>
-  <li><strong>老房更甚</strong>：1970-1990年代建筑问题更突出</li>
+<li><strong>建筑特点</strong>：传统建筑注重通风散热，砖墙薄、地板多为瓷砖</li>
+<li><strong>噪音问题</strong>：隔壁看电视、走路声清晰可闻</li>
+<li><strong>老房更甚</strong>：1970-1990年代建筑问题更突出</li>
 </ul>
-
 <p><strong>选房技巧</strong>：</p>
 <ul>
-  <li>优先选择2009年后符合CTE隔音标准的建筑</li>
-  <li>避开临街、酒吧区和交通要道</li>
-  <li>看房时特意选周末晚上，测试噪音水平</li>
-  <li>询问邻居情况（有无派对爱好者、宠物等）</li>
+<li>优先选择2009年后符合CTE隔音标准的建筑</li>
+<li>避开临街、酒吧区和交通要道</li>
+<li>看房时特意选周末晚上，测试噪音水平</li>
+<li>询问邻居情况（有无派对爱好者、宠物等）</li>
 </ul>
-
-<h2 id="五买房风险房价涨占房隐患">五、买房风险：房价涨+”占房”隐患</h2>
-
-<h3 id="房价与贷款门槛">房价与贷款门槛</h3>
+<h2>五、买房风险：房价涨+“占房”隐患</h2>
+<h3>房价与贷款门槛</h3>
 <ul>
-  <li><strong>非盈利签证持有者无法贷款</strong>，需全额支付</li>
-  <li><strong>50万欧元黄金签证政策已取消</strong>，购房移民路径变窄</li>
-  <li>近年房价持续上涨，马德里和巴塞罗那涨幅达20-30%</li>
+<li><strong>非盈利签证持有者无法贷款</strong>，需全额支付</li>
+<li><strong>50万欧元黄金签证政策已取消</strong>，购房移民路径变窄</li>
+<li>近年房价持续上涨，马德里和巴塞罗那涨幅达20-30%</li>
 </ul>
-
-<h3 id="占房法律漏洞okupación">“占房”法律漏洞（Okupación）</h3>
+<h3>“占房”法律漏洞（Okupación）</h3>
 <p><strong>什么是占房？</strong>
 西班牙法律规定，若房屋被非法占据超过48小时，房东需通过司法程序驱逐，耗时可能长达数年。</p>
-
 <p><strong>高风险区域</strong>：</p>
 <ul>
-  <li>加泰罗尼亚部分社区</li>
-  <li>经济状况不佳的老城区</li>
-  <li>长期空置的度假房产区</li>
+<li>加泰罗尼亚部分社区</li>
+<li>经济状况不佳的老城区</li>
+<li>长期空置的度假房产区</li>
 </ul>
-
 <p><strong>防范措施</strong>：</p>
 <ol>
-  <li>购房前调研社区安全和”占房”历史</li>
-  <li>安装防盗门窗和报警系统</li>
-  <li>不要长期空置房产</li>
-  <li>购买专门的”占房险”（Seguro de Okupación）</li>
-  <li>委托可靠的物业管理</li>
+<li>购房前调研社区安全和”占房”历史</li>
+<li>安装防盗门窗和报警系统</li>
+<li>不要长期空置房产</li>
+<li>购买专门的”占房险”（Seguro de Okupación）</li>
+<li>委托可靠的物业管理</li>
 </ol>
-
 <p><strong>投资警示</strong>：如果买房是为了出租或投资，这个风险不容忽视。</p>
-
-<h2 id="六气候地中海气候也有另一面">六、气候：地中海气候也有”另一面”</h2>
-
-<h3 id="极端天气频发">极端天气频发</h3>
+<h2>六、气候：地中海气候也有”另一面”</h2>
+<h3>极端天气频发</h3>
 <ul>
-  <li><strong>2024年10月</strong>：瓦伦西亚暴雨引发洪涝，致223人遇难</li>
-  <li><strong>夏季高温</strong>：南部酷热干燥，4月塞维利亚就可能出现皮肤干裂问题</li>
-  <li><strong>冬季阴冷</strong>：北部沿海城市冬季多雨寒冷，类似上海</li>
+<li><strong>2024年10月</strong>：瓦伦西亚暴雨引发洪涝，致223人遇难</li>
+<li><strong>夏季高温</strong>：南部酷热干燥，4月塞维利亚就可能出现皮肤干裂问题</li>
+<li><strong>冬季阴冷</strong>：北部沿海城市冬季多雨寒冷，类似上海</li>
 </ul>
-
-<h3 id="南北差异大">南北差异大</h3>
-
+<h3>南北差异大</h3>
 <p><strong>北部（巴斯克、加利西亚）</strong>：</p>
 <ul>
-  <li>冬季：多雨阴冷，湿度大</li>
-  <li>夏季：温和舒适</li>
-  <li>适合怕热的人</li>
+<li>冬季：多雨阴冷，湿度大</li>
+<li>夏季：温和舒适</li>
+<li>适合怕热的人</li>
 </ul>
-
 <p><strong>中部（马德里）</strong>：</p>
 <ul>
-  <li>冬季：寒冷干燥，偶有降雪</li>
-  <li>夏季：炎热，40°C+常见</li>
-  <li>四季分明，昼夜温差大</li>
+<li>冬季：寒冷干燥，偶有降雪</li>
+<li>夏季：炎热，40°C+常见</li>
+<li>四季分明，昼夜温差大</li>
 </ul>
-
 <p><strong>南部（安达卢西亚）</strong>：</p>
 <ul>
-  <li>冬季：温和少雨</li>
-  <li>夏季：极度炎热干燥</li>
-  <li>适合怕冷但耐热的人</li>
+<li>冬季：温和少雨</li>
+<li>夏季：极度炎热干燥</li>
+<li>适合怕冷但耐热的人</li>
 </ul>
-
 <p><strong>东部沿海（瓦伦西亚、巴塞罗那）</strong>：</p>
 <ul>
-  <li>最接近理想的地中海气候</li>
-  <li>但近年极端天气增多</li>
+<li>最接近理想的地中海气候</li>
+<li>但近年极端天气增多</li>
 </ul>
-
 <p><strong>选择建议</strong>：实地考察至少体验两个季节，不要只凭旅游印象决定。</p>
-
-<h2 id="七心态自由的代价是从零开始">七、心态：自由的代价是”从零开始”</h2>
-
-<h3 id="孤独与重建">孤独与重建</h3>
+<h2>七、心态：自由的代价是”从零开始”</h2>
+<h3>孤独与重建</h3>
 <p>离开熟悉的社交圈、职场身份，需面对”<strong>我是谁？要怎样活？</strong>“的终极问题。</p>
-
 <p><strong>常见心理困境</strong>：</p>
 <ol>
-  <li><strong>身份迷失</strong>：从”XX公司的谁”变成”无业的外国人”</li>
-  <li><strong>社交退缩</strong>：语言障碍→沟通挫败→只待华人圈→更难融入</li>
-  <li><strong>目标缺失</strong>：无工作压力后反而陷入”空虚焦虑”</li>
-  <li><strong>关系疏离</strong>：与国内亲友渐行渐远，新朋友难以深交</li>
+<li><strong>身份迷失</strong>：从”XX公司的谁”变成”无业的外国人”</li>
+<li><strong>社交退缩</strong>：语言障碍→沟通挫败→只待华人圈→更难融入</li>
+<li><strong>目标缺失</strong>：无工作压力后反而陷入”空虚焦虑”</li>
+<li><strong>关系疏离</strong>：与国内亲友渐行渐远，新朋友难以深交</li>
 </ol>
-
-<h3 id="柴静的启示">柴静的启示</h3>
+<h3>柴静的启示</h3>
 <blockquote>
-  <p>“自由了”的下一句是”考验来了”——如何用这份自由构建自我，比”适应”更重要。</p>
+<p>“自由了”的下一句是”考验来了”——如何用这份自由构建自我，比”适应”更重要。</p>
 </blockquote>
-
 <p><strong>积极应对方式</strong>：</p>
 <ol>
-  <li><strong>主动建立routine</strong>：给自己设定学习、运动、社交的规律</li>
-  <li><strong>发展新兴趣</strong>：学做西班牙菜、跳Flamenco、参加徒步团</li>
-  <li><strong>志愿服务</strong>：既练语言又扩大社交圈</li>
-  <li><strong>保持产出</strong>：写作、摄影、自媒体，记录这段经历</li>
-  <li><strong>接纳过程</strong>：允许自己有迷茫期，这是成长的必经阶段</li>
+<li><strong>主动建立routine</strong>：给自己设定学习、运动、社交的规律</li>
+<li><strong>发展新兴趣</strong>：学做西班牙菜、跳Flamenco、参加徒步团</li>
+<li><strong>志愿服务</strong>：既练语言又扩大社交圈</li>
+<li><strong>保持产出</strong>：写作、摄影、自媒体，记录这段经历</li>
+<li><strong>接纳过程</strong>：允许自己有迷茫期，这是成长的必经阶段</li>
 </ol>
-
-<h3 id="真实案例">真实案例</h3>
-
+<h3>真实案例</h3>
 <p><strong>案例1 - 封闭型</strong>：
 40岁IT男，辞职移民，每天在家打游戏，两年后西语仍是A1水平，最终因抑郁回国。</p>
-
 <p><strong>案例2 - 重建型</strong>：
 35岁前媒体人，移民后学烘焙，开了家小工作室，虽收入不高但找到了新的人生意义。</p>
-
 <p><strong>启示</strong>：移民不是逃避，而是重新选择。如果在国内就缺乏自我驱动力，换个环境不会自动解决问题。</p>
-
-<h2 id="八其他需要知道的小麻烦">八、其他需要知道的”小麻烦”</h2>
-
-<h3 id="办事效率低">办事效率低</h3>
+<h2>八、其他需要知道的”小麻烦”</h2>
+<h3>办事效率低</h3>
 <ul>
-  <li>银行开户可能要预约等1-2周</li>
-  <li>居留卡制作等待时间1-3个月</li>
-  <li>政府部门常罢工，办事需早作准备</li>
+<li>银行开户可能要预约等1-2周</li>
+<li>居留卡制作等待时间1-3个月</li>
+<li>政府部门常罢工，办事需早作准备</li>
 </ul>
-
-<h3 id="医疗系统慢">医疗系统慢</h3>
+<h3>医疗系统慢</h3>
 <ul>
-  <li>公立医疗免费但预约等待久（专科可能几个月）</li>
-  <li>急诊室等待时间长（非紧急情况可能等6-8小时）</li>
-  <li>建议购买私人医疗保险作为补充</li>
+<li>公立医疗免费但预约等待久（专科可能几个月）</li>
+<li>急诊室等待时间长（非紧急情况可能等6-8小时）</li>
+<li>建议购买私人医疗保险作为补充</li>
 </ul>
-
-<h3 id="文化差异">文化差异</h3>
+<h3>文化差异</h3>
 <ul>
-  <li><strong>时间观念松散</strong>：约9点见面9:15到算正常</li>
-  <li><strong>噪音容忍度高</strong>：深夜聚会、白天午睡时装修都可能遇到</li>
-  <li><strong>社交距离近</strong>：见面贴面礼，肢体接触多</li>
-  <li><strong>饮食时间晚</strong>：晚餐9-10点开始很正常</li>
+<li><strong>时间观念松散</strong>：约9点见面9:15到算正常</li>
+<li><strong>噪音容忍度高</strong>：深夜聚会、白天午睡时装修都可能遇到</li>
+<li><strong>社交距离近</strong>：见面贴面礼，肢体接触多</li>
+<li><strong>饮食时间晚</strong>：晚餐9-10点开始很正常</li>
 </ul>
-
-<h3 id="税务复杂">税务复杂</h3>
+<h3>税务复杂</h3>
 <ul>
-  <li>成为税务居民后全球收入需申报</li>
-  <li>自由职业者（Autónomo）社保费用高</li>
-  <li>个人所得税最高可达47%</li>
-  <li>建议聘请专业税务顾问</li>
+<li>成为税务居民后全球收入需申报</li>
+<li>自由职业者（Autónomo）社保费用高</li>
+<li>个人所得税最高可达47%</li>
+<li>建议聘请专业税务顾问</li>
 </ul>
-
-<h2 id="冷静思考西班牙到底适合谁">冷静思考：西班牙到底适合谁？</h2>
-
-<h3 id="-适合的人群">✅ 适合的人群</h3>
-
+<h2>冷静思考：西班牙到底适合谁？</h2>
+<h3>✅ 适合的人群</h3>
 <ol>
-  <li><strong>退休人士或财务自由者</strong>
-    <ul>
-      <li>有稳定被动收入</li>
-      <li>不依赖当地就业市场</li>
-      <li>追求生活质量而非事业发展</li>
-    </ul>
-  </li>
-  <li><strong>远程工作者</strong>
-    <ul>
-      <li>收入来源在境外</li>
-      <li>工作时间灵活</li>
-      <li>重视work-life balance</li>
-    </ul>
-  </li>
-  <li><strong>追求慢生活者</strong>
-    <ul>
-      <li>厌倦内卷和快节奏</li>
-      <li>看重家庭时间和个人兴趣</li>
-      <li>物质欲望相对较低</li>
-    </ul>
-  </li>
-  <li><strong>子女教育规划者</strong>
-    <ul>
-      <li>看重欧洲教育体系</li>
-      <li>希望孩子多语言环境</li>
-      <li>愿意陪伴孩子成长</li>
-    </ul>
-  </li>
-  <li><strong>气候敏感者</strong>
-    <ul>
-      <li>身体或心理健康需要温暖气候</li>
-      <li>特定疾病需干燥/温和环境</li>
-    </ul>
-  </li>
+<li>
+<p><strong>退休人士或财务自由者</strong></p>
+<ul>
+<li>有稳定被动收入</li>
+<li>不依赖当地就业市场</li>
+<li>追求生活质量而非事业发展</li>
+</ul>
+</li>
+<li>
+<p><strong>远程工作者</strong></p>
+<ul>
+<li>收入来源在境外</li>
+<li>工作时间灵活</li>
+<li>重视work-life balance</li>
+</ul>
+</li>
+<li>
+<p><strong>追求慢生活者</strong></p>
+<ul>
+<li>厌倦内卷和快节奏</li>
+<li>看重家庭时间和个人兴趣</li>
+<li>物质欲望相对较低</li>
+</ul>
+</li>
+<li>
+<p><strong>子女教育规划者</strong></p>
+<ul>
+<li>看重欧洲教育体系</li>
+<li>希望孩子多语言环境</li>
+<li>愿意陪伴孩子成长</li>
+</ul>
+</li>
+<li>
+<p><strong>气候敏感者</strong></p>
+<ul>
+<li>身体或心理健康需要温暖气候</li>
+<li>特定疾病需干燥/温和环境</li>
+</ul>
+</li>
 </ol>
-
-<h3 id="-不太适合的人群">❌ 不太适合的人群</h3>
-
+<h3>❌ 不太适合的人群</h3>
 <ol>
-  <li><strong>事业上升期</strong>
-    <ul>
-      <li>当地职业发展机会有限</li>
-      <li>薪资天花板低</li>
-      <li>行业选择窄</li>
-    </ul>
-  </li>
-  <li><strong>追求高收入者</strong>
-    <ul>
-      <li>工资水平远低于北欧、美国</li>
-      <li>税收不低但福利不及北欧</li>
-    </ul>
-  </li>
-  <li><strong>效率至上者</strong>
-    <ul>
-      <li>办事节奏慢会让人抓狂</li>
-      <li>商业环境不如国内便捷</li>
-    </ul>
-  </li>
-  <li><strong>语言恐惧者</strong>
-    <ul>
-      <li>不愿学习新语言</li>
-      <li>依赖华人圈生活</li>
-      <li>长期会很痛苦</li>
-    </ul>
-  </li>
-  <li><strong>原生家庭依赖重</strong>
-    <ul>
-      <li>需要常回国照顾父母</li>
-      <li>无法适应远距离亲情</li>
-      <li>居住要求会成为负担</li>
-    </ul>
-  </li>
+<li>
+<p><strong>事业上升期</strong></p>
+<ul>
+<li>当地职业发展机会有限</li>
+<li>薪资天花板低</li>
+<li>行业选择窄</li>
+</ul>
+</li>
+<li>
+<p><strong>追求高收入者</strong></p>
+<ul>
+<li>工资水平远低于北欧、美国</li>
+<li>税收不低但福利不及北欧</li>
+</ul>
+</li>
+<li>
+<p><strong>效率至上者</strong></p>
+<ul>
+<li>办事节奏慢会让人抓狂</li>
+<li>商业环境不如国内便捷</li>
+</ul>
+</li>
+<li>
+<p><strong>语言恐惧者</strong></p>
+<ul>
+<li>不愿学习新语言</li>
+<li>依赖华人圈生活</li>
+<li>长期会很痛苦</li>
+</ul>
+</li>
+<li>
+<p><strong>原生家庭依赖重</strong></p>
+<ul>
+<li>需要常回国照顾父母</li>
+<li>无法适应远距离亲情</li>
+<li>居住要求会成为负担</li>
+</ul>
+</li>
 </ol>
-
-<h2 id="最后想说">最后想说</h2>
-
+<h2>最后想说</h2>
 <p>这些问题是否算”缺点”，完全取决于你的需求和价值观：</p>
-
 <ul>
-  <li>若追求<strong>高薪和效率</strong>，西班牙或许不适合</li>
-  <li>若看重<strong>气候、生活节奏和低成本移民</strong>，它的吸引力仍在</li>
-  <li>若追求<strong>自我实现和人生体验</strong>，这里可能给你意想不到的收获</li>
+<li>若追求<strong>高薪和效率</strong>，西班牙或许不适合</li>
+<li>若看重<strong>气候、生活节奏和低成本移民</strong>，它的吸引力仍在</li>
+<li>若追求<strong>自我实现和人生体验</strong>，这里可能给你意想不到的收获</li>
 </ul>
-
 <p><strong>移民不是终点，而是新起点。</strong></p>
-
 <p>重要的不是选择哪个国家，而是：</p>
 <ol>
-  <li><strong>清楚自己要什么</strong> - 事业？家庭？自由？健康？</li>
-  <li><strong>接受真实的代价</strong> - 每个选择都有得失</li>
-  <li><strong>主动构建生活</strong> - 环境不会自动让你幸福</li>
-  <li><strong>保持开放心态</strong> - 随时准备调整甚至回国</li>
+<li><strong>清楚自己要什么</strong> - 事业？家庭？自由？健康？</li>
+<li><strong>接受真实的代价</strong> - 每个选择都有得失</li>
+<li><strong>主动构建生活</strong> - 环境不会自动让你幸福</li>
+<li><strong>保持开放心态</strong> - 随时准备调整甚至回国</li>
 </ol>
-
-<p>有人说：”只有在异国他乡待过，才真正懂得自己需要什么。”这话有一定道理。移民经历可能让你发现不一样的自己，也可能让你更珍惜曾经拥有的一切。</p>
-
+<p>有人说：“只有在异国他乡待过，才真正懂得自己需要什么。“这话有一定道理。移民经历可能让你发现不一样的自己，也可能让你更珍惜曾经拥有的一切。</p>
 <p><strong>无论结果如何，勇敢尝试过，就不枉此行。</strong></p>
-
 <hr />
-
 <blockquote>
-  <p>配图：一杯治愈的卡布奇诺，生活再难，总有小确幸 ☕️</p>
+<p>配图：一杯治愈的卡布奇诺，生活再难，总有小确幸 ☕️</p>
 </blockquote>
-
 <p><strong>写在最后</strong>：这篇文章基于个人观察，不同城市、不同背景的人感受会有差异。欢迎已在西班牙的朋友补充，也欢迎观望者理性讨论。移民是人生重大决定，需要充分调研，而非一时冲动。</p>]]></content><author><name>黑石</name></author><category term="移民" /><summary type="html"><![CDATA[距离登陆西班牙已过去一个月，从初来的兴奋到逐渐熟悉，这篇笔记想聊聊生活中遇到的真实问题——没有完美的居住地，只有适合自己的选择。以下是基于我所在城市（非马德里/巴塞罗那）的观察，供参考：]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/8aaacd7e.png" /><media:content medium="image" url="https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/8aaacd7e.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">西班牙非盈利移民签证完全指南</title><link href="https://blackstones.xyz/spain-non-lucrative-visa/" rel="alternate" type="text/html" title="西班牙非盈利移民签证完全指南" /><published>2025-10-11T10:00:00+08:00</published><updated>2025-10-11T10:00:00+08:00</updated><id>https://blackstones.xyz/spain-non-lucrative-visa</id><content type="html" xml:base="https://blackstones.xyz/spain-non-lucrative-visa/"><![CDATA[<p>在全球移民项目中，西班牙非盈利居留签证（Non-Lucrative Residence Visa）以其相对宽松的条件、优质的生活环境和通往欧盟永居的路径，成为越来越多中国申请人的选择。这篇文章将全面解析西班牙非盈利签证的方方面面。</p>
-
-<h2 id="什么是西班牙非盈利签证">什么是西班牙非盈利签证？</h2>
-
-<p>西班牙非盈利居留签证，是西班牙政府为那些希望在西班牙长期居住、但不在当地工作的外国人设计的一种居留许可。顾名思义，”非盈利”意味着持有者不能在西班牙从事任何雇佣性质的工作。</p>
-
-<h3 id="核心特点">核心特点</h3>
-
+<h2>什么是西班牙非盈利签证？</h2>
+<p>西班牙非盈利居留签证，是西班牙政府为那些希望在西班牙长期居住、但不在当地工作的外国人设计的一种居留许可。顾名思义，“非盈利”意味着持有者不能在西班牙从事任何雇佣性质的工作。</p>
+<h3>核心特点</h3>
 <ul>
-  <li><strong>无需投资</strong> - 不需要购买房产或进行商业投资</li>
-  <li><strong>门槛相对较低</strong> - 主要考察经济能力和健康状况</li>
-  <li><strong>全家移民</strong> - 可携带配偶和子女</li>
-  <li><strong>欧盟自由</strong> - 获得居留权后可自由进出申根国家</li>
-  <li><strong>永居路径</strong> - 满足条件后可申请永久居留和入籍</li>
+<li><strong>无需投资</strong> - 不需要购买房产或进行商业投资</li>
+<li><strong>门槛相对较低</strong> - 主要考察经济能力和健康状况</li>
+<li><strong>全家移民</strong> - 可携带配偶和子女</li>
+<li><strong>欧盟自由</strong> - 获得居留权后可自由进出申根国家</li>
+<li><strong>永居路径</strong> - 满足条件后可申请永久居留和入籍</li>
 </ul>
-
-<h2 id="申请条件详解">申请条件详解</h2>
-
-<h3 id="1-经济能力证明">1. 经济能力证明</h3>
-
+<h2>申请条件详解</h2>
+<h3>1. 经济能力证明</h3>
 <p>这是非盈利签证最核心的要求。申请人需要证明拥有足够的经济能力在西班牙生活，而无需工作。</p>
-
-<h4 id="官方要求标准2024年">官方要求标准（2024年）</h4>
-
+<h4>官方要求标准（2024年）</h4>
 <p><strong>主申请人年收入要求：</strong></p>
 <ul>
-  <li>最低年收入：约 €28,800（约¥22.5万，IPREM 指数的 400%）</li>
-  <li>月均收入：约 €2,400（约¥1.87万）</li>
+<li>最低年收入：约 €28,800（约¥22.5万，IPREM 指数的 400%）</li>
+<li>月均收入：约 €2,400（约¥1.87万）</li>
 </ul>
-
 <p><strong>家庭成员附加要求：</strong></p>
 <ul>
-  <li>每增加一名成年家属：额外需要 IPREM 的 100%（约 €7,200/年，约¥5.6万/年）</li>
-  <li>每增加一名未成年子女：额外需要 IPREM 的 75%（约 €5,400/年，约¥4.2万/年）</li>
+<li>每增加一名成年家属：额外需要 IPREM 的 100%（约 €7,200/年，约¥5.6万/年）</li>
+<li>每增加一名未成年子女：额外需要 IPREM 的 75%（约 €5,400/年，约¥4.2万/年）</li>
 </ul>
-
 <p><strong>举例计算：</strong></p>
 <ul>
-  <li>单人申请：€28,800/年（约¥22.5万/年）</li>
-  <li>夫妻二人：€28,800 + €7,200 = €36,000/年（约¥28万/年）</li>
-  <li>夫妻 + 1个未成年子女：€36,000 + €5,400 = €41,400/年（约¥32万/年）</li>
+<li>单人申请：€28,800/年（约¥22.5万/年）</li>
+<li>夫妻二人：€28,800 + €7,200 = €36,000/年（约¥28万/年）</li>
+<li>夫妻 + 1个未成年子女：€36,000 + €5,400 = €41,400/年（约¥32万/年）</li>
 </ul>
-
-<h4 id="资金来源证明">资金来源证明</h4>
-
+<h4>资金来源证明</h4>
 <p>可接受的资金来源包括：</p>
 <ul>
-  <li><strong>存款证明</strong> - 银行存款账户</li>
-  <li><strong>理财产品</strong> - 基金、股票等金融资产</li>
-  <li><strong>房产收入</strong> - 租金收入证明</li>
-  <li><strong>退休金</strong> - 退休金收入证明</li>
-  <li><strong>企业分红</strong> - 公司股东分红证明</li>
-  <li><strong>被动收入</strong> - 版税、专利授权等</li>
+<li><strong>存款证明</strong> - 银行存款账户</li>
+<li><strong>理财产品</strong> - 基金、股票等金融资产</li>
+<li><strong>房产收入</strong> - 租金收入证明</li>
+<li><strong>退休金</strong> - 退休金收入证明</li>
+<li><strong>企业分红</strong> - 公司股东分红证明</li>
+<li><strong>被动收入</strong> - 版税、专利授权等</li>
 </ul>
-
 <p><strong>重要提示：</strong></p>
 <ol>
-  <li>所有资金证明必须是”非劳动性收入”，工资收入不被认可</li>
-  <li>银行流水通常需要提供最近 6-12 个月的记录</li>
-  <li>大额存款需要说明资金来源的合法性</li>
+<li>所有资金证明必须是”非劳动性收入”，工资收入不被认可</li>
+<li>银行流水通常需要提供最近 6-12 个月的记录</li>
+<li>大额存款需要说明资金来源的合法性</li>
 </ol>
-
-<h3 id="2-医疗保险">2. 医疗保险</h3>
-
+<h3>2. 医疗保险</h3>
 <p>申请人必须购买在西班牙有效的医疗保险，覆盖整个居留期间。</p>
-
 <p><strong>保险要求：</strong></p>
 <ul>
-  <li>必须覆盖在西班牙的所有医疗费用</li>
-  <li>不能有免赔额或共付额</li>
-  <li>保险公司必须在西班牙有业务</li>
-  <li>保额建议至少 €30,000（约¥23.4万）</li>
+<li>必须覆盖在西班牙的所有医疗费用</li>
+<li>不能有免赔额或共付额</li>
+<li>保险公司必须在西班牙有业务</li>
+<li>保额建议至少 €30,000（约¥23.4万）</li>
 </ul>
-
 <p><strong>推荐保险公司：</strong></p>
 <ul>
-  <li>Sanitas</li>
-  <li>Adeslas</li>
-  <li>Asisa</li>
-  <li>AXA</li>
-  <li>DKV</li>
+<li>Sanitas</li>
+<li>Adeslas</li>
+<li>Asisa</li>
+<li>AXA</li>
+<li>DKV</li>
 </ul>
-
 <p><strong>费用参考：</strong> 根据年龄和保障范围，年保费约 €600-€2,000/人（约¥4,680-1.56万/人）</p>
-
-<h3 id="3-无犯罪记录">3. 无犯罪记录</h3>
-
+<h3>3. 无犯罪记录</h3>
 <p><strong>中国申请人需准备：</strong></p>
 <ul>
-  <li>国内无犯罪记录证明（公安局出具）</li>
-  <li>需做外交部认证和西班牙驻华使馆认证</li>
-  <li>过去5年在其他国家居住超过6个月的，还需提供该国的无犯罪证明</li>
+<li>国内无犯罪记录证明（公安局出具）</li>
+<li>需做外交部认证和西班牙驻华使馆认证</li>
+<li>过去5年在其他国家居住超过6个月的，还需提供该国的无犯罪证明</li>
 </ul>
-
 <p><strong>有效期：</strong> 无犯罪证明通常有效期为 3 个月</p>
-
-<h3 id="4-健康体检">4. 健康体检</h3>
-
+<h3>4. 健康体检</h3>
 <p>证明没有严重传染性疾病或对公共健康构成威胁的疾病。</p>
-
 <p><strong>体检要求：</strong></p>
 <ul>
-  <li>需在指定医疗机构进行</li>
-  <li>主要检查传染病（如结核病）</li>
-  <li>体检报告需翻译成西班牙语并公证</li>
+<li>需在指定医疗机构进行</li>
+<li>主要检查传染病（如结核病）</li>
+<li>体检报告需翻译成西班牙语并公证</li>
 </ul>
-
-<h3 id="5-住所证明">5. 住所证明</h3>
-
+<h3>5. 住所证明</h3>
 <p>证明在西班牙有固定住所。</p>
-
 <p><strong>可接受的证明：</strong></p>
 <ul>
-  <li><strong>购房合同</strong> - 如果已在西班牙购买房产</li>
-  <li><strong>租房合同</strong> - 至少一年的租赁合同</li>
-  <li><strong>酒店预订</strong> - 长期酒店预订（不推荐，因为续签时不适用）</li>
-  <li><strong>亲友担保</strong> - 亲友提供住所的证明信</li>
+<li><strong>购房合同</strong> - 如果已在西班牙购买房产</li>
+<li><strong>租房合同</strong> - 至少一年的租赁合同</li>
+<li><strong>酒店预订</strong> - 长期酒店预订（不推荐，因为续签时不适用）</li>
+<li><strong>亲友担保</strong> - 亲友提供住所的证明信</li>
 </ul>
-
 <p><strong>注意事项：</strong></p>
 <ul>
-  <li>住所必须满足最低居住标准</li>
-  <li>租房合同需到当地政府部门登记（Empadronamiento）</li>
+<li>住所必须满足最低居住标准</li>
+<li>租房合同需到当地政府部门登记（Empadronamiento）</li>
 </ul>
-
-<h2 id="申请流程详解">申请流程详解</h2>
-
-<h3 id="第一步准备材料国内完成">第一步：准备材料（国内完成）</h3>
-
+<h2>申请流程详解</h2>
+<h3>第一步：准备材料（国内完成）</h3>
 <p><strong>所需材料清单：</strong></p>
-
 <ol>
-  <li><strong>签证申请表</strong> - 填写完整并签名</li>
-  <li><strong>护照原件及复印件</strong> - 有效期至少12个月</li>
-  <li><strong>照片</strong> - 近期彩色证件照（白底，26x32mm）</li>
-  <li><strong>经济能力证明</strong>
-    <ul>
-      <li>银行存款证明</li>
-      <li>银行流水（6-12个月）</li>
-      <li>收入证明文件</li>
-    </ul>
-  </li>
-  <li><strong>医疗保险</strong>
-    <ul>
-      <li>保单原件</li>
-      <li>覆盖整个申根区</li>
-    </ul>
-  </li>
-  <li><strong>无犯罪记录</strong>
-    <ul>
-      <li>中国无犯罪证明（双认证）</li>
-      <li>其他国家证明（如适用）</li>
-    </ul>
-  </li>
-  <li><strong>健康证明</strong>
-    <ul>
-      <li>体检报告</li>
-      <li>翻译公证</li>
-    </ul>
-  </li>
-  <li><strong>住所证明</strong>
-    <ul>
-      <li>购房合同或租房合同</li>
-    </ul>
-  </li>
-  <li><strong>申请费用</strong> - 约 €80（约¥624）</li>
+<li><strong>签证申请表</strong> - 填写完整并签名</li>
+<li><strong>护照原件及复印件</strong> - 有效期至少12个月</li>
+<li><strong>照片</strong> - 近期彩色证件照（白底，26x32mm）</li>
+<li><strong>经济能力证明</strong>
+<ul>
+<li>银行存款证明</li>
+<li>银行流水（6-12个月）</li>
+<li>收入证明文件</li>
+</ul>
+</li>
+<li><strong>医疗保险</strong>
+<ul>
+<li>保单原件</li>
+<li>覆盖整个申根区</li>
+</ul>
+</li>
+<li><strong>无犯罪记录</strong>
+<ul>
+<li>中国无犯罪证明（双认证）</li>
+<li>其他国家证明（如适用）</li>
+</ul>
+</li>
+<li><strong>健康证明</strong>
+<ul>
+<li>体检报告</li>
+<li>翻译公证</li>
+</ul>
+</li>
+<li><strong>住所证明</strong>
+<ul>
+<li>购房合同或租房合同</li>
+</ul>
+</li>
+<li><strong>申请费用</strong> - 约 €80（约¥624）</li>
 </ol>
-
 <p><strong>文件准备要点：</strong></p>
 <ul>
-  <li>所有非西班牙语文件需翻译成西班牙语</li>
-  <li>重要文件需做公证和双认证（外交部 + 使馆）</li>
-  <li>建议准备多份复印件</li>
+<li>所有非西班牙语文件需翻译成西班牙语</li>
+<li>重要文件需做公证和双认证（外交部 + 使馆）</li>
+<li>建议准备多份复印件</li>
 </ul>
-
-<h3 id="第二步预约并递交申请">第二步：预约并递交申请</h3>
-
+<h3>第二步：预约并递交申请</h3>
 <p><strong>在中国申请：</strong></p>
 <ul>
-  <li>前往西班牙驻华使领馆</li>
-  <li>提前在线预约递交时间</li>
-  <li>北京、上海、广州、香港均有领事馆</li>
+<li>前往西班牙驻华使领馆</li>
+<li>提前在线预约递交时间</li>
+<li>北京、上海、广州、香港均有领事馆</li>
 </ul>
-
 <p><strong>审理时间：</strong></p>
 <ul>
-  <li>通常需要 1-3 个月</li>
-  <li>旺季可能更长</li>
-  <li>建议提前至少 4-6 个月开始准备</li>
+<li>通常需要 1-3 个月</li>
+<li>旺季可能更长</li>
+<li>建议提前至少 4-6 个月开始准备</li>
 </ul>
-
-<h3 id="第三步登陆西班牙">第三步：登陆西班牙</h3>
-
+<h3>第三步：登陆西班牙</h3>
 <p>获得签证后，必须在签证有效期内（通常为3个月）入境西班牙。</p>
-
 <p><strong>登陆后需办理：</strong></p>
 <ol>
-  <li><strong>NIE（外国人身份号码）</strong> - 在西班牙的身份证号</li>
-  <li><strong>TIE（外国人身份证）</strong> - 实体居留卡</li>
-  <li><strong>Empadronamiento（住家登记）</strong> - 到市政厅登记住址</li>
-  <li><strong>银行开户</strong> - 开设西班牙银行账户</li>
+<li><strong>NIE（外国人身份号码）</strong> - 在西班牙的身份证号</li>
+<li><strong>TIE（外国人身份证）</strong> - 实体居留卡</li>
+<li><strong>Empadronamiento（住家登记）</strong> - 到市政厅登记住址</li>
+<li><strong>银行开户</strong> - 开设西班牙银行账户</li>
 </ol>
-
 <p><strong>办理时限：</strong></p>
 <ul>
-  <li>入境后 30 天内必须申请 TIE</li>
-  <li>建议抵达后尽快办理</li>
+<li>入境后 30 天内必须申请 TIE</li>
+<li>建议抵达后尽快办理</li>
 </ul>
-
-<h3 id="第四步居留卡领取">第四步：居留卡领取</h3>
-
+<h3>第四步：居留卡领取</h3>
 <p>提交 TIE 申请后，等待制卡和领取。</p>
-
 <p><strong>办理时间：</strong> 通常 4-6 周
 <strong>居留卡有效期：</strong> 首次获批通常为 1 年</p>
-
-<h2 id="续签与永居路径">续签与永居路径</h2>
-
-<h3 id="居留卡续签">居留卡续签</h3>
-
+<h2>续签与永居路径</h2>
+<h3>居留卡续签</h3>
 <p>非盈利居留卡需要定期续签：</p>
-
 <p><strong>续签周期：</strong></p>
 <ul>
-  <li>第一次续签：1年后 → 获得2年居留卡</li>
-  <li>第二次续签：3年后 → 获得2年居留卡</li>
-  <li>持续模式：每2年续签一次</li>
+<li>第一次续签：1年后 → 获得2年居留卡</li>
+<li>第二次续签：3年后 → 获得2年居留卡</li>
+<li>持续模式：每2年续签一次</li>
 </ul>
-
 <p><strong>续签要求：</strong></p>
 <ol>
-  <li><strong>居住要求</strong> - 每年在西班牙居住至少183天</li>
-  <li><strong>经济能力</strong> - 持续证明经济能力</li>
-  <li><strong>医疗保险</strong> - 保持有效保险</li>
-  <li><strong>无犯罪记录</strong> - 在西班牙无犯罪记录</li>
-  <li><strong>融入测试</strong> - 部分地区可能要求语言测试</li>
+<li><strong>居住要求</strong> - 每年在西班牙居住至少183天</li>
+<li><strong>经济能力</strong> - 持续证明经济能力</li>
+<li><strong>医疗保险</strong> - 保持有效保险</li>
+<li><strong>无犯罪记录</strong> - 在西班牙无犯罪记录</li>
+<li><strong>融入测试</strong> - 部分地区可能要求语言测试</li>
 </ol>
-
-<h3 id="永久居留申请">永久居留申请</h3>
-
+<h3>永久居留申请</h3>
 <p>持续居住满5年后，可申请永久居留（Long-term Residence）。</p>
-
 <p><strong>永居要求：</strong></p>
 <ul>
-  <li>5年内在西班牙居住至少4年零2个月</li>
-  <li>每年离境不超过6个月</li>
-  <li>连续离境不超过10个月</li>
-  <li>通过语言和文化融入测试（A2级西班牙语）</li>
-  <li>无犯罪记录</li>
-  <li>有稳定收入和医疗保险</li>
+<li>5年内在西班牙居住至少4年零2个月</li>
+<li>每年离境不超过6个月</li>
+<li>连续离境不超过10个月</li>
+<li>通过语言和文化融入测试（A2级西班牙语）</li>
+<li>无犯罪记录</li>
+<li>有稳定收入和医疗保险</li>
 </ul>
-
-<h3 id="入籍申请">入籍申请</h3>
-
+<h3>入籍申请</h3>
 <p>获得永居后，还可以申请加入西班牙国籍。</p>
-
 <p><strong>入籍要求：</strong></p>
 <ul>
-  <li>在西班牙合法居住满10年</li>
-  <li>通过语言测试（A2级）</li>
-  <li>通过文化常识测试（CCSE）</li>
-  <li>放弃原国籍（中国不承认双重国籍）</li>
+<li>在西班牙合法居住满10年</li>
+<li>通过语言测试（A2级）</li>
+<li>通过文化常识测试（CCSE）</li>
+<li>放弃原国籍（中国不承认双重国籍）</li>
 </ul>
-
 <p><strong>特殊情况：</strong></p>
 <ul>
-  <li>拉美国家公民：2年即可入籍</li>
-  <li>难民：5年即可入籍</li>
+<li>拉美国家公民：2年即可入籍</li>
+<li>难民：5年即可入籍</li>
 </ul>
-
-<h2 id="生活成本估算">生活成本估算</h2>
-
+<h2>生活成本估算</h2>
 <p>了解西班牙的生活成本，有助于更好地规划移民预算。</p>
-
-<h3 id="马德里生活成本月均">马德里生活成本（月均）</h3>
-
+<h3>马德里生活成本（月均）</h3>
 <p><strong>住房：</strong></p>
 <ul>
-  <li>市中心一居室：€900-€1,400（约¥7,020-1.09万）</li>
-  <li>郊区一居室：€650-€1,000（约¥5,070-7,800）</li>
-  <li>市中心三居室：€1,500-€2,500（约¥1.17万-1.95万）</li>
-  <li>郊区三居室：€1,000-€1,800（约¥7,800-1.4万）</li>
+<li>市中心一居室：€900-€1,400（约¥7,020-1.09万）</li>
+<li>郊区一居室：€650-€1,000（约¥5,070-7,800）</li>
+<li>市中心三居室：€1,500-€2,500（约¥1.17万-1.95万）</li>
+<li>郊区三居室：€1,000-€1,800（约¥7,800-1.4万）</li>
 </ul>
-
 <p><strong>日常开销：</strong></p>
 <ul>
-  <li>餐厅用餐：€10-€15/人（约¥78-117/人）</li>
-  <li>超市购物：€200-€400/月/人（约¥1,560-3,120/月/人）</li>
-  <li>公共交通月票：€54.60（约¥426）</li>
-  <li>水电气网：€100-€150/月（约¥780-1,170/月）</li>
-  <li>健身房会员：€30-€50/月（约¥234-390/月）</li>
+<li>餐厅用餐：€10-€15/人（约¥78-117/人）</li>
+<li>超市购物：€200-€400/月/人（约¥1,560-3,120/月/人）</li>
+<li>公共交通月票：€54.60（约¥426）</li>
+<li>水电气网：€100-€150/月（约¥780-1,170/月）</li>
+<li>健身房会员：€30-€50/月（约¥234-390/月）</li>
 </ul>
-
 <p><strong>家庭月支出参考（三口之家）：</strong></p>
 <ul>
-  <li>租房：€1,200（约¥9,360）</li>
-  <li>饮食：€600（约¥4,680）</li>
-  <li>交通：€100（约¥780）</li>
-  <li>水电网：€150（约¥1,170）</li>
-  <li>保险：€150（约¥1,170）</li>
-  <li>其他：€300（约¥2,340）</li>
-  <li><strong>总计：约€2,500-€3,000/月（约¥1.95万-2.34万/月）</strong></li>
+<li>租房：€1,200（约¥9,360）</li>
+<li>饮食：€600（约¥4,680）</li>
+<li>交通：€100（约¥780）</li>
+<li>水电网：€150（约¥1,170）</li>
+<li>保险：€150（约¥1,170）</li>
+<li>其他：€300（约¥2,340）</li>
+<li><strong>总计：约€2,500-€3,000/月（约¥1.95万-2.34万/月）</strong></li>
 </ul>
-
-<h3 id="巴塞罗那生活成本">巴塞罗那生活成本</h3>
-
+<h3>巴塞罗那生活成本</h3>
 <p>与马德里相近，海景房产稍贵10-20%。</p>
-
-<h3 id="二线城市瓦伦西亚塞维利亚马拉加">二线城市（瓦伦西亚、塞维利亚、马拉加）</h3>
-
+<h3>二线城市（瓦伦西亚、塞维利亚、马拉加）</h3>
 <p>生活成本比马德里和巴塞罗那低 20-30%。</p>
-
-<h2 id="常见问题解答">常见问题解答</h2>
-
-<h3 id="1-非盈利签证可以工作吗">1. 非盈利签证可以工作吗？</h3>
-
+<h2>常见问题解答</h2>
+<h3>1. 非盈利签证可以工作吗？</h3>
 <p><strong>严格来说，不可以。</strong> 非盈利签证持有者不能在西班牙从事任何雇佣性质的工作。</p>
-
 <p><strong>但是可以：</strong></p>
 <ul>
-  <li>从事非盈利性志愿工作</li>
-  <li>在国外公司远程工作（收入来源在西班牙境外）</li>
-  <li>进行个人投资和理财</li>
+<li>从事非盈利性志愿工作</li>
+<li>在国外公司远程工作（收入来源在西班牙境外）</li>
+<li>进行个人投资和理财</li>
 </ul>
-
 <p><strong>工作许可转换：</strong></p>
 <ul>
-  <li>持有非盈利居留3年后，可以申请转为工作居留</li>
-  <li>或者通过创业/投资的方式获得工作权</li>
+<li>持有非盈利居留3年后，可以申请转为工作居留</li>
+<li>或者通过创业/投资的方式获得工作权</li>
 </ul>
-
-<h3 id="2-子女可以在西班牙上学吗">2. 子女可以在西班牙上学吗？</h3>
-
+<h3>2. 子女可以在西班牙上学吗？</h3>
 <p><strong>可以。</strong> 持非盈利居留的子女享有与西班牙公民子女同等的教育权利。</p>
-
 <p><strong>教育系统：</strong></p>
 <ul>
-  <li><strong>公立学校</strong> - 完全免费，需用西班牙语或当地语言教学</li>
-  <li><strong>半私立学校</strong> - 部分政府补贴，学费约€100-€500/月（约¥780-3,900/月）</li>
-  <li><strong>国际学校</strong> - 使用英语等外语教学，学费约€500-€1,500/月（约¥3,900-1.17万/月）</li>
+<li><strong>公立学校</strong> - 完全免费，需用西班牙语或当地语言教学</li>
+<li><strong>半私立学校</strong> - 部分政府补贴，学费约€100-€500/月（约¥780-3,900/月）</li>
+<li><strong>国际学校</strong> - 使用英语等外语教学，学费约€500-€1,500/月（约¥3,900-1.17万/月）</li>
 </ul>
-
-<h3 id="3-居住要求如何计算">3. 居住要求如何计算？</h3>
-
+<h3>3. 居住要求如何计算？</h3>
 <p><strong>短期离境计算：</strong></p>
 <ul>
-  <li>离境10天以内 - 算作居住时间</li>
-  <li>离境10天以上 - 不算居住时间</li>
+<li>离境10天以内 - 算作居住时间</li>
+<li>离境10天以上 - 不算居住时间</li>
 </ul>
-
 <p><strong>建议：</strong></p>
 <ul>
-  <li>每年至少在西班牙居住6个月以上（183天）</li>
-  <li>保留所有出入境记录</li>
-  <li>保留在西班牙的生活痕迹（水电账单、消费记录等）</li>
+<li>每年至少在西班牙居住6个月以上（183天）</li>
+<li>保留所有出入境记录</li>
+<li>保留在西班牙的生活痕迹（水电账单、消费记录等）</li>
 </ul>
-
-<h3 id="4-首次签证被拒后可以再申请吗">4. 首次签证被拒后可以再申请吗？</h3>
-
+<h3>4. 首次签证被拒后可以再申请吗？</h3>
 <p><strong>可以。</strong> 拒签后可以了解拒签原因，补充材料后重新申请。</p>
-
 <p><strong>常见拒签原因：</strong></p>
 <ul>
-  <li>经济能力证明不足</li>
-  <li>文件不齐全或未正确认证</li>
-  <li>住所证明不符合要求</li>
-  <li>保险覆盖不全面</li>
-  <li>体检或无犯罪证明过期</li>
+<li>经济能力证明不足</li>
+<li>文件不齐全或未正确认证</li>
+<li>住所证明不符合要求</li>
+<li>保险覆盖不全面</li>
+<li>体检或无犯罪证明过期</li>
 </ul>
-
-<h3 id="5-可以带父母一起移民吗">5. 可以带父母一起移民吗？</h3>
-
+<h3>5. 可以带父母一起移民吗？</h3>
 <p><strong>理论上可以，但难度较大。</strong></p>
-
 <p><strong>条件：</strong></p>
 <ul>
-  <li>父母年龄通常需超过65岁</li>
-  <li>证明父母经济上依赖申请人</li>
-  <li>证明有能力承担父母的生活费用</li>
-  <li>需增加相应的经济能力证明</li>
+<li>父母年龄通常需超过65岁</li>
+<li>证明父母经济上依赖申请人</li>
+<li>证明有能力承担父母的生活费用</li>
+<li>需增加相应的经济能力证明</li>
 </ul>
-
 <p><strong>更实际的方案：</strong></p>
 <ul>
-  <li>父母单独申请非盈利签证</li>
-  <li>或申请长期探亲签证（多次往返）</li>
+<li>父母单独申请非盈利签证</li>
+<li>或申请长期探亲签证（多次往返）</li>
 </ul>
-
-<h3 id="6-非盈利签证与购房移民的区别">6. 非盈利签证与购房移民的区别？</h3>
-
+<h3>6. 非盈利签证与购房移民的区别？</h3>
 <p><strong>西班牙没有”购房移民”项目。</strong> 所谓的”购房移民”实际上是”黄金签证”（Golden Visa）。</p>
-
 <table>
-  <thead>
-    <tr>
-      <th>对比项</th>
-      <th>非盈利签证</th>
-      <th>黄金签证</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>投资要求</td>
-      <td>无需投资</td>
-      <td>购买€50万以上房产（约¥390万）</td>
-    </tr>
-    <tr>
-      <td>居住要求</td>
-      <td>每年183天</td>
-      <td>每年仅需登陆1次</td>
-    </tr>
-    <tr>
-      <td>工作权利</td>
-      <td>不可工作</td>
-      <td>可以工作</td>
-    </tr>
-    <tr>
-      <td>申请费用</td>
-      <td>较低（约€1万，约¥7.8万）</td>
-      <td>较高（含房产税费等）</td>
-    </tr>
-    <tr>
-      <td>适合人群</td>
-      <td>长期居住者、退休人士</td>
-      <td>高净值人士、需保持流动性者</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>对比项</th>
+<th>非盈利签证</th>
+<th>黄金签证</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>投资要求</td>
+<td>无需投资</td>
+<td>购买€50万以上房产（约¥390万）</td>
+</tr>
+<tr>
+<td>居住要求</td>
+<td>每年183天</td>
+<td>每年仅需登陆1次</td>
+</tr>
+<tr>
+<td>工作权利</td>
+<td>不可工作</td>
+<td>可以工作</td>
+</tr>
+<tr>
+<td>申请费用</td>
+<td>较低（约€1万，约¥7.8万）</td>
+<td>较高（含房产税费等）</td>
+</tr>
+<tr>
+<td>适合人群</td>
+<td>长期居住者、退休人士</td>
+<td>高净值人士、需保持流动性者</td>
+</tr>
+</tbody>
 </table>
-
-<h3 id="7-语言要求严格吗">7. 语言要求严格吗？</h3>
-
+<h3>7. 语言要求严格吗？</h3>
 <p><strong>首次申请无语言要求。</strong> 但长期生活和融入需要学习西班牙语。</p>
-
 <p><strong>语言要求出现在：</strong></p>
 <ul>
-  <li>申请永久居留时（A2级）</li>
-  <li>申请入籍时（A2级 + 文化测试）</li>
-  <li>日常生活交流</li>
+<li>申请永久居留时（A2级）</li>
+<li>申请入籍时（A2级 + 文化测试）</li>
+<li>日常生活交流</li>
 </ul>
-
 <p><strong>学习建议：</strong></p>
 <ul>
-  <li>在国内可以开始基础学习</li>
-  <li>抵达西班牙后参加语言课程</li>
-  <li>多与当地人交流实践</li>
+<li>在国内可以开始基础学习</li>
+<li>抵达西班牙后参加语言课程</li>
+<li>多与当地人交流实践</li>
 </ul>
-
-<h2 id="优势与劣势分析">优势与劣势分析</h2>
-
-<h3 id="优势">优势</h3>
-
+<h2>优势与劣势分析</h2>
+<h3>优势</h3>
 <p><strong>1. 门槛相对较低</strong></p>
 <ul>
-  <li>无需大额投资或购房</li>
-  <li>主要考察经济能力</li>
-  <li>适合中产阶层</li>
+<li>无需大额投资或购房</li>
+<li>主要考察经济能力</li>
+<li>适合中产阶层</li>
 </ul>
-
 <p><strong>2. 生活质量高</strong></p>
 <ul>
-  <li>气候宜人，地中海气候</li>
-  <li>饮食健康，生活节奏慢</li>
-  <li>医疗和教育质量优秀</li>
+<li>气候宜人，地中海气候</li>
+<li>饮食健康，生活节奏慢</li>
+<li>医疗和教育质量优秀</li>
 </ul>
-
 <p><strong>3. 欧盟身份</strong></p>
 <ul>
-  <li>可自由出入26个申根国家</li>
-  <li>子女可享受欧盟教育资源</li>
-  <li>永居后可在欧盟其他国家工作</li>
+<li>可自由出入26个申根国家</li>
+<li>子女可享受欧盟教育资源</li>
+<li>永居后可在欧盟其他国家工作</li>
 </ul>
-
 <p><strong>4. 通往永居和入籍的路径清晰</strong></p>
 <ul>
-  <li>5年可申请永居</li>
-  <li>10年可申请入籍</li>
+<li>5年可申请永居</li>
+<li>10年可申请入籍</li>
 </ul>
-
 <p><strong>5. 文化魅力</strong></p>
 <ul>
-  <li>丰富的历史文化遗产</li>
-  <li>热情友好的民风</li>
-  <li>多元的艺术氛围</li>
+<li>丰富的历史文化遗产</li>
+<li>热情友好的民风</li>
+<li>多元的艺术氛围</li>
 </ul>
-
-<h3 id="劣势">劣势</h3>
-
+<h3>劣势</h3>
 <p><strong>1. 不能工作</strong></p>
 <ul>
-  <li>依靠被动收入生活</li>
-  <li>无法在当地就业</li>
+<li>依靠被动收入生活</li>
+<li>无法在当地就业</li>
 </ul>
-
 <p><strong>2. 居住要求严格</strong></p>
 <ul>
-  <li>每年需在西班牙居住至少6个月</li>
-  <li>影响国内事业或生活</li>
+<li>每年需在西班牙居住至少6个月</li>
+<li>影响国内事业或生活</li>
 </ul>
-
 <p><strong>3. 语言障碍</strong></p>
 <ul>
-  <li>西班牙语是官方语言</li>
-  <li>英语普及率不如北欧国家</li>
-  <li>日常生活需要学习当地语言</li>
+<li>西班牙语是官方语言</li>
+<li>英语普及率不如北欧国家</li>
+<li>日常生活需要学习当地语言</li>
 </ul>
-
 <p><strong>4. 经济状况</strong></p>
 <ul>
-  <li>西班牙经济相对欧洲其他国家较弱</li>
-  <li>失业率相对较高</li>
-  <li>税收体系复杂</li>
+<li>西班牙经济相对欧洲其他国家较弱</li>
+<li>失业率相对较高</li>
+<li>税收体系复杂</li>
 </ul>
-
 <p><strong>5. 续签不确定性</strong></p>
 <ul>
-  <li>每次续签都需重新审核</li>
-  <li>政策可能变化</li>
+<li>每次续签都需重新审核</li>
+<li>政策可能变化</li>
 </ul>
-
-<h2 id="实用建议">实用建议</h2>
-
-<h3 id="给潜在申请人的建议">给潜在申请人的建议</h3>
-
+<h2>实用建议</h2>
+<h3>给潜在申请人的建议</h3>
 <p><strong>1. 提前规划财务</strong></p>
 <ul>
-  <li>至少提前1年开始准备资金证明</li>
-  <li>确保收入来源稳定且合法</li>
-  <li>考虑汇率波动风险</li>
+<li>至少提前1年开始准备资金证明</li>
+<li>确保收入来源稳定且合法</li>
+<li>考虑汇率波动风险</li>
 </ul>
-
 <p><strong>2. 选择合适的城市</strong></p>
 <ul>
-  <li><strong>马德里</strong> - 首都，国际化程度高，华人社区成熟</li>
-  <li><strong>巴塞罗那</strong> - 海滨城市，文化艺术氛围浓厚</li>
-  <li><strong>瓦伦西亚</strong> - 气候宜人，生活成本较低</li>
-  <li><strong>马拉加</strong> - 海岸城市，退休人士首选</li>
-  <li><strong>塞维利亚</strong> - 历史文化名城，传统西班牙风情</li>
+<li><strong>马德里</strong> - 首都，国际化程度高，华人社区成熟</li>
+<li><strong>巴塞罗那</strong> - 海滨城市，文化艺术氛围浓厚</li>
+<li><strong>瓦伦西亚</strong> - 气候宜人，生活成本较低</li>
+<li><strong>马拉加</strong> - 海岸城市，退休人士首选</li>
+<li><strong>塞维利亚</strong> - 历史文化名城，传统西班牙风情</li>
 </ul>
-
 <p><strong>3. 学习语言</strong></p>
 <ul>
-  <li>至少掌握基础西班牙语</li>
-  <li>考虑报名线上或线下课程</li>
-  <li>日常多看西班牙语媒体</li>
+<li>至少掌握基础西班牙语</li>
+<li>考虑报名线上或线下课程</li>
+<li>日常多看西班牙语媒体</li>
 </ul>
-
 <p><strong>4. 了解税务</strong></p>
 <ul>
-  <li>成为税务居民后需全球征税</li>
-  <li>提前咨询专业税务顾问</li>
-  <li>了解中西税收协定</li>
+<li>成为税务居民后需全球征税</li>
+<li>提前咨询专业税务顾问</li>
+<li>了解中西税收协定</li>
 </ul>
-
 <p><strong>5. 考察当地</strong></p>
 <ul>
-  <li>申请前最好实地考察</li>
-  <li>体验当地生活方式</li>
-  <li>确认是否适应</li>
+<li>申请前最好实地考察</li>
+<li>体验当地生活方式</li>
+<li>确认是否适应</li>
 </ul>
-
 <p><strong>6. 寻求专业帮助</strong></p>
 <ul>
-  <li>委托专业移民律师或中介</li>
-  <li>确保材料准备正确完整</li>
-  <li>避免因小错误导致拒签</li>
+<li>委托专业移民律师或中介</li>
+<li>确保材料准备正确完整</li>
+<li>避免因小错误导致拒签</li>
 </ul>
-
-<h3 id="给已获批申请人的建议">给已获批申请人的建议</h3>
-
+<h3>给已获批申请人的建议</h3>
 <p><strong>1. 尽快登陆</strong></p>
 <ul>
-  <li>签证有效期通常只有3个月</li>
-  <li>安排好国内事务后及时出发</li>
+<li>签证有效期通常只有3个月</li>
+<li>安排好国内事务后及时出发</li>
 </ul>
-
 <p><strong>2. 办理必要手续</strong></p>
 <ul>
-  <li>30天内申请TIE居留卡</li>
-  <li>尽快办理住家登记</li>
-  <li>开设当地银行账户</li>
+<li>30天内申请TIE居留卡</li>
+<li>尽快办理住家登记</li>
+<li>开设当地银行账户</li>
 </ul>
-
 <p><strong>3. 融入当地社区</strong></p>
 <ul>
-  <li>参加社区活动</li>
-  <li>结交当地朋友</li>
-  <li>学习西班牙文化</li>
+<li>参加社区活动</li>
+<li>结交当地朋友</li>
+<li>学习西班牙文化</li>
 </ul>
-
 <p><strong>4. 记录居住证明</strong></p>
 <ul>
-  <li>保留所有消费记录</li>
-  <li>保留出入境记录</li>
-  <li>准备续签材料</li>
+<li>保留所有消费记录</li>
+<li>保留出入境记录</li>
+<li>准备续签材料</li>
 </ul>
-
 <p><strong>5. 关注政策变化</strong></p>
 <ul>
-  <li>定期查看移民局官网</li>
-  <li>加入华人社群获取信息</li>
-  <li>必要时咨询律师</li>
+<li>定期查看移民局官网</li>
+<li>加入华人社群获取信息</li>
+<li>必要时咨询律师</li>
 </ul>
-
-<h2 id="总结">总结</h2>
-
+<h2>总结</h2>
 <p>西班牙非盈利居留签证为那些希望享受地中海生活方式、不需要在当地工作的人群提供了一条可行的移民路径。相比投资移民，它的门槛更低；相比技术移民，它的要求更灵活。</p>
-
 <p><strong>适合人群：</strong></p>
 <ul>
-  <li>退休人士</li>
-  <li>自由职业者（有稳定被动收入）</li>
-  <li>远程工作者</li>
-  <li>需要长期陪读的家长</li>
-  <li>追求高品质生活的中产家庭</li>
+<li>退休人士</li>
+<li>自由职业者（有稳定被动收入）</li>
+<li>远程工作者</li>
+<li>需要长期陪读的家长</li>
+<li>追求高品质生活的中产家庭</li>
 </ul>
-
 <p><strong>成功关键：</strong></p>
 <ol>
-  <li>充分的经济能力证明</li>
-  <li>完整正确的申请材料</li>
-  <li>对长期居住的心理准备</li>
-  <li>融入当地的积极态度</li>
+<li>充分的经济能力证明</li>
+<li>完整正确的申请材料</li>
+<li>对长期居住的心理准备</li>
+<li>融入当地的积极态度</li>
 </ol>
-
 <p>如果你厌倦了国内的快节奏生活，向往阳光海滩和悠闲的欧洲生活，有一定的经济基础但不想做大额投资，那么西班牙非盈利签证或许是你的理想选择。</p>
-
 <p>但记住，移民不是旅游，它需要慎重考虑。在做决定前，深入了解西班牙的文化、气候、经济状况，最好亲自考察，确保这是适合你和家人的选择。</p>
-
 <p>祝每一位有移民梦想的朋友都能找到属于自己的理想生活方式。</p>
-
 <hr />
-
-<p><strong>免责声明：</strong> 本文信息基于2024-2025年的政策整理，具体申请要求和流程可能会有变化，请以西班牙移民局官网和领事馆的最新信息为准。建议咨询专业移民律师获取个性化建议。</p>]]></content><author><name>黑石</name></author><category term="移民" /><summary type="html"><![CDATA[在全球移民项目中，西班牙非盈利居留签证（Non-Lucrative Residence Visa）以其相对宽松的条件、优质的生活环境和通往欧盟永居的路径，成为越来越多中国申请人的选择。这篇文章将全面解析西班牙非盈利签证的方方面面。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://pic.iu101.org/cdn-cgi/image/width=300,quality=75,format=png/5c93c7b0.png" /><media:content medium="image" url="https://pic.iu101.org/cdn-cgi/image/width=300,quality=75,format=png/5c93c7b0.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">YouTube 短视频创作指南</title><link href="https://blackstones.xyz/youtube-shorts/" rel="alternate" type="text/html" title="YouTube 短视频创作指南" /><published>2025-10-10T20:00:00+08:00</published><updated>2025-10-10T20:00:00+08:00</updated><id>https://blackstones.xyz/youtube-shorts</id><content type="html" xml:base="https://blackstones.xyz/youtube-shorts/"><![CDATA[<h2 id="为什么要做直播切片">为什么要做直播切片？</h2>
-
-<h2 id="youtube-shorts-的核心机制">YouTube Shorts 的核心机制</h2>
-
-<h3 id="算法逻辑前-3-秒决定一切">算法逻辑：前 3 秒决定一切</h3>
-
+<p><strong>免责声明：</strong> 本文信息基于2024-2025年的政策整理，具体申请要求和流程可能会有变化，请以西班牙移民局官网和领事馆的最新信息为准。建议咨询专业移民律师获取个性化建议。</p>]]></content><author><name>黑石</name></author><category term="移民" /><summary type="html"><![CDATA[在全球移民项目中，西班牙非盈利居留签证（Non-Lucrative Residence Visa）以其相对宽松的条件、优质的生活环境和通往欧盟永居的路径，成为越来越多中国申请人的选择。这篇文章将全面解析西班牙非盈利签证的方方面面。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://pic.iu101.org/cdn-cgi/image/width=300,quality=75,format=png/5c93c7b0.png" /><media:content medium="image" url="https://pic.iu101.org/cdn-cgi/image/width=300,quality=75,format=png/5c93c7b0.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">YouTube 短视频创作指南</title><link href="https://blackstones.xyz/youtube-shorts/" rel="alternate" type="text/html" title="YouTube 短视频创作指南" /><published>2025-10-10T20:00:00+08:00</published><updated>2025-10-10T20:00:00+08:00</updated><id>https://blackstones.xyz/youtube-shorts</id><content type="html" xml:base="https://blackstones.xyz/youtube-shorts/"><![CDATA[<h2>为什么要做直播切片？</h2>
+<h2>YouTube Shorts 的核心机制</h2>
+<h3>算法逻辑：前 3 秒决定一切</h3>
 <p>YouTube Shorts 的推荐算法与长视频截然不同。它更像是一场残酷的筛选游戏：</p>
-
 <ol>
-  <li><strong>初始流量池</strong> - 你的视频会先推送给一小批用户（通常 100-500 人）</li>
-  <li><strong>关键指标测试</strong> - 算法会追踪完播率、点赞率、评论率、分享率</li>
-  <li><strong>流量放大</strong> - 如果初始数据优秀，视频会被推送到更大的流量池</li>
-  <li><strong>持续迭代</strong> - 这个过程会不断重复，直到数据下滑</li>
+<li><strong>初始流量池</strong> - 你的视频会先推送给一小批用户（通常 100-500 人）</li>
+<li><strong>关键指标测试</strong> - 算法会追踪完播率、点赞率、评论率、分享率</li>
+<li><strong>流量放大</strong> - 如果初始数据优秀，视频会被推送到更大的流量池</li>
+<li><strong>持续迭代</strong> - 这个过程会不断重复，直到数据下滑</li>
 </ol>
-
 <p>这意味着什么？<strong>前 3 秒的吸引力决定了你的视频能走多远。</strong></p>
-
-<h3 id="竖屏思维的转变">竖屏思维的转变</h3>
-
+<h3>竖屏思维的转变</h3>
 <p>许多传统视频创作者在制作 Shorts 时犯的最大错误，是简单地把横屏内容裁剪成竖屏。这完全误解了短视频的本质。</p>
-
 <p>竖屏不仅是格式的改变，更是叙事方式的革命：</p>
 <ul>
-  <li><strong>全屏沉浸</strong> - 用户的注意力 100% 集中在你的内容上</li>
-  <li><strong>移动优先</strong> - 大多数观看发生在碎片时间</li>
-  <li><strong>快速消费</strong> - 用户期待即时满足感</li>
+<li><strong>全屏沉浸</strong> - 用户的注意力 100% 集中在你的内容上</li>
+<li><strong>移动优先</strong> - 大多数观看发生在碎片时间</li>
+<li><strong>快速消费</strong> - 用户期待即时满足感</li>
 </ul>
-
-<h2 id="制作-youtube-shorts-的系统方法">制作 YouTube Shorts 的系统方法</h2>
-
-<h3 id="第一步选题策略">第一步：选题策略</h3>
-
+<h2>制作 YouTube Shorts 的系统方法</h2>
+<h3>第一步：选题策略</h3>
 <p>好的选题是成功的一半。以下是几种高效的选题方法：</p>
-
-<h4 id="1-钩子式选题">1. 钩子式选题</h4>
+<h4>1. 钩子式选题</h4>
 <p>用一个反直觉的观点或令人震惊的事实开头：</p>
 <ul>
-  <li>“你以为的 XX，其实是错的”</li>
-  <li>“99% 的人不知道的 XX 秘密”</li>
-  <li>“这个方法让我在 30 天内…”</li>
+<li>“你以为的 XX，其实是错的”</li>
+<li>“99% 的人不知道的 XX 秘密”</li>
+<li>“这个方法让我在 30 天内…”</li>
 </ul>
-
-<h4 id="2-情绪共鸣式">2. 情绪共鸣式</h4>
+<h4>2. 情绪共鸣式</h4>
 <p>触及用户的痛点或渴望：</p>
 <ul>
-  <li>焦虑（”还在为 XX 烦恼？”）</li>
-  <li>好奇（”如果我告诉你…“）</li>
-  <li>FOMO（”所有人都在做，你还不知道？”）</li>
+<li>焦虑（“还在为 XX 烦恼？”）</li>
+<li>好奇（“如果我告诉你…”）</li>
+<li>FOMO（“所有人都在做，你还不知道？”）</li>
 </ul>
-
-<h4 id="3-实用价值式">3. 实用价值式</h4>
+<h4>3. 实用价值式</h4>
 <p>提供立即可用的技巧或知识：</p>
 <ul>
-  <li>“3 个技巧让你的 XX 提升 10 倍”</li>
-  <li>“这样做 XX，省时又高效”</li>
-  <li>“我用这个方法解决了 XX 问题”</li>
+<li>“3 个技巧让你的 XX 提升 10 倍”</li>
+<li>“这样做 XX，省时又高效”</li>
+<li>“我用这个方法解决了 XX 问题”</li>
 </ul>
-
-<h3 id="第二步脚本设计">第二步：脚本设计</h3>
-
+<h3>第二步：脚本设计</h3>
 <p>优秀的 Shorts 脚本遵循一个黄金公式：</p>
-
 <p><strong>钩子（3秒） → 价值承诺（5秒） → 内容展开（40秒） → 行动号召（12秒）</strong></p>
-
-<h4 id="钩子阶段">钩子阶段</h4>
+<h4>钩子阶段</h4>
 <ul>
-  <li>使用视觉冲击或语言冲击</li>
-  <li>制造悬念或提出问题</li>
-  <li>展示结果预览</li>
+<li>使用视觉冲击或语言冲击</li>
+<li>制造悬念或提出问题</li>
+<li>展示结果预览</li>
 </ul>
-
-<h4 id="价值承诺">价值承诺</h4>
+<h4>价值承诺</h4>
 <ul>
-  <li>明确告诉观众能获得什么</li>
-  <li>给出观看的理由</li>
-  <li>建立期待感</li>
+<li>明确告诉观众能获得什么</li>
+<li>给出观看的理由</li>
+<li>建立期待感</li>
 </ul>
-
-<h4 id="内容展开">内容展开</h4>
+<h4>内容展开</h4>
 <ul>
-  <li>快节奏，不拖沓</li>
-  <li>每 10 秒一个小高潮</li>
-  <li>使用视觉变化维持注意力</li>
+<li>快节奏，不拖沓</li>
+<li>每 10 秒一个小高潮</li>
+<li>使用视觉变化维持注意力</li>
 </ul>
-
-<h4 id="行动号召">行动号召</h4>
+<h4>行动号召</h4>
 <ul>
-  <li>引导点赞、评论、关注</li>
-  <li>提示下滑观看更多内容</li>
-  <li>创造互动话题</li>
+<li>引导点赞、评论、关注</li>
+<li>提示下滑观看更多内容</li>
+<li>创造互动话题</li>
 </ul>
-
-<h3 id="第三步拍摄技巧">第三步：拍摄技巧</h3>
-
-<h4 id="设备选择">设备选择</h4>
-<p><strong>好消息是：你不需要昂贵的设备。</strong>一部智能手机足够了。</p>
-
+<h3>第三步：拍摄技巧</h3>
+<h4>设备选择</h4>
+<p>**好消息是：你不需要昂贵的设备。**一部智能手机足够了。</p>
 <p>关键在于：</p>
 <ul>
-  <li><strong>稳定性</strong> - 使用手机稳定器或三脚架</li>
-  <li><strong>光线</strong> - 自然光是最好的，或使用补光灯</li>
-  <li><strong>清晰度</strong> - 确保对焦准确，至少 1080p 分辨率</li>
+<li><strong>稳定性</strong> - 使用手机稳定器或三脚架</li>
+<li><strong>光线</strong> - 自然光是最好的，或使用补光灯</li>
+<li><strong>清晰度</strong> - 确保对焦准确，至少 1080p 分辨率</li>
 </ul>
-
-<h4 id="构图原则">构图原则</h4>
+<h4>构图原则</h4>
 <ul>
-  <li><strong>三分法</strong> - 将画面分成 9 等份，重要元素放在交叉点</li>
-  <li><strong>视线空间</strong> - 如果人物看向一侧，该侧要留出空间</li>
-  <li><strong>垂直优先</strong> - 充分利用竖屏的高度，重要信息放在中上部</li>
+<li><strong>三分法</strong> - 将画面分成 9 等份，重要元素放在交叉点</li>
+<li><strong>视线空间</strong> - 如果人物看向一侧，该侧要留出空间</li>
+<li><strong>垂直优先</strong> - 充分利用竖屏的高度，重要信息放在中上部</li>
 </ul>
-
-<h4 id="拍摄技巧">拍摄技巧</h4>
+<h4>拍摄技巧</h4>
 <ol>
-  <li><strong>多机位切换</strong> - 即使只有一台设备，也可以分段拍摄不同角度</li>
-  <li><strong>B-roll 素材</strong> - 准备丰富的辅助画面，避免单调</li>
-  <li><strong>眼神交流</strong> - 看镜头说话，建立与观众的连接</li>
+<li><strong>多机位切换</strong> - 即使只有一台设备，也可以分段拍摄不同角度</li>
+<li><strong>B-roll 素材</strong> - 准备丰富的辅助画面，避免单调</li>
+<li><strong>眼神交流</strong> - 看镜头说话，建立与观众的连接</li>
 </ol>
-
-<h3 id="第四步剪辑要点">第四步：剪辑要点</h3>
-
-<h4 id="节奏控制">节奏控制</h4>
+<h3>第四步：剪辑要点</h3>
+<h4>节奏控制</h4>
 <ul>
-  <li><strong>快速剪切</strong> - 每 2-3 秒换一个镜头</li>
-  <li><strong>跳剪技术</strong> - 去掉说话的停顿和犹豫</li>
-  <li><strong>音乐配合</strong> - 剪辑点与音乐节拍同步</li>
+<li><strong>快速剪切</strong> - 每 2-3 秒换一个镜头</li>
+<li><strong>跳剪技术</strong> - 去掉说话的停顿和犹豫</li>
+<li><strong>音乐配合</strong> - 剪辑点与音乐节拍同步</li>
 </ul>
-
-<h4 id="视觉元素">视觉元素</h4>
+<h4>视觉元素</h4>
 <ul>
-  <li><strong>字幕必备</strong> - 70% 的用户静音观看</li>
-  <li><strong>动态文字</strong> - 关键词放大、高亮</li>
-  <li><strong>表情符号</strong> - 适当使用增强情感表达</li>
-  <li><strong>转场效果</strong> - 简洁有力，不要过度</li>
+<li><strong>字幕必备</strong> - 70% 的用户静音观看</li>
+<li><strong>动态文字</strong> - 关键词放大、高亮</li>
+<li><strong>表情符号</strong> - 适当使用增强情感表达</li>
+<li><strong>转场效果</strong> - 简洁有力，不要过度</li>
 </ul>
-
-<h4 id="推荐工具">推荐工具</h4>
+<h4>推荐工具</h4>
 <ul>
-  <li><strong>手机端</strong>：CapCut、InShot、Adobe Premiere Rush</li>
-  <li><strong>电脑端</strong>：DaVinci Resolve（免费）、Final Cut Pro、Adobe Premiere Pro</li>
+<li><strong>手机端</strong>：CapCut、InShot、Adobe Premiere Rush</li>
+<li><strong>电脑端</strong>：DaVinci Resolve（免费）、Final Cut Pro、Adobe Premiere Pro</li>
 </ul>
-
-<h3 id="第五步优化发布">第五步：优化发布</h3>
-
-<h4 id="标题策略">标题策略</h4>
+<h3>第五步：优化发布</h3>
+<h4>标题策略</h4>
 <ul>
-  <li>前 5 个字最重要（在缩略图上可见）</li>
-  <li>包含关键词，利于搜索</li>
-  <li>制造好奇心，但不要标题党</li>
+<li>前 5 个字最重要（在缩略图上可见）</li>
+<li>包含关键词，利于搜索</li>
+<li>制造好奇心，但不要标题党</li>
 </ul>
-
-<h4 id="描述和标签">描述和标签</h4>
+<h4>描述和标签</h4>
 <ul>
-  <li>前 2 行是预览内容，要写清楚核心价值</li>
-  <li>添加相关话题标签 #Shorts #YourNiche</li>
-  <li>包含时间戳和章节（如适用）</li>
-  <li>添加相关链接（其他视频、社交媒体）</li>
+<li>前 2 行是预览内容，要写清楚核心价值</li>
+<li>添加相关话题标签 #Shorts #YourNiche</li>
+<li>包含时间戳和章节（如适用）</li>
+<li>添加相关链接（其他视频、社交媒体）</li>
 </ul>
-
-<h4 id="发布时间">发布时间</h4>
+<h4>发布时间</h4>
 <p>根据你的目标受众选择：</p>
 <ul>
-  <li><strong>北美受众</strong> - 美东时间下午 2-4 点，晚上 7-9 点</li>
-  <li><strong>中文受众</strong> - 北京时间晚上 7-9 点，午休时间 12-1 点</li>
-  <li><strong>全球受众</strong> - 美东时间上午 9-11 点</li>
+<li><strong>北美受众</strong> - 美东时间下午 2-4 点，晚上 7-9 点</li>
+<li><strong>中文受众</strong> - 北京时间晚上 7-9 点，午休时间 12-1 点</li>
+<li><strong>全球受众</strong> - 美东时间上午 9-11 点</li>
 </ul>
-
 <p>建议：持续发布一段时间后，在 YouTube Studio 的分析数据中查看”观众活跃时段”。</p>
-
-<h2 id="高级策略让算法为你工作">高级策略：让算法为你工作</h2>
-
-<h3 id="利用首发流量">利用首发流量</h3>
+<h2>高级策略：让算法为你工作</h2>
+<h3>利用首发流量</h3>
 <p>YouTube 会给新内容一个”新鲜度加成”。在发布后的前 1 小时内：</p>
 <ul>
-  <li>在其他社交媒体平台分享</li>
-  <li>通知你的核心粉丝观看和互动</li>
-  <li>积极回复评论，提升互动率</li>
+<li>在其他社交媒体平台分享</li>
+<li>通知你的核心粉丝观看和互动</li>
+<li>积极回复评论，提升互动率</li>
 </ul>
-
-<h3 id="创造系列内容">创造系列内容</h3>
+<h3>创造系列内容</h3>
 <p>算法喜欢能让用户持续观看的创作者：</p>
 <ul>
-  <li>设计可延续的主题（”XX 技巧第 1 集”）</li>
-  <li>在视频结尾预告下期内容</li>
-  <li>保持一致的视觉风格和节奏</li>
+<li>设计可延续的主题（“XX 技巧第 1 集”）</li>
+<li>在视频结尾预告下期内容</li>
+<li>保持一致的视觉风格和节奏</li>
 </ul>
-
-<h3 id="ab-测试">A/B 测试</h3>
+<h3>A/B 测试</h3>
 <p>不要盲目猜测，用数据说话：</p>
 <ul>
-  <li>测试不同的钩子开场</li>
-  <li>尝试不同的标题和缩略图</li>
-  <li>对比不同的发布时间</li>
+<li>测试不同的钩子开场</li>
+<li>尝试不同的标题和缩略图</li>
+<li>对比不同的发布时间</li>
 </ul>
-
-<h3 id="观众互动技巧">观众互动技巧</h3>
+<h3>观众互动技巧</h3>
 <p>算法重视互动率：</p>
 <ul>
-  <li>在视频中提出问题，引导评论</li>
-  <li>设计有争议的观点（适度）</li>
-  <li>创建投票和社区贴文</li>
-  <li>迅速回复评论，尤其是前 24 小时</li>
+<li>在视频中提出问题，引导评论</li>
+<li>设计有争议的观点（适度）</li>
+<li>创建投票和社区贴文</li>
+<li>迅速回复评论，尤其是前 24 小时</li>
 </ul>
-
-<h2 id="常见误区与避坑指南">常见误区与避坑指南</h2>
-
-<h3 id="误区一追求完美主义">误区一：追求完美主义</h3>
-<p>很多人第一条视频就想做到完美，结果一拖再拖。记住：<strong>完成比完美更重要。</strong>YouTube Shorts 的制作周期应该是快速迭代的。</p>
-
-<h3 id="误区二忽视数据分析">误区二：忽视数据分析</h3>
+<h2>常见误区与避坑指南</h2>
+<h3>误区一：追求完美主义</h3>
+<p>很多人第一条视频就想做到完美，结果一拖再拖。记住：**完成比完美更重要。**YouTube Shorts 的制作周期应该是快速迭代的。</p>
+<h3>误区二：忽视数据分析</h3>
 <p>拍完发布就结束了？大错特错。进入 YouTube Studio，认真研究：</p>
 <ul>
-  <li>平均观看时长（最重要的指标）</li>
-  <li>观众流失点（在哪里用户停止观看）</li>
-  <li>流量来源</li>
-  <li>受众人群特征</li>
+<li>平均观看时长（最重要的指标）</li>
+<li>观众流失点（在哪里用户停止观看）</li>
+<li>流量来源</li>
+<li>受众人群特征</li>
 </ul>
-
-<h3 id="误区三内容同质化">误区三：内容同质化</h3>
+<h3>误区三：内容同质化</h3>
 <p>不要盲目模仿爆款。找到你的独特角度：</p>
 <ul>
-  <li>你的专业知识</li>
-  <li>你的个人风格</li>
-  <li>你的独特观点</li>
+<li>你的专业知识</li>
+<li>你的个人风格</li>
+<li>你的独特观点</li>
 </ul>
-
-<h3 id="误区四忽视长期价值">误区四：忽视长期价值</h3>
+<h3>误区四：忽视长期价值</h3>
 <p>Shorts 不仅是流量工具，更是品牌建设的途径：</p>
 <ul>
-  <li>保持内容质量的底线</li>
-  <li>建立个人 IP 和识别度</li>
-  <li>引导观众到你的长视频或其他平台</li>
+<li>保持内容质量的底线</li>
+<li>建立个人 IP 和识别度</li>
+<li>引导观众到你的长视频或其他平台</li>
 </ul>
-
-<h2 id="变现策略">变现策略</h2>
-
+<h2>变现策略</h2>
 <p>当你的 Shorts 开始获得流量后，如何变现？</p>
-
-<h3 id="直接收益">直接收益</h3>
+<h3>直接收益</h3>
 <ul>
-  <li><strong>YouTube 合作伙伴计划</strong> - 达到 1000 订阅和 1000 万 Shorts 观看量</li>
-  <li><strong>广告收益</strong> - Shorts 的收益相对较低，但量大可弥补</li>
+<li><strong>YouTube 合作伙伴计划</strong> - 达到 1000 订阅和 1000 万 Shorts 观看量</li>
+<li><strong>广告收益</strong> - Shorts 的收益相对较低，但量大可弥补</li>
 </ul>
-
-<h3 id="间接收益">间接收益</h3>
+<h3>间接收益</h3>
 <ul>
-  <li><strong>引流到长视频</strong> - 在 Shorts 中推荐你的深度内容</li>
-  <li><strong>联盟营销</strong> - 在描述中添加产品链接</li>
-  <li><strong>赞助合作</strong> - 品牌植入和产品推广</li>
-  <li><strong>导流到付费产品</strong> - 课程、咨询、电商</li>
+<li><strong>引流到长视频</strong> - 在 Shorts 中推荐你的深度内容</li>
+<li><strong>联盟营销</strong> - 在描述中添加产品链接</li>
+<li><strong>赞助合作</strong> - 品牌植入和产品推广</li>
+<li><strong>导流到付费产品</strong> - 课程、咨询、电商</li>
 </ul>
-
-<h3 id="个人品牌价值">个人品牌价值</h3>
+<h3>个人品牌价值</h3>
 <ul>
-  <li>建立专家形象</li>
-  <li>扩大影响力</li>
-  <li>开拓商业机会</li>
+<li>建立专家形象</li>
+<li>扩大影响力</li>
+<li>开拓商业机会</li>
 </ul>
-
-<h2 id="成功案例分析">成功案例分析</h2>
-
+<h2>成功案例分析</h2>
 <p>让我们看看几个不同领域的成功案例：</p>
-
-<h3 id="教育类ali-abdaal">教育类：Ali Abdaal</h3>
+<h3>教育类：Ali Abdaal</h3>
 <ul>
-  <li><strong>策略</strong>：将复杂概念简化为 60 秒解释</li>
-  <li><strong>特点</strong>：高信息密度 + 快节奏剪辑 + 清晰字幕</li>
-  <li><strong>结果</strong>：单条 Shorts 超 1000 万播放</li>
+<li><strong>策略</strong>：将复杂概念简化为 60 秒解释</li>
+<li><strong>特点</strong>：高信息密度 + 快节奏剪辑 + 清晰字幕</li>
+<li><strong>结果</strong>：单条 Shorts 超 1000 万播放</li>
 </ul>
-
-<h3 id="生活类matt-davella">生活类：Matt D’Avella</h3>
+<h3>生活类：Matt D’Avella</h3>
 <ul>
-  <li><strong>策略</strong>：极简主义生活方式分享</li>
-  <li><strong>特点</strong>：高质量画面 + 故事化叙事 + 情感共鸣</li>
-  <li><strong>结果</strong>：稳定的观看量和订阅增长</li>
+<li><strong>策略</strong>：极简主义生活方式分享</li>
+<li><strong>特点</strong>：高质量画面 + 故事化叙事 + 情感共鸣</li>
+<li><strong>结果</strong>：稳定的观看量和订阅增长</li>
 </ul>
-
-<h3 id="技术类fireship">技术类：Fireship</h3>
+<h3>技术类：Fireship</h3>
 <ul>
-  <li><strong>策略</strong>：100 秒讲清一个技术概念</li>
-  <li><strong>特点</strong>：快速切换 + 幽默感 + 视觉信息丰富</li>
-  <li><strong>结果</strong>：成为编程学习的首选短视频来源</li>
+<li><strong>策略</strong>：100 秒讲清一个技术概念</li>
+<li><strong>特点</strong>：快速切换 + 幽默感 + 视觉信息丰富</li>
+<li><strong>结果</strong>：成为编程学习的首选短视频来源</li>
 </ul>
-
-<h2 id="持续成长的心态">持续成长的心态</h2>
-
+<h2>持续成长的心态</h2>
 <p>制作 YouTube Shorts 是一场马拉松，不是短跑：</p>
-
 <ol>
-  <li><strong>保持频率</strong> - 至少每周 3-5 条，持续 90 天</li>
-  <li><strong>快速迭代</strong> - 从每条视频中学习，不断优化</li>
-  <li><strong>关注趋势</strong> - 但不盲目跟风，结合自己的定位</li>
-  <li><strong>建立系统</strong> - 选题、拍摄、剪辑、发布形成流水线</li>
-  <li><strong>享受过程</strong> - 如果你不享受创作，观众也感受不到热情</li>
+<li><strong>保持频率</strong> - 至少每周 3-5 条，持续 90 天</li>
+<li><strong>快速迭代</strong> - 从每条视频中学习，不断优化</li>
+<li><strong>关注趋势</strong> - 但不盲目跟风，结合自己的定位</li>
+<li><strong>建立系统</strong> - 选题、拍摄、剪辑、发布形成流水线</li>
+<li><strong>享受过程</strong> - 如果你不享受创作，观众也感受不到热情</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>YouTube Shorts 不是运气游戏，而是一门可以学习和掌握的技能。它要求你理解算法机制，掌握视觉叙事，保持持续创作，并从数据中学习。</p>
-
 <p>最重要的是：<strong>现在就开始。</strong></p>
-
 <p>不要等到你”准备好了”，不要等到你有了”完美的设备”，不要等到你”想到了绝佳的创意”。每个成功的创作者都是从第一条笨拙的视频开始的。</p>
-
 <p>拿起你的手机，拍摄你的第一条 Shorts。然后是第二条，第三条…在这个过程中，你会找到自己的声音，建立自己的受众，创造你的影响力。</p>
-
-<p>短视频的浪潮已经到来，现在是上船的最好时机。你准备好了吗？</p>]]></content><author><name>黑石</name></author><category term="文章" /><summary type="html"><![CDATA[为什么要做直播切片？]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blackstones.xyz/assets/images/ai-tools.jpg" /><media:content medium="image" url="https://blackstones.xyz/assets/images/ai-tools.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">未来十年的七大趋势，找到赚钱的方向</title><link href="https://blackstones.xyz/future-trends/" rel="alternate" type="text/html" title="未来十年的七大趋势，找到赚钱的方向" /><published>2025-10-09T00:00:00+08:00</published><updated>2025-10-09T00:00:00+08:00</updated><id>https://blackstones.xyz/future-trends</id><content type="html" xml:base="https://blackstones.xyz/future-trends/"><![CDATA[<h2 id="未来十年的七大趋势">未来十年的七大趋势</h2>
-
+<p>短视频的浪潮已经到来，现在是上船的最好时机。你准备好了吗？</p>]]></content><author><name>黑石</name></author><category term="文章" /><summary type="html"><![CDATA[为什么要做直播切片？]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blackstones.xyz/assets/images/ai-tools.jpg" /><media:content medium="image" url="https://blackstones.xyz/assets/images/ai-tools.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">未来十年的七大趋势，找到赚钱的方向</title><link href="https://blackstones.xyz/future-trends/" rel="alternate" type="text/html" title="未来十年的七大趋势，找到赚钱的方向" /><published>2025-10-09T00:00:00+08:00</published><updated>2025-10-09T00:00:00+08:00</updated><id>https://blackstones.xyz/future-trends</id><content type="html" xml:base="https://blackstones.xyz/future-trends/"><![CDATA[<h2>未来十年的七大趋势</h2>
 <p>在时代的转折点上,我们正站在一个充满变革的十字路口。以下七大趋势将深刻影响未来十年的经济格局和社会发展。</p>
-
-<h3 id="-趋势一人口结构变化">📈 趋势一：人口结构变化</h3>
-
+<h3>📈 趋势一：人口结构变化</h3>
 <p><strong>新增老年群体带来的消费机遇</strong></p>
-
 <p>1962-1973年出生的2.8亿人将进入63-73岁年龄段，成为未来十年新增老年群体主力（当前52-63岁）。</p>
-
 <p>在平均寿命背景下（男78岁/女79.6岁），该群体消费需求将持续释放，这意味着：</p>
 <ul>
-  <li>养老服务市场将迎来爆发式增长</li>
-  <li>医疗健康产业需求持续扩大</li>
-  <li>银发经济成为新的增长引擎</li>
+<li>养老服务市场将迎来爆发式增长</li>
+<li>医疗健康产业需求持续扩大</li>
+<li>银发经济成为新的增长引擎</li>
 </ul>
-
-<h3 id="-趋势二孤独经济崛起">🌐 趋势二：孤独经济崛起</h3>
-
+<h3>🌐 趋势二：孤独经济崛起</h3>
 <p><strong>个体意识觉醒推动新型消费</strong></p>
-
 <p>随着个体意识的觉醒，孤独感的增强将催生全新的经济形态：</p>
 <ul>
-  <li><strong>陪伴经济</strong>：情感陪伴、宠物经济、智能陪伴机器人</li>
-  <li><strong>一人食经济</strong>：独居生活方式带来的餐饮、家居、娱乐需求</li>
-  <li><strong>个性化服务</strong>：满足个体独特需求的定制化产品和服务</li>
+<li><strong>陪伴经济</strong>：情感陪伴、宠物经济、智能陪伴机器人</li>
+<li><strong>一人食经济</strong>：独居生活方式带来的餐饮、家居、娱乐需求</li>
+<li><strong>个性化服务</strong>：满足个体独特需求的定制化产品和服务</li>
 </ul>
-
 <p>这些领域将迎来显著的增长机遇。</p>
-
-<h3 id="️-趋势三服务业体验升级">⚙️ 趋势三：服务业体验升级</h3>
-
+<h3>⚙️ 趋势三：服务业体验升级</h3>
 <p><strong>从效率红利到体验革命</strong></p>
-
 <p>互联网效率提升红利已达瓶颈，传统零售必须向服务业转型：</p>
 <ul>
-  <li><strong>即时零售模式</strong>：如闪送、即时配送等新型业态</li>
-  <li><strong>服务业效率提升</strong>：技术赋能提升服务效率</li>
-  <li><strong>体验升级</strong>：服务质量和用户体验成为核心竞争点</li>
+<li><strong>即时零售模式</strong>：如闪送、即时配送等新型业态</li>
+<li><strong>服务业效率提升</strong>：技术赋能提升服务效率</li>
+<li><strong>体验升级</strong>：服务质量和用户体验成为核心竞争点</li>
 </ul>
-
 <p>从”快”到”好”，服务业的本质正在回归。</p>
-
-<h3 id="-趋势四ai与机器人重构生产力">🤖 趋势四：AI与机器人重构生产力</h3>
-
+<h3>🤖 趋势四：AI与机器人重构生产力</h3>
 <p><strong>生产要素的本质性改变</strong></p>
-
 <p>互联网仅仅提升了效率，而AI+机器人将彻底改变生产要素的本质：</p>
-
 <p><strong>算力替代人力/脑力</strong></p>
 <ul>
-  <li>算力成为新生产力的核心</li>
-  <li>重复性劳动将被全面替代</li>
-  <li>知识工作自动化加速推进</li>
+<li>算力成为新生产力的核心</li>
+<li>重复性劳动将被全面替代</li>
+<li>知识工作自动化加速推进</li>
 </ul>
-
 <p><strong>人类核心竞争力转向</strong></p>
 <ul>
-  <li><strong>创造力</strong>：提问能力、定义问题的能力</li>
-  <li><strong>人际关系</strong>：情感连接、协作能力、领导力</li>
+<li><strong>创造力</strong>：提问能力、定义问题的能力</li>
+<li><strong>人际关系</strong>：情感连接、协作能力、领导力</li>
 </ul>
-
 <p>未来的价值创造将更多依赖人类独有的创造性和社交能力。</p>
-
-<h3 id="️-趋势五社会关键词转向稳定">🏛️ 趋势五：社会关键词转向”稳定”</h3>
-
+<h3>🏛️ 趋势五：社会关键词转向”稳定”</h3>
 <p><strong>第三产业成为就业主力</strong></p>
-
 <p>社会发展进入新阶段，稳定成为核心诉求：</p>
-
 <p><strong>服务业结构性增长</strong></p>
 <ul>
-  <li>第三产业（流通+服务业）成为就业主力</li>
-  <li>当前服务业GDP占比仅46%</li>
-  <li>发达国家平均达78-82%</li>
-  <li><strong>未来十年将迎来结构性增长空间</strong></li>
+<li>第三产业（流通+服务业）成为就业主力</li>
+<li>当前服务业GDP占比仅46%</li>
+<li>发达国家平均达78-82%</li>
+<li><strong>未来十年将迎来结构性增长空间</strong></li>
 </ul>
-
 <p>这是一个巨大的发展机遇，也是社会转型的必然方向。</p>
-
-<h3 id="-趋势六电力成为能源货币锚点">🔌 趋势六：电力成为能源货币锚点</h3>
-
+<h3>🔌 趋势六：电力成为能源货币锚点</h3>
 <p><strong>新型能源货币体系的构建</strong></p>
-
 <p>在人民币国际化进程中，需要绑定新型能源属性：</p>
-
 <p><strong>电力战略方向</strong></p>
 <ul>
-  <li>电力输出能力建设</li>
-  <li>电力存储技术突破</li>
-  <li>新能源基础设施布局</li>
+<li>电力输出能力建设</li>
+<li>电力存储技术突破</li>
+<li>新能源基础设施布局</li>
 </ul>
-
 <p><strong>替代传统锚定</strong></p>
 <ul>
-  <li>脱离石油/黄金锚定模式</li>
-  <li>构建新型能源贸易体系</li>
-  <li>电力成为新的”能源货币”</li>
+<li>脱离石油/黄金锚定模式</li>
+<li>构建新型能源贸易体系</li>
+<li>电力成为新的”能源货币”</li>
 </ul>
-
 <p>这将重塑全球能源格局和货币体系。</p>
-
-<h3 id="️-趋势七陆权贸易重新崛起">🛣️ 趋势七：陆权贸易重新崛起</h3>
-
+<h3>🛣️ 趋势七：陆权贸易重新崛起</h3>
 <p><strong>从海洋文明到陆路复兴</strong></p>
-
 <p>在逆全球化背景下，贸易战略正在发生深刻转向：</p>
-
 <p><strong>陆路连接重点市场</strong></p>
 <ul>
-  <li>东南亚市场</li>
-  <li>RCEP区域合作</li>
-  <li>中东能源走廊</li>
+<li>东南亚市场</li>
+<li>RCEP区域合作</li>
+<li>中东能源走廊</li>
 </ul>
-
 <p><strong>一带一路战略价值</strong></p>
 <ul>
-  <li>新丝绸之路建设</li>
-  <li>跨境陆路贸易增长</li>
-  <li>陆权文明的战略复兴</li>
+<li>新丝绸之路建设</li>
+<li>跨境陆路贸易增长</li>
+<li>陆权文明的战略复兴</li>
 </ul>
-
 <p>海洋文明主导的贸易体系正在被重新审视，陆路贸易将迎来新的发展机遇。</p>
-
-<h2 id="-核心观点">💡 核心观点</h2>
-
+<h2>💡 核心观点</h2>
 <p>面对这些趋势，我们需要具备的核心能力：</p>
-
 <p><strong>胆大心细</strong></p>
 <ul>
-  <li>胆大是把握趋势的前提</li>
-  <li>心细确保执行不偏离</li>
-  <li>学识提供判断依据</li>
-  <li>运营能力决定最终成败</li>
+<li>胆大是把握趋势的前提</li>
+<li>心细确保执行不偏离</li>
+<li>学识提供判断依据</li>
+<li>运营能力决定最终成败</li>
 </ul>
-
 <p><strong>实践出真知</strong></p>
 <ul>
-  <li>实践优于理论</li>
-  <li>同行是最好的老师</li>
-  <li>在行动中学习和成长</li>
+<li>实践优于理论</li>
+<li>同行是最好的老师</li>
+<li>在行动中学习和成长</li>
 </ul>
-
 <p><strong>聚焦第三产业</strong></p>
 <ul>
-  <li>第三产业与服务业将是未来就业核心载体</li>
-  <li>经济增长的主要驱动力</li>
-  <li>个人发展的最佳赛道</li>
+<li>第三产业与服务业将是未来就业核心载体</li>
+<li>经济增长的主要驱动力</li>
+<li>个人发展的最佳赛道</li>
 </ul>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>这七大趋势不是孤立的，它们相互交织、相互影响，共同塑造着未来十年的经济和社会面貌。</p>
-
 <p>人口结构变化催生新的消费需求，孤独经济和服务业升级回应这些需求；AI与机器人改变生产方式，电力能源和陆权贸易重塑经济基础；而这一切都在”稳定”这个大主题下展开。</p>
-
 <p>把握趋势，不是预测未来，而是理解变化的底层逻辑，在确定性中寻找机会。</p>
-
 <p>未来已来，你准备好了吗？</p>]]></content><author><name>黑石</name></author><category term="投资" /><summary type="html"><![CDATA[洞察未来十年经济与社会变革的关键方向]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/2dcd7d08.png" /><media:content medium="image" url="https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/2dcd7d08.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">短线偷鸡玩法原则：风险与收益的平衡艺术</title><link href="https://blackstones.xyz/short-term-trading-principles/" rel="alternate" type="text/html" title="短线偷鸡玩法原则：风险与收益的平衡艺术" /><published>2025-09-28T14:00:00+08:00</published><updated>2025-09-28T14:00:00+08:00</updated><id>https://blackstones.xyz/short-term-trading-principles</id><content type="html" xml:base="https://blackstones.xyz/short-term-trading-principles/"><![CDATA[<p>短线交易，俗称”偷鸡”，是投资中最具挑战性的策略之一。它要求投资者在极短的时间内做出决策，承受巨大的心理压力，同时追求快速的高收益。</p>
-
 <p>在短线交易的世界里，<strong>纪律比技术更重要</strong>。没有严格的纪律，再好的技术分析也会被情绪和贪婪摧毁。今天分享一套经过实战验证的”三五原则”，帮助你在短线交易中保持清醒和纪律。</p>
-
-<h2 id="-短线交易三大核心要素">🎯 短线交易三大核心要素</h2>
-
-<h3 id="1-仓位控制1-成左右">1. 仓位控制：1 成左右</h3>
+<h2>🎯 短线交易三大核心要素</h2>
+<h3>1. 仓位控制：1 成左右</h3>
 <p><strong>严格控制仓位，保护资金安全</strong></p>
-
 <ul>
-  <li><strong>仓位比例</strong>：单次短线交易不超过总资金的 10%</li>
-  <li><strong>风险控制</strong>：即使全部亏损，也不会对整体资金造成重大影响</li>
-  <li><strong>心理优势</strong>：小仓位操作，心理压力小，决策更理性</li>
+<li><strong>仓位比例</strong>：单次短线交易不超过总资金的 10%</li>
+<li><strong>风险控制</strong>：即使全部亏损，也不会对整体资金造成重大影响</li>
+<li><strong>心理优势</strong>：小仓位操作，心理压力小，决策更理性</li>
 </ul>
-
-<h3 id="2-选股策略龙回头战法">2. 选股策略：龙回头战法</h3>
+<h3>2. 选股策略：龙回头战法</h3>
 <p><strong>选择强势股回调后的再次启动机会</strong></p>
-
 <ul>
-  <li><strong>前期强势</strong>：股票曾经有过明显的上涨趋势</li>
-  <li><strong>调整充分</strong>：回调幅度通常在 20-30% 之间</li>
-  <li><strong>量能配合</strong>：调整时成交量萎缩，启动时放量</li>
-  <li><strong>支撑有效</strong>：在关键支撑位获得支撑</li>
+<li><strong>前期强势</strong>：股票曾经有过明显的上涨趋势</li>
+<li><strong>调整充分</strong>：回调幅度通常在 20-30% 之间</li>
+<li><strong>量能配合</strong>：调整时成交量萎缩，启动时放量</li>
+<li><strong>支撑有效</strong>：在关键支撑位获得支撑</li>
 </ul>
-
-<h3 id="3-纪律执行三五原则">3. 纪律执行：三五原则</h3>
+<h3>3. 纪律执行：三五原则</h3>
 <p><strong>严格执行交易纪律，避免情绪化操作</strong></p>
-
 <ul>
-  <li><strong>跌 5% 割肉</strong>：严格执行止损，保护本金</li>
-  <li><strong>5 天不涨卖掉</strong>：时间止损，避免资金沉淀</li>
-  <li><strong>不破 5 日线持有</strong>：趋势跟踪，让利润奔跑</li>
+<li><strong>跌 5% 割肉</strong>：严格执行止损，保护本金</li>
+<li><strong>5 天不涨卖掉</strong>：时间止损，避免资金沉淀</li>
+<li><strong>不破 5 日线持有</strong>：趋势跟踪，让利润奔跑</li>
 </ul>
-
-<h2 id="-三五原则短线交易的核心纪律">🎯 三五原则：短线交易的核心纪律</h2>
-
-<h3 id="原则一跌-5-割肉">原则一：跌 5% 割肉</h3>
+<h2>🎯 三五原则：短线交易的核心纪律</h2>
+<h3>原则一：跌 5% 割肉</h3>
 <p><strong>严格执行止损，保护本金</strong></p>
-
 <ul>
-  <li><strong>止损线</strong>：买入后如果下跌超过 5%，立即割肉离场</li>
-  <li><strong>心理建设</strong>：把 5% 当作交易成本，不要心存侥幸</li>
-  <li><strong>执行纪律</strong>：无论什么理由，跌破 5% 必须执行，没有例外</li>
+<li><strong>止损线</strong>：买入后如果下跌超过 5%，立即割肉离场</li>
+<li><strong>心理建设</strong>：把 5% 当作交易成本，不要心存侥幸</li>
+<li><strong>执行纪律</strong>：无论什么理由，跌破 5% 必须执行，没有例外</li>
 </ul>
-
 <blockquote>
-  <p><strong>为什么是 5%？</strong> 这个比例既能有效控制风险，又不会因为市场正常波动而频繁止损。5% 的亏损可以通过一次 5.26% 的盈利完全回本。</p>
+<p><strong>为什么是 5%？</strong> 这个比例既能有效控制风险，又不会因为市场正常波动而频繁止损。5% 的亏损可以通过一次 5.26% 的盈利完全回本。</p>
 </blockquote>
-
-<h3 id="原则二5-天不涨卖掉">原则二：5 天不涨，卖掉</h3>
+<h3>原则二：5 天不涨，卖掉</h3>
 <p><strong>时间止损，避免资金沉淀</strong></p>
-
 <ul>
-  <li><strong>时间限制</strong>：买入后 5 个交易日内没有明显上涨，果断卖出</li>
-  <li><strong>资金效率</strong>：短线交易追求的是资金快速周转，不是长期持有</li>
-  <li><strong>机会成本</strong>：与其等待不确定的上涨，不如寻找新的机会</li>
+<li><strong>时间限制</strong>：买入后 5 个交易日内没有明显上涨，果断卖出</li>
+<li><strong>资金效率</strong>：短线交易追求的是资金快速周转，不是长期持有</li>
+<li><strong>机会成本</strong>：与其等待不确定的上涨，不如寻找新的机会</li>
 </ul>
-
 <blockquote>
-  <p><strong>实战技巧</strong>：如果第 4 天还没有起色，第 5 天开盘就准备卖出，不要等到收盘。</p>
+<p><strong>实战技巧</strong>：如果第 4 天还没有起色，第 5 天开盘就准备卖出，不要等到收盘。</p>
 </blockquote>
-
-<h3 id="原则三上涨不破-5-日线继续持有">原则三：上涨不破 5 日线，继续持有</h3>
+<h3>原则三：上涨不破 5 日线，继续持有</h3>
 <p><strong>趋势跟踪，让利润奔跑</strong></p>
-
 <ul>
-  <li><strong>趋势判断</strong>：只要股价不跌破 5 日均线，就继续持有</li>
-  <li><strong>减仓策略</strong>：跌破 5 日线可以减仓，但不要全部清仓</li>
-  <li><strong>分批离场</strong>：可以分 2-3 次减仓，给股价反弹的机会</li>
+<li><strong>趋势判断</strong>：只要股价不跌破 5 日均线，就继续持有</li>
+<li><strong>减仓策略</strong>：跌破 5 日线可以减仓，但不要全部清仓</li>
+<li><strong>分批离场</strong>：可以分 2-3 次减仓，给股价反弹的机会</li>
 </ul>
-
 <blockquote>
-  <p><strong>技术要点</strong>：5 日线是短期趋势的重要指标，跌破说明短期趋势转弱。</p>
+<p><strong>技术要点</strong>：5 日线是短期趋势的重要指标，跌破说明短期趋势转弱。</p>
 </blockquote>
-
-<h2 id="-龙回头战法胜率最高的短线策略">🐉 龙回头战法：胜率最高的短线策略</h2>
-
-<h3 id="什么是龙回头">什么是龙回头？</h3>
+<h2>🐉 龙回头战法：胜率最高的短线策略</h2>
+<h3>什么是龙回头？</h3>
 <p>龙回头战法是指强势股在经历一波上涨后，经过短暂调整，再次启动上涨的经典形态。</p>
-
-<h3 id="龙回头的特征">龙回头的特征</h3>
+<h3>龙回头的特征</h3>
 <ol>
-  <li><strong>前期强势</strong>：股票曾经有过明显的上涨趋势</li>
-  <li><strong>调整充分</strong>：回调幅度通常在 20-30% 之间</li>
-  <li><strong>量能配合</strong>：调整时成交量萎缩，启动时放量</li>
-  <li><strong>支撑有效</strong>：在关键支撑位获得支撑</li>
+<li><strong>前期强势</strong>：股票曾经有过明显的上涨趋势</li>
+<li><strong>调整充分</strong>：回调幅度通常在 20-30% 之间</li>
+<li><strong>量能配合</strong>：调整时成交量萎缩，启动时放量</li>
+<li><strong>支撑有效</strong>：在关键支撑位获得支撑</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>短线交易是一门艺术，更是一门科学。<strong>仓位控制、选股策略、纪律执行</strong>三大核心要素缺一不可。</p>
-
 <p>记住：</p>
 <ul>
-  <li><strong>1 成仓位</strong>：控制风险，保护资金</li>
-  <li><strong>龙回头战法</strong>：选择高胜率机会</li>
-  <li><strong>三五原则</strong>：严格执行纪律</li>
+<li><strong>1 成仓位</strong>：控制风险，保护资金</li>
+<li><strong>龙回头战法</strong>：选择高胜率机会</li>
+<li><strong>三五原则</strong>：严格执行纪律</li>
 </ul>
-
 <p><strong>在短线交易中，生存比盈利更重要</strong>。只有先活下来，才有机会获得长期收益。</p>
-
 <hr />
-
 <p><em>投资有风险，入市需谨慎。本文内容仅供参考，不构成投资建议。</em></p>]]></content><author><name>黑石</name></author><category term="投资" /><summary type="html"><![CDATA[短线交易是一门高风险高收益的艺术，需要严格的纪律和清晰的原则。本文分享短线偷鸡玩法的核心原则和实战技巧。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/19b6f99b.png" /><media:content medium="image" url="https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/19b6f99b.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

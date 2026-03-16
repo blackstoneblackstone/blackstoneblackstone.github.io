@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/readdy-logo.png"
+            alt="readdy.ai"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,172 +290,140 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#生成设计稿" itemprop="item"><span itemprop="name">生成设计稿</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">readdy.ai</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#生成设计稿" itemprop="item"><span itemprop="name">生成设计稿</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">readdy.ai</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="readdy-让网站设计变得简单直观">Readdy-让网站设计变得简单直观</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Readdy-让网站设计变得简单直观</h2>
 <p>在当今数字时代，拥有一个专业、美观的网站对企业和个人来说至关重要。然而，传统的网站设计和开发过程通常需要专业技能和大量时间投入。<a href="https://readdy.ai/">Readdy</a>作为一款创新的AI驱动设计工具，彻底改变了这一现状，它使用户能够通过自然语言对话就能创建精美的网站设计，并快速部署或导出代码。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
+<h2>核心功能</h2>
 <p>Readdy的核心价值在于将创意快速转化为实际可用的网站设计，主要功能包括：</p>
-
-<h3 id="1-对话式设计体验">1. 对话式设计体验</h3>
-
+<h3>1. 对话式设计体验</h3>
 <p>用户只需通过自然语言描述自己的想法，Readdy的AI就能理解需求并创建相应的设计。这种交互方式消除了传统设计工具的学习曲线，让任何人都能成为设计师。</p>
-
-<h3 id="2-分钟级完成设计">2. 分钟级完成设计</h3>
-
+<h3>2. 分钟级完成设计</h3>
 <p>Readdy能够在几分钟内将想法转化为完整的网站设计，大大缩短了从构思到实现的时间。这对于需要快速验证创意或有紧急项目的用户来说尤为有价值。</p>
-
-<h3 id="3-多种导出选项">3. 多种导出选项</h3>
-
+<h3>3. 多种导出选项</h3>
 <p>设计完成后，Readdy提供多种灵活的导出方式：</p>
 <ul>
-  <li>即时发布上线</li>
-  <li>导出为生产级前端代码</li>
-  <li>导出为Figma设计文件</li>
+<li>即时发布上线</li>
+<li>导出为生产级前端代码</li>
+<li>导出为Figma设计文件</li>
 </ul>
-
 <p>这些选项满足了不同用户的需求，无论是希望快速上线还是需要进一步定制化开发。</p>
-
-<h3 id="4-专业级设计质量">4. 专业级设计质量</h3>
-
+<h3>4. 专业级设计质量</h3>
 <p>Readdy生成的设计遵循现代UI/UX最佳实践，确保网站不仅美观，还具有良好的用户体验和响应式布局，适应各种设备屏幕。</p>
-
-<h2 id="技术特点">技术特点</h2>
-
+<h2>技术特点</h2>
 <p>Readdy采用了多项前沿技术，使其在AI设计工具中脱颖而出：</p>
-
 <ol>
-  <li><strong>自然语言理解</strong>：强大的NLP能力能够准确理解用户的设计意图和需求描述</li>
-  <li><strong>设计知识库</strong>：内置丰富的设计模式、元素和原则，确保生成的设计符合专业标准</li>
-  <li><strong>迭代反馈机制</strong>：支持用户通过对话不断调整和完善设计，实现真正的协作式设计过程</li>
-  <li><strong>代码生成引擎</strong>：能够生成干净、高效、符合标准的前端代码，无需手动转换设计</li>
-  <li><strong>多平台兼容</strong>：生成的设计和代码能够在各种现代浏览器和设备上正常运行</li>
+<li><strong>自然语言理解</strong>：强大的NLP能力能够准确理解用户的设计意图和需求描述</li>
+<li><strong>设计知识库</strong>：内置丰富的设计模式、元素和原则，确保生成的设计符合专业标准</li>
+<li><strong>迭代反馈机制</strong>：支持用户通过对话不断调整和完善设计，实现真正的协作式设计过程</li>
+<li><strong>代码生成引擎</strong>：能够生成干净、高效、符合标准的前端代码，无需手动转换设计</li>
+<li><strong>多平台兼容</strong>：生成的设计和代码能够在各种现代浏览器和设备上正常运行</li>
 </ol>
-
-<h2 id="适用场景">适用场景</h2>
-
+<h2>适用场景</h2>
 <p>Readdy特别适合以下应用场景：</p>
-
-<h3 id="快速构建产品原型">快速构建产品原型</h3>
-
+<h3>快速构建产品原型</h3>
 <p>创业团队和产品经理可以使用Readdy快速将产品创意转化为可视化的网站原型，便于验证概念和收集用户反馈。</p>
-
-<h3 id="个人网站和作品集">个人网站和作品集</h3>
-
+<h3>个人网站和作品集</h3>
 <p>设计师、开发者和创意工作者可以轻松创建专业的个人网站，展示自己的作品和技能，无需投入大量时间在技术细节上。</p>
-
-<h3 id="小型企业官网">小型企业官网</h3>
-
+<h3>小型企业官网</h3>
 <p>小型企业和创业公司可以利用Readdy快速建立专业的在线形象，吸引客户和投资者，同时节省昂贵的设计和开发成本。</p>
-
-<h3 id="营销落地页">营销落地页</h3>
-
+<h3>营销落地页</h3>
 <p>市场营销团队可以为不同的营销活动快速创建定制化的落地页，提高转化率和用户参与度。</p>
-
-<h2 id="使用体验">使用体验</h2>
-
+<h2>使用体验</h2>
 <p>Readdy提供了极其简单直观的使用流程：</p>
-
 <ol>
-  <li><strong>描述需求</strong>：用自然语言描述你想要的网站设计，包括风格、功能、内容等</li>
-  <li><strong>对话调整</strong>：与AI进行对话式交流，不断完善和调整设计细节</li>
-  <li><strong>预览设计</strong>：实时查看生成的设计效果，确保符合预期</li>
-  <li><strong>导出使用</strong>：选择合适的方式导出（即时发布、导出代码或Figma文件）</li>
-  <li><strong>进一步定制</strong>：根据需要进行额外的定制和优化</li>
+<li><strong>描述需求</strong>：用自然语言描述你想要的网站设计，包括风格、功能、内容等</li>
+<li><strong>对话调整</strong>：与AI进行对话式交流，不断完善和调整设计细节</li>
+<li><strong>预览设计</strong>：实时查看生成的设计效果，确保符合预期</li>
+<li><strong>导出使用</strong>：选择合适的方式导出（即时发布、导出代码或Figma文件）</li>
+<li><strong>进一步定制</strong>：根据需要进行额外的定制和优化</li>
 </ol>
-
-<h2 id="与传统设计方式的对比">与传统设计方式的对比</h2>
-
+<h2>与传统设计方式的对比</h2>
 <p>相比传统的网站设计和开发方式，Readdy带来了显著的优势：</p>
-
 <ol>
-  <li><strong>时间效率</strong>：将设计时间从数周缩短至几分钟</li>
-  <li><strong>成本节约</strong>：无需聘请专业设计师和开发团队</li>
-  <li><strong>易用性</strong>：不需要专业的设计或编码知识</li>
-  <li><strong>灵活性</strong>：随时可以调整和更新设计</li>
-  <li><strong>设计质量</strong>：AI确保设计符合当前的设计趋势和最佳实践</li>
+<li><strong>时间效率</strong>：将设计时间从数周缩短至几分钟</li>
+<li><strong>成本节约</strong>：无需聘请专业设计师和开发团队</li>
+<li><strong>易用性</strong>：不需要专业的设计或编码知识</li>
+<li><strong>灵活性</strong>：随时可以调整和更新设计</li>
+<li><strong>设计质量</strong>：AI确保设计符合当前的设计趋势和最佳实践</li>
 </ol>
-
-<h2 id="案例分享">案例分享</h2>
-
-<h3 id="创业公司品牌网站">创业公司品牌网站</h3>
-
+<h2>案例分享</h2>
+<h3>创业公司品牌网站</h3>
 <p>一家初创SaaS公司使用Readdy在一天内完成了公司网站的设计和上线，避免了传统方式需要的几周时间和数千美元的投入。</p>
-
-<h3 id="产品发布落地页">产品发布落地页</h3>
-
+<h3>产品发布落地页</h3>
 <p>某科技产品团队利用Readdy为新产品发布创建了专业的营销落地页，整个过程仅用了不到一小时，并且获得了比预期高30%的转化率。</p>
-
-<h3 id="设计师作品集">设计师作品集</h3>
-
+<h3>设计师作品集</h3>
 <p>一位自由设计师使用Readdy创建了个人作品集网站，不仅节省了大量编码时间，还能通过简单的对话不断更新和完善网站内容。</p>
-
-<h2 id="用户反馈">用户反馈</h2>
-
+<h2>用户反馈</h2>
 <blockquote>
-  <p>“Readdy彻底改变了我们的网站设计流程。以前需要几周的工作现在只需几分钟就能完成，而且质量甚至更好。”
+<p>“Readdy彻底改变了我们的网站设计流程。以前需要几周的工作现在只需几分钟就能完成，而且质量甚至更好。”
 – 技术创业者</p>
 </blockquote>
-
 <blockquote>
-  <p>“作为非设计师，我一直担心无法创建专业的网站。Readdy让这个过程变得像聊天一样简单，成品令人惊艳。”
+<p>“作为非设计师，我一直担心无法创建专业的网站。Readdy让这个过程变得像聊天一样简单，成品令人惊艳。”
 – 小型企业主</p>
 </blockquote>
-
 <blockquote>
-  <p>“导出到Figma的功能特别实用，让我可以在AI生成的基础上进行专业级的调整，大大加快了我的工作流程。”
+<p>“导出到Figma的功能特别实用，让我可以在AI生成的基础上进行专业级的调整，大大加快了我的工作流程。”
 – UI/UX设计师</p>
 </blockquote>
-
-<h2 id="未来发展">未来发展</h2>
-
+<h2>未来发展</h2>
 <p>随着AI技术的持续发展，Readdy计划在以下方面进一步创新：</p>
-
 <ol>
-  <li><strong>更深入的定制能力</strong>：提供更精细的设计控制和品牌定制选项</li>
-  <li><strong>更强的交互功能</strong>：支持创建更复杂的交互式网站元素和动画</li>
-  <li><strong>集成分析和优化</strong>：内置数据分析和A/B测试功能，持续优化网站性能</li>
-  <li><strong>多语言支持</strong>：扩展对更多语言的支持，使全球用户都能便捷使用</li>
+<li><strong>更深入的定制能力</strong>：提供更精细的设计控制和品牌定制选项</li>
+<li><strong>更强的交互功能</strong>：支持创建更复杂的交互式网站元素和动画</li>
+<li><strong>集成分析和优化</strong>：内置数据分析和A/B测试功能，持续优化网站性能</li>
+<li><strong>多语言支持</strong>：扩展对更多语言的支持，使全球用户都能便捷使用</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Readdy代表了网站设计和开发领域的新范式，通过AI的力量使复杂的设计工作变得简单、高效且富有创意。它不仅节省了时间和资源，还打破了技术壁垒，让更多人能够实现自己的数字创意。</p>
-
 <p>在未来的软件开发中，这种对话式、协作式的设计方法将成为标准，而Readdy正走在这一革命的前沿。</p>
-
 <p>想亲身体验这种全新的网站建设方式，请访问<a href="https://readdy.ai/">Readdy官方网站</a>，用对话创造属于你的网站。</p>
 
+					</div>
 				</article>
 
 				
@@ -514,11 +492,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -529,18 +506,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -550,7 +520,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -563,6 +533,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/quest.svg"
+            alt="Quest.ai"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,282 +290,244 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#设计转代码" itemprop="item"><span itemprop="name">设计转代码</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Quest.ai</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#设计转代码" itemprop="item"><span itemprop="name">设计转代码</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Quest.ai</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="questai---打通设计与代码的无缝桥梁">Quest.ai - 打通设计与代码的无缝桥梁</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Quest.ai - 打通设计与代码的无缝桥梁</h2>
 <p><a href="https://www.quest.ai/">Quest.ai</a> 是一款革命性的AI驱动工具，它彻底改变了从设计到代码的转换流程。Quest专注于将Figma设计直接转换为高质量、可扩展的React代码，让开发者和设计师之间的协作更加高效，同时大幅提升前端开发的速度。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
+<h2>核心功能</h2>
 <p>Quest.ai的核心价值在于简化React应用的构建流程，通过多种智能功能实现设计到代码的无缝转换：</p>
-
-<h3 id="1-figma到react的精准转换">1. Figma到React的精准转换</h3>
-
+<h3>1. Figma到React的精准转换</h3>
 <ul>
-  <li>从Figma设计直接生成生产级React代码</li>
-  <li>保持视觉设计的精确还原，像素级完美</li>
-  <li>自动处理复杂布局、嵌套组件和样式</li>
-  <li>直接推送到GitHub，加速部署流程</li>
+<li>从Figma设计直接生成生产级React代码</li>
+<li>保持视觉设计的精确还原，像素级完美</li>
+<li>自动处理复杂布局、嵌套组件和样式</li>
+<li>直接推送到GitHub，加速部署流程</li>
 </ul>
-
-<h3 id="2-ai驱动的代码生成">2. AI驱动的代码生成</h3>
-
+<h3>2. AI驱动的代码生成</h3>
 <ul>
-  <li>借助先进AI模型生成专业级React代码</li>
-  <li>通过聊天界面修改样式和编写业务逻辑</li>
-  <li>智能识别设计意图，生成对应交互逻辑</li>
-  <li>生成干净、符合最佳实践的可维护代码</li>
+<li>借助先进AI模型生成专业级React代码</li>
+<li>通过聊天界面修改样式和编写业务逻辑</li>
+<li>智能识别设计意图，生成对应交互逻辑</li>
+<li>生成干净、符合最佳实践的可维护代码</li>
 </ul>
-
-<h3 id="3-无代码动画系统">3. 无代码动画系统</h3>
-
+<h3>3. 无代码动画系统</h3>
 <ul>
-  <li>无需编写JavaScript即可创建复杂动画</li>
-  <li>内置丰富的动画库和预设效果</li>
-  <li>支持状态变化和交互触发的动画</li>
-  <li>直观的可视化动画编辑界面</li>
+<li>无需编写JavaScript即可创建复杂动画</li>
+<li>内置丰富的动画库和预设效果</li>
+<li>支持状态变化和交互触发的动画</li>
+<li>直观的可视化动画编辑界面</li>
 </ul>
-
-<h3 id="4-响应式设计支持">4. 响应式设计支持</h3>
-
+<h3>4. 响应式设计支持</h3>
 <ul>
-  <li>内置响应式布局支持，自定义断点设置</li>
-  <li>跨设备自适应的组件布局</li>
-  <li>直观预览不同屏幕尺寸的渲染效果</li>
-  <li>生成兼容移动设备的React组件</li>
+<li>内置响应式布局支持，自定义断点设置</li>
+<li>跨设备自适应的组件布局</li>
+<li>直观预览不同屏幕尺寸的渲染效果</li>
+<li>生成兼容移动设备的React组件</li>
 </ul>
-
-<h3 id="5-设计系统集成">5. 设计系统集成</h3>
-
+<h3>5. 设计系统集成</h3>
 <ul>
-  <li>原生支持Material UI、Chakra UI等流行设计系统</li>
-  <li>可轻松集成自定义设计系统和组件库</li>
-  <li>自动应用设计标记生成对应组件变体</li>
-  <li>确保代码和设计系统规范一致</li>
+<li>原生支持Material UI、Chakra UI等流行设计系统</li>
+<li>可轻松集成自定义设计系统和组件库</li>
+<li>自动应用设计标记生成对应组件变体</li>
+<li>确保代码和设计系统规范一致</li>
 </ul>
-
-<h2 id="技术优势">技术优势</h2>
-
+<h2>技术优势</h2>
 <p>Quest.ai在技术实现上具有多项创新，使其在设计转代码领域处于领先地位：</p>
-
-<h3 id="代码质量与架构">代码质量与架构</h3>
-
+<h3>代码质量与架构</h3>
 <p>Quest生成的代码具有专业水准：</p>
 <ul>
-  <li><strong>干净可读</strong>: 生成符合行业最佳实践的结构化代码</li>
-  <li><strong>关注点分离</strong>: 清晰区分表现层和业务逻辑</li>
-  <li><strong>可扩展性</strong>: 易于添加自定义逻辑和功能</li>
-  <li><strong>无供应商锁定</strong>: 生成标准React代码，无特殊依赖</li>
+<li><strong>干净可读</strong>: 生成符合行业最佳实践的结构化代码</li>
+<li><strong>关注点分离</strong>: 清晰区分表现层和业务逻辑</li>
+<li><strong>可扩展性</strong>: 易于添加自定义逻辑和功能</li>
+<li><strong>无供应商锁定</strong>: 生成标准React代码，无特殊依赖</li>
 </ul>
-
-<h3 id="支持多种react框架">支持多种React框架</h3>
-
+<h3>支持多种React框架</h3>
 <p>灵活适应不同项目需求：</p>
 <ul>
-  <li>Next.js项目支持</li>
-  <li>Create React App支持</li>
-  <li>TypeScript和JavaScript双支持</li>
-  <li>适配最新React特性和API</li>
+<li>Next.js项目支持</li>
+<li>Create React App支持</li>
+<li>TypeScript和JavaScript双支持</li>
+<li>适配最新React特性和API</li>
 </ul>
-
-<h3 id="与开发工具集成">与开发工具集成</h3>
-
+<h3>与开发工具集成</h3>
 <p>无缝融入现代开发工作流：</p>
 <ul>
-  <li>GitHub集成，直接提交代码</li>
-  <li>Figma插件支持</li>
-  <li>版本控制兼容性</li>
-  <li>CI/CD流程友好</li>
+<li>GitHub集成，直接提交代码</li>
+<li>Figma插件支持</li>
+<li>版本控制兼容性</li>
+<li>CI/CD流程友好</li>
 </ul>
-
-<h2 id="实际应用场景">实际应用场景</h2>
-
+<h2>实际应用场景</h2>
 <p>Quest.ai在多种开发场景中大幅提升效率：</p>
-
-<h3 id="前端开发加速">前端开发加速</h3>
-
+<h3>前端开发加速</h3>
 <p>对于前端开发者和团队：</p>
 <ul>
-  <li>将设计转代码时间缩短80%</li>
-  <li>消除重复和机械性编码工作</li>
-  <li>保持代码质量和一致性</li>
-  <li>专注于复杂业务逻辑而非UI实现</li>
+<li>将设计转代码时间缩短80%</li>
+<li>消除重复和机械性编码工作</li>
+<li>保持代码质量和一致性</li>
+<li>专注于复杂业务逻辑而非UI实现</li>
 </ul>
-
-<h3 id="设计师赋能">设计师赋能</h3>
-
+<h3>设计师赋能</h3>
 <p>为设计师提供更多控制力：</p>
 <ul>
-  <li>直接将设计转化为可用代码</li>
-  <li>减少设计与实现之间的差异</li>
-  <li>无需等待开发资源即可验证设计</li>
-  <li>加快设计迭代和反馈循环</li>
+<li>直接将设计转化为可用代码</li>
+<li>减少设计与实现之间的差异</li>
+<li>无需等待开发资源即可验证设计</li>
+<li>加快设计迭代和反馈循环</li>
 </ul>
-
-<h3 id="初创企业快速原型">初创企业快速原型</h3>
-
+<h3>初创企业快速原型</h3>
 <p>帮助创业团队加速产品开发：</p>
 <ul>
-  <li>快速从概念到可用原型</li>
-  <li>节省前端开发资源和成本</li>
-  <li>缩短上市时间</li>
-  <li>更灵活地进行产品验证和调整</li>
+<li>快速从概念到可用原型</li>
+<li>节省前端开发资源和成本</li>
+<li>缩短上市时间</li>
+<li>更灵活地进行产品验证和调整</li>
 </ul>
-
-<h3 id="企业应用现代化">企业应用现代化</h3>
-
+<h3>企业应用现代化</h3>
 <p>支持大型企业的数字化转型：</p>
 <ul>
-  <li>统一设计系统实现</li>
-  <li>加速遗留应用的现代化改造</li>
-  <li>提高团队协作效率</li>
-  <li>降低维护和迭代成本</li>
+<li>统一设计系统实现</li>
+<li>加速遗留应用的现代化改造</li>
+<li>提高团队协作效率</li>
+<li>降低维护和迭代成本</li>
 </ul>
-
-<h2 id="用户数据">用户数据</h2>
-
+<h2>用户数据</h2>
 <p>Quest.ai的强大功能已在实际使用中得到验证：</p>
-
 <ul>
-  <li><strong>6000万+</strong>: 已生成代码行数</li>
-  <li><strong>41万+</strong>: 已构建项目数量</li>
-  <li><strong>4.3万+</strong>: Figma插件安装量</li>
-  <li><strong>85%</strong>: 产品团队因协作不足每周浪费时间</li>
+<li><strong>6000万+</strong>: 已生成代码行数</li>
+<li><strong>41万+</strong>: 已构建项目数量</li>
+<li><strong>4.3万+</strong>: Figma插件安装量</li>
+<li><strong>85%</strong>: 产品团队因协作不足每周浪费时间</li>
 </ul>
-
-<h2 id="与传统方法对比">与传统方法对比</h2>
-
+<h2>与传统方法对比</h2>
 <table>
-  <thead>
-    <tr>
-      <th>开发方面</th>
-      <th>传统手动编码</th>
-      <th>使用Quest.ai</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>UI实现时间</td>
-      <td>数天到数周</td>
-      <td>数小时到数天</td>
-    </tr>
-    <tr>
-      <td>代码质量一致性</td>
-      <td>依赖开发者水平</td>
-      <td>一致高质量</td>
-    </tr>
-    <tr>
-      <td>设计偏差</td>
-      <td>常见问题</td>
-      <td>像素级精确</td>
-    </tr>
-    <tr>
-      <td>迭代速度</td>
-      <td>慢，需重写代码</td>
-      <td>快，设计更新即代码更新</td>
-    </tr>
-    <tr>
-      <td>响应式支持</td>
-      <td>需额外工作</td>
-      <td>内置支持</td>
-    </tr>
-    <tr>
-      <td>学习曲线</td>
-      <td>陡峭</td>
-      <td>平缓</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>开发方面</th>
+<th>传统手动编码</th>
+<th>使用Quest.ai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UI实现时间</td>
+<td>数天到数周</td>
+<td>数小时到数天</td>
+</tr>
+<tr>
+<td>代码质量一致性</td>
+<td>依赖开发者水平</td>
+<td>一致高质量</td>
+</tr>
+<tr>
+<td>设计偏差</td>
+<td>常见问题</td>
+<td>像素级精确</td>
+</tr>
+<tr>
+<td>迭代速度</td>
+<td>慢，需重写代码</td>
+<td>快，设计更新即代码更新</td>
+</tr>
+<tr>
+<td>响应式支持</td>
+<td>需额外工作</td>
+<td>内置支持</td>
+</tr>
+<tr>
+<td>学习曲线</td>
+<td>陡峭</td>
+<td>平缓</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="成功案例">成功案例</h2>
-
+<h2>成功案例</h2>
 <p>Quest.ai已帮助众多团队提升开发效率：</p>
-
 <blockquote>
-  <p>“Quest.ai能够以你之前所需时间的一小部分，从Figma设计中生成像素完美的代码。简直不敢相信这个工具之前竟然不存在。”
+<p>“Quest.ai能够以你之前所需时间的一小部分，从Figma设计中生成像素完美的代码。简直不敢相信这个工具之前竟然不存在。”
 — Luka Antolic-Soban，Entcr（Web3公司）CEO</p>
 </blockquote>
-
 <p>这类反馈展示了Quest如何彻底改变设计到开发的工作流程，尤其对于需要快速迭代的团队。</p>
-
-<h2 id="适用团队">适用团队</h2>
-
+<h2>适用团队</h2>
 <p>Quest.ai专为多种团队设计：</p>
-
-<h3 id="产品团队">产品团队</h3>
-
+<h3>产品团队</h3>
 <ul>
-  <li>解决设计-开发沟通不畅问题</li>
-  <li>加速产品迭代周期</li>
-  <li>建立可扩展的设计系统和组件库</li>
-  <li>提高整体产品质量和一致性</li>
+<li>解决设计-开发沟通不畅问题</li>
+<li>加速产品迭代周期</li>
+<li>建立可扩展的设计系统和组件库</li>
+<li>提高整体产品质量和一致性</li>
 </ul>
-
-<h3 id="开发机构">开发机构</h3>
-
+<h3>开发机构</h3>
 <ul>
-  <li>用更少资源完成更多项目</li>
-  <li>提高项目交付速度和质量</li>
-  <li>扩大业务规模和收入</li>
-  <li>优化资源分配</li>
+<li>用更少资源完成更多项目</li>
+<li>提高项目交付速度和质量</li>
+<li>扩大业务规模和收入</li>
+<li>优化资源分配</li>
 </ul>
-
-<h3 id="创业公司">创业公司</h3>
-
+<h3>创业公司</h3>
 <ul>
-  <li>加速产品开发和上市</li>
-  <li>根据学习快速迭代</li>
-  <li>克服前端开发资源瓶颈</li>
-  <li>专注于产品差异化而非基础UI实现</li>
+<li>加速产品开发和上市</li>
+<li>根据学习快速迭代</li>
+<li>克服前端开发资源瓶颈</li>
+<li>专注于产品差异化而非基础UI实现</li>
 </ul>
-
-<h2 id="未来发展">未来发展</h2>
-
+<h2>未来发展</h2>
 <p>Quest.ai团队持续创新，计划中的功能包括：</p>
-
 <ol>
-  <li><strong>增强AI能力</strong>: 更智能的代码生成和优化</li>
-  <li><strong>更多框架支持</strong>: 扩展到Vue、Angular等其他前端框架</li>
-  <li><strong>增强企业功能</strong>: 更深入的团队协作和工作流集成</li>
-  <li><strong>高级组件库</strong>: 更丰富的预制组件和模板</li>
+<li><strong>增强AI能力</strong>: 更智能的代码生成和优化</li>
+<li><strong>更多框架支持</strong>: 扩展到Vue、Angular等其他前端框架</li>
+<li><strong>增强企业功能</strong>: 更深入的团队协作和工作流集成</li>
+<li><strong>高级组件库</strong>: 更丰富的预制组件和模板</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Quest.ai代表了前端开发的未来方向，它不仅仅是一个设计到代码的转换工具，更是一个重塑开发工作流的强大平台。通过自动化繁琐的UI实现过程，Quest让开发者能够专注于真正有价值的工作，同时确保设计师的创意能够精确地转化为功能性代码。</p>
-
 <p>随着AI技术的不断进步，Quest.ai这类工具将继续革新软件开发流程，使开发更加高效、协作更加顺畅，最终帮助团队以更快的速度交付更优质的产品。</p>
-
 <p>访问<a href="https://www.quest.ai/">Quest.ai官网</a>，体验如何通过AI技术构建现代React应用，重新定义你的前端开发流程。</p>
 
+					</div>
 				</article>
 
 				
@@ -624,11 +596,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -639,18 +610,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -660,7 +624,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -673,6 +637,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

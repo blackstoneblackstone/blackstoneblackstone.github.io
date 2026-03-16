@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/windsurf.svg"
+            alt="Windsurf"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,250 +290,222 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#代码编辑器" itemprop="item"><span itemprop="name">代码编辑器</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Windsurf</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#代码编辑器" itemprop="item"><span itemprop="name">代码编辑器</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Windsurf</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="windsurf---专为心流状态设计的ai编辑器">Windsurf - 专为心流状态设计的AI编辑器</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Windsurf - 专为心流状态设计的AI编辑器</h2>
 <p><a href="https://windsurf.com/">Windsurf</a> 是一款重新思考开发者体验的现代化IDE，旨在让开发者进入并保持”心流状态”(flow state)。通过无缝集成AI功能、智能预测和流畅界面，Windsurf不只是辅助你编码，而是能够预测你的需求，提前解决问题，让你专注于创造性工作。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
+<h2>核心功能</h2>
 <p>Windsurf的核心设计理念围绕着提升开发效率和创造力展开：</p>
-
-<h3 id="1-cascade---思考领先10步的ai代理">1. Cascade - 思考领先10步的AI代理</h3>
-
+<h3>1. Cascade - 思考领先10步的AI代理</h3>
 <p>Cascade是Windsurf的核心AI引擎，它能够:</p>
 <ul>
-  <li>主动理解你的编码意图</li>
-  <li>在你编写测试前就解决测试失败问题</li>
-  <li>在问题出现前就预见并解决潜在问题</li>
-  <li>处理复杂代码库，让你专注于创新功能</li>
+<li>主动理解你的编码意图</li>
+<li>在你编写测试前就解决测试失败问题</li>
+<li>在问题出现前就预见并解决潜在问题</li>
+<li>处理复杂代码库，让你专注于创新功能</li>
 </ul>
-
-<h3 id="2-windsurf-tab功能">2. Windsurf Tab功能</h3>
-
+<h3>2. Windsurf Tab功能</h3>
 <p>通过简单的Tab键，释放无限潜能:</p>
 <ul>
-  <li>智能跟踪你的命令历史</li>
-  <li>记录剪贴板内容和Cascade操作</li>
-  <li>提供更智能、更相关的代码建议</li>
-  <li>减少常规任务所需的按键次数</li>
+<li>智能跟踪你的命令历史</li>
+<li>记录剪贴板内容和Cascade操作</li>
+<li>提供更智能、更相关的代码建议</li>
+<li>减少常规任务所需的按键次数</li>
 </ul>
-
-<h3 id="3-一体化工作流程">3. 一体化工作流程</h3>
-
+<h3>3. 一体化工作流程</h3>
 <p>从构建到部署，一气呵成:</p>
 <ul>
-  <li>在编写代码的同时即时预览</li>
-  <li>随时部署应用，无需离开IDE</li>
-  <li>消除在不同工具间切换的干扰</li>
-  <li>保持开发者思维的连贯性</li>
+<li>在编写代码的同时即时预览</li>
+<li>随时部署应用，无需离开IDE</li>
+<li>消除在不同工具间切换的干扰</li>
+<li>保持开发者思维的连贯性</li>
 </ul>
-
-<h3 id="4-memories功能">4. Memories功能</h3>
-
+<h3>4. Memories功能</h3>
 <p>代码库知识的智能管理:</p>
 <ul>
-  <li>自动记住重要的代码库结构</li>
-  <li>追踪项目规则和编码标准</li>
-  <li>随时可查询的项目知识库</li>
-  <li>减少新成员加入项目的学习曲线</li>
+<li>自动记住重要的代码库结构</li>
+<li>追踪项目规则和编码标准</li>
+<li>随时可查询的项目知识库</li>
+<li>减少新成员加入项目的学习曲线</li>
 </ul>
-
-<h3 id="5-自动修复lint错误">5. 自动修复Lint错误</h3>
-
+<h3>5. 自动修复Lint错误</h3>
 <p>智能代码质量保证:</p>
 <ul>
-  <li>自动检测生成代码中的lint错误</li>
-  <li>一键修复所有问题</li>
-  <li>确保代码风格一致性</li>
-  <li>减少代码审查负担</li>
+<li>自动检测生成代码中的lint错误</li>
+<li>一键修复所有问题</li>
+<li>确保代码风格一致性</li>
+<li>减少代码审查负担</li>
 </ul>
-
-<h2 id="技术亮点">技术亮点</h2>
-
-<h3 id="mcp支持系统">MCP支持系统</h3>
-
+<h2>技术亮点</h2>
+<h3>MCP支持系统</h3>
 <p>增强AI工作流的定制性:</p>
 <ul>
-  <li>连接自定义工具和服务</li>
-  <li>一键设置访问精选MCP服务器</li>
-  <li>支持Figma、Slack、GitHub等集成</li>
-  <li>PostgreSQL、Playwright等工具模板</li>
+<li>连接自定义工具和服务</li>
+<li>一键设置访问精选MCP服务器</li>
+<li>支持Figma、Slack、GitHub等集成</li>
+<li>PostgreSQL、Playwright等工具模板</li>
 </ul>
-
-<h3 id="直观的图像处理">直观的图像处理</h3>
-
+<h3>直观的图像处理</h3>
 <p>视觉设计与代码的无缝衔接:</p>
 <ul>
-  <li>简单拖放图像到编辑器</li>
-  <li>自动从设计生成代码实现</li>
-  <li>支持多种设计格式</li>
-  <li>加速UI开发流程</li>
+<li>简单拖放图像到编辑器</li>
+<li>自动从设计生成代码实现</li>
+<li>支持多种设计格式</li>
+<li>加速UI开发流程</li>
 </ul>
-
-<h3 id="智能终端助手">智能终端助手</h3>
-
+<h3>智能终端助手</h3>
 <p>终端命令的智能辅助:</p>
 <ul>
-  <li>自动补全复杂命令</li>
-  <li>使用⌘+I快速获取命令建议</li>
-  <li>保持开发流程不中断</li>
-  <li>减少查询文档的时间</li>
+<li>自动补全复杂命令</li>
+<li>使用⌘+I快速获取命令建议</li>
+<li>保持开发流程不中断</li>
+<li>减少查询文档的时间</li>
 </ul>
-
-<h3 id="工作连续性保障">工作连续性保障</h3>
-
+<h3>工作连续性保障</h3>
 <p>无缝编码体验:</p>
 <ul>
-  <li>自动追踪工作进度</li>
-  <li>“继续我的工作”功能一键恢复上下文</li>
-  <li>记录编辑历史和操作序列</li>
-  <li>无缝切换不同任务</li>
+<li>自动追踪工作进度</li>
+<li>“继续我的工作”功能一键恢复上下文</li>
+<li>记录编辑历史和操作序列</li>
+<li>无缝切换不同任务</li>
 </ul>
-
-<h3 id="turbo模式">Turbo模式</h3>
-
+<h3>Turbo模式</h3>
 <p>开发效率的终极提升:</p>
 <ul>
-  <li>自动执行终端命令</li>
-  <li>预测下一步操作</li>
-  <li>连贯执行复杂任务序列</li>
-  <li>减少重复性操作</li>
+<li>自动执行终端命令</li>
+<li>预测下一步操作</li>
+<li>连贯执行复杂任务序列</li>
+<li>减少重复性操作</li>
 </ul>
-
-<h2 id="企业级优势">企业级优势</h2>
-
+<h2>企业级优势</h2>
 <p>Windsurf为企业用户提供显著价值:</p>
-
 <ul>
-  <li><strong>25%提升开发者生产力</strong>: 减少PR周期时间，提高输出质量</li>
-  <li><strong>4倍缩短入职培训时间</strong>: 新成员更快适应团队代码库和工作流</li>
-  <li><strong>降低技术债务</strong>: 更现代的代码，更高效的开发者</li>
-  <li><strong>1000+企业客户</strong>: 充分验证的企业级解决方案</li>
-  <li><strong>安全与合规</strong>: 专为企业安全需求设计</li>
+<li><strong>25%提升开发者生产力</strong>: 减少PR周期时间，提高输出质量</li>
+<li><strong>4倍缩短入职培训时间</strong>: 新成员更快适应团队代码库和工作流</li>
+<li><strong>降低技术债务</strong>: 更现代的代码，更高效的开发者</li>
+<li><strong>1000+企业客户</strong>: 充分验证的企业级解决方案</li>
+<li><strong>安全与合规</strong>: 专为企业安全需求设计</li>
 </ul>
-
-<h2 id="用户体验">用户体验</h2>
-
-<h3 id="保持在心流状态">保持在心流状态</h3>
-
+<h2>用户体验</h2>
+<h3>保持在心流状态</h3>
 <p>Windsurf的所有功能都服务于一个核心目标——让开发者进入并保持心流状态:</p>
-
 <ol>
-  <li><strong>减少上下文切换</strong>: 所有功能集成在一个环境中</li>
-  <li><strong>预测性支持</strong>: AI预测需求，提前准备解决方案</li>
-  <li><strong>无干扰界面</strong>: 专注于当前任务的清爽界面设计</li>
-  <li><strong>智能工作记忆</strong>: 自动记住重要上下文信息</li>
+<li><strong>减少上下文切换</strong>: 所有功能集成在一个环境中</li>
+<li><strong>预测性支持</strong>: AI预测需求，提前准备解决方案</li>
+<li><strong>无干扰界面</strong>: 专注于当前任务的清爽界面设计</li>
+<li><strong>智能工作记忆</strong>: 自动记住重要上下文信息</li>
 </ol>
-
-<h3 id="适合各类开发任务">适合各类开发任务</h3>
-
+<h3>适合各类开发任务</h3>
 <p>Windsurf在多种开发场景中表现出色:</p>
-
 <ul>
-  <li><strong>前端开发</strong>: 即时预览，设计无缝转代码</li>
-  <li><strong>后端开发</strong>: 智能代码生成和API集成</li>
-  <li><strong>全栈开发</strong>: 在同一环境中无缝切换前后端任务</li>
-  <li><strong>企业级应用</strong>: 支持大型代码库和团队协作</li>
+<li><strong>前端开发</strong>: 即时预览，设计无缝转代码</li>
+<li><strong>后端开发</strong>: 智能代码生成和API集成</li>
+<li><strong>全栈开发</strong>: 在同一环境中无缝切换前后端任务</li>
+<li><strong>企业级应用</strong>: 支持大型代码库和团队协作</li>
 </ul>
-
-<h2 id="对比传统ide">对比传统IDE</h2>
-
+<h2>对比传统IDE</h2>
 <table>
-  <thead>
-    <tr>
-      <th>特性</th>
-      <th>Windsurf</th>
-      <th>传统IDE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>AI集成</td>
-      <td>深度集成，主动预测</td>
-      <td>基础辅助，被动响应</td>
-    </tr>
-    <tr>
-      <td>上下文理解</td>
-      <td>全面理解代码库和意图</td>
-      <td>有限的局部理解</td>
-    </tr>
-    <tr>
-      <td>工作流连贯性</td>
-      <td>设计-开发-部署一体化</td>
-      <td>需跨多工具切换</td>
-    </tr>
-    <tr>
-      <td>学习曲线</td>
-      <td>适应用户习惯，直观简单</td>
-      <td>复杂配置，陡峭学习曲线</td>
-    </tr>
-    <tr>
-      <td>团队协作</td>
-      <td>原生支持，共享上下文</td>
-      <td>依赖外部工具</td>
-    </tr>
-    <tr>
-      <td>生产力提升</td>
-      <td>25%以上效率提升</td>
-      <td>依赖开发者熟练度</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特性</th>
+<th>Windsurf</th>
+<th>传统IDE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI集成</td>
+<td>深度集成，主动预测</td>
+<td>基础辅助，被动响应</td>
+</tr>
+<tr>
+<td>上下文理解</td>
+<td>全面理解代码库和意图</td>
+<td>有限的局部理解</td>
+</tr>
+<tr>
+<td>工作流连贯性</td>
+<td>设计-开发-部署一体化</td>
+<td>需跨多工具切换</td>
+</tr>
+<tr>
+<td>学习曲线</td>
+<td>适应用户习惯，直观简单</td>
+<td>复杂配置，陡峭学习曲线</td>
+</tr>
+<tr>
+<td>团队协作</td>
+<td>原生支持，共享上下文</td>
+<td>依赖外部工具</td>
+</tr>
+<tr>
+<td>生产力提升</td>
+<td>25%以上效率提升</td>
+<td>依赖开发者熟练度</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="发展历程">发展历程</h2>
-
+<h2>发展历程</h2>
 <p>Windsurf团队持续创新，定期发布更新:</p>
-
 <ul>
-  <li><strong>Wave 6</strong>: 专注于应用部署的重大更新</li>
-  <li><strong>品牌重塑</strong>: 从Codeium到Windsurf的品牌进化</li>
-  <li><strong>Wave 5</strong>: 第五批编辑器功能更新和改进</li>
+<li><strong>Wave 6</strong>: 专注于应用部署的重大更新</li>
+<li><strong>品牌重塑</strong>: 从Codeium到Windsurf的品牌进化</li>
+<li><strong>Wave 5</strong>: 第五批编辑器功能更新和改进</li>
 </ul>
-
-<h2 id="用户反馈">用户反馈</h2>
-
+<h2>用户反馈</h2>
 <blockquote>
-  <p>“每一位工程师只需花一天时间使用Windsurf进行项目开发，就像装上了火箭助推器。”
+<p>“每一位工程师只需花一天时间使用Windsurf进行项目开发，就像装上了火箭助推器。”
 — Garry Tan, Y Combinator 总裁兼CEO</p>
 </blockquote>
-
 <p>这样的高评价反映了Windsurf对开发流程的革命性影响，它不仅提高效率，更重塑了开发者与工具的交互方式。</p>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Windsurf代表了AI时代代码编辑器的未来方向。它超越了传统IDE的功能辅助角色，成为真正懂你、预测你需求、与你思维同步的开发伙伴。通过将AI深度融入开发体验的每个环节，Windsurf让开发者可以专注于最具创造性的工作，进入真正的编程心流状态。</p>
-
 <p>无论你是个人开发者还是企业团队成员，Windsurf都能提供前所未有的编程体验。访问<a href="https://windsurf.com/">Windsurf官网</a>，开始你的心流编程之旅。</p>
 
+					</div>
 				</article>
 
 				
@@ -592,11 +574,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -607,18 +588,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -628,7 +602,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -641,6 +615,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

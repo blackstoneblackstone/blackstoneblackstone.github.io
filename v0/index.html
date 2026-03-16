@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/v0-dev.svg"
+            alt="V0.dev"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,181 +290,152 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#生成代码" itemprop="item"><span itemprop="name">生成代码</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">V0.dev</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#生成代码" itemprop="item"><span itemprop="name">生成代码</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">V0.dev</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="v0dev---ai驱动的ui设计革命">V0.dev - AI驱动的UI设计革命</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>V0.dev - AI驱动的UI设计革命</h2>
 <p>在当今快速发展的前端开发领域，设计与开发之间的无缝衔接变得尤为重要。<a href="https://v0.dev/">V0.dev</a>作为Vercel推出的革命性AI设计工具，正在彻底改变开发者和设计师构建用户界面的方式，通过简单的文本提示即可生成高质量、可定制的UI组件和完整页面。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
+<h2>核心功能</h2>
 <p>V0.dev提供了一系列强大功能，使UI设计和原型开发过程高效简洁：</p>
-
-<h3 id="1-文本到ui转换">1. 文本到UI转换</h3>
-
+<h3>1. 文本到UI转换</h3>
 <p>V0.dev的核心功能是将自然语言描述转换为实际可用的UI组件和页面。只需简单描述你想要的界面元素、布局和功能，V0.dev就能快速生成符合现代设计标准的UI实现。</p>
-
-<h3 id="2-基于react和tailwind-css">2. 基于React和Tailwind CSS</h3>
-
+<h3>2. 基于React和Tailwind CSS</h3>
 <p>所有生成的组件都基于React构建，并使用Tailwind CSS进行样式设计，确保代码的可维护性和扩展性。这种组合提供了高度的灵活性和现代化的开发体验。</p>
-
-<h3 id="3-代码导出功能">3. 代码导出功能</h3>
-
+<h3>3. 代码导出功能</h3>
 <p>V0.dev不仅是一个设计工具，更是开发工具。生成的UI组件可以直接导出为可用的React代码，无缝集成到现有项目中，大大缩短了从设计到实现的时间。</p>
-
-<h3 id="4-交互式编辑">4. 交互式编辑</h3>
-
+<h3>4. 交互式编辑</h3>
 <p>生成UI后，可以通过直观的界面进行调整和细化，添加交互元素，修改样式，确保设计符合具体需求。这种即时反馈的方式极大提升了设计效率。</p>
-
-<h3 id="5-ai驱动的设计建议">5. AI驱动的设计建议</h3>
-
+<h3>5. AI驱动的设计建议</h3>
 <p>V0.dev不仅能按照指令生成UI，还能提供智能的设计建议，帮助优化用户体验和视觉效果，即使没有专业设计背景的开发者也能创建出专业级别的界面。</p>
-
-<h2 id="技术优势">技术优势</h2>
-
+<h2>技术优势</h2>
 <p>V0.dev在多个方面展现出了技术领先性：</p>
-
 <ol>
-  <li><strong>先进的AI模型</strong>：采用了专门针对UI设计训练的AI模型，理解设计语言和用户意图</li>
-  <li><strong>组件化架构</strong>：生成的UI采用组件化设计，便于复用和维护</li>
-  <li><strong>响应式设计</strong>：自动适应不同屏幕尺寸，确保良好的移动端体验</li>
-  <li><strong>可访问性支持</strong>：内置对Web可访问性标准的支持，创建包容性更强的用户界面</li>
-  <li><strong>与Vercel生态集成</strong>：作为Vercel工具链的一部分，实现与Next.js等框架的无缝衔接</li>
+<li><strong>先进的AI模型</strong>：采用了专门针对UI设计训练的AI模型，理解设计语言和用户意图</li>
+<li><strong>组件化架构</strong>：生成的UI采用组件化设计，便于复用和维护</li>
+<li><strong>响应式设计</strong>：自动适应不同屏幕尺寸，确保良好的移动端体验</li>
+<li><strong>可访问性支持</strong>：内置对Web可访问性标准的支持，创建包容性更强的用户界面</li>
+<li><strong>与Vercel生态集成</strong>：作为Vercel工具链的一部分，实现与Next.js等框架的无缝衔接</li>
 </ol>
-
-<h2 id="适用场景">适用场景</h2>
-
+<h2>适用场景</h2>
 <p>V0.dev在多种开发场景中展现出色价值：</p>
-
-<h3 id="快速原型设计">快速原型设计</h3>
-
+<h3>快速原型设计</h3>
 <p>产品经理和开发者可以快速将创意转化为可视化原型，加速产品验证和迭代过程。</p>
-
-<h3 id="组件库构建">组件库构建</h3>
-
+<h3>组件库构建</h3>
 <p>团队可以使用V0.dev快速生成一致性的UI组件库，建立设计系统基础，提高开发效率。</p>
-
-<h3 id="现有项目改进">现有项目改进</h3>
-
+<h3>现有项目改进</h3>
 <p>为已有项目添加新功能或改进界面时，V0.dev可以生成符合现有设计风格的新组件，保持视觉一致性。</p>
-
-<h3 id="学习现代ui开发">学习现代UI开发</h3>
-
+<h3>学习现代UI开发</h3>
 <p>初学者可以通过观察V0.dev生成的代码，学习React和Tailwind CSS的最佳实践和设计模式。</p>
-
-<h2 id="使用体验">使用体验</h2>
-
+<h2>使用体验</h2>
 <p>V0.dev提供了流畅直观的使用体验：</p>
-
 <ol>
-  <li><strong>简单的提示语法</strong>：使用自然语言描述需求，无需学习复杂的命令或语法</li>
-  <li><strong>即时生成</strong>：几秒钟内即可看到设计效果，快速迭代</li>
-  <li><strong>代码与设计的统一</strong>：消除了设计师和开发者之间的沟通障碍</li>
-  <li><strong>持续进化</strong>：工具随着用户反馈不断改进，生成质量持续提升</li>
+<li><strong>简单的提示语法</strong>：使用自然语言描述需求，无需学习复杂的命令或语法</li>
+<li><strong>即时生成</strong>：几秒钟内即可看到设计效果，快速迭代</li>
+<li><strong>代码与设计的统一</strong>：消除了设计师和开发者之间的沟通障碍</li>
+<li><strong>持续进化</strong>：工具随着用户反馈不断改进，生成质量持续提升</li>
 </ol>
-
-<h2 id="与传统设计工具对比">与传统设计工具对比</h2>
-
+<h2>与传统设计工具对比</h2>
 <p>相比传统UI设计和开发方式，V0.dev带来了显著优势：</p>
-
 <table>
-  <thead>
-    <tr>
-      <th>特点</th>
-      <th>传统方式</th>
-      <th>V0.dev</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>设计速度</td>
-      <td>需要数小时或数天</td>
-      <td>几分钟内完成</td>
-    </tr>
-    <tr>
-      <td>代码转换</td>
-      <td>手动实现，容易出错</td>
-      <td>自动生成高质量代码</td>
-    </tr>
-    <tr>
-      <td>设计专业知识</td>
-      <td>需要专业设计技能</td>
-      <td>降低了设计门槛</td>
-    </tr>
-    <tr>
-      <td>迭代效率</td>
-      <td>修改繁琐，需要重新实现</td>
-      <td>快速调整，即时更新</td>
-    </tr>
-    <tr>
-      <td>技术栈集成</td>
-      <td>需手动适配不同框架</td>
-      <td>原生支持React生态系统</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特点</th>
+<th>传统方式</th>
+<th>V0.dev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设计速度</td>
+<td>需要数小时或数天</td>
+<td>几分钟内完成</td>
+</tr>
+<tr>
+<td>代码转换</td>
+<td>手动实现，容易出错</td>
+<td>自动生成高质量代码</td>
+</tr>
+<tr>
+<td>设计专业知识</td>
+<td>需要专业设计技能</td>
+<td>降低了设计门槛</td>
+</tr>
+<tr>
+<td>迭代效率</td>
+<td>修改繁琐，需要重新实现</td>
+<td>快速调整，即时更新</td>
+</tr>
+<tr>
+<td>技术栈集成</td>
+<td>需手动适配不同框架</td>
+<td>原生支持React生态系统</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="用户案例">用户案例</h2>
-
-<h3 id="创业公司产品开发">创业公司产品开发</h3>
-
+<h2>用户案例</h2>
+<h3>创业公司产品开发</h3>
 <p>某SaaS创业公司使用V0.dev在一周内完成了产品管理界面的设计和实现，相比传统方式节省了至少3周的开发时间。</p>
-
-<h3 id="企业内部工具">企业内部工具</h3>
-
+<h3>企业内部工具</h3>
 <p>一家金融机构利用V0.dev快速构建了数据分析仪表盘，使非技术团队能够更高效地获取业务洞察。</p>
-
-<h3 id="电商网站改版">电商网站改版</h3>
-
+<h3>电商网站改版</h3>
 <p>一家电商平台使用V0.dev重新设计了产品详情页和购物车界面，提升了转化率和用户满意度。</p>
-
-<h2 id="未来发展方向">未来发展方向</h2>
-
+<h2>未来发展方向</h2>
 <p>随着技术的不断进步，V0.dev计划在以下方面持续创新：</p>
-
 <ol>
-  <li><strong>更丰富的交互支持</strong>：增强对复杂交互和动画效果的生成能力</li>
-  <li><strong>多框架支持</strong>：扩展对Vue、Svelte等其他前端框架的支持</li>
-  <li><strong>更深入的定制能力</strong>：提供更精细的设计控制和品牌定制选项</li>
-  <li><strong>协作功能增强</strong>：支持团队共同设计和迭代UI组件</li>
-  <li><strong>智能化设计系统</strong>：自动生成一致的设计系统和组件文档</li>
+<li><strong>更丰富的交互支持</strong>：增强对复杂交互和动画效果的生成能力</li>
+<li><strong>多框架支持</strong>：扩展对Vue、Svelte等其他前端框架的支持</li>
+<li><strong>更深入的定制能力</strong>：提供更精细的设计控制和品牌定制选项</li>
+<li><strong>协作功能增强</strong>：支持团队共同设计和迭代UI组件</li>
+<li><strong>智能化设计系统</strong>：自动生成一致的设计系统和组件文档</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>V0.dev代表了设计和开发融合的未来趋势，它不仅是一个工具，更是一种新的工作方式。通过AI的力量，它打破了设计与开发之间的壁垒，使创建美观、功能强大的用户界面变得前所未有地简单和高效。</p>
-
 <p>作为Vercel生态系统的重要组成部分，V0.dev与Next.js等现代开发框架完美结合，为开发者提供了从构思到部署的完整解决方案。随着AI技术的不断进步，V0.dev有望进一步改变我们构建数字产品的方式。</p>
-
 <p>想要体验AI驱动的UI设计新方式，请访问<a href="https://v0.dev/">V0.dev官方网站</a>，开始您的设计之旅。</p>
 
+					</div>
 				</article>
 
 				
@@ -523,11 +504,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -538,18 +518,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -559,7 +532,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -572,6 +545,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

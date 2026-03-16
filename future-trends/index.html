@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/2dcd7d08.png"
+            alt="未来十年的七大趋势，找到赚钱的方向"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -278,190 +288,161 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#投资" itemprop="item"><span itemprop="name">投资</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">未来十年的七大趋势，找到赚钱的方向</span>
-							<meta itemprop="position" content="4" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#投资" itemprop="item"><span itemprop="name">投资</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">未来十年的七大趋势，找到赚钱的方向</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="未来十年的七大趋势">未来十年的七大趋势</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>未来十年的七大趋势</h2>
 <p>在时代的转折点上,我们正站在一个充满变革的十字路口。以下七大趋势将深刻影响未来十年的经济格局和社会发展。</p>
-
-<h3 id="-趋势一人口结构变化">📈 趋势一：人口结构变化</h3>
-
+<h3>📈 趋势一：人口结构变化</h3>
 <p><strong>新增老年群体带来的消费机遇</strong></p>
-
 <p>1962-1973年出生的2.8亿人将进入63-73岁年龄段，成为未来十年新增老年群体主力（当前52-63岁）。</p>
-
 <p>在平均寿命背景下（男78岁/女79.6岁），该群体消费需求将持续释放，这意味着：</p>
 <ul>
-  <li>养老服务市场将迎来爆发式增长</li>
-  <li>医疗健康产业需求持续扩大</li>
-  <li>银发经济成为新的增长引擎</li>
+<li>养老服务市场将迎来爆发式增长</li>
+<li>医疗健康产业需求持续扩大</li>
+<li>银发经济成为新的增长引擎</li>
 </ul>
-
-<h3 id="-趋势二孤独经济崛起">🌐 趋势二：孤独经济崛起</h3>
-
+<h3>🌐 趋势二：孤独经济崛起</h3>
 <p><strong>个体意识觉醒推动新型消费</strong></p>
-
 <p>随着个体意识的觉醒，孤独感的增强将催生全新的经济形态：</p>
 <ul>
-  <li><strong>陪伴经济</strong>：情感陪伴、宠物经济、智能陪伴机器人</li>
-  <li><strong>一人食经济</strong>：独居生活方式带来的餐饮、家居、娱乐需求</li>
-  <li><strong>个性化服务</strong>：满足个体独特需求的定制化产品和服务</li>
+<li><strong>陪伴经济</strong>：情感陪伴、宠物经济、智能陪伴机器人</li>
+<li><strong>一人食经济</strong>：独居生活方式带来的餐饮、家居、娱乐需求</li>
+<li><strong>个性化服务</strong>：满足个体独特需求的定制化产品和服务</li>
 </ul>
-
 <p>这些领域将迎来显著的增长机遇。</p>
-
-<h3 id="️-趋势三服务业体验升级">⚙️ 趋势三：服务业体验升级</h3>
-
+<h3>⚙️ 趋势三：服务业体验升级</h3>
 <p><strong>从效率红利到体验革命</strong></p>
-
 <p>互联网效率提升红利已达瓶颈，传统零售必须向服务业转型：</p>
 <ul>
-  <li><strong>即时零售模式</strong>：如闪送、即时配送等新型业态</li>
-  <li><strong>服务业效率提升</strong>：技术赋能提升服务效率</li>
-  <li><strong>体验升级</strong>：服务质量和用户体验成为核心竞争点</li>
+<li><strong>即时零售模式</strong>：如闪送、即时配送等新型业态</li>
+<li><strong>服务业效率提升</strong>：技术赋能提升服务效率</li>
+<li><strong>体验升级</strong>：服务质量和用户体验成为核心竞争点</li>
 </ul>
-
 <p>从”快”到”好”，服务业的本质正在回归。</p>
-
-<h3 id="-趋势四ai与机器人重构生产力">🤖 趋势四：AI与机器人重构生产力</h3>
-
+<h3>🤖 趋势四：AI与机器人重构生产力</h3>
 <p><strong>生产要素的本质性改变</strong></p>
-
 <p>互联网仅仅提升了效率，而AI+机器人将彻底改变生产要素的本质：</p>
-
 <p><strong>算力替代人力/脑力</strong></p>
 <ul>
-  <li>算力成为新生产力的核心</li>
-  <li>重复性劳动将被全面替代</li>
-  <li>知识工作自动化加速推进</li>
+<li>算力成为新生产力的核心</li>
+<li>重复性劳动将被全面替代</li>
+<li>知识工作自动化加速推进</li>
 </ul>
-
 <p><strong>人类核心竞争力转向</strong></p>
 <ul>
-  <li><strong>创造力</strong>：提问能力、定义问题的能力</li>
-  <li><strong>人际关系</strong>：情感连接、协作能力、领导力</li>
+<li><strong>创造力</strong>：提问能力、定义问题的能力</li>
+<li><strong>人际关系</strong>：情感连接、协作能力、领导力</li>
 </ul>
-
 <p>未来的价值创造将更多依赖人类独有的创造性和社交能力。</p>
-
-<h3 id="️-趋势五社会关键词转向稳定">🏛️ 趋势五：社会关键词转向”稳定”</h3>
-
+<h3>🏛️ 趋势五：社会关键词转向”稳定”</h3>
 <p><strong>第三产业成为就业主力</strong></p>
-
 <p>社会发展进入新阶段，稳定成为核心诉求：</p>
-
 <p><strong>服务业结构性增长</strong></p>
 <ul>
-  <li>第三产业（流通+服务业）成为就业主力</li>
-  <li>当前服务业GDP占比仅46%</li>
-  <li>发达国家平均达78-82%</li>
-  <li><strong>未来十年将迎来结构性增长空间</strong></li>
+<li>第三产业（流通+服务业）成为就业主力</li>
+<li>当前服务业GDP占比仅46%</li>
+<li>发达国家平均达78-82%</li>
+<li><strong>未来十年将迎来结构性增长空间</strong></li>
 </ul>
-
 <p>这是一个巨大的发展机遇，也是社会转型的必然方向。</p>
-
-<h3 id="-趋势六电力成为能源货币锚点">🔌 趋势六：电力成为能源货币锚点</h3>
-
+<h3>🔌 趋势六：电力成为能源货币锚点</h3>
 <p><strong>新型能源货币体系的构建</strong></p>
-
 <p>在人民币国际化进程中，需要绑定新型能源属性：</p>
-
 <p><strong>电力战略方向</strong></p>
 <ul>
-  <li>电力输出能力建设</li>
-  <li>电力存储技术突破</li>
-  <li>新能源基础设施布局</li>
+<li>电力输出能力建设</li>
+<li>电力存储技术突破</li>
+<li>新能源基础设施布局</li>
 </ul>
-
 <p><strong>替代传统锚定</strong></p>
 <ul>
-  <li>脱离石油/黄金锚定模式</li>
-  <li>构建新型能源贸易体系</li>
-  <li>电力成为新的”能源货币”</li>
+<li>脱离石油/黄金锚定模式</li>
+<li>构建新型能源贸易体系</li>
+<li>电力成为新的”能源货币”</li>
 </ul>
-
 <p>这将重塑全球能源格局和货币体系。</p>
-
-<h3 id="️-趋势七陆权贸易重新崛起">🛣️ 趋势七：陆权贸易重新崛起</h3>
-
+<h3>🛣️ 趋势七：陆权贸易重新崛起</h3>
 <p><strong>从海洋文明到陆路复兴</strong></p>
-
 <p>在逆全球化背景下，贸易战略正在发生深刻转向：</p>
-
 <p><strong>陆路连接重点市场</strong></p>
 <ul>
-  <li>东南亚市场</li>
-  <li>RCEP区域合作</li>
-  <li>中东能源走廊</li>
+<li>东南亚市场</li>
+<li>RCEP区域合作</li>
+<li>中东能源走廊</li>
 </ul>
-
 <p><strong>一带一路战略价值</strong></p>
 <ul>
-  <li>新丝绸之路建设</li>
-  <li>跨境陆路贸易增长</li>
-  <li>陆权文明的战略复兴</li>
+<li>新丝绸之路建设</li>
+<li>跨境陆路贸易增长</li>
+<li>陆权文明的战略复兴</li>
 </ul>
-
 <p>海洋文明主导的贸易体系正在被重新审视，陆路贸易将迎来新的发展机遇。</p>
-
-<h2 id="-核心观点">💡 核心观点</h2>
-
+<h2>💡 核心观点</h2>
 <p>面对这些趋势，我们需要具备的核心能力：</p>
-
 <p><strong>胆大心细</strong></p>
 <ul>
-  <li>胆大是把握趋势的前提</li>
-  <li>心细确保执行不偏离</li>
-  <li>学识提供判断依据</li>
-  <li>运营能力决定最终成败</li>
+<li>胆大是把握趋势的前提</li>
+<li>心细确保执行不偏离</li>
+<li>学识提供判断依据</li>
+<li>运营能力决定最终成败</li>
 </ul>
-
 <p><strong>实践出真知</strong></p>
 <ul>
-  <li>实践优于理论</li>
-  <li>同行是最好的老师</li>
-  <li>在行动中学习和成长</li>
+<li>实践优于理论</li>
+<li>同行是最好的老师</li>
+<li>在行动中学习和成长</li>
 </ul>
-
 <p><strong>聚焦第三产业</strong></p>
 <ul>
-  <li>第三产业与服务业将是未来就业核心载体</li>
-  <li>经济增长的主要驱动力</li>
-  <li>个人发展的最佳赛道</li>
+<li>第三产业与服务业将是未来就业核心载体</li>
+<li>经济增长的主要驱动力</li>
+<li>个人发展的最佳赛道</li>
 </ul>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>这七大趋势不是孤立的，它们相互交织、相互影响，共同塑造着未来十年的经济和社会面貌。</p>
-
 <p>人口结构变化催生新的消费需求，孤独经济和服务业升级回应这些需求；AI与机器人改变生产方式，电力能源和陆权贸易重塑经济基础；而这一切都在”稳定”这个大主题下展开。</p>
-
 <p>把握趋势，不是预测未来，而是理解变化的底层逻辑，在确定性中寻找机会。</p>
-
 <p>未来已来，你准备好了吗？</p>
 
+					</div>
 				</article>
 
 				
@@ -530,11 +511,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -545,18 +525,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -566,7 +539,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -579,6 +552,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

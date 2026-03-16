@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/anchor-relay.svg"
+            alt="Anchor Relay"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -278,235 +288,216 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#独立开发工具" itemprop="item"><span itemprop="name">独立开发工具</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Anchor Relay</span>
-							<meta itemprop="position" content="4" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#独立开发工具" itemprop="item"><span itemprop="name">独立开发工具</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Anchor Relay</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h1 id="anchor-relay---免费生成https证书的独立开发工具">Anchor Relay - 免费生成HTTPS证书的独立开发工具</h1>
-
+					<div id="article-body" class="markdown-body">
+						<h1>Anchor Relay - 免费生成HTTPS证书的独立开发工具</h1>
 <p><a href="https://anchor.dev/relay/5879edd1-bead-45a8-a070-25e13b4c1fd0">Anchor Relay</a> 是一款专为独立开发者设计的免费HTTPS证书生成工具。它基于Let’s Encrypt技术，为开发者提供快速、安全、免费的SSL/TLS证书解决方案，让网站安全部署变得简单高效。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
-<h3 id="1-免费https证书生成">1. 免费HTTPS证书生成</h3>
+<h2>核心功能</h2>
+<h3>1. 免费HTTPS证书生成</h3>
 <p>Anchor Relay基于Let’s Encrypt的免费证书服务，为开发者提供90天有效期的SSL/TLS证书，完全免费且无需复杂的申请流程。</p>
-
-<h3 id="2-快速部署">2. 快速部署</h3>
+<h3>2. 快速部署</h3>
 <p>通过简单的配置，开发者可以在几分钟内为网站配置HTTPS证书，大大简化了安全部署的流程。</p>
-
-<h3 id="3-自动续期支持">3. 自动续期支持</h3>
+<h3>3. 自动续期支持</h3>
 <p>虽然证书有效期为90天，但Anchor Relay提供了自动续期的解决方案，确保网站持续保持安全连接。</p>
-
-<h3 id="4-浏览器信任">4. 浏览器信任</h3>
+<h3>4. 浏览器信任</h3>
 <p>生成的证书被主流浏览器完全信任，确保用户访问时不会出现安全警告。</p>
-
-<h2 id="技术优势">技术优势</h2>
-
-<h3 id="lets-encrypt集成">Let’s Encrypt集成</h3>
+<h2>技术优势</h2>
+<h3>Let’s Encrypt集成</h3>
 <ul>
-  <li><strong>权威认证</strong> - 基于Let’s Encrypt的免费证书颁发机构</li>
-  <li><strong>广泛支持</strong> - 被所有主流浏览器和操作系统信任</li>
-  <li><strong>自动化管理</strong> - 支持证书的自动申请和续期</li>
+<li><strong>权威认证</strong> - 基于Let’s Encrypt的免费证书颁发机构</li>
+<li><strong>广泛支持</strong> - 被所有主流浏览器和操作系统信任</li>
+<li><strong>自动化管理</strong> - 支持证书的自动申请和续期</li>
 </ul>
-
-<h3 id="开发者友好">开发者友好</h3>
+<h3>开发者友好</h3>
 <ul>
-  <li><strong>零成本</strong> - 完全免费，无需付费订阅</li>
-  <li><strong>简单配置</strong> - 最小化配置要求，快速上手</li>
-  <li><strong>文档完善</strong> - 提供详细的使用文档和示例</li>
+<li><strong>零成本</strong> - 完全免费，无需付费订阅</li>
+<li><strong>简单配置</strong> - 最小化配置要求，快速上手</li>
+<li><strong>文档完善</strong> - 提供详细的使用文档和示例</li>
 </ul>
-
-<h3 id="安全可靠">安全可靠</h3>
+<h3>安全可靠</h3>
 <ul>
-  <li><strong>加密强度</strong> - 支持现代加密算法和协议</li>
-  <li><strong>定期更新</strong> - 证书定期更新确保安全性</li>
-  <li><strong>合规标准</strong> - 符合行业安全标准</li>
+<li><strong>加密强度</strong> - 支持现代加密算法和协议</li>
+<li><strong>定期更新</strong> - 证书定期更新确保安全性</li>
+<li><strong>合规标准</strong> - 符合行业安全标准</li>
 </ul>
-
-<h2 id="适用场景">适用场景</h2>
-
-<h3 id="独立开发者">独立开发者</h3>
+<h2>适用场景</h2>
+<h3>独立开发者</h3>
 <ul>
-  <li><strong>个人项目</strong> - 为个人网站和项目快速配置HTTPS</li>
-  <li><strong>原型验证</strong> - 在开发阶段快速部署安全连接</li>
-  <li><strong>成本控制</strong> - 避免昂贵的商业证书费用</li>
+<li><strong>个人项目</strong> - 为个人网站和项目快速配置HTTPS</li>
+<li><strong>原型验证</strong> - 在开发阶段快速部署安全连接</li>
+<li><strong>成本控制</strong> - 避免昂贵的商业证书费用</li>
 </ul>
-
-<h3 id="小型团队">小型团队</h3>
+<h3>小型团队</h3>
 <ul>
-  <li><strong>内部工具</strong> - 为内部管理系统配置安全连接</li>
-  <li><strong>测试环境</strong> - 在测试环境中验证HTTPS功能</li>
-  <li><strong>快速迭代</strong> - 支持快速的产品迭代和部署</li>
+<li><strong>内部工具</strong> - 为内部管理系统配置安全连接</li>
+<li><strong>测试环境</strong> - 在测试环境中验证HTTPS功能</li>
+<li><strong>快速迭代</strong> - 支持快速的产品迭代和部署</li>
 </ul>
-
-<h3 id="学习项目">学习项目</h3>
+<h3>学习项目</h3>
 <ul>
-  <li><strong>技术学习</strong> - 学习HTTPS配置和SSL证书管理</li>
-  <li><strong>实验项目</strong> - 在实验性项目中测试安全功能</li>
-  <li><strong>开源贡献</strong> - 为开源项目提供安全的访问方式</li>
+<li><strong>技术学习</strong> - 学习HTTPS配置和SSL证书管理</li>
+<li><strong>实验项目</strong> - 在实验性项目中测试安全功能</li>
+<li><strong>开源贡献</strong> - 为开源项目提供安全的访问方式</li>
 </ul>
-
-<h2 id="使用流程">使用流程</h2>
-
-<h3 id="1-域名验证">1. 域名验证</h3>
+<h2>使用流程</h2>
+<h3>1. 域名验证</h3>
 <ul>
-  <li>验证域名所有权</li>
-  <li>配置DNS记录</li>
-  <li>确认域名解析正确</li>
+<li>验证域名所有权</li>
+<li>配置DNS记录</li>
+<li>确认域名解析正确</li>
 </ul>
-
-<h3 id="2-证书申请">2. 证书申请</h3>
+<h3>2. 证书申请</h3>
 <ul>
-  <li>填写域名信息</li>
-  <li>选择证书类型</li>
-  <li>提交申请请求</li>
+<li>填写域名信息</li>
+<li>选择证书类型</li>
+<li>提交申请请求</li>
 </ul>
-
-<h3 id="3-自动配置">3. 自动配置</h3>
+<h3>3. 自动配置</h3>
 <ul>
-  <li>系统自动生成证书</li>
-  <li>提供配置文件和密钥</li>
-  <li>下载证书文件</li>
+<li>系统自动生成证书</li>
+<li>提供配置文件和密钥</li>
+<li>下载证书文件</li>
 </ul>
-
-<h3 id="4-服务器部署">4. 服务器部署</h3>
+<h3>4. 服务器部署</h3>
 <ul>
-  <li>上传证书到服务器</li>
-  <li>配置Web服务器</li>
-  <li>测试HTTPS连接</li>
+<li>上传证书到服务器</li>
+<li>配置Web服务器</li>
+<li>测试HTTPS连接</li>
 </ul>
-
-<h2 id="与其他证书服务的对比">与其他证书服务的对比</h2>
-
+<h2>与其他证书服务的对比</h2>
 <table>
-  <thead>
-    <tr>
-      <th>特性</th>
-      <th>Anchor Relay</th>
-      <th>商业证书</th>
-      <th>Let’s Encrypt直接使用</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>费用</td>
-      <td>免费</td>
-      <td>付费</td>
-      <td>免费</td>
-    </tr>
-    <tr>
-      <td>配置难度</td>
-      <td>简单</td>
-      <td>中等</td>
-      <td>复杂</td>
-    </tr>
-    <tr>
-      <td>自动化程度</td>
-      <td>高</td>
-      <td>低</td>
-      <td>中等</td>
-    </tr>
-    <tr>
-      <td>技术支持</td>
-      <td>社区</td>
-      <td>专业</td>
-      <td>社区</td>
-    </tr>
-    <tr>
-      <td>证书有效期</td>
-      <td>90天</td>
-      <td>1-2年</td>
-      <td>90天</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特性</th>
+<th>Anchor Relay</th>
+<th>商业证书</th>
+<th>Let’s Encrypt直接使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>费用</td>
+<td>免费</td>
+<td>付费</td>
+<td>免费</td>
+</tr>
+<tr>
+<td>配置难度</td>
+<td>简单</td>
+<td>中等</td>
+<td>复杂</td>
+</tr>
+<tr>
+<td>自动化程度</td>
+<td>高</td>
+<td>低</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>技术支持</td>
+<td>社区</td>
+<td>专业</td>
+<td>社区</td>
+</tr>
+<tr>
+<td>证书有效期</td>
+<td>90天</td>
+<td>1-2年</td>
+<td>90天</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="最佳实践">最佳实践</h2>
-
-<h3 id="证书管理">证书管理</h3>
+<h2>最佳实践</h2>
+<h3>证书管理</h3>
 <ol>
-  <li><strong>定期检查</strong> - 定期检查证书有效期</li>
-  <li><strong>自动续期</strong> - 配置自动续期避免证书过期</li>
-  <li><strong>备份存储</strong> - 安全备份证书和私钥文件</li>
+<li><strong>定期检查</strong> - 定期检查证书有效期</li>
+<li><strong>自动续期</strong> - 配置自动续期避免证书过期</li>
+<li><strong>备份存储</strong> - 安全备份证书和私钥文件</li>
 </ol>
-
-<h3 id="安全配置">安全配置</h3>
+<h3>安全配置</h3>
 <ol>
-  <li><strong>强制HTTPS</strong> - 配置服务器强制使用HTTPS</li>
-  <li><strong>安全头设置</strong> - 配置适当的安全HTTP头</li>
-  <li><strong>定期更新</strong> - 保持服务器和证书的定期更新</li>
+<li><strong>强制HTTPS</strong> - 配置服务器强制使用HTTPS</li>
+<li><strong>安全头设置</strong> - 配置适当的安全HTTP头</li>
+<li><strong>定期更新</strong> - 保持服务器和证书的定期更新</li>
 </ol>
-
-<h3 id="监控告警">监控告警</h3>
+<h3>监控告警</h3>
 <ol>
-  <li><strong>证书监控</strong> - 设置证书过期监控</li>
-  <li><strong>服务监控</strong> - 监控HTTPS服务可用性</li>
-  <li><strong>性能监控</strong> - 监控SSL握手性能</li>
+<li><strong>证书监控</strong> - 设置证书过期监控</li>
+<li><strong>服务监控</strong> - 监控HTTPS服务可用性</li>
+<li><strong>性能监控</strong> - 监控SSL握手性能</li>
 </ol>
-
-<h2 id="技术限制">技术限制</h2>
-
-<h3 id="证书限制">证书限制</h3>
+<h2>技术限制</h2>
+<h3>证书限制</h3>
 <ul>
-  <li><strong>有效期</strong> - 证书有效期为90天，需要定期续期</li>
-  <li><strong>域名限制</strong> - 仅支持已验证的域名</li>
-  <li><strong>通配符</strong> - 支持通配符证书申请</li>
+<li><strong>有效期</strong> - 证书有效期为90天，需要定期续期</li>
+<li><strong>域名限制</strong> - 仅支持已验证的域名</li>
+<li><strong>通配符</strong> - 支持通配符证书申请</li>
 </ul>
-
-<h3 id="使用限制">使用限制</h3>
+<h3>使用限制</h3>
 <ul>
-  <li><strong>申请频率</strong> - 有申请频率限制，避免滥用</li>
-  <li><strong>域名数量</strong> - 单个账户有域名数量限制</li>
-  <li><strong>技术支持</strong> - 主要依靠社区支持</li>
+<li><strong>申请频率</strong> - 有申请频率限制，避免滥用</li>
+<li><strong>域名数量</strong> - 单个账户有域名数量限制</li>
+<li><strong>技术支持</strong> - 主要依靠社区支持</li>
 </ul>
-
-<h2 id="发展前景">发展前景</h2>
-
-<h3 id="市场需求">市场需求</h3>
+<h2>发展前景</h2>
+<h3>市场需求</h3>
 <p>随着网络安全意识的提升和HTTPS的普及，免费证书服务的需求持续增长，特别是对独立开发者和小型团队。</p>
-
-<h3 id="技术发展">技术发展</h3>
+<h3>技术发展</h3>
 <ul>
-  <li><strong>自动化程度提升</strong> - 进一步简化证书申请和部署流程</li>
-  <li><strong>集成能力增强</strong> - 与更多开发工具和平台集成</li>
-  <li><strong>安全标准更新</strong> - 跟上最新的安全标准和最佳实践</li>
+<li><strong>自动化程度提升</strong> - 进一步简化证书申请和部署流程</li>
+<li><strong>集成能力增强</strong> - 与更多开发工具和平台集成</li>
+<li><strong>安全标准更新</strong> - 跟上最新的安全标准和最佳实践</li>
 </ul>
-
-<h3 id="生态建设">生态建设</h3>
+<h3>生态建设</h3>
 <ul>
-  <li><strong>开发者社区</strong> - 建设活跃的开发者社区</li>
-  <li><strong>工具集成</strong> - 与主流开发工具和平台深度集成</li>
-  <li><strong>文档完善</strong> - 持续完善使用文档和最佳实践指南</li>
+<li><strong>开发者社区</strong> - 建设活跃的开发者社区</li>
+<li><strong>工具集成</strong> - 与主流开发工具和平台深度集成</li>
+<li><strong>文档完善</strong> - 持续完善使用文档和最佳实践指南</li>
 </ul>
-
-<h2 id="访问地址">访问地址</h2>
-
+<h2>访问地址</h2>
 <p><a href="https://anchor.dev/relay/5879edd1-bead-45a8-a070-25e13b4c1fd0">Anchor Relay</a></p>
-
 <hr />
-
 <p><em>Anchor Relay为独立开发者提供了简单、免费、可靠的HTTPS证书解决方案，让网站安全部署不再是技术门槛。无论是个人项目还是小型团队，都能快速获得专业级的SSL/TLS证书保护。</em></p>
 
+					</div>
 				</article>
 
 				
@@ -575,11 +566,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -590,18 +580,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -611,7 +594,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -624,6 +607,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

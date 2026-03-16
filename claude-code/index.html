@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/claude.svg"
+            alt="Claude Code"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,238 +290,218 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#code cli" itemprop="item"><span itemprop="name">Code CLI</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Claude Code</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#code cli" itemprop="item"><span itemprop="name">Code CLI</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Claude Code</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h1 id="claude-code---重新定义ai编程体验的智能助手">Claude Code - 重新定义AI编程体验的智能助手</h1>
-
+					<div id="article-body" class="markdown-body">
+						<h1>Claude Code - 重新定义AI编程体验的智能助手</h1>
 <p>在AI编程工具竞争激烈的今天，<a href="https://www.anthropic.com/claude-code">Claude Code</a> 作为 Anthropic 推出的专业编程助手，以其独特的理解能力和代码生成质量，正在重新定义开发者的编程体验。</p>
-
-<h2 id="为什么选择-claude-code">为什么选择 Claude Code？</h2>
-
-<h3 id="-深度理解能力">🧠 深度理解能力</h3>
+<h2>为什么选择 Claude Code？</h2>
+<h3>🧠 深度理解能力</h3>
 <p><strong>不只是代码生成，更是代码理解</strong></p>
-
 <p>Claude Code 基于 Anthropic 的先进 AI 模型，具备强大的代码理解能力：</p>
 <ul>
-  <li><strong>上下文感知</strong>：能够理解整个项目的结构和依赖关系</li>
-  <li><strong>多语言支持</strong>：精通 Python、JavaScript、TypeScript、Go、Rust 等主流编程语言</li>
-  <li><strong>架构思维</strong>：不仅生成代码，还能提供架构建议和最佳实践</li>
+<li><strong>上下文感知</strong>：能够理解整个项目的结构和依赖关系</li>
+<li><strong>多语言支持</strong>：精通 Python、JavaScript、TypeScript、Go、Rust 等主流编程语言</li>
+<li><strong>架构思维</strong>：不仅生成代码，还能提供架构建议和最佳实践</li>
 </ul>
-
-<h3 id="-智能代码生成">⚡ 智能代码生成</h3>
+<h3>⚡ 智能代码生成</h3>
 <p><strong>从想法到代码，一步到位</strong></p>
-
 <ul>
-  <li><strong>自然语言转代码</strong>：用简单的描述就能生成复杂的代码逻辑</li>
-  <li><strong>代码补全</strong>：智能预测并补全代码，提高开发效率</li>
-  <li><strong>重构建议</strong>：自动识别代码问题并提供优化建议</li>
-  <li><strong>测试生成</strong>：自动生成单元测试和集成测试代码</li>
+<li><strong>自然语言转代码</strong>：用简单的描述就能生成复杂的代码逻辑</li>
+<li><strong>代码补全</strong>：智能预测并补全代码，提高开发效率</li>
+<li><strong>重构建议</strong>：自动识别代码问题并提供优化建议</li>
+<li><strong>测试生成</strong>：自动生成单元测试和集成测试代码</li>
 </ul>
-
-<h2 id="核心功能特性">核心功能特性</h2>
-
-<h3 id="-智能代码分析">🔍 智能代码分析</h3>
+<h2>核心功能特性</h2>
+<h3>🔍 智能代码分析</h3>
 <p><strong>深度理解，精准建议</strong></p>
-
 <ul>
-  <li><strong>代码审查</strong>：自动检测潜在 bug 和安全漏洞</li>
-  <li><strong>性能优化</strong>：识别性能瓶颈并提供优化方案</li>
-  <li><strong>代码风格</strong>：确保代码符合最佳实践和团队规范</li>
-  <li><strong>依赖分析</strong>：智能分析项目依赖关系，避免冲突</li>
+<li><strong>代码审查</strong>：自动检测潜在 bug 和安全漏洞</li>
+<li><strong>性能优化</strong>：识别性能瓶颈并提供优化方案</li>
+<li><strong>代码风格</strong>：确保代码符合最佳实践和团队规范</li>
+<li><strong>依赖分析</strong>：智能分析项目依赖关系，避免冲突</li>
 </ul>
-
-<h3 id="️-多场景支持">🛠️ 多场景支持</h3>
+<h3>🛠️ 多场景支持</h3>
 <p><strong>从原型到生产，全程陪伴</strong></p>
-
 <ul>
-  <li><strong>快速原型</strong>：快速搭建 MVP 和概念验证</li>
-  <li><strong>功能开发</strong>：实现复杂业务逻辑和算法</li>
-  <li><strong>代码重构</strong>：安全地重构和优化现有代码</li>
-  <li><strong>文档生成</strong>：自动生成 API 文档和代码注释</li>
+<li><strong>快速原型</strong>：快速搭建 MVP 和概念验证</li>
+<li><strong>功能开发</strong>：实现复杂业务逻辑和算法</li>
+<li><strong>代码重构</strong>：安全地重构和优化现有代码</li>
+<li><strong>文档生成</strong>：自动生成 API 文档和代码注释</li>
 </ul>
-
-<h3 id="-集成开发环境">🌐 集成开发环境</h3>
+<h3>🌐 集成开发环境</h3>
 <p><strong>无缝融入现有工作流</strong></p>
-
 <ul>
-  <li><strong>VS Code 扩展</strong>：深度集成 Visual Studio Code</li>
-  <li><strong>命令行工具</strong>：支持 CLI 操作，适合各种开发环境</li>
-  <li><strong>API 接口</strong>：提供 RESTful API，支持自定义集成</li>
-  <li><strong>团队协作</strong>：支持团队共享和协作开发</li>
+<li><strong>VS Code 扩展</strong>：深度集成 Visual Studio Code</li>
+<li><strong>命令行工具</strong>：支持 CLI 操作，适合各种开发环境</li>
+<li><strong>API 接口</strong>：提供 RESTful API，支持自定义集成</li>
+<li><strong>团队协作</strong>：支持团队共享和协作开发</li>
 </ul>
-
-<h2 id="技术优势">技术优势</h2>
-
-<h3 id="-性能卓越">🚀 性能卓越</h3>
+<h2>技术优势</h2>
+<h3>🚀 性能卓越</h3>
 <ul>
-  <li><strong>快速响应</strong>：毫秒级代码生成和补全</li>
-  <li><strong>高准确率</strong>：代码生成准确率超过 90%</li>
-  <li><strong>低延迟</strong>：优化的模型推理，减少等待时间</li>
+<li><strong>快速响应</strong>：毫秒级代码生成和补全</li>
+<li><strong>高准确率</strong>：代码生成准确率超过 90%</li>
+<li><strong>低延迟</strong>：优化的模型推理，减少等待时间</li>
 </ul>
-
-<h3 id="-安全可靠">🔒 安全可靠</h3>
+<h3>🔒 安全可靠</h3>
 <ul>
-  <li><strong>代码安全</strong>：内置安全检查，防止恶意代码生成</li>
-  <li><strong>隐私保护</strong>：本地处理敏感代码，保护知识产权</li>
-  <li><strong>版本控制</strong>：完整的代码变更历史和回滚功能</li>
+<li><strong>代码安全</strong>：内置安全检查，防止恶意代码生成</li>
+<li><strong>隐私保护</strong>：本地处理敏感代码，保护知识产权</li>
+<li><strong>版本控制</strong>：完整的代码变更历史和回滚功能</li>
 </ul>
-
-<h3 id="-持续学习">📈 持续学习</h3>
+<h3>📈 持续学习</h3>
 <ul>
-  <li><strong>模型更新</strong>：定期更新 AI 模型，保持最新能力</li>
-  <li><strong>用户反馈</strong>：基于用户反馈持续优化</li>
-  <li><strong>社区驱动</strong>：活跃的开发者社区和丰富的资源</li>
+<li><strong>模型更新</strong>：定期更新 AI 模型，保持最新能力</li>
+<li><strong>用户反馈</strong>：基于用户反馈持续优化</li>
+<li><strong>社区驱动</strong>：活跃的开发者社区和丰富的资源</li>
 </ul>
-
-<h2 id="实际应用场景">实际应用场景</h2>
-
-<h3 id="-企业级开发">💼 企业级开发</h3>
+<h2>实际应用场景</h2>
+<h3>💼 企业级开发</h3>
 <p><strong>提升团队开发效率</strong></p>
-
 <ul>
-  <li><strong>大型项目</strong>：处理复杂的企业级应用开发</li>
-  <li><strong>代码审查</strong>：自动化代码质量检查</li>
-  <li><strong>技术债务</strong>：快速识别和解决技术债务</li>
-  <li><strong>知识传承</strong>：帮助新员工快速理解代码库</li>
+<li><strong>大型项目</strong>：处理复杂的企业级应用开发</li>
+<li><strong>代码审查</strong>：自动化代码质量检查</li>
+<li><strong>技术债务</strong>：快速识别和解决技术债务</li>
+<li><strong>知识传承</strong>：帮助新员工快速理解代码库</li>
 </ul>
-
-<h3 id="-学习编程">🎓 学习编程</h3>
+<h3>🎓 学习编程</h3>
 <p><strong>最好的编程导师</strong></p>
-
 <ul>
-  <li><strong>概念解释</strong>：用通俗易懂的语言解释复杂概念</li>
-  <li><strong>实例演示</strong>：提供大量实际代码示例</li>
-  <li><strong>错误调试</strong>：帮助定位和解决编程错误</li>
-  <li><strong>最佳实践</strong>：传授行业最佳实践和设计模式</li>
+<li><strong>概念解释</strong>：用通俗易懂的语言解释复杂概念</li>
+<li><strong>实例演示</strong>：提供大量实际代码示例</li>
+<li><strong>错误调试</strong>：帮助定位和解决编程错误</li>
+<li><strong>最佳实践</strong>：传授行业最佳实践和设计模式</li>
 </ul>
-
-<h3 id="-快速原型">🚀 快速原型</h3>
+<h3>🚀 快速原型</h3>
 <p><strong>从想法到产品，极速实现</strong></p>
-
 <ul>
-  <li><strong>MVP 开发</strong>：快速构建最小可行产品</li>
-  <li><strong>概念验证</strong>：验证技术方案的可行性</li>
-  <li><strong>技术选型</strong>：提供技术栈选择建议</li>
-  <li><strong>架构设计</strong>：协助设计系统架构</li>
+<li><strong>MVP 开发</strong>：快速构建最小可行产品</li>
+<li><strong>概念验证</strong>：验证技术方案的可行性</li>
+<li><strong>技术选型</strong>：提供技术栈选择建议</li>
+<li><strong>架构设计</strong>：协助设计系统架构</li>
 </ul>
-
-<h2 id="使用指南">使用指南</h2>
-
-<h3 id="快速开始">快速开始</h3>
+<h2>使用指南</h2>
+<h3>快速开始</h3>
 <ol>
-  <li><strong>安装扩展</strong>：在 VS Code 中安装 Claude Code 扩展</li>
-  <li><strong>配置 API</strong>：设置 Anthropic API 密钥</li>
-  <li><strong>开始编码</strong>：在代码编辑器中开始使用自然语言描述需求</li>
-  <li><strong>查看建议</strong>：接受或修改 AI 生成的代码建议</li>
+<li><strong>安装扩展</strong>：在 VS Code 中安装 Claude Code 扩展</li>
+<li><strong>配置 API</strong>：设置 Anthropic API 密钥</li>
+<li><strong>开始编码</strong>：在代码编辑器中开始使用自然语言描述需求</li>
+<li><strong>查看建议</strong>：接受或修改 AI 生成的代码建议</li>
 </ol>
-
-<h3 id="最佳实践">最佳实践</h3>
+<h3>最佳实践</h3>
 <ul>
-  <li><strong>明确描述</strong>：用清晰的语言描述你的需求</li>
-  <li><strong>提供上下文</strong>：包含相关的代码文件和项目信息</li>
-  <li><strong>迭代优化</strong>：基于 AI 建议进行迭代改进</li>
-  <li><strong>代码审查</strong>：始终审查 AI 生成的代码</li>
+<li><strong>明确描述</strong>：用清晰的语言描述你的需求</li>
+<li><strong>提供上下文</strong>：包含相关的代码文件和项目信息</li>
+<li><strong>迭代优化</strong>：基于 AI 建议进行迭代改进</li>
+<li><strong>代码审查</strong>：始终审查 AI 生成的代码</li>
 </ul>
-
-<h2 id="与其他工具对比">与其他工具对比</h2>
-
+<h2>与其他工具对比</h2>
 <table>
-  <thead>
-    <tr>
-      <th>特性</th>
-      <th>Claude Code</th>
-      <th>GitHub Copilot</th>
-      <th>ChatGPT</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>代码理解</td>
-      <td>⭐⭐⭐⭐⭐</td>
-      <td>⭐⭐⭐⭐</td>
-      <td>⭐⭐⭐</td>
-    </tr>
-    <tr>
-      <td>生成质量</td>
-      <td>⭐⭐⭐⭐⭐</td>
-      <td>⭐⭐⭐⭐</td>
-      <td>⭐⭐⭐</td>
-    </tr>
-    <tr>
-      <td>上下文感知</td>
-      <td>⭐⭐⭐⭐⭐</td>
-      <td>⭐⭐⭐</td>
-      <td>⭐⭐</td>
-    </tr>
-    <tr>
-      <td>多语言支持</td>
-      <td>⭐⭐⭐⭐⭐</td>
-      <td>⭐⭐⭐⭐</td>
-      <td>⭐⭐⭐⭐</td>
-    </tr>
-    <tr>
-      <td>集成体验</td>
-      <td>⭐⭐⭐⭐⭐</td>
-      <td>⭐⭐⭐⭐⭐</td>
-      <td>⭐⭐</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特性</th>
+<th>Claude Code</th>
+<th>GitHub Copilot</th>
+<th>ChatGPT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>代码理解</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>生成质量</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>上下文感知</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐</td>
+</tr>
+<tr>
+<td>多语言支持</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>集成体验</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="定价与计划">定价与计划</h2>
-
-<h3 id="免费版">免费版</h3>
+<h2>定价与计划</h2>
+<h3>免费版</h3>
 <ul>
-  <li>基础代码补全功能</li>
-  <li>每月 100 次请求</li>
-  <li>社区支持</li>
+<li>基础代码补全功能</li>
+<li>每月 100 次请求</li>
+<li>社区支持</li>
 </ul>
-
-<h3 id="专业版">专业版</h3>
+<h3>专业版</h3>
 <ul>
-  <li>无限制代码生成</li>
-  <li>高级功能访问</li>
-  <li>优先技术支持</li>
-  <li>团队协作功能</li>
+<li>无限制代码生成</li>
+<li>高级功能访问</li>
+<li>优先技术支持</li>
+<li>团队协作功能</li>
 </ul>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Claude Code 不仅仅是一个代码生成工具，更是一个智能的编程伙伴。它能够理解你的意图，提供高质量的代码建议，并帮助你成为更好的开发者。</p>
-
 <p>在 AI 编程工具快速发展的今天，Claude Code 以其独特的理解能力和生成质量，正在成为越来越多开发者的首选工具。无论你是初学者还是资深开发者，Claude Code 都能为你的编程之旅提供强有力的支持。</p>
-
 <p><strong>立即体验 Claude Code</strong> → <a href="https://www.anthropic.com/claude-code">https://www.anthropic.com/claude-code</a></p>
-
 <p>让 AI 成为你编程路上的最佳伙伴！</p>
 
+					</div>
 				</article>
 
 				
@@ -580,11 +570,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -595,18 +584,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -616,7 +598,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -629,6 +611,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

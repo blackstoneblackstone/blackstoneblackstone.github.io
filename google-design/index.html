@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/google-design.svg"
+            alt="Google Design"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -278,91 +288,92 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#优秀项目" itemprop="item"><span itemprop="name">优秀项目</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Google Design</span>
-							<meta itemprop="position" content="4" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#优秀项目" itemprop="item"><span itemprop="name">优秀项目</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Google Design</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<p>地址：<a href="https://design.google/">https://design.google/</a></p>
-
-<h2 id="google-design-简介">Google Design 简介</h2>
-
+					<div id="article-body" class="markdown-body">
+						<p>地址：<!-- raw HTML omitted --><a href="https://design.google/">https://design.google/</a><!-- raw HTML omitted --></p>
+<h2>Google Design 简介</h2>
 <p>Google Design 是 Google 官方的设计网站，汇集了 Google 在产品设计领域的经验、最佳实践和设计资源。作为全球领先科技公司的设计团队，Google Design 为独立开发者和设计师提供了宝贵的设计指导和灵感来源。</p>
-
-<h2 id="核心内容">核心内容</h2>
-
-<h3 id="material-design-设计系统">Material Design 设计系统</h3>
-
+<h2>核心内容</h2>
+<h3>Material Design 设计系统</h3>
 <p>Material Design 是 Google 创建的综合性设计系统，提供了：</p>
-
 <ul>
-  <li><strong>设计原则</strong>：深度、动效、响应式设计等核心概念</li>
-  <li><strong>组件库</strong>：按钮、卡片、导航、表单等常用 UI 组件</li>
-  <li><strong>配色方案</strong>：完整的色彩系统和无障碍配色建议</li>
-  <li><strong>排版指南</strong>：字体层级、行高、字重等排版规范</li>
-  <li><strong>图标资源</strong>：高质量的 Material 图标库</li>
+<li><strong>设计原则</strong>：深度、动效、响应式设计等核心概念</li>
+<li><strong>组件库</strong>：按钮、卡片、导航、表单等常用 UI 组件</li>
+<li><strong>配色方案</strong>：完整的色彩系统和无障碍配色建议</li>
+<li><strong>排版指南</strong>：字体层级、行高、字重等排版规范</li>
+<li><strong>图标资源</strong>：高质量的 Material 图标库</li>
 </ul>
-
-<h3 id="设计文章与案例">设计文章与案例</h3>
-
+<h3>设计文章与案例</h3>
 <p>网站发布大量高质量的设计文章，包括：</p>
-
 <ul>
-  <li><strong>设计思维</strong>：探讨设计背后的思考过程和方法论</li>
-  <li><strong>案例研究</strong>：Google 产品设计决策的深度解析</li>
-  <li><strong>用户体验</strong>：关于可用性、可访问性的最佳实践</li>
-  <li><strong>品牌设计</strong>：Google 品牌设计的历史和演进</li>
+<li><strong>设计思维</strong>：探讨设计背后的思考过程和方法论</li>
+<li><strong>案例研究</strong>：Google 产品设计决策的深度解析</li>
+<li><strong>用户体验</strong>：关于可用性、可访问性的最佳实践</li>
+<li><strong>品牌设计</strong>：Google 品牌设计的历史和演进</li>
 </ul>
-
-<h3 id="工具与资源">工具与资源</h3>
-
+<h3>工具与资源</h3>
 <ul>
-  <li><strong>Material Theme Builder</strong>：在线主题定制工具</li>
-  <li><strong>Icons</strong>：可直接使用的 Material 图标库</li>
-  <li><strong>Fonts</strong>：Google Fonts 字体的设计应用指南</li>
-  <li><strong>Dev Resources</strong>：面向开发者的设计实现资源</li>
+<li><strong>Material Theme Builder</strong>：在线主题定制工具</li>
+<li><strong>Icons</strong>：可直接使用的 Material 图标库</li>
+<li><strong>Fonts</strong>：Google Fonts 字体的设计应用指南</li>
+<li><strong>Dev Resources</strong>：面向开发者的设计实现资源</li>
 </ul>
-
-<h2 id="对独立开发者的价值">对独立开发者的价值</h2>
-
+<h2>对独立开发者的价值</h2>
 <ol>
-  <li><strong>专业设计指南</strong>：获得世界级设计团队的设计指导</li>
-  <li><strong>提升产品品质</strong>：遵循成熟的设计系统，避免常见设计错误</li>
-  <li><strong>提高开发效率</strong>：设计系统提供现成的组件和规范</li>
-  <li><strong>学习设计思维</strong>：了解大厂如何思考和解决设计问题</li>
-  <li><strong>保持设计一致性</strong>：确保产品各模块风格统一</li>
+<li><strong>专业设计指南</strong>：获得世界级设计团队的设计指导</li>
+<li><strong>提升产品品质</strong>：遵循成熟的设计系统，避免常见设计错误</li>
+<li><strong>提高开发效率</strong>：设计系统提供现成的组件和规范</li>
+<li><strong>学习设计思维</strong>：了解大厂如何思考和解决设计问题</li>
+<li><strong>保持设计一致性</strong>：确保产品各模块风格统一</li>
 </ol>
-
-<h2 id="特色栏目">特色栏目</h2>
-
+<h2>特色栏目</h2>
 <ul>
-  <li><strong>Podcasts</strong>：设计对话播客，邀请知名设计师分享经验</li>
-  <li><strong>Perspectives</strong>：深度设计思考文章</li>
-  <li><strong>Guides</strong>：实用的设计教程和指南</li>
-  <li><strong>Spotlight</strong>：重点产品设计的深度解析</li>
+<li><strong>Podcasts</strong>：设计对话播客，邀请知名设计师分享经验</li>
+<li><strong>Perspectives</strong>：深度设计思考文章</li>
+<li><strong>Guides</strong>：实用的设计教程和指南</li>
+<li><strong>Spotlight</strong>：重点产品设计的深度解析</li>
 </ul>
-
 <p>Google Design 不仅是设计资源库，更是一个学习和提升设计能力的平台。无论你是开发者还是设计师，都能从中获得有价值的洞察和灵感。</p>
 
+					</div>
 				</article>
 
 				
@@ -431,11 +442,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -446,18 +456,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -467,7 +470,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -480,6 +483,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

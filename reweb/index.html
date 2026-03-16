@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/reweb.png"
+            alt="Reweb"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,183 +290,154 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#生成低代码" itemprop="item"><span itemprop="name">生成低代码</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Reweb</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#生成低代码" itemprop="item"><span itemprop="name">生成低代码</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Reweb</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="reweb---开发者的ai可视化构建工具">Reweb - 开发者的AI可视化构建工具</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Reweb - 开发者的AI可视化构建工具</h2>
 <p>近年来，随着网站和应用程序需求的日益增长，开发工具的创新步伐也在不断加快。<a href="https://www.reweb.so/">Reweb</a>作为一款面向Next.js和Tailwind的AI可视化构建工具，正在革新开发者的工作方式。它巧妙地结合了可视化编辑的速度与代码灵活性的优势，让开发者能够以前所未有的效率创建高质量网站。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
-<h3 id="ai生成界面">AI生成界面</h3>
-
+<h2>核心功能</h2>
+<h3>AI生成界面</h3>
 <p>Reweb的一大亮点是其强大的AI生成能力。通过简单的文字提示或图片，开发者可以让AI生成精美的组件和页面。这一功能特别适合解决”白纸恐惧症”问题，帮助开发者快速从零开始构建界面。</p>
-
-<h3 id="tailwind可视化编辑器">Tailwind可视化编辑器</h3>
-
+<h3>Tailwind可视化编辑器</h3>
 <p>为Tailwind和shadcn/ui精心设计的可视化编辑器是Reweb的核心优势。编辑器提供了直观的界面，让开发者能够轻松调整组件样式、布局和响应式设计，而无需记忆复杂的Tailwind类名。</p>
-
-<h3 id="代码导出">代码导出</h3>
-
+<h3>代码导出</h3>
 <p>Reweb最大的价值在于其高质量的代码导出能力。与其他低代码工具不同，Reweb生成的是真正的Next.js、Tailwind和shadcn/ui代码，开发者可以将其无缝集成到现有项目中，或者用作独立项目的基础。导出的代码干净、可维护，遵循现代开发最佳实践。</p>
-
-<h3 id="模板和组件库">模板和组件库</h3>
-
+<h3>模板和组件库</h3>
 <p>Reweb提供丰富的模板和预制组件，开发者可以将其作为起点快速构建项目。这些模板涵盖了登录页面、SaaS仪表盘、电子商务和聊天机器人等多种常见应用场景，为开发者节省了大量设计和编码时间。</p>
-
-<h2 id="深度定制能力">深度定制能力</h2>
-
-<h3 id="自定义组件">自定义组件</h3>
-
+<h2>深度定制能力</h2>
+<h3>自定义组件</h3>
 <p>Reweb允许开发者创建可重用的UI组件，就像在React中一样。这种组件化的设计理念使团队能够构建一致的UI系统，提高开发效率和设计一致性。</p>
-
-<h3 id="无代码控制">无代码控制</h3>
-
+<h3>无代码控制</h3>
 <p>对于不熟悉代码的用户，Reweb提供了直观的无代码控制选项，使得设计师和非技术人员也能参与到网站构建过程中，而无需编写任何Tailwind代码。</p>
-
-<h3 id="figma导入">Figma导入</h3>
-
+<h3>Figma导入</h3>
 <p>Reweb支持从Figma导入设计，这意味着设计师可以在熟悉的工具中工作，然后将设计导入Reweb进行进一步定制，最终导出为Next.js和Tailwind代码，大大缩短了从设计到开发的过程。</p>
-
-<h3 id="主题库">主题库</h3>
-
+<h3>主题库</h3>
 <p>Reweb内置了丰富的主题库，开发者可以选择现成的主题，或者让AI生成自定义主题，轻松实现品牌一致性和个性化设计。</p>
-
-<h2 id="适用场景">适用场景</h2>
-
-<h3 id="快速原型设计">快速原型设计</h3>
-
+<h2>适用场景</h2>
+<h3>快速原型设计</h3>
 <p>对于需要快速验证创意的团队，Reweb是理想选择。它能够在几分钟内从概念到可交互原型，加速决策和迭代过程。</p>
-
-<h3 id="开发效率提升">开发效率提升</h3>
-
+<h3>开发效率提升</h3>
 <p>对于熟悉Next.js和Tailwind的开发者，Reweb可以显著提高开发效率，处理重复性工作，让开发者专注于解决更具挑战性的问题。</p>
-
-<h3 id="设计转代码">设计转代码</h3>
-
+<h3>设计转代码</h3>
 <p>设计师可以使用Reweb将Figma设计直接转换为高质量代码，减少与开发团队的沟通成本，加快交付速度。</p>
-
-<h3 id="教育与学习">教育与学习</h3>
-
+<h3>教育与学习</h3>
 <p>对于正在学习React、Next.js或Tailwind的开发者，Reweb提供了一个理想的学习平台，通过观察生成的代码，初学者可以更好地理解这些技术的最佳实践。</p>
-
-<h2 id="与竞品对比">与竞品对比</h2>
-
+<h2>与竞品对比</h2>
 <p>相比其他AI网站构建工具如v0、Bolt和Lovable，Reweb专注于开发者体验，提供更精细的控制和更高质量的代码输出。</p>
-
 <table>
-  <thead>
-    <tr>
-      <th>特点</th>
-      <th>Reweb</th>
-      <th>其他AI网站构建工具</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>目标用户</td>
-      <td>开发者和设计师</td>
-      <td>主要面向非技术用户</td>
-    </tr>
-    <tr>
-      <td>代码质量</td>
-      <td>高质量、可维护的Next.js和Tailwind代码</td>
-      <td>通常生成通用代码或专有格式</td>
-    </tr>
-    <tr>
-      <td>定制能力</td>
-      <td>深度定制，支持组件级控制</td>
-      <td>通常限于预设选项</td>
-    </tr>
-    <tr>
-      <td>导出选项</td>
-      <td>完整代码导出，可自行托管</td>
-      <td>通常绑定到特定平台</td>
-    </tr>
-    <tr>
-      <td>学习曲线</td>
-      <td>对熟悉React和Tailwind的开发者友好</td>
-      <td>入门简单但高级功能有限</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特点</th>
+<th>Reweb</th>
+<th>其他AI网站构建工具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标用户</td>
+<td>开发者和设计师</td>
+<td>主要面向非技术用户</td>
+</tr>
+<tr>
+<td>代码质量</td>
+<td>高质量、可维护的Next.js和Tailwind代码</td>
+<td>通常生成通用代码或专有格式</td>
+</tr>
+<tr>
+<td>定制能力</td>
+<td>深度定制，支持组件级控制</td>
+<td>通常限于预设选项</td>
+</tr>
+<tr>
+<td>导出选项</td>
+<td>完整代码导出，可自行托管</td>
+<td>通常绑定到特定平台</td>
+</tr>
+<tr>
+<td>学习曲线</td>
+<td>对熟悉React和Tailwind的开发者友好</td>
+<td>入门简单但高级功能有限</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="用户反馈">用户反馈</h2>
-
+<h2>用户反馈</h2>
 <p>Reweb已经赢得了超过20,000名开发者的信任，用户普遍认为它解决了传统开发流程中的痛点，特别是在从设计到代码的转换方面。</p>
-
-<p>一位设计工程师表示：”它几乎解决了我在Webflow和Framer中遇到的所有问题。作为开发者，这款工具更容易使用。”</p>
-
-<p>另一位用户评价道：”这就像Framer和v0的完美结合！”</p>
-
-<h2 id="定价方案">定价方案</h2>
-
+<p>一位设计工程师表示：“它几乎解决了我在Webflow和Framer中遇到的所有问题。作为开发者，这款工具更容易使用。”</p>
+<p>另一位用户评价道：“这就像Framer和v0的完美结合！”</p>
+<h2>定价方案</h2>
 <p>Reweb提供灵活的定价方案，适合不同规模的团队和个人：</p>
-
-<h3 id="免费计划">免费计划</h3>
-
+<h3>免费计划</h3>
 <ul>
-  <li>1个用户</li>
-  <li>2个项目</li>
-  <li>5次代码导出</li>
-  <li>有限的Reweb AI访问权限</li>
-  <li>分享链接带有Reweb品牌标识</li>
+<li>1个用户</li>
+<li>2个项目</li>
+<li>5次代码导出</li>
+<li>有限的Reweb AI访问权限</li>
+<li>分享链接带有Reweb品牌标识</li>
 </ul>
-
-<h3 id="专业计划">专业计划</h3>
-
+<h3>专业计划</h3>
 <ul>
-  <li>每月$12（年付可享7折）</li>
-  <li>无限项目</li>
-  <li>10倍更高的AI限制</li>
-  <li>无限代码导出</li>
-  <li>CLI导出</li>
-  <li>分享链接无品牌标识</li>
+<li>每月$12（年付可享7折）</li>
+<li>无限项目</li>
+<li>10倍更高的AI限制</li>
+<li>无限代码导出</li>
+<li>CLI导出</li>
+<li>分享链接无品牌标识</li>
 </ul>
-
-<h3 id="团队计划">团队计划</h3>
-
+<h3>团队计划</h3>
 <ul>
-  <li>即将推出</li>
-  <li>邀请团队成员</li>
-  <li>更高的AI限制</li>
-  <li>优先支持</li>
-  <li>集中计费</li>
+<li>即将推出</li>
+<li>邀请团队成员</li>
+<li>更高的AI限制</li>
+<li>优先支持</li>
+<li>集中计费</li>
 </ul>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Reweb代表了现代网站开发工具的发展方向，它不仅仅是一个AI驱动的网站构建工具，更是开发者和设计师之间的桥梁。通过结合可视化编辑的便捷性和代码的灵活性，Reweb为创建高质量网站提供了一种更高效、更愉悦的方式。</p>
-
 <p>无论您是资深开发者寻求提高效率的工具，还是设计师希望将创意直接转化为代码，Reweb都能为您提供强大支持。访问<a href="https://www.reweb.so/">Reweb官网</a>，探索这一革新性工具的全部潜力。</p>
 
+					</div>
 				</article>
 
 				
@@ -525,11 +506,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -540,18 +520,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -561,7 +534,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -574,6 +547,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

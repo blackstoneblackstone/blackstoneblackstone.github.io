@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/imgcook.png"
+            alt="imgcook"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,316 +290,270 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#设计转代码" itemprop="item"><span itemprop="name">设计转代码</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">imgcook</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#设计转代码" itemprop="item"><span itemprop="name">设计转代码</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">imgcook</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="imgcook---设计稿转代码的智能引擎">imgcook - 设计稿转代码的智能引擎</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>imgcook - 设计稿转代码的智能引擎</h2>
 <p><a href="https://www.imgcook.com/">imgcook</a> 是阿里巴巴开发的一款智能化前端开发平台，专注于将设计稿（UI视觉稿）一键转换为可维护的前端代码。它通过视觉算法、设计分析和智能化技术，大幅提升了前端开发效率，让开发者从重复性UI还原工作中解放出来，专注于业务逻辑和用户体验优化。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
+<h2>核心功能</h2>
 <p>imgcook提供了一系列功能，使设计师和开发者之间的协作更加高效：</p>
-
-<h3 id="1-设计稿智能识别与分析">1. 设计稿智能识别与分析</h3>
-
+<h3>1. 设计稿智能识别与分析</h3>
 <ul>
-  <li>支持Sketch、Photoshop、Adobe XD等多种设计工具源文件</li>
-  <li>自动识别设计稿中的视觉元素和层级结构</li>
-  <li>智能分析组件关系和布局逻辑</li>
-  <li>精确提取颜色、字体、间距等样式信息</li>
+<li>支持Sketch、Photoshop、Adobe XD等多种设计工具源文件</li>
+<li>自动识别设计稿中的视觉元素和层级结构</li>
+<li>智能分析组件关系和布局逻辑</li>
+<li>精确提取颜色、字体、间距等样式信息</li>
 </ul>
-
-<h3 id="2-多端代码生成">2. 多端代码生成</h3>
-
+<h3>2. 多端代码生成</h3>
 <ul>
-  <li>一键生成React、Vue、小程序等多框架代码</li>
-  <li>支持Web、移动端、小程序等多平台适配</li>
-  <li>生成符合工程规范的模块化代码</li>
-  <li>智能处理响应式布局和适配逻辑</li>
+<li>一键生成React、Vue、小程序等多框架代码</li>
+<li>支持Web、移动端、小程序等多平台适配</li>
+<li>生成符合工程规范的模块化代码</li>
+<li>智能处理响应式布局和适配逻辑</li>
 </ul>
-
-<h3 id="3-d2c模块化设计">3. D2C模块化设计</h3>
-
+<h3>3. D2C模块化设计</h3>
 <p>imgcook采用D2C（Design to Code）模块化架构：</p>
 <ul>
-  <li>将设计稿解析为结构化的DSL（领域特定语言）</li>
-  <li>基于DSL生成不同框架和平台的代码</li>
-  <li>支持自定义DSL插件开发和扩展</li>
-  <li>确保代码生成过程的可控性和灵活性</li>
+<li>将设计稿解析为结构化的DSL（领域特定语言）</li>
+<li>基于DSL生成不同框架和平台的代码</li>
+<li>支持自定义DSL插件开发和扩展</li>
+<li>确保代码生成过程的可控性和灵活性</li>
 </ul>
-
-<h3 id="4-资产管理与复用">4. 资产管理与复用</h3>
-
+<h3>4. 资产管理与复用</h3>
 <ul>
-  <li>智能提取设计资产（颜色、字体、组件等）</li>
-  <li>建立可复用的设计组件库</li>
-  <li>跨项目共享设计规范和组件</li>
-  <li>减少重复工作，确保视觉一致性</li>
+<li>智能提取设计资产（颜色、字体、组件等）</li>
+<li>建立可复用的设计组件库</li>
+<li>跨项目共享设计规范和组件</li>
+<li>减少重复工作，确保视觉一致性</li>
 </ul>
-
-<h3 id="5-工程化集成">5. 工程化集成</h3>
-
+<h3>5. 工程化集成</h3>
 <ul>
-  <li>与现有前端工程体系无缝衔接</li>
-  <li>支持npm包导出和模块化引入</li>
-  <li>代码提交至Git仓库的自动化流程</li>
-  <li>与CI/CD流程友好集成</li>
+<li>与现有前端工程体系无缝衔接</li>
+<li>支持npm包导出和模块化引入</li>
+<li>代码提交至Git仓库的自动化流程</li>
+<li>与CI/CD流程友好集成</li>
 </ul>
-
-<h2 id="技术亮点">技术亮点</h2>
-
+<h2>技术亮点</h2>
 <p>imgcook在技术实现上具有多项创新：</p>
-
-<h3 id="视觉ai算法">视觉AI算法</h3>
-
+<h3>视觉AI算法</h3>
 <ul>
-  <li>先进的计算机视觉算法识别UI元素</li>
-  <li>深度学习模型优化布局识别准确率</li>
-  <li>智能处理复杂嵌套结构和组件关系</li>
-  <li>持续优化的视觉识别引擎</li>
+<li>先进的计算机视觉算法识别UI元素</li>
+<li>深度学习模型优化布局识别准确率</li>
+<li>智能处理复杂嵌套结构和组件关系</li>
+<li>持续优化的视觉识别引擎</li>
 </ul>
-
-<h3 id="多模态代码生成">多模态代码生成</h3>
-
+<h3>多模态代码生成</h3>
 <ul>
-  <li>基于上下文的智能代码生成</li>
-  <li>动态调整生成策略适应不同场景</li>
-  <li>支持各种布局系统（Flex、Grid等）</li>
-  <li>可定制的代码风格和规范适配</li>
+<li>基于上下文的智能代码生成</li>
+<li>动态调整生成策略适应不同场景</li>
+<li>支持各种布局系统（Flex、Grid等）</li>
+<li>可定制的代码风格和规范适配</li>
 </ul>
-
-<h3 id="开放生态系统">开放生态系统</h3>
-
+<h3>开放生态系统</h3>
 <ul>
-  <li>插件化架构支持社区扩展</li>
-  <li>自定义DSL转换规则</li>
-  <li>开放API便于与其他工具集成</li>
-  <li>丰富的插件生态满足多样化需求</li>
+<li>插件化架构支持社区扩展</li>
+<li>自定义DSL转换规则</li>
+<li>开放API便于与其他工具集成</li>
+<li>丰富的插件生态满足多样化需求</li>
 </ul>
-
-<h2 id="实际应用场景">实际应用场景</h2>
-
+<h2>实际应用场景</h2>
 <p>imgcook在多种开发场景中显著提升效率：</p>
-
-<h3 id="电商与营销页面开发">电商与营销页面开发</h3>
-
+<h3>电商与营销页面开发</h3>
 <ul>
-  <li>快速将营销活动设计转为线上页面</li>
-  <li>精确还原复杂商品展示布局</li>
-  <li>支持动态数据绑定和交互效果</li>
-  <li>大幅缩短活动上线周期</li>
+<li>快速将营销活动设计转为线上页面</li>
+<li>精确还原复杂商品展示布局</li>
+<li>支持动态数据绑定和交互效果</li>
+<li>大幅缩短活动上线周期</li>
 </ul>
-
-<h3 id="企业应用ui开发">企业应用UI开发</h3>
-
+<h3>企业应用UI开发</h3>
 <ul>
-  <li>标准化企业应用界面生成</li>
-  <li>保持组件库和设计系统一致性</li>
-  <li>提高复杂表单和数据展示效率</li>
-  <li>降低维护成本和技术债务</li>
+<li>标准化企业应用界面生成</li>
+<li>保持组件库和设计系统一致性</li>
+<li>提高复杂表单和数据展示效率</li>
+<li>降低维护成本和技术债务</li>
 </ul>
-
-<h3 id="多端应用快速适配">多端应用快速适配</h3>
-
+<h3>多端应用快速适配</h3>
 <ul>
-  <li>一次设计多端代码生成</li>
-  <li>智能处理不同端的差异化需求</li>
-  <li>减少跨平台适配工作量</li>
-  <li>保持各平台体验一致性</li>
+<li>一次设计多端代码生成</li>
+<li>智能处理不同端的差异化需求</li>
+<li>减少跨平台适配工作量</li>
+<li>保持各平台体验一致性</li>
 </ul>
-
-<h3 id="设计系统落地与实践">设计系统落地与实践</h3>
-
+<h3>设计系统落地与实践</h3>
 <ul>
-  <li>将抽象设计规范转化为实际代码组件</li>
-  <li>自动化设计标准执行和应用</li>
-  <li>提高设计资产利用率</li>
-  <li>促进设计和开发标准统一</li>
+<li>将抽象设计规范转化为实际代码组件</li>
+<li>自动化设计标准执行和应用</li>
+<li>提高设计资产利用率</li>
+<li>促进设计和开发标准统一</li>
 </ul>
-
-<h2 id="效率提升数据">效率提升数据</h2>
-
+<h2>效率提升数据</h2>
 <p>imgcook为开发团队带来显著的效率提升：</p>
-
 <ul>
-  <li><strong>80%</strong>: 减少UI还原所需时间</li>
-  <li><strong>60%</strong>: 降低设计与开发沟通成本</li>
-  <li><strong>75%</strong>: 提高设计资产复用率</li>
-  <li><strong>90%</strong>: 减少UI还原中的人为错误</li>
+<li><strong>80%</strong>: 减少UI还原所需时间</li>
+<li><strong>60%</strong>: 降低设计与开发沟通成本</li>
+<li><strong>75%</strong>: 提高设计资产复用率</li>
+<li><strong>90%</strong>: 减少UI还原中的人为错误</li>
 </ul>
-
-<h2 id="与传统开发方式对比">与传统开发方式对比</h2>
-
+<h2>与传统开发方式对比</h2>
 <table>
-  <thead>
-    <tr>
-      <th>开发环节</th>
-      <th>传统开发方式</th>
-      <th>使用imgcook</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>设计标注与切图</td>
-      <td>手动测量和切图</td>
-      <td>自动分析和资源提取</td>
-    </tr>
-    <tr>
-      <td>布局实现</td>
-      <td>手写HTML/CSS</td>
-      <td>自动生成布局代码</td>
-    </tr>
-    <tr>
-      <td>样式调整</td>
-      <td>反复微调和对比</td>
-      <td>精确还原设计规范</td>
-    </tr>
-    <tr>
-      <td>组件拆分</td>
-      <td>人工判断和拆分</td>
-      <td>智能识别组件结构</td>
-    </tr>
-    <tr>
-      <td>响应式适配</td>
-      <td>额外编写适配代码</td>
-      <td>内置响应式处理</td>
-    </tr>
-    <tr>
-      <td>多端适配</td>
-      <td>为每个端单独开发</td>
-      <td>一次生成多端代码</td>
-    </tr>
-    <tr>
-      <td>设计变更</td>
-      <td>手动修改代码</td>
-      <td>重新生成并合并</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>开发环节</th>
+<th>传统开发方式</th>
+<th>使用imgcook</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设计标注与切图</td>
+<td>手动测量和切图</td>
+<td>自动分析和资源提取</td>
+</tr>
+<tr>
+<td>布局实现</td>
+<td>手写HTML/CSS</td>
+<td>自动生成布局代码</td>
+</tr>
+<tr>
+<td>样式调整</td>
+<td>反复微调和对比</td>
+<td>精确还原设计规范</td>
+</tr>
+<tr>
+<td>组件拆分</td>
+<td>人工判断和拆分</td>
+<td>智能识别组件结构</td>
+</tr>
+<tr>
+<td>响应式适配</td>
+<td>额外编写适配代码</td>
+<td>内置响应式处理</td>
+</tr>
+<tr>
+<td>多端适配</td>
+<td>为每个端单独开发</td>
+<td>一次生成多端代码</td>
+</tr>
+<tr>
+<td>设计变更</td>
+<td>手动修改代码</td>
+<td>重新生成并合并</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="行业实践案例">行业实践案例</h2>
-
+<h2>行业实践案例</h2>
 <p>imgcook已在阿里巴巴及众多企业得到广泛应用：</p>
-
 <blockquote>
-  <p>“imgcook将我们的页面开发效率提升了3倍以上，特别是在电商大促期间，能够快速响应设计变更并保证还原质量，大大减轻了前端团队的压力。”
+<p>“imgcook将我们的页面开发效率提升了3倍以上，特别是在电商大促期间，能够快速响应设计变更并保证还原质量，大大减轻了前端团队的压力。”
 — 某电商平台技术负责人</p>
 </blockquote>
-
 <blockquote>
-  <p>“通过imgcook，我们的设计师能够更直接地参与到产品开发中，减少了沟通成本，同时提高了设计稿的实现精度。”
+<p>“通过imgcook，我们的设计师能够更直接地参与到产品开发中，减少了沟通成本，同时提高了设计稿的实现精度。”
 — 某互联网企业产品经理</p>
 </blockquote>
-
-<h2 id="适用开发团队">适用开发团队</h2>
-
+<h2>适用开发团队</h2>
 <p>imgcook为不同类型的团队提供价值：</p>
-
-<h3 id="大型前端团队">大型前端团队</h3>
-
+<h3>大型前端团队</h3>
 <ul>
-  <li>规范化UI开发流程</li>
-  <li>提高团队协作效率</li>
-  <li>降低人员技能差异影响</li>
-  <li>集中精力于创新和体验优化</li>
+<li>规范化UI开发流程</li>
+<li>提高团队协作效率</li>
+<li>降低人员技能差异影响</li>
+<li>集中精力于创新和体验优化</li>
 </ul>
-
-<h3 id="小型创业团队">小型创业团队</h3>
-
+<h3>小型创业团队</h3>
 <ul>
-  <li>用有限资源实现更多功能</li>
-  <li>加速产品原型到正式版转换</li>
-  <li>减少对专业前端人员的依赖</li>
-  <li>快速响应市场反馈进行迭代</li>
+<li>用有限资源实现更多功能</li>
+<li>加速产品原型到正式版转换</li>
+<li>减少对专业前端人员的依赖</li>
+<li>快速响应市场反馈进行迭代</li>
 </ul>
-
-<h3 id="设计驱动型团队">设计驱动型团队</h3>
-
+<h3>设计驱动型团队</h3>
 <ul>
-  <li>赋能设计师直接产出可用代码</li>
-  <li>减少设计意图传达损失</li>
-  <li>缩短设计到实现的周期</li>
-  <li>鼓励更多设计创新尝试</li>
+<li>赋能设计师直接产出可用代码</li>
+<li>减少设计意图传达损失</li>
+<li>缩短设计到实现的周期</li>
+<li>鼓励更多设计创新尝试</li>
 </ul>
-
-<h2 id="集成与扩展">集成与扩展</h2>
-
+<h2>集成与扩展</h2>
 <p>imgcook提供丰富的集成和扩展能力：</p>
-
-<h3 id="设计工具集成">设计工具集成</h3>
-
+<h3>设计工具集成</h3>
 <ul>
-  <li>Sketch插件支持</li>
-  <li>Adobe XD连接器</li>
-  <li>Figma导出兼容</li>
-  <li>支持设计稿直接上传</li>
+<li>Sketch插件支持</li>
+<li>Adobe XD连接器</li>
+<li>Figma导出兼容</li>
+<li>支持设计稿直接上传</li>
 </ul>
-
-<h3 id="开发环境集成">开发环境集成</h3>
-
+<h3>开发环境集成</h3>
 <ul>
-  <li>主流IDE插件</li>
-  <li>npm包形式集成</li>
-  <li>CLI命令行工具</li>
-  <li>WebHook自动化集成</li>
+<li>主流IDE插件</li>
+<li>npm包形式集成</li>
+<li>CLI命令行工具</li>
+<li>WebHook自动化集成</li>
 </ul>
-
-<h3 id="自定义扩展能力">自定义扩展能力</h3>
-
+<h3>自定义扩展能力</h3>
 <ul>
-  <li>自定义DSL转换规则</li>
-  <li>自定义代码生成模板</li>
-  <li>自定义样式处理逻辑</li>
-  <li>自定义组件映射关系</li>
+<li>自定义DSL转换规则</li>
+<li>自定义代码生成模板</li>
+<li>自定义样式处理逻辑</li>
+<li>自定义组件映射关系</li>
 </ul>
-
-<h2 id="未来发展方向">未来发展方向</h2>
-
+<h2>未来发展方向</h2>
 <p>imgcook团队持续创新，未来发展方向包括：</p>
-
 <ol>
-  <li><strong>增强AI生成能力</strong>: 更智能的布局理解和交互代码生成</li>
-  <li><strong>低代码整合</strong>: 与低代码平台深度融合，提供完整解决方案</li>
-  <li><strong>设计意图理解</strong>: 更深层次理解设计师意图，生成更合理代码</li>
-  <li><strong>跨平台拓展</strong>: 支持更多新兴平台和框架</li>
-  <li><strong>生态建设</strong>: 打造更开放的开发者生态和插件市场</li>
+<li><strong>增强AI生成能力</strong>: 更智能的布局理解和交互代码生成</li>
+<li><strong>低代码整合</strong>: 与低代码平台深度融合，提供完整解决方案</li>
+<li><strong>设计意图理解</strong>: 更深层次理解设计师意图，生成更合理代码</li>
+<li><strong>跨平台拓展</strong>: 支持更多新兴平台和框架</li>
+<li><strong>生态建设</strong>: 打造更开放的开发者生态和插件市场</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>imgcook代表了前端开发自动化的重要方向，它不仅是设计到代码的转换工具，更是连接设计与开发的桥梁。通过将重复性的UI还原工作交给AI处理，开发者可以专注于更具创造性和挑战性的任务，提升整体开发效率和产品质量。</p>
-
 <p>随着AI技术和前端工程化的不断发展，imgcook这类工具将在软件开发流程中扮演越来越重要的角色，推动设计驱动开发模式的普及和创新。</p>
-
 <p>访问<a href="https://www.imgcook.com/">imgcook官网</a>，体验如何通过AI技术将设计稿转化为高质量前端代码，重塑您的前端开发流程。</p>
 
+					</div>
 				</article>
 
 				
@@ -658,11 +622,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -673,18 +636,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -694,7 +650,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -707,6 +663,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

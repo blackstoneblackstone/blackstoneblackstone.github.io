@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/qoder.svg"
+            alt="Qoder"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,78 +290,82 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#代码编辑器" itemprop="item"><span itemprop="name">代码编辑器</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Qoder</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#代码编辑器" itemprop="item"><span itemprop="name">代码编辑器</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Qoder</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h1 id="qoder---阿里出品的ai驱动代码编辑器">Qoder - 阿里出品的AI驱动代码编辑器</h1>
-
+					<div id="article-body" class="markdown-body">
+						<h1>Qoder - 阿里出品的AI驱动代码编辑器</h1>
 <p>Qoder是由阿里巴巴推出的一款AI驱动的代码编辑器，专为提升开发者效率而设计。它结合了阿里巴巴在人工智能和软件工程领域的深厚积累，为开发者提供智能化的编程体验。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
-<h3 id="1-智能代码生成">1. 智能代码生成</h3>
+<h2>核心功能</h2>
+<h3>1. 智能代码生成</h3>
 <p>通过自然语言描述功能需求，Qoder能够快速生成高质量的代码片段，支持多种编程语言。</p>
-
-<h3 id="2-代码理解与解释">2. 代码理解与解释</h3>
+<h3>2. 代码理解与解释</h3>
 <p>Qoder可以分析复杂的代码逻辑，并提供清晰易懂的解释，帮助开发者快速理解代码功能。</p>
-
-<h3 id="3-自动错误检测与修复">3. 自动错误检测与修复</h3>
+<h3>3. 自动错误检测与修复</h3>
 <p>内置的AI引擎能够识别代码中的潜在问题，并提供修复建议，减少调试时间。</p>
-
-<h3 id="4-代码重构优化">4. 代码重构优化</h3>
+<h3>4. 代码重构优化</h3>
 <p>Qoder能够分析现有代码结构，提供重构建议以提高代码质量和性能。</p>
-
-<h2 id="技术优势">技术优势</h2>
-
+<h2>技术优势</h2>
 <ol>
-  <li><strong>阿里云AI技术支持</strong> - 基于阿里云强大的AI模型，提供准确的代码理解和生成能力</li>
-  <li><strong>多语言支持</strong> - 支持Java、Python、JavaScript、TypeScript等多种主流编程语言</li>
-  <li><strong>上下文感知</strong> - 能够理解整个项目结构，提供更精准的代码建议</li>
-  <li><strong>本土化优化</strong> - 针对中国开发者的使用习惯进行优化，提供更好的中文支持</li>
+<li><strong>阿里云AI技术支持</strong> - 基于阿里云强大的AI模型，提供准确的代码理解和生成能力</li>
+<li><strong>多语言支持</strong> - 支持Java、Python、JavaScript、TypeScript等多种主流编程语言</li>
+<li><strong>上下文感知</strong> - 能够理解整个项目结构，提供更精准的代码建议</li>
+<li><strong>本土化优化</strong> - 针对中国开发者的使用习惯进行优化，提供更好的中文支持</li>
 </ol>
-
-<h2 id="适用场景">适用场景</h2>
-
+<h2>适用场景</h2>
 <ul>
-  <li><strong>快速原型开发</strong> - 通过自然语言快速生成功能原型</li>
-  <li><strong>代码学习</strong> - 帮助开发者理解复杂代码逻辑</li>
-  <li><strong>团队协作</strong> - 统一代码风格，提高团队开发效率</li>
-  <li><strong>技术栈迁移</strong> - 协助开发者在不同技术栈之间迁移代码</li>
+<li><strong>快速原型开发</strong> - 通过自然语言快速生成功能原型</li>
+<li><strong>代码学习</strong> - 帮助开发者理解复杂代码逻辑</li>
+<li><strong>团队协作</strong> - 统一代码风格，提高团队开发效率</li>
+<li><strong>技术栈迁移</strong> - 协助开发者在不同技术栈之间迁移代码</li>
 </ul>
-
-<h2 id="访问地址">访问地址</h2>
-
+<h2>访问地址</h2>
 <p><a href="https://qoder.com/">Qoder</a></p>
-
 <hr />
 <p><em>Qoder是阿里巴巴推出的AI代码编辑器，旨在通过人工智能技术提升开发者的编程效率。</em></p>
 
+					</div>
 				</article>
 
 				
@@ -420,11 +434,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -435,18 +448,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -456,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -469,6 +475,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

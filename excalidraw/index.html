@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/excalidraw.svg"
+            alt="Excalidraw"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,222 +290,192 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#one" itemprop="item"><span itemprop="name">One</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#独立开发工具" itemprop="item"><span itemprop="name">独立开发工具</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Excalidraw</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#one" itemprop="item"><span itemprop="name">One</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#独立开发工具" itemprop="item"><span itemprop="name">独立开发工具</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Excalidraw</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="excalidraw---开源手绘风格白板工具">Excalidraw - 开源手绘风格白板工具</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Excalidraw - 开源手绘风格白板工具</h2>
 <p><a href="https://excalidraw.com/">Excalidraw</a> 是一款简单而强大的开源白板工具，它以独特的手绘风格和直观的用户界面而闻名。无论是绘制流程图、架构图、产品原型，还是简单的头脑风暴，Excalidraw 都能提供流畅的绘图体验。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
-<h3 id="1-手绘风格">1. 手绘风格</h3>
-
+<h2>核心功能</h2>
+<h3>1. 手绘风格</h3>
 <p>Excalidraw 最显著的特点是其独特的手绘风格：</p>
-
 <ul>
-  <li><strong>自然的线条</strong>：模拟真实手绘的笔触效果</li>
-  <li><strong>随机变化</strong>：每次绘制都有细微差异，增加趣味性</li>
-  <li><strong>风格一致</strong>：所有元素保持统一的手绘美感</li>
-  <li><strong>可调节粗细</strong>：支持不同粗细的线条样式</li>
+<li><strong>自然的线条</strong>：模拟真实手绘的笔触效果</li>
+<li><strong>随机变化</strong>：每次绘制都有细微差异，增加趣味性</li>
+<li><strong>风格一致</strong>：所有元素保持统一的手绘美感</li>
+<li><strong>可调节粗细</strong>：支持不同粗细的线条样式</li>
 </ul>
-
-<h3 id="2-丰富的绘图工具">2. 丰富的绘图工具</h3>
-
+<h3>2. 丰富的绘图工具</h3>
 <p>提供全面的绘图工具满足各种需求：</p>
-
 <ul>
-  <li><strong>基础图形</strong>：矩形、圆形、箭头、线条等</li>
-  <li><strong>文本编辑</strong>：支持多种字体和样式</li>
-  <li><strong>图形库</strong>：内置大量常用图形和图标</li>
-  <li><strong>自由绘制</strong>：支持自由手绘和草图</li>
+<li><strong>基础图形</strong>：矩形、圆形、箭头、线条等</li>
+<li><strong>文本编辑</strong>：支持多种字体和样式</li>
+<li><strong>图形库</strong>：内置大量常用图形和图标</li>
+<li><strong>自由绘制</strong>：支持自由手绘和草图</li>
 </ul>
-
-<h3 id="3-协作功能">3. 协作功能</h3>
-
+<h3>3. 协作功能</h3>
 <p>支持实时协作和分享：</p>
-
 <ul>
-  <li><strong>实时协作</strong>：多人同时编辑同一画板</li>
-  <li><strong>房间功能</strong>：创建私密协作空间</li>
-  <li><strong>链接分享</strong>：一键生成分享链接</li>
-  <li><strong>导出选项</strong>：支持多种格式导出</li>
+<li><strong>实时协作</strong>：多人同时编辑同一画板</li>
+<li><strong>房间功能</strong>：创建私密协作空间</li>
+<li><strong>链接分享</strong>：一键生成分享链接</li>
+<li><strong>导出选项</strong>：支持多种格式导出</li>
 </ul>
-
-<h3 id="4-版本控制">4. 版本控制</h3>
-
+<h3>4. 版本控制</h3>
 <p>完善的版本管理功能：</p>
-
 <ul>
-  <li><strong>自动保存</strong>：定期保存工作进度</li>
-  <li><strong>历史记录</strong>：查看和恢复历史版本</li>
-  <li><strong>本地存储</strong>：离线工作时自动保存</li>
-  <li><strong>云端同步</strong>：跨设备访问和编辑</li>
+<li><strong>自动保存</strong>：定期保存工作进度</li>
+<li><strong>历史记录</strong>：查看和恢复历史版本</li>
+<li><strong>本地存储</strong>：离线工作时自动保存</li>
+<li><strong>云端同步</strong>：跨设备访问和编辑</li>
 </ul>
-
-<h2 id="技术特点">技术特点</h2>
-
+<h2>技术特点</h2>
 <p>Excalidraw 采用现代 Web 技术构建：</p>
-
 <ol>
-  <li><strong>轻量级</strong>：加载迅速，运行流畅</li>
-  <li><strong>离线支持</strong>：PWA 技术支持离线使用</li>
-  <li><strong>开源透明</strong>：代码完全开源，社区驱动</li>
-  <li><strong>易于集成</strong>：提供 API 和组件便于集成</li>
+<li><strong>轻量级</strong>：加载迅速，运行流畅</li>
+<li><strong>离线支持</strong>：PWA 技术支持离线使用</li>
+<li><strong>开源透明</strong>：代码完全开源，社区驱动</li>
+<li><strong>易于集成</strong>：提供 API 和组件便于集成</li>
 </ol>
-
-<h2 id="适用场景">适用场景</h2>
-
+<h2>适用场景</h2>
 <p>Excalidraw 在多种场景下表现出色：</p>
-
-<h3 id="软件开发">软件开发</h3>
-
+<h3>软件开发</h3>
 <ul>
-  <li><strong>架构设计</strong>：系统架构图和流程图</li>
-  <li><strong>UI 原型</strong>：快速绘制界面原型</li>
-  <li><strong>数据流程</strong>：数据流转和处理流程</li>
-  <li><strong>API 设计</strong>：接口关系和数据结构</li>
+<li><strong>架构设计</strong>：系统架构图和流程图</li>
+<li><strong>UI 原型</strong>：快速绘制界面原型</li>
+<li><strong>数据流程</strong>：数据流转和处理流程</li>
+<li><strong>API 设计</strong>：接口关系和数据结构</li>
 </ul>
-
-<h3 id="项目管理">项目管理</h3>
-
+<h3>项目管理</h3>
 <ul>
-  <li><strong>头脑风暴</strong>：团队创意讨论</li>
-  <li><strong>任务规划</strong>：项目路线图和时间线</li>
-  <li><strong>组织架构</strong>：团队结构和职责划分</li>
-  <li><strong>流程优化</strong>：业务流程分析和改进</li>
+<li><strong>头脑风暴</strong>：团队创意讨论</li>
+<li><strong>任务规划</strong>：项目路线图和时间线</li>
+<li><strong>组织架构</strong>：团队结构和职责划分</li>
+<li><strong>流程优化</strong>：业务流程分析和改进</li>
 </ul>
-
-<h3 id="教育培训">教育培训</h3>
-
+<h3>教育培训</h3>
 <ul>
-  <li><strong>课程讲解</strong>：概念图和知识点连接</li>
-  <li><strong>教学演示</strong>：步骤说明和示意图</li>
-  <li><strong>学习笔记</strong>：知识整理和思维导图</li>
-  <li><strong>在线教学</strong>：实时互动白板</li>
+<li><strong>课程讲解</strong>：概念图和知识点连接</li>
+<li><strong>教学演示</strong>：步骤说明和示意图</li>
+<li><strong>学习笔记</strong>：知识整理和思维导图</li>
+<li><strong>在线教学</strong>：实时互动白板</li>
 </ul>
-
-<h2 id="使用体验">使用体验</h2>
-
+<h2>使用体验</h2>
 <p>Excalidraw 提供直观的使用体验：</p>
-
 <ol>
-  <li><strong>无需注册</strong>：直接访问即可使用</li>
-  <li><strong>简单上手</strong>：界面清晰，操作直观</li>
-  <li><strong>快捷键支持</strong>：提高操作效率</li>
-  <li><strong>响应式设计</strong>：适配各种设备屏幕</li>
+<li><strong>无需注册</strong>：直接访问即可使用</li>
+<li><strong>简单上手</strong>：界面清晰，操作直观</li>
+<li><strong>快捷键支持</strong>：提高操作效率</li>
+<li><strong>响应式设计</strong>：适配各种设备屏幕</li>
 </ol>
-
-<h2 id="与传统工具对比">与传统工具对比</h2>
-
+<h2>与传统工具对比</h2>
 <p>相比传统绘图工具，Excalidraw 具有独特优势：</p>
-
 <table>
-  <thead>
-    <tr>
-      <th>特点</th>
-      <th>Excalidraw</th>
-      <th>传统工具</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>上手难度</td>
-      <td>简单直观</td>
-      <td>学习曲线陡峭</td>
-    </tr>
-    <tr>
-      <td>协作能力</td>
-      <td>实时多人协作</td>
-      <td>有限或需付费</td>
-    </tr>
-    <tr>
-      <td>手绘风格</td>
-      <td>原生支持</td>
-      <td>需要额外设置</td>
-    </tr>
-    <tr>
-      <td>使用成本</td>
-      <td>免费开源</td>
-      <td>多为付费软件</td>
-    </tr>
-    <tr>
-      <td>离线支持</td>
-      <td>支持</td>
-      <td>通常不支持</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特点</th>
+<th>Excalidraw</th>
+<th>传统工具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上手难度</td>
+<td>简单直观</td>
+<td>学习曲线陡峭</td>
+</tr>
+<tr>
+<td>协作能力</td>
+<td>实时多人协作</td>
+<td>有限或需付费</td>
+</tr>
+<tr>
+<td>手绘风格</td>
+<td>原生支持</td>
+<td>需要额外设置</td>
+</tr>
+<tr>
+<td>使用成本</td>
+<td>免费开源</td>
+<td>多为付费软件</td>
+</tr>
+<tr>
+<td>离线支持</td>
+<td>支持</td>
+<td>通常不支持</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="实际应用案例">实际应用案例</h2>
-
-<h3 id="开发团队协作">开发团队协作</h3>
-
+<h2>实际应用案例</h2>
+<h3>开发团队协作</h3>
 <p>某软件开发团队使用 Excalidraw 进行系统架构设计和讨论，团队成员可以实时协作，快速迭代方案。</p>
-
-<h3 id="远程教学互动">远程教学互动</h3>
-
+<h3>远程教学互动</h3>
 <p>教师使用 Excalidraw 进行在线课程讲解，学生可以实时查看和参与互动，提升学习效果。</p>
-
-<h3 id="产品设计讨论">产品设计讨论</h3>
-
+<h3>产品设计讨论</h3>
 <p>产品团队利用 Excalidraw 进行原型设计和功能讨论，手绘风格帮助团队专注于核心概念而不是视觉细节。</p>
-
-<h2 id="社区生态">社区生态</h2>
-
+<h2>社区生态</h2>
 <p>Excalidraw 拥有活跃的开源社区：</p>
-
 <ul>
-  <li><strong>GitHub 仓库</strong>：持续更新和改进</li>
-  <li><strong>插件系统</strong>：支持功能扩展</li>
-  <li><strong>模板库</strong>：社区分享模板资源</li>
-  <li><strong>多语言支持</strong>：全球化的用户群体</li>
+<li><strong>GitHub 仓库</strong>：持续更新和改进</li>
+<li><strong>插件系统</strong>：支持功能扩展</li>
+<li><strong>模板库</strong>：社区分享模板资源</li>
+<li><strong>多语言支持</strong>：全球化的用户群体</li>
 </ul>
-
-<h2 id="未来发展">未来发展</h2>
-
+<h2>未来发展</h2>
 <p>Excalidraw 团队计划在以下方面持续创新：</p>
-
 <ol>
-  <li><strong>更多绘图工具</strong>：扩展专业绘图功能</li>
-  <li><strong>增强协作体验</strong>：改进多人协作机制</li>
-  <li><strong>模板市场</strong>：建立模板分享平台</li>
-  <li><strong>移动端优化</strong>：提升移动设备体验</li>
-  <li><strong>API 增强</strong>：提供更多集成选项</li>
+<li><strong>更多绘图工具</strong>：扩展专业绘图功能</li>
+<li><strong>增强协作体验</strong>：改进多人协作机制</li>
+<li><strong>模板市场</strong>：建立模板分享平台</li>
+<li><strong>移动端优化</strong>：提升移动设备体验</li>
+<li><strong>API 增强</strong>：提供更多集成选项</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Excalidraw 作为一款开源的手绘风格白板工具，以其简单直观的界面、强大的协作功能和独特的手绘风格，为用户提供了一个理想的可视化协作平台。无论是个人使用还是团队协作，Excalidraw 都能满足各种绘图和讨论需求，让创意表达变得更加自然和高效。</p>
-
 <p>访问 <a href="https://excalidraw.com/">Excalidraw 官网</a>，体验这款独特的开源白板工具，开启你的创意之旅。</p>
 
+					</div>
 				</article>
 
 				
@@ -564,11 +544,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -579,18 +558,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -600,7 +572,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -613,6 +585,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

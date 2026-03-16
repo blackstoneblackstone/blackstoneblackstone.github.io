@@ -59,8 +59,8 @@
 <meta property="og:title" content="MCP：下一代AI开发工具交互协议" />
 <meta name="author" content="黑石" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="Agent 里的几大协议" />
-<meta property="og:description" content="Agent 里的几大协议" />
+<meta name="description" content="黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。" />
+<meta property="og:description" content="黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。" />
 <link rel="canonical" href="https://blackstones.xyz/mcp/" />
 <meta property="og:url" content="https://blackstones.xyz/mcp/" />
 <meta property="og:site_name" content="黑石的知识库 - AI编程、技术分享与开发经验" />
@@ -72,7 +72,7 @@
 <meta property="twitter:title" content="MCP：下一代AI开发工具交互协议" />
 <meta name="google-site-verification" content="" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"黑石"},"dateModified":"2025-09-10T00:00:00+08:00","datePublished":"2025-09-10T00:00:00+08:00","description":"Agent 里的几大协议","headline":"MCP：下一代AI开发工具交互协议","image":"https://blackstones.xyz/assets/images/tools/youglish.svg","mainEntityOfPage":{"@type":"WebPage","@id":"https://blackstones.xyz/mcp/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://blackstones.xyz/assets/images/logo.png"},"name":"黑石"},"url":"https://blackstones.xyz/mcp/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"黑石"},"dateModified":"2025-09-10T00:00:00+08:00","datePublished":"2025-09-10T00:00:00+08:00","description":"黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。","headline":"MCP：下一代AI开发工具交互协议","image":"https://blackstones.xyz/assets/images/tools/youglish.svg","mainEntityOfPage":{"@type":"WebPage","@id":"https://blackstones.xyz/mcp/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://blackstones.xyz/assets/images/logo.png"},"name":"黑石"},"url":"https://blackstones.xyz/mcp/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/youglish.svg"
+            alt="MCP：下一代AI开发工具交互协议"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -278,144 +288,128 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#文章" itemprop="item"><span itemprop="name">文章</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">MCP：下一代AI开发工具交互协议</span>
-							<meta itemprop="position" content="4" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#文章" itemprop="item"><span itemprop="name">文章</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">MCP：下一代AI开发工具交互协议</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="agent-里的几大协议">Agent 里的几大协议</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Agent 里的几大协议</h2>
 <p>在 AI Agent 生态系统中，有几个重要的协议标准：</p>
-
 <ul>
-  <li><strong>MCP</strong>（Model Context Protocol，模型上下文协议）</li>
-  <li><strong>A2A</strong>（Agent-to-Agent Protocol，智能体到智能体协议）</li>
-  <li><strong>AGUI</strong>（Agent Graphical User Interface，智能体图形用户界面）</li>
+<li><strong>MCP</strong>（Model Context Protocol，模型上下文协议）</li>
+<li><strong>A2A</strong>（Agent-to-Agent Protocol，智能体到智能体协议）</li>
+<li><strong>AGUI</strong>（Agent Graphical User Interface，智能体图形用户界面）</li>
 </ul>
-
 <p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2025/gif/170066/1756718760855-de425b43-2a65-480d-a037-54f06d3562c7.gif" alt="" /></p>
-
-<h2 id="什么是-mcp">什么是 MCP？</h2>
-
+<h2>什么是 MCP？</h2>
 <p>MCP 可以理解为<strong>给大模型装上手和脚，让它能够行动</strong>的协议。</p>
-
-<h3 id="两种架构的区别">两种架构的区别</h3>
-
+<h3>两种架构的区别</h3>
 <table>
-  <thead>
-    <tr>
-      <th>协议</th>
-      <th>公司</th>
-      <th>特点</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Function Call</td>
-      <td>OpenAI</td>
-      <td>传统的函数调用方式</td>
-    </tr>
-    <tr>
-      <td>MCP</td>
-      <td>Anthropic</td>
-      <td>更灵活的模型上下文协议</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>协议</th>
+<th>公司</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Function Call</td>
+<td>OpenAI</td>
+<td>传统的函数调用方式</td>
+</tr>
+<tr>
+<td>MCP</td>
+<td>Anthropic</td>
+<td>更灵活的模型上下文协议</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="mcp-的三个角色">MCP 的三个角色</h2>
-
+<h2>MCP 的三个角色</h2>
 <p>MCP 协议涉及三个核心角色：</p>
-
 <ol>
-  <li><strong>Host</strong> - 主机/宿主</li>
-  <li><strong>MCP Client</strong> - MCP 客户端</li>
-  <li><strong>MCP Server</strong> - MCP 服务器</li>
+<li><strong>Host</strong> - 主机/宿主</li>
+<li><strong>MCP Client</strong> - MCP 客户端</li>
+<li><strong>MCP Server</strong> - MCP 服务器</li>
 </ol>
-
-<h2 id="mcp-server">MCP Server</h2>
-
-<h3 id="三种传输形式">三种传输形式</h3>
-
+<h2>MCP Server</h2>
+<h3>三种传输形式</h3>
 <ul>
-  <li><strong>Stdio</strong> - 标准输入输出</li>
-  <li><strong>SSE</strong> - Server-Sent Events</li>
-  <li><strong>Streamable HTTP</strong> - 可流式传输的 HTTP</li>
+<li><strong>Stdio</strong> - 标准输入输出</li>
+<li><strong>SSE</strong> - Server-Sent Events</li>
+<li><strong>Streamable HTTP</strong> - 可流式传输的 HTTP</li>
 </ul>
-
-<h3 id="核心功能">核心功能</h3>
-
+<h3>核心功能</h3>
 <p>MCP Server 提供以下功能模块：</p>
-
 <ul>
-  <li><strong>Resources</strong> - 资源管理</li>
-  <li><strong>Prompts</strong> - 提示词管理</li>
-  <li><strong>Tools</strong> - 工具调用</li>
-  <li><strong>Sampling</strong> - 采样控制</li>
-  <li><strong>Roots</strong> - 根目录管理</li>
-  <li><strong>Transports</strong> - 传输层协议</li>
+<li><strong>Resources</strong> - 资源管理</li>
+<li><strong>Prompts</strong> - 提示词管理</li>
+<li><strong>Tools</strong> - 工具调用</li>
+<li><strong>Sampling</strong> - 采样控制</li>
+<li><strong>Roots</strong> - 根目录管理</li>
+<li><strong>Transports</strong> - 传输层协议</li>
 </ul>
-
-<h2 id="mcp-client">MCP Client</h2>
-
+<h2>MCP Client</h2>
 <p>MCP Client 是与 MCP Server 交互的客户端，负责发起请求和处理响应。</p>
-
-<h2 id="调试工具">调试工具</h2>
-
+<h2>调试工具</h2>
 <p>使用官方提供的调试工具：</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>npx @modelcontextprotocol/inspector
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h2 id="mcp-生态资源">MCP 生态资源</h2>
-
-<h3 id="官方集合站">官方集合站</h3>
-
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">npx @modelcontextprotocol/inspector
+</code></pre></div></div>
+<h2>MCP 生态资源</h2>
+<h3>官方集合站</h3>
 <ul>
-  <li><strong>MCP 集合站</strong>: <a href="https://rube.app/">https://rube.app/</a></li>
+<li><strong>MCP 集合站</strong>: <a href="https://rube.app/">https://rube.app/</a></li>
+</ul>
+<h3>企业级市场</h3>
+<ul>
+<li><strong>OpenLM MCP 市场</strong>: <a href="https://openlm.alibaba-inc.com/web/workbench/chatOs/public-tools">https://openlm.alibaba-inc.com/web/workbench/chatOs/public-tools</a></li>
+</ul>
+<h2>MCP 经典项目</h2>
+<h3>浏览器集成</h3>
+<ul>
+<li><strong>MCP-chrome</strong>: <a href="https://github.com/hangwin/mcp-chrome/blob/master/README_zh.md">https://github.com/hangwin/mcp-chrome/blob/master/README_zh.md</a></li>
+</ul>
+<h3>注释工具</h3>
+<ul>
+<li><strong>Vibe annotations</strong>: <a href="https://github.com/RaphaelRegnier/vibe-annotations">https://github.com/RaphaelRegnier/vibe-annotations</a></li>
 </ul>
 
-<h3 id="企业级市场">企业级市场</h3>
-
-<ul>
-  <li><strong>OpenLM MCP 市场</strong>: <a href="https://openlm.alibaba-inc.com/web/workbench/chatOs/public-tools">https://openlm.alibaba-inc.com/web/workbench/chatOs/public-tools</a></li>
-</ul>
-
-<h2 id="mcp-经典项目">MCP 经典项目</h2>
-
-<h3 id="浏览器集成">浏览器集成</h3>
-
-<ul>
-  <li><strong>MCP-chrome</strong>: <a href="https://github.com/hangwin/mcp-chrome/blob/master/README_zh.md">https://github.com/hangwin/mcp-chrome/blob/master/README_zh.md</a></li>
-</ul>
-
-<h3 id="注释工具">注释工具</h3>
-
-<ul>
-  <li><strong>Vibe annotations</strong>: <a href="https://github.com/RaphaelRegnier/vibe-annotations">https://github.com/RaphaelRegnier/vibe-annotations</a></li>
-</ul>
-
-
+					</div>
 				</article>
 
 				
@@ -484,11 +478,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -499,18 +492,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -520,7 +506,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -533,6 +519,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

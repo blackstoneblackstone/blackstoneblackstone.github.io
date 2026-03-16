@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/19b6f99b.png"
+            alt="短线偷鸡玩法原则：风险与收益的平衡艺术"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -278,135 +288,125 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#投资" itemprop="item"><span itemprop="name">投资</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">短线偷鸡玩法原则：风险与收益的平衡艺术</span>
-							<meta itemprop="position" content="4" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#投资" itemprop="item"><span itemprop="name">投资</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">短线偷鸡玩法原则：风险与收益的平衡艺术</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<p>短线交易，俗称”偷鸡”，是投资中最具挑战性的策略之一。它要求投资者在极短的时间内做出决策，承受巨大的心理压力，同时追求快速的高收益。</p>
-
+					<div id="article-body" class="markdown-body">
+						<p>短线交易，俗称”偷鸡”，是投资中最具挑战性的策略之一。它要求投资者在极短的时间内做出决策，承受巨大的心理压力，同时追求快速的高收益。</p>
 <p>在短线交易的世界里，<strong>纪律比技术更重要</strong>。没有严格的纪律，再好的技术分析也会被情绪和贪婪摧毁。今天分享一套经过实战验证的”三五原则”，帮助你在短线交易中保持清醒和纪律。</p>
-
-<h2 id="-短线交易三大核心要素">🎯 短线交易三大核心要素</h2>
-
-<h3 id="1-仓位控制1-成左右">1. 仓位控制：1 成左右</h3>
+<h2>🎯 短线交易三大核心要素</h2>
+<h3>1. 仓位控制：1 成左右</h3>
 <p><strong>严格控制仓位，保护资金安全</strong></p>
-
 <ul>
-  <li><strong>仓位比例</strong>：单次短线交易不超过总资金的 10%</li>
-  <li><strong>风险控制</strong>：即使全部亏损，也不会对整体资金造成重大影响</li>
-  <li><strong>心理优势</strong>：小仓位操作，心理压力小，决策更理性</li>
+<li><strong>仓位比例</strong>：单次短线交易不超过总资金的 10%</li>
+<li><strong>风险控制</strong>：即使全部亏损，也不会对整体资金造成重大影响</li>
+<li><strong>心理优势</strong>：小仓位操作，心理压力小，决策更理性</li>
 </ul>
-
-<h3 id="2-选股策略龙回头战法">2. 选股策略：龙回头战法</h3>
+<h3>2. 选股策略：龙回头战法</h3>
 <p><strong>选择强势股回调后的再次启动机会</strong></p>
-
 <ul>
-  <li><strong>前期强势</strong>：股票曾经有过明显的上涨趋势</li>
-  <li><strong>调整充分</strong>：回调幅度通常在 20-30% 之间</li>
-  <li><strong>量能配合</strong>：调整时成交量萎缩，启动时放量</li>
-  <li><strong>支撑有效</strong>：在关键支撑位获得支撑</li>
+<li><strong>前期强势</strong>：股票曾经有过明显的上涨趋势</li>
+<li><strong>调整充分</strong>：回调幅度通常在 20-30% 之间</li>
+<li><strong>量能配合</strong>：调整时成交量萎缩，启动时放量</li>
+<li><strong>支撑有效</strong>：在关键支撑位获得支撑</li>
 </ul>
-
-<h3 id="3-纪律执行三五原则">3. 纪律执行：三五原则</h3>
+<h3>3. 纪律执行：三五原则</h3>
 <p><strong>严格执行交易纪律，避免情绪化操作</strong></p>
-
 <ul>
-  <li><strong>跌 5% 割肉</strong>：严格执行止损，保护本金</li>
-  <li><strong>5 天不涨卖掉</strong>：时间止损，避免资金沉淀</li>
-  <li><strong>不破 5 日线持有</strong>：趋势跟踪，让利润奔跑</li>
+<li><strong>跌 5% 割肉</strong>：严格执行止损，保护本金</li>
+<li><strong>5 天不涨卖掉</strong>：时间止损，避免资金沉淀</li>
+<li><strong>不破 5 日线持有</strong>：趋势跟踪，让利润奔跑</li>
 </ul>
-
-<h2 id="-三五原则短线交易的核心纪律">🎯 三五原则：短线交易的核心纪律</h2>
-
-<h3 id="原则一跌-5-割肉">原则一：跌 5% 割肉</h3>
+<h2>🎯 三五原则：短线交易的核心纪律</h2>
+<h3>原则一：跌 5% 割肉</h3>
 <p><strong>严格执行止损，保护本金</strong></p>
-
 <ul>
-  <li><strong>止损线</strong>：买入后如果下跌超过 5%，立即割肉离场</li>
-  <li><strong>心理建设</strong>：把 5% 当作交易成本，不要心存侥幸</li>
-  <li><strong>执行纪律</strong>：无论什么理由，跌破 5% 必须执行，没有例外</li>
+<li><strong>止损线</strong>：买入后如果下跌超过 5%，立即割肉离场</li>
+<li><strong>心理建设</strong>：把 5% 当作交易成本，不要心存侥幸</li>
+<li><strong>执行纪律</strong>：无论什么理由，跌破 5% 必须执行，没有例外</li>
 </ul>
-
 <blockquote>
-  <p><strong>为什么是 5%？</strong> 这个比例既能有效控制风险，又不会因为市场正常波动而频繁止损。5% 的亏损可以通过一次 5.26% 的盈利完全回本。</p>
+<p><strong>为什么是 5%？</strong> 这个比例既能有效控制风险，又不会因为市场正常波动而频繁止损。5% 的亏损可以通过一次 5.26% 的盈利完全回本。</p>
 </blockquote>
-
-<h3 id="原则二5-天不涨卖掉">原则二：5 天不涨，卖掉</h3>
+<h3>原则二：5 天不涨，卖掉</h3>
 <p><strong>时间止损，避免资金沉淀</strong></p>
-
 <ul>
-  <li><strong>时间限制</strong>：买入后 5 个交易日内没有明显上涨，果断卖出</li>
-  <li><strong>资金效率</strong>：短线交易追求的是资金快速周转，不是长期持有</li>
-  <li><strong>机会成本</strong>：与其等待不确定的上涨，不如寻找新的机会</li>
+<li><strong>时间限制</strong>：买入后 5 个交易日内没有明显上涨，果断卖出</li>
+<li><strong>资金效率</strong>：短线交易追求的是资金快速周转，不是长期持有</li>
+<li><strong>机会成本</strong>：与其等待不确定的上涨，不如寻找新的机会</li>
 </ul>
-
 <blockquote>
-  <p><strong>实战技巧</strong>：如果第 4 天还没有起色，第 5 天开盘就准备卖出，不要等到收盘。</p>
+<p><strong>实战技巧</strong>：如果第 4 天还没有起色，第 5 天开盘就准备卖出，不要等到收盘。</p>
 </blockquote>
-
-<h3 id="原则三上涨不破-5-日线继续持有">原则三：上涨不破 5 日线，继续持有</h3>
+<h3>原则三：上涨不破 5 日线，继续持有</h3>
 <p><strong>趋势跟踪，让利润奔跑</strong></p>
-
 <ul>
-  <li><strong>趋势判断</strong>：只要股价不跌破 5 日均线，就继续持有</li>
-  <li><strong>减仓策略</strong>：跌破 5 日线可以减仓，但不要全部清仓</li>
-  <li><strong>分批离场</strong>：可以分 2-3 次减仓，给股价反弹的机会</li>
+<li><strong>趋势判断</strong>：只要股价不跌破 5 日均线，就继续持有</li>
+<li><strong>减仓策略</strong>：跌破 5 日线可以减仓，但不要全部清仓</li>
+<li><strong>分批离场</strong>：可以分 2-3 次减仓，给股价反弹的机会</li>
 </ul>
-
 <blockquote>
-  <p><strong>技术要点</strong>：5 日线是短期趋势的重要指标，跌破说明短期趋势转弱。</p>
+<p><strong>技术要点</strong>：5 日线是短期趋势的重要指标，跌破说明短期趋势转弱。</p>
 </blockquote>
-
-<h2 id="-龙回头战法胜率最高的短线策略">🐉 龙回头战法：胜率最高的短线策略</h2>
-
-<h3 id="什么是龙回头">什么是龙回头？</h3>
+<h2>🐉 龙回头战法：胜率最高的短线策略</h2>
+<h3>什么是龙回头？</h3>
 <p>龙回头战法是指强势股在经历一波上涨后，经过短暂调整，再次启动上涨的经典形态。</p>
-
-<h3 id="龙回头的特征">龙回头的特征</h3>
+<h3>龙回头的特征</h3>
 <ol>
-  <li><strong>前期强势</strong>：股票曾经有过明显的上涨趋势</li>
-  <li><strong>调整充分</strong>：回调幅度通常在 20-30% 之间</li>
-  <li><strong>量能配合</strong>：调整时成交量萎缩，启动时放量</li>
-  <li><strong>支撑有效</strong>：在关键支撑位获得支撑</li>
+<li><strong>前期强势</strong>：股票曾经有过明显的上涨趋势</li>
+<li><strong>调整充分</strong>：回调幅度通常在 20-30% 之间</li>
+<li><strong>量能配合</strong>：调整时成交量萎缩，启动时放量</li>
+<li><strong>支撑有效</strong>：在关键支撑位获得支撑</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>短线交易是一门艺术，更是一门科学。<strong>仓位控制、选股策略、纪律执行</strong>三大核心要素缺一不可。</p>
-
 <p>记住：</p>
 <ul>
-  <li><strong>1 成仓位</strong>：控制风险，保护资金</li>
-  <li><strong>龙回头战法</strong>：选择高胜率机会</li>
-  <li><strong>三五原则</strong>：严格执行纪律</li>
+<li><strong>1 成仓位</strong>：控制风险，保护资金</li>
+<li><strong>龙回头战法</strong>：选择高胜率机会</li>
+<li><strong>三五原则</strong>：严格执行纪律</li>
 </ul>
-
 <p><strong>在短线交易中，生存比盈利更重要</strong>。只有先活下来，才有机会获得长期收益。</p>
-
 <hr />
-
 <p><em>投资有风险，入市需谨慎。本文内容仅供参考，不构成投资建议。</em></p>
 
+					</div>
 				</article>
 
 				
@@ -475,11 +475,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -490,18 +489,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -511,7 +503,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -524,6 +516,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

@@ -59,8 +59,8 @@
 <meta property="og:title" content="AI结对编程：与人工智能一起编写代码的新范式" />
 <meta name="author" content="黑石" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="AI结对编程的概念" />
-<meta property="og:description" content="AI结对编程的概念" />
+<meta name="description" content="黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。" />
+<meta property="og:description" content="黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。" />
 <link rel="canonical" href="https://blackstones.xyz/ai-pair-programming/" />
 <meta property="og:url" content="https://blackstones.xyz/ai-pair-programming/" />
 <meta property="og:site_name" content="黑石的知识库 - AI编程、技术分享与开发经验" />
@@ -72,7 +72,7 @@
 <meta property="twitter:title" content="AI结对编程：与人工智能一起编写代码的新范式" />
 <meta name="google-site-verification" content="" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"黑石"},"dateModified":"2025-03-20T00:00:00+08:00","datePublished":"2025-03-20T00:00:00+08:00","description":"AI结对编程的概念","headline":"AI结对编程：与人工智能一起编写代码的新范式","image":"https://blackstones.xyz/assets/images/ai-coding.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://blackstones.xyz/ai-pair-programming/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://blackstones.xyz/assets/images/logo.png"},"name":"黑石"},"url":"https://blackstones.xyz/ai-pair-programming/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"黑石"},"dateModified":"2025-03-20T00:00:00+08:00","datePublished":"2025-03-20T00:00:00+08:00","description":"黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。","headline":"AI结对编程：与人工智能一起编写代码的新范式","image":"https://blackstones.xyz/assets/images/ai-coding.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://blackstones.xyz/ai-pair-programming/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://blackstones.xyz/assets/images/logo.png"},"name":"黑石"},"url":"https://blackstones.xyz/ai-pair-programming/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/ai-coding.jpg"
+            alt="AI结对编程：与人工智能一起编写代码的新范式"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,109 +290,75 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#最佳实践" itemprop="item"><span itemprop="name">最佳实践</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">AI结对编程：与人工智能一起编写代码的新范式</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#最佳实践" itemprop="item"><span itemprop="name">最佳实践</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">AI结对编程：与人工智能一起编写代码的新范式</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="ai结对编程的概念">AI结对编程的概念</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>AI结对编程的概念</h2>
 <p>结对编程是一种传统的编程实践，两名开发者在同一工作站上协作完成编码任务。而AI结对编程则是用AI工具替代其中一名开发者的角色，与人类开发者共同解决问题、编写代码。这种模式既保留了结对编程的优势，又利用了AI的强大能力，为软件开发带来全新的可能性。</p>
-
-<h2 id="ai结对编程的优势">AI结对编程的优势</h2>
-
+<h2>AI结对编程的优势</h2>
 <p>与传统结对编程相比，AI结对编程有以下几个显著优势：</p>
-
 <ol>
-  <li><strong>全天候可用</strong> - AI助手不需要休息，随时可以陪伴你编程</li>
-  <li><strong>知识库广泛</strong> - AI可以快速检索和应用大量的代码模式和最佳实践</li>
-  <li><strong>不会情绪化</strong> - AI不会因为疲劳或情绪波动而影响工作质量</li>
-  <li><strong>高度适应性</strong> - 可以根据开发者的风格和项目需求调整工作方式</li>
+<li><strong>全天候可用</strong> - AI助手不需要休息，随时可以陪伴你编程</li>
+<li><strong>知识库广泛</strong> - AI可以快速检索和应用大量的代码模式和最佳实践</li>
+<li><strong>不会情绪化</strong> - AI不会因为疲劳或情绪波动而影响工作质量</li>
+<li><strong>高度适应性</strong> - 可以根据开发者的风格和项目需求调整工作方式</li>
 </ol>
-
-<h2 id="有效的ai结对编程策略">有效的AI结对编程策略</h2>
-
+<h2>有效的AI结对编程策略</h2>
 <p>要充分发挥AI结对编程的效果，可以采用以下策略：</p>
-
-<h3 id="1-明确分工">1. 明确分工</h3>
-
+<h3>1. 明确分工</h3>
 <ul>
-  <li><strong>人类负责</strong> - 业务需求理解、架构决策、代码评审、质量把控</li>
-  <li><strong>AI负责</strong> - 代码生成、API查询、测试案例编写、重复性任务</li>
+<li><strong>人类负责</strong> - 业务需求理解、架构决策、代码评审、质量把控</li>
+<li><strong>AI负责</strong> - 代码生成、API查询、测试案例编写、重复性任务</li>
 </ul>
-
-<h3 id="2-持续对话">2. 持续对话</h3>
-
+<h3>2. 持续对话</h3>
 <p>保持与AI的持续交流，不断提供反馈和澄清需求，这样AI才能更准确地理解你的意图并提供适当的建议。</p>
-
-<h3 id="3-关注学习">3. 关注学习</h3>
-
+<h3>3. 关注学习</h3>
 <p>AI结对编程不仅是为了提高生产力，也是学习的机会。观察AI如何解决问题，可以帮助你发现新的编程模式和技术。</p>
-
-<h2 id="实际案例分析">实际案例分析</h2>
-
+<h2>实际案例分析</h2>
 <p>以下是一个真实的AI结对编程场景：</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-</pre></td><td class="rouge-code"><pre><span class="c1"># 人类提出需求：我需要一个函数来解析CSV文件并提取特定列的数据
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="python"><span class="c1"># 人类提出需求：我需要一个函数来解析CSV文件并提取特定列的数据
 </span>
 <span class="c1"># AI建议实现
 </span><span class="kn">import</span> <span class="n">csv</span>
@@ -417,16 +393,13 @@ crossorigin="anonymous"></script>
     <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Error processing CSV: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">None</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
+</code></pre></div></div>
 <p>这个例子展示了人类开发者与AI助手之间的迭代交流，不断完善代码实现。</p>
-
-<h2 id="结论">结论</h2>
-
+<h2>结论</h2>
 <p>AI结对编程代表着软件开发的一种新范式，它不是要取代开发者，而是提供强大的辅助。通过正确的策略和实践，开发者可以与AI建立高效的工作关系，显著提升开发效率和代码质量。</p>
-
 <p>随着AI技术的不断进步，这种协作模式将变得越来越普遍和成熟。未来的软件开发可能会将AI结对编程视为标准实践，就像今天的版本控制和自动化测试一样不可或缺。</p>
 
+					</div>
 				</article>
 
 				
@@ -495,11 +468,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -510,18 +482,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -531,7 +496,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -544,6 +509,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

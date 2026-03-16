@@ -94,10 +94,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -259,13 +259,23 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="/assets/images/openclaw-feishu.png"
+            alt="OpenClaw 飞书机器人对接完全指南"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
 			<div class="post-meta">
 				<span class="post-categories">
 					
-						<a class="post-category" href="/categories.html#ai 编程，openclaw">AI 编程，OpenClaw</a>
+						<a class="post-category" href="/categories.html#文章">文章</a>
 					
 				</span>
 				
@@ -280,326 +290,223 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai 编程，openclaw" itemprop="item"><span itemprop="name">AI 编程，OpenClaw</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">OpenClaw 飞书机器人对接完全指南</span>
-							<meta itemprop="position" content="4" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#文章" itemprop="item"><span itemprop="name">文章</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">OpenClaw 飞书机器人对接完全指南</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="前言">前言</h2>
-
-<p>在生成式人工智能从单纯的”对话框”向能够执行复杂任务的”自主代理（Agent）”演进的当下，<strong>OpenClaw</strong>（原名 Clawdbot）作为一个开源的、本地优先的 AI 代理网关，正在重塑个人与 AI 的交互范式。</p>
-
+					<div id="article-body" class="markdown-body">
+						<h2>前言</h2>
+<p>在生成式人工智能从单纯的”对话框”向能够执行复杂任务的”自主代理（Agent）“演进的当下，<strong>OpenClaw</strong>（原名 Clawdbot）作为一个开源的、本地优先的 AI 代理网关，正在重塑个人与 AI 的交互范式。</p>
 <p>不同于 ChatGPT 或 Claude 等依赖云端托管的 SaaS 服务，OpenClaw 通过独特的 Gateway-Node 架构，将大模型的推理能力下沉至用户私有硬件，并通过标准化的协议连接至飞书、Telegram、Discord 等主流即时通讯平台。</p>
-
 <p>本文将系统讲解 OpenClaw 的安装配置，并一步步教你如何接入飞书，打造属于自己的 AI 助手。</p>
-
-<h2 id="一前置准备">一、前置准备</h2>
-
-<h3 id="环境要求">环境要求</h3>
-
+<h2>一、前置准备</h2>
+<h3>环境要求</h3>
 <table>
-  <thead>
-    <tr>
-      <th>项目</th>
-      <th>要求</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Node.js</td>
-      <td>≥ 22.x</td>
-    </tr>
-    <tr>
-      <td>操作系统</td>
-      <td>macOS / Linux / Windows (WSL2)</td>
-    </tr>
-    <tr>
-      <td>内存</td>
-      <td>≥ 2GB 可用</td>
-    </tr>
-    <tr>
-      <td>AI API</td>
-      <td>您常用的模型的 API Key</td>
-    </tr>
-    <tr>
-      <td>Docker</td>
-      <td>可选，用于容器化部署</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>项目</th>
+<th>要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node.js</td>
+<td>≥ 22.x</td>
+</tr>
+<tr>
+<td>操作系统</td>
+<td>macOS / Linux / Windows (WSL2)</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>≥ 2GB 可用</td>
+</tr>
+<tr>
+<td>AI API</td>
+<td>您常用的模型的 API Key</td>
+</tr>
+<tr>
+<td>Docker</td>
+<td>可选，用于容器化部署</td>
+</tr>
+</tbody>
 </table>
-
-<h3 id="第一步全局安装-openclaw">第一步：全局安装 OpenClaw</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>npm <span class="nb">install</span> <span class="nt">-g</span> openclaw
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h3 id="第二步运行配置向导">第二步：运行配置向导</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw config
-</pre></td></tr></tbody></table></code></pre></div></div>
-
+<h3>第一步：全局安装 OpenClaw</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">npm <span class="nb">install</span> <span class="nt">-g</span> openclaw
+</code></pre></div></div>
+<h3>第二步：运行配置向导</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">openclaw config
+</code></pre></div></div>
 <p>向导会引导你完成：</p>
 <ul>
-  <li><strong>AI 模型配置</strong> – 输入 API Key</li>
-  <li><strong>工作目录设置</strong> – 默认 ~/openclaw</li>
-  <li><strong>渠道启用</strong> – 选择要连接的聊天平台（选择 Feishu/Lark）</li>
-  <li><strong>守护进程安装</strong> – 让 Gateway 后台持续运行</li>
+<li><strong>AI 模型配置</strong> – 输入 API Key</li>
+<li><strong>工作目录设置</strong> – 默认 ~/openclaw</li>
+<li><strong>渠道启用</strong> – 选择要连接的聊天平台（选择 Feishu/Lark）</li>
+<li><strong>守护进程安装</strong> – 让 Gateway 后台持续运行</li>
 </ul>
-
-<h3 id="第三步验证安装">第三步：验证安装</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw <span class="nt">--version</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h2 id="二常用-skills-配置">二、常用 Skills 配置</h2>
-
+<h3>第三步：验证安装</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">openclaw <span class="nt">--version</span>
+</code></pre></div></div>
+<h2>二、常用 Skills 配置</h2>
 <p>OpenClaw 的强大之处在于可扩展的 Skills 系统。以下是几个实用的 Skills：</p>
-
-<h3 id="网页搜索-skill">网页搜索 Skill</h3>
-
+<h3>网页搜索 Skill</h3>
 <p>配置后 OpenClaw 可以搜索实时网络信息回答问题。</p>
-
 <p><strong>方式一：通过 ClawdHub 安装（推荐）</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>npx skills add @openclaw/web-search
-</pre></td></tr></tbody></table></code></pre></div></div>
-
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">npx skills add @openclaw/web-search
+</code></pre></div></div>
 <p><strong>方式二：手动下载</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="c"># 下载技能到 skills 目录</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash"><span class="c"># 下载技能到 skills 目录</span>
+</code></pre></div></div>
 <blockquote>
-  <p>若无海外信用卡注册 Brave Search，也可以使用火山云「融合信息搜索 API」</p>
+<p>若无海外信用卡注册 Brave Search，也可以使用火山云「融合信息搜索 API」</p>
 </blockquote>
-
-<h3 id="文件操作-skill">文件操作 Skill</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>npx skills add @openclaw/file-operations
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h3 id="其他实用-skills">其他实用 Skills</h3>
-
+<h3>文件操作 Skill</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">npx skills add @openclaw/file-operations
+</code></pre></div></div>
+<h3>其他实用 Skills</h3>
 <ul>
-  <li><strong>self-improving-agent</strong>：让 AI 记录错误和经验，转化为长期记忆</li>
-  <li><strong>find-skills</strong>：帮助用户发现并安装代理技能</li>
-  <li><strong>humanizer</strong>：去除文本中 AI 生成痕迹</li>
+<li><strong>self-improving-agent</strong>：让 AI 记录错误和经验，转化为长期记忆</li>
+<li><strong>find-skills</strong>：帮助用户发现并安装代理技能</li>
+<li><strong>humanizer</strong>：去除文本中 AI 生成痕迹</li>
 </ul>
-
 <p><strong>关键命令：</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre>npx skills find <span class="o">[</span>query]          <span class="c"># 搜索技能</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">npx skills find <span class="o">[</span>query]          <span class="c"># 搜索技能</span>
 npx skills add &lt;package&gt;         <span class="c"># 安装技能</span>
 npx skills check                 <span class="c"># 检查技能更新</span>
 npx skills update                <span class="c"># 更新所有已安装的技能</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h2 id="三飞书应用配置">三、飞书应用配置</h2>
-
-<h3 id="方式一通过安装向导添加推荐">方式一：通过安装向导添加（推荐）</h3>
-
+</code></pre></div></div>
+<h2>三、飞书应用配置</h2>
+<h3>方式一：通过安装向导添加（推荐）</h3>
 <p>如果您刚安装完 OpenClaw，可以直接运行向导添加飞书：</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw channels add
-</pre></td></tr></tbody></table></code></pre></div></div>
-
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">openclaw channels add
+</code></pre></div></div>
 <p>向导会引导您完成：</p>
 <ul>
-  <li>创建飞书应用并获取凭证</li>
-  <li>配置应用凭证</li>
-  <li>启动网关</li>
+<li>创建飞书应用并获取凭证</li>
+<li>配置应用凭证</li>
+<li>启动网关</li>
 </ul>
-
 <p>✅ 完成配置后，使用以下命令检查网关状态：</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre>openclaw gateway status        <span class="c"># 查看网关运行状态</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">openclaw gateway status        <span class="c"># 查看网关运行状态</span>
 openclaw logs <span class="nt">--follow</span>         <span class="c"># 查看实时日志</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h3 id="方式二通过命令行添加">方式二：通过命令行添加</h3>
-
+</code></pre></div></div>
+<h3>方式二：通过命令行添加</h3>
 <p>如果您已经完成了初始安装，可以用以下命令添加飞书渠道：</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw channels add feishu
-</pre></td></tr></tbody></table></code></pre></div></div>
-
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">openclaw channels add feishu
+</code></pre></div></div>
 <p>然后根据交互式提示输入 App ID 和 App Secret 即可。</p>
-
-<h2 id="四飞书机器人对接详细步骤">四、飞书机器人对接详细步骤</h2>
-
-<h3 id="1️⃣-进入飞书应用中心">1️⃣ 进入飞书应用中心</h3>
-
+<h2>四、飞书机器人对接详细步骤</h2>
+<h3>1️⃣ 进入飞书应用中心</h3>
 <p>访问：<strong><a href="https://open.feishu.cn/app">开发者后台 - 飞书开放平台</a></strong></p>
-
 <ul>
-  <li>使用飞书账号登录</li>
-  <li>Lark（国际版）请使用 https://open.larksuite.com/app，并在配置中设置 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>domain: "lark"
-</pre></td></tr></tbody></table></code></li>
+<li>使用飞书账号登录</li>
+<li>Lark（国际版）请使用 <a href="https://open.larksuite.com/app%EF%BC%8C%E5%B9%B6%E5%9C%A8%E9%85%8D%E7%BD%AE%E4%B8%AD%E8%AE%BE%E7%BD%AE">https://open.larksuite.com/app，并在配置中设置</a> <code>domain: &quot;lark&quot;</code></li>
 </ul>
-
-<h3 id="2️⃣-新建企业自建应用">2️⃣ 新建企业自建应用</h3>
-
+<h3>2️⃣ 新建企业自建应用</h3>
 <p><strong>路径：</strong> 创建应用 → 企业自建应用</p>
-
 <p>基础信息按提示填写即可（名称、描述等），完成后进入应用详情页。</p>
-
-<h3 id="3️⃣-启用机器人能力">3️⃣ 启用机器人能力</h3>
-
+<h3>3️⃣ 启用机器人能力</h3>
 <p>在 <strong>添加应用能力 &gt; 机器人</strong> 页面：</p>
 <ol>
-  <li>开启机器人能力</li>
-  <li>配置机器人相关设置</li>
+<li>开启机器人能力</li>
+<li>配置机器人相关设置</li>
 </ol>
-
-<h3 id="4️⃣-配置应用权限">4️⃣ 配置应用权限</h3>
-
+<h3>4️⃣ 配置应用权限</h3>
 <p>在 <strong>权限管理</strong> 页面，点击 <strong>批量导入</strong> 按钮，粘贴以下 JSON 配置一键导入所需权限：</p>
-
 <p><strong>基础权限：</strong></p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="nl">"im:message"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="nl">"im:chat"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="nl">"bot"</span><span class="p">:</span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-
+</span></code></pre></div></div>
 <p><strong>可选全功能权限：</strong></p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="nl">"im:message"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="nl">"im:chat"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="nl">"bot"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message:send_as_bot"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="nl">"group:manage"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-
+</span></code></pre></div></div>
 <blockquote>
-  <p>确保消息、机器人、事件订阅等相关权限均已开启。</p>
+<p>确保消息、机器人、事件订阅等相关权限均已开启。</p>
 </blockquote>
-
-<h3 id="5️⃣-更新应用-token">5️⃣ 更新应用 Token</h3>
-
+<h3>5️⃣ 更新应用 Token</h3>
 <p>回到 <strong>凭证与基础信息</strong> 页面，将黄色区域中的以下信息同步更新到 OpenClaw 配置中：</p>
 <ul>
-  <li><strong>App ID</strong></li>
-  <li><strong>App Secret</strong></li>
-  <li><strong>Token</strong></li>
+<li><strong>App ID</strong></li>
+<li><strong>App Secret</strong></li>
+<li><strong>Token</strong></li>
 </ul>
-
 <p>然后运行命令重启：</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw gateway restart
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h3 id="6️⃣-设置事件回调callback">6️⃣ 设置事件回调（Callback）</h3>
-
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash">openclaw gateway restart
+</code></pre></div></div>
+<h3>6️⃣ 设置事件回调（Callback）</h3>
 <p>⚠️ <strong>重要提醒：</strong> 在配置事件订阅前，请务必确保已完成以下步骤：</p>
 <ul>
-  <li>运行 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw channels add
-</pre></td></tr></tbody></table></code> 添加了 Feishu 渠道</li>
-  <li>网关处于启动状态（可通过 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw gateway status
-</pre></td></tr></tbody></table></code> 检查状态）</li>
+<li>运行 <code>openclaw channels add</code> 添加了 Feishu 渠道</li>
+<li>网关处于启动状态（可通过 <code>openclaw gateway status</code> 检查状态）</li>
 </ul>
-
 <p>在 <strong>事件订阅</strong> 页面：</p>
 <ul>
-  <li>选择 <strong>使用长连接接收事件（WebSocket 模式）</strong></li>
-  <li>添加事件：<strong><code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>im.message.receive_v1
-</pre></td></tr></tbody></table></code></strong>（接收消息）</li>
+<li>选择 <strong>使用长连接接收事件（WebSocket 模式）</strong></li>
+<li>添加事件：<strong><code>im.message.receive_v1</code></strong>（接收消息）</li>
 </ul>
-
 <blockquote>
-  <p>⚠️ 注意：如果网关未启动或渠道未添加，长连接设置将保存失败。</p>
+<p>⚠️ 注意：如果网关未启动或渠道未添加，长连接设置将保存失败。</p>
 </blockquote>
-
-<h3 id="7️⃣-发布应用">7️⃣ 发布应用</h3>
-
+<h3>7️⃣ 发布应用</h3>
 <p>在 <strong>版本管理与发布</strong> 页面：</p>
 <ul>
-  <li>创建版本</li>
-  <li>提交审核并发布</li>
-  <li>等待管理员审批（企业自建应用通常自动通过）</li>
+<li>创建版本</li>
+<li>提交审核并发布</li>
+<li>等待管理员审批（企业自建应用通常自动通过）</li>
 </ul>
-
-<h3 id="8️⃣-发送测试消息">8️⃣ 发送测试消息</h3>
-
+<h3>8️⃣ 发送测试消息</h3>
 <p>在飞书中找到您创建的机器人，发送一条消息。</p>
-
-<h3 id="9️⃣-配对授权">9️⃣ 配对授权</h3>
-
+<h3>9️⃣ 配对授权</h3>
 <p>默认情况下，机器人会回复一个配对码。您需要批准此代码：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>配对码：XXXXXX
-</pre></td></tr></tbody></table></code></pre></div></div>
-
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>配对码：XXXXXX
+</code></pre></div></div>
 <p>批准后即可正常对话！🎉</p>
-
-<h2 id="五常用管理命令">五、常用管理命令</h2>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-</pre></td><td class="rouge-code"><pre><span class="c"># 查看网关状态</span>
+<h2>五、常用管理命令</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code data-lang="bash"><span class="c"># 查看网关状态</span>
 openclaw gateway status
 
 <span class="c"># 重启网关</span>
@@ -616,63 +523,46 @@ openclaw channels list
 
 <span class="c"># 删除渠道</span>
 openclaw channels remove &lt;channel-id&gt;
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h2 id="六常见问题">六、常见问题</h2>
-
-<h3 id="网关无法启动">网关无法启动</h3>
+</code></pre></div></div>
+<h2>六、常见问题</h2>
+<h3>网关无法启动</h3>
 <ul>
-  <li>检查 Node.js 版本是否 ≥ 22.x</li>
-  <li>检查端口是否被占用（默认端口 18789）</li>
-  <li>查看日志：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw logs --follow
-</pre></td></tr></tbody></table></code></li>
+<li>检查 Node.js 版本是否 ≥ 22.x</li>
+<li>检查端口是否被占用（默认端口 18789）</li>
+<li>查看日志：<code>openclaw logs --follow</code></li>
 </ul>
-
-<h3 id="飞书机器人不回复消息">飞书机器人不回复消息</h3>
+<h3>飞书机器人不回复消息</h3>
 <ul>
-  <li>确认事件订阅已配置（<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>im.message.receive_v1
-</pre></td></tr></tbody></table></code>）</li>
-  <li>确认网关正在运行</li>
-  <li>检查权限是否已正确配置</li>
-  <li>确认机器人已发布并添加到群聊</li>
+<li>确认事件订阅已配置（<code>im.message.receive_v1</code>）</li>
+<li>确认网关正在运行</li>
+<li>检查权限是否已正确配置</li>
+<li>确认机器人已发布并添加到群聊</li>
 </ul>
-
-<h3 id="配对码无效">配对码无效</h3>
+<h3>配对码无效</h3>
 <ul>
-  <li>确认机器人配置中的 App ID / App Secret 正确</li>
-  <li>重启网关：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>openclaw gateway restart
-</pre></td></tr></tbody></table></code></li>
-  <li>重新发送消息触发配对</li>
+<li>确认机器人配置中的 App ID / App Secret 正确</li>
+<li>重启网关：<code>openclaw gateway restart</code></li>
+<li>重新发送消息触发配对</li>
 </ul>
-
-<h2 id="总结">总结</h2>
-
+<h2>总结</h2>
 <p>OpenClaw 通过本地优先的架构设计，让用户能够完全掌控自己的 AI 助手。相比云端 SaaS 服务，它具有以下优势：</p>
-
 <ul>
-  <li><strong>数据隐私</strong>：所有对话记录和上下文存储在本地</li>
-  <li><strong>自主控制</strong>：可自定义 Skills，扩展 AI 能力边界</li>
-  <li><strong>成本可控</strong>：只需支付 API 调用费用，无订阅费</li>
-  <li><strong>灵活部署</strong>：支持 Mac Mini、Linux 服务器、树莓派等多种硬件</li>
+<li><strong>数据隐私</strong>：所有对话记录和上下文存储在本地</li>
+<li><strong>自主控制</strong>：可自定义 Skills，扩展 AI 能力边界</li>
+<li><strong>成本可控</strong>：只需支付 API 调用费用，无订阅费</li>
+<li><strong>灵活部署</strong>：支持 Mac Mini、Linux 服务器、树莓派等多种硬件</li>
 </ul>
-
 <p>通过飞书集成，你可以随时随地在熟悉的办公环境中与 AI 对话，让 OpenClaw 成为真正的”数字副驾驶”。</p>
-
-<h2 id="参考资料">参考资料</h2>
-
+<h2>参考资料</h2>
 <ul>
-  <li><a href="https://github.com/OpenClaw">OpenClaw 官方文档</a></li>
-  <li><a href="https://open.feishu.cn/">飞书开放平台</a></li>
-  <li><a href="https://clawdhub.example.com">ClawdHub 技能市场</a></li>
+<li><a href="https://github.com/OpenClaw">OpenClaw 官方文档</a></li>
+<li><a href="https://open.feishu.cn/">飞书开放平台</a></li>
+<li><a href="https://clawdhub.example.com">ClawdHub 技能市场</a></li>
 </ul>
-
 <hr />
-
 <p><em>本文内容整理自飞书官网 - 《一文完全搞懂 OpenClaw（Clawdbot）附飞书对接教程！》</em></p>
 
+					</div>
 				</article>
 
 				
@@ -747,11 +637,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -762,18 +651,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -783,7 +665,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -796,6 +678,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

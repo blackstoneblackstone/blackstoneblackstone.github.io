@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/c34bedc5.jpg"
+            alt="Logto - 独立开发者的身份认证解决方案"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -278,161 +288,148 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#独立开发工具" itemprop="item"><span itemprop="name">独立开发工具</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Logto - 独立开发者的身份认证解决方案</span>
-							<meta itemprop="position" content="4" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#独立开发工具" itemprop="item"><span itemprop="name">独立开发工具</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Logto - 独立开发者的身份认证解决方案</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="logto---独立开发者的身份认证解决方案">Logto - 独立开发者的身份认证解决方案</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Logto - 独立开发者的身份认证解决方案</h2>
 <p><a href="https://logto.io/">Logto</a> 是一个开源的现代身份认证平台，专为独立开发者和小团队设计。它提供了从前端到后端的完整身份解决方案，让开发者能够快速搭建用户登录、注册和身份管理体系，无需从零开始构建复杂的认证逻辑。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
-<h3 id="1-完整的身份认证体系">1. 完整的身份认证体系</h3>
+<h2>核心功能</h2>
+<h3>1. 完整的身份认证体系</h3>
 <ul>
-  <li><strong>多种登录方式</strong>：支持邮箱密码、手机号验证码、社交登录等多种认证方式</li>
-  <li><strong>社交登录集成</strong>：内置支持微信、支付宝、GitHub、Google、Apple 等主流平台</li>
-  <li><strong>无密码登录</strong>：支持短信验证码和邮箱验证码登录</li>
-  <li><strong>多因素认证</strong>：提供 2FA 安全增强功能</li>
+<li><strong>多种登录方式</strong>：支持邮箱密码、手机号验证码、社交登录等多种认证方式</li>
+<li><strong>社交登录集成</strong>：内置支持微信、支付宝、GitHub、Google、Apple 等主流平台</li>
+<li><strong>无密码登录</strong>：支持短信验证码和邮箱验证码登录</li>
+<li><strong>多因素认证</strong>：提供 2FA 安全增强功能</li>
 </ul>
-
-<h3 id="2-开发者友好的集成体验">2. 开发者友好的集成体验</h3>
+<h3>2. 开发者友好的集成体验</h3>
 <ul>
-  <li><strong>多语言 SDK</strong>：支持 React、Vue、Next.js、Node.js、Python、PHP 等多种框架</li>
-  <li><strong>RESTful API</strong>：完整的 REST API 接口，支持自定义集成</li>
-  <li><strong>OIDC 标准</strong>：基于 OpenID Connect 标准，确保安全性和互操作性</li>
-  <li><strong>Webhook 支持</strong>：支持事件通知，实现业务流程自动化</li>
+<li><strong>多语言 SDK</strong>：支持 React、Vue、Next.js、Node.js、Python、PHP 等多种框架</li>
+<li><strong>RESTful API</strong>：完整的 REST API 接口，支持自定义集成</li>
+<li><strong>OIDC 标准</strong>：基于 OpenID Connect 标准，确保安全性和互操作性</li>
+<li><strong>Webhook 支持</strong>：支持事件通知，实现业务流程自动化</li>
 </ul>
-
-<h3 id="3-灵活的用户管理">3. 灵活的用户管理</h3>
+<h3>3. 灵活的用户管理</h3>
 <ul>
-  <li><strong>用户信息管理</strong>：完整的用户资料管理功能</li>
-  <li><strong>角色权限控制</strong>：支持基于角色的访问控制（RBAC）</li>
-  <li><strong>组织架构管理</strong>：支持多租户和企业级组织架构</li>
-  <li><strong>审计日志</strong>：完整的用户行为审计和日志记录</li>
+<li><strong>用户信息管理</strong>：完整的用户资料管理功能</li>
+<li><strong>角色权限控制</strong>：支持基于角色的访问控制（RBAC）</li>
+<li><strong>组织架构管理</strong>：支持多租户和企业级组织架构</li>
+<li><strong>审计日志</strong>：完整的用户行为审计和日志记录</li>
 </ul>
-
-<h2 id="技术特点">技术特点</h2>
-
-<h3 id="现代化架构">现代化架构</h3>
+<h2>技术特点</h2>
+<h3>现代化架构</h3>
 <ul>
-  <li><strong>微服务架构</strong>：模块化设计，易于扩展和维护</li>
-  <li><strong>容器化部署</strong>：支持 Docker 和 Kubernetes 部署</li>
-  <li><strong>云原生</strong>：完美适配云环境，支持水平扩展</li>
-  <li><strong>高可用性</strong>：内置负载均衡和故障转移机制</li>
+<li><strong>微服务架构</strong>：模块化设计，易于扩展和维护</li>
+<li><strong>容器化部署</strong>：支持 Docker 和 Kubernetes 部署</li>
+<li><strong>云原生</strong>：完美适配云环境，支持水平扩展</li>
+<li><strong>高可用性</strong>：内置负载均衡和故障转移机制</li>
 </ul>
-
-<h3 id="安全可靠">安全可靠</h3>
+<h3>安全可靠</h3>
 <ul>
-  <li><strong>加密存储</strong>：用户数据采用加密存储，确保数据安全</li>
-  <li><strong>JWT Token</strong>：基于 JWT 的无状态认证</li>
-  <li><strong>HTTPS 强制</strong>：强制使用 HTTPS 确保传输安全</li>
-  <li><strong>定期安全审计</strong>：定期进行安全漏洞扫描和修复</li>
+<li><strong>加密存储</strong>：用户数据采用加密存储，确保数据安全</li>
+<li><strong>JWT Token</strong>：基于 JWT 的无状态认证</li>
+<li><strong>HTTPS 强制</strong>：强制使用 HTTPS 确保传输安全</li>
+<li><strong>定期安全审计</strong>：定期进行安全漏洞扫描和修复</li>
 </ul>
-
-<h2 id="适用场景">适用场景</h2>
-
-<h3 id="独立开发项目">独立开发项目</h3>
+<h2>适用场景</h2>
+<h3>独立开发项目</h3>
 <ul>
-  <li><strong>SaaS 应用</strong>：快速为 SaaS 产品添加用户认证功能</li>
-  <li><strong>移动应用</strong>：支持移动端的用户登录和身份验证</li>
-  <li><strong>Web 应用</strong>：为 Web 应用提供完整的用户管理体系</li>
-  <li><strong>API 服务</strong>：为 API 服务提供身份验证和授权</li>
+<li><strong>SaaS 应用</strong>：快速为 SaaS 产品添加用户认证功能</li>
+<li><strong>移动应用</strong>：支持移动端的用户登录和身份验证</li>
+<li><strong>Web 应用</strong>：为 Web 应用提供完整的用户管理体系</li>
+<li><strong>API 服务</strong>：为 API 服务提供身份验证和授权</li>
 </ul>
-
-<h3 id="企业级应用">企业级应用</h3>
+<h3>企业级应用</h3>
 <ul>
-  <li><strong>内部系统</strong>：企业内部的用户认证和权限管理</li>
-  <li><strong>客户门户</strong>：面向客户的自助服务平台</li>
-  <li><strong>合作伙伴系统</strong>：与合作伙伴的集成认证</li>
-  <li><strong>多租户应用</strong>：支持多租户的 SaaS 平台</li>
+<li><strong>内部系统</strong>：企业内部的用户认证和权限管理</li>
+<li><strong>客户门户</strong>：面向客户的自助服务平台</li>
+<li><strong>合作伙伴系统</strong>：与合作伙伴的集成认证</li>
+<li><strong>多租户应用</strong>：支持多租户的 SaaS 平台</li>
 </ul>
-
-<h2 id="集成优势">集成优势</h2>
-
-<h3 id="快速集成">快速集成</h3>
+<h2>集成优势</h2>
+<h3>快速集成</h3>
 <p>只需几行代码即可完成基础的身份认证功能集成，大大减少开发时间和成本。</p>
-
-<h3 id="开箱即用">开箱即用</h3>
+<h3>开箱即用</h3>
 <p>提供完整的用户界面和管理后台，无需额外开发用户管理功能。</p>
-
-<h3 id="高度可定制">高度可定制</h3>
+<h3>高度可定制</h3>
 <p>支持自定义主题、品牌和用户流程，满足不同项目的个性化需求。</p>
-
-<h3 id="成本效益">成本效益</h3>
+<h3>成本效益</h3>
 <p>开源免费使用，对于独立开发者来说是一个高性价比的解决方案。</p>
-
-<h2 id="部署方式">部署方式</h2>
-
-<h3 id="云端托管">云端托管</h3>
+<h2>部署方式</h2>
+<h3>云端托管</h3>
 <ul>
-  <li>使用 Logto 官方提供的云服务</li>
-  <li>无需维护服务器，专注业务开发</li>
-  <li>自动备份和灾难恢复</li>
+<li>使用 Logto 官方提供的云服务</li>
+<li>无需维护服务器，专注业务开发</li>
+<li>自动备份和灾难恢复</li>
 </ul>
-
-<h3 id="自托管">自托管</h3>
+<h3>自托管</h3>
 <ul>
-  <li>支持 Docker 一键部署</li>
-  <li>完全控制数据和服务器</li>
-  <li>适合对数据安全要求较高的场景</li>
+<li>支持 Docker 一键部署</li>
+<li>完全控制数据和服务器</li>
+<li>适合对数据安全要求较高的场景</li>
 </ul>
-
-<h2 id="实际应用案例">实际应用案例</h2>
-
-<h3 id="独立开发者工具">独立开发者工具</h3>
+<h2>实际应用案例</h2>
+<h3>独立开发者工具</h3>
 <p>许多独立开发者使用 Logto 为他们的工具和服务添加用户认证功能，如项目管理工具、设计协作平台等。</p>
-
-<h3 id="创业公司">创业公司</h3>
+<h3>创业公司</h3>
 <p>初创公司利用 Logto 快速构建 MVP，无需在用户认证上花费过多开发资源。</p>
-
-<h3 id="开源项目">开源项目</h3>
+<h3>开源项目</h3>
 <p>开源项目集成 Logto 为用户提供更好的使用体验，同时保持项目的开放性。</p>
-
-<h2 id="使用建议">使用建议</h2>
-
-<h3 id="对于独立开发者">对于独立开发者</h3>
+<h2>使用建议</h2>
+<h3>对于独立开发者</h3>
 <ul>
-  <li>优先选择云端托管版本，减少运维成本</li>
-  <li>利用社交登录功能，降低用户注册门槛</li>
-  <li>合理设计用户权限体系，避免过度复杂化</li>
+<li>优先选择云端托管版本，减少运维成本</li>
+<li>利用社交登录功能，降低用户注册门槛</li>
+<li>合理设计用户权限体系，避免过度复杂化</li>
 </ul>
-
-<h3 id="对于团队项目">对于团队项目</h3>
+<h3>对于团队项目</h3>
 <ul>
-  <li>考虑自托管部署，确保数据安全</li>
-  <li>充分利用角色权限功能，实现精细化管理</li>
-  <li>定期审查用户数据和权限设置</li>
+<li>考虑自托管部署，确保数据安全</li>
+<li>充分利用角色权限功能，实现精细化管理</li>
+<li>定期审查用户数据和权限设置</li>
 </ul>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Logto 作为现代身份认证平台，为独立开发者提供了一个完整、安全、易用的用户认证解决方案。通过使用 Logto，开发者可以将更多精力投入到核心业务功能的开发上，而无需在用户认证这一基础功能上花费过多时间。</p>
-
 <p>无论是个人项目还是团队开发，Logto 都能提供合适的身份认证解决方案，帮助项目快速上线并获得更好的用户体验。</p>
-
 <p>访问 <a href="https://logto.io/">Logto 官网</a> 开始您的身份认证集成之旅，让用户管理变得简单高效。</p>
 
+					</div>
 				</article>
 
 				
@@ -501,11 +498,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -516,18 +512,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -537,7 +526,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -550,6 +539,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

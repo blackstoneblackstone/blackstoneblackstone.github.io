@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/21st-logo-dark.png"
+            alt="21st.dev"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,138 +290,128 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#one" itemprop="item"><span itemprop="name">One</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#优秀项目" itemprop="item"><span itemprop="name">优秀项目</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">21st.dev</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#one" itemprop="item"><span itemprop="name">One</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#优秀项目" itemprop="item"><span itemprop="name">优秀项目</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">21st.dev</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="21stdev---21世纪开发者资源平台">21st.dev - 21世纪开发者资源平台</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>21st.dev - 21世纪开发者资源平台</h2>
 <p><a href="https://21st.dev/">21st.dev</a> 是一个专注于为21世纪开发者提供优质工具和资源的平台。它汇集了最新的开发工具、框架、库和最佳实践，帮助开发者提升效率，跟上技术发展的步伐。</p>
-
-<h2 id="核心特点">核心特点</h2>
-
-<h3 id="1-精选资源">1. 精选资源</h3>
-
+<h2>核心特点</h2>
+<h3>1. 精选资源</h3>
 <ul>
-  <li><strong>工具推荐</strong>：精选实用的开发工具和软件</li>
-  <li><strong>框架指南</strong>：主流框架的使用指南和最佳实践</li>
-  <li><strong>学习资源</strong>：高质量的学习材料和教程</li>
-  <li><strong>社区精选</strong>：来自开发者社区的优质内容</li>
+<li><strong>工具推荐</strong>：精选实用的开发工具和软件</li>
+<li><strong>框架指南</strong>：主流框架的使用指南和最佳实践</li>
+<li><strong>学习资源</strong>：高质量的学习材料和教程</li>
+<li><strong>社区精选</strong>：来自开发者社区的优质内容</li>
 </ul>
-
-<h3 id="2-技术趋势">2. 技术趋势</h3>
-
+<h3>2. 技术趋势</h3>
 <ul>
-  <li><strong>前沿技术</strong>：关注新兴技术和创新方向</li>
-  <li><strong>行业动态</strong>：及时的技术新闻和趋势分析</li>
-  <li><strong>技术预测</strong>：对未来技术发展的洞察</li>
-  <li><strong>案例研究</strong>：成功项目的经验分享</li>
+<li><strong>前沿技术</strong>：关注新兴技术和创新方向</li>
+<li><strong>行业动态</strong>：及时的技术新闻和趋势分析</li>
+<li><strong>技术预测</strong>：对未来技术发展的洞察</li>
+<li><strong>案例研究</strong>：成功项目的经验分享</li>
 </ul>
-
-<h3 id="3-开发者社区">3. 开发者社区</h3>
-
+<h3>3. 开发者社区</h3>
 <ul>
-  <li><strong>经验分享</strong>：开发者之间的经验交流</li>
-  <li><strong>问题解答</strong>：技术问题的讨论和解答</li>
-  <li><strong>项目展示</strong>：优秀项目的展示和推广</li>
-  <li><strong>合作机会</strong>：寻找志同道合的合作伙伴</li>
+<li><strong>经验分享</strong>：开发者之间的经验交流</li>
+<li><strong>问题解答</strong>：技术问题的讨论和解答</li>
+<li><strong>项目展示</strong>：优秀项目的展示和推广</li>
+<li><strong>合作机会</strong>：寻找志同道合的合作伙伴</li>
 </ul>
-
-<h2 id="技术栈">技术栈</h2>
-
+<h2>技术栈</h2>
 <p>21st.dev 采用现代化的技术栈构建：</p>
-
 <ul>
-  <li><strong>前端</strong>：React + Next.js</li>
-  <li><strong>后端</strong>：Node.js + Express</li>
-  <li><strong>数据库</strong>：MongoDB</li>
-  <li><strong>部署</strong>：Vercel</li>
-  <li><strong>CI/CD</strong>：GitHub Actions</li>
+<li><strong>前端</strong>：React + Next.js</li>
+<li><strong>后端</strong>：Node.js + Express</li>
+<li><strong>数据库</strong>：MongoDB</li>
+<li><strong>部署</strong>：Vercel</li>
+<li><strong>CI/CD</strong>：GitHub Actions</li>
 </ul>
-
-<h2 id="特色功能">特色功能</h2>
-
-<h3 id="1-资源导航">1. 资源导航</h3>
-
+<h2>特色功能</h2>
+<h3>1. 资源导航</h3>
 <ul>
-  <li><strong>分类浏览</strong>：按技术领域分类的资源导航</li>
-  <li><strong>搜索功能</strong>：强大的资源搜索和筛选</li>
-  <li><strong>标签系统</strong>：多维度的资源标签管理</li>
-  <li><strong>收藏功能</strong>：个人资源收藏和管理</li>
+<li><strong>分类浏览</strong>：按技术领域分类的资源导航</li>
+<li><strong>搜索功能</strong>：强大的资源搜索和筛选</li>
+<li><strong>标签系统</strong>：多维度的资源标签管理</li>
+<li><strong>收藏功能</strong>：个人资源收藏和管理</li>
 </ul>
-
-<h3 id="2-学习路径">2. 学习路径</h3>
-
+<h3>2. 学习路径</h3>
 <ul>
-  <li><strong>技能图谱</strong>：清晰的技术学习路径</li>
-  <li><strong>进阶指南</strong>：从入门到精通的系统学习</li>
-  <li><strong>实战项目</strong>：实践导向的学习项目</li>
-  <li><strong>进度追踪</strong>：学习进度的记录和追踪</li>
+<li><strong>技能图谱</strong>：清晰的技术学习路径</li>
+<li><strong>进阶指南</strong>：从入门到精通的系统学习</li>
+<li><strong>实战项目</strong>：实践导向的学习项目</li>
+<li><strong>进度追踪</strong>：学习进度的记录和追踪</li>
 </ul>
-
-<h3 id="3-社区互动">3. 社区互动</h3>
-
+<h3>3. 社区互动</h3>
 <ul>
-  <li><strong>技术讨论</strong>：专业的技术讨论区</li>
-  <li><strong>经验分享</strong>：开发者经验分享平台</li>
-  <li><strong>问答社区</strong>：技术问题解答社区</li>
-  <li><strong>活动组织</strong>：线上线下的技术活动</li>
+<li><strong>技术讨论</strong>：专业的技术讨论区</li>
+<li><strong>经验分享</strong>：开发者经验分享平台</li>
+<li><strong>问答社区</strong>：技术问题解答社区</li>
+<li><strong>活动组织</strong>：线上线下的技术活动</li>
 </ul>
-
-<h2 id="适用人群">适用人群</h2>
-
+<h2>适用人群</h2>
 <p>21st.dev 适合以下人群：</p>
-
 <ul>
-  <li><strong>初学者</strong>：寻找学习资源和指导</li>
-  <li><strong>中级开发者</strong>：提升技能和扩展知识</li>
-  <li><strong>高级开发者</strong>：分享经验和参与社区</li>
-  <li><strong>技术团队</strong>：寻找工具和最佳实践</li>
+<li><strong>初学者</strong>：寻找学习资源和指导</li>
+<li><strong>中级开发者</strong>：提升技能和扩展知识</li>
+<li><strong>高级开发者</strong>：分享经验和参与社区</li>
+<li><strong>技术团队</strong>：寻找工具和最佳实践</li>
 </ul>
-
-<h2 id="未来规划">未来规划</h2>
-
+<h2>未来规划</h2>
 <p>21st.dev 计划在以下方面持续发展：</p>
-
 <ol>
-  <li><strong>内容扩展</strong>：增加更多优质技术内容</li>
-  <li><strong>社区建设</strong>：加强社区互动和参与</li>
-  <li><strong>工具集成</strong>：集成更多实用开发工具</li>
-  <li><strong>移动端优化</strong>：提升移动端使用体验</li>
-  <li><strong>国际化</strong>：支持多语言内容</li>
+<li><strong>内容扩展</strong>：增加更多优质技术内容</li>
+<li><strong>社区建设</strong>：加强社区互动和参与</li>
+<li><strong>工具集成</strong>：集成更多实用开发工具</li>
+<li><strong>移动端优化</strong>：提升移动端使用体验</li>
+<li><strong>国际化</strong>：支持多语言内容</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>21st.dev 致力于为21世纪的开发者提供一个全面的资源平台，通过精选的工具、优质的内容和活跃的社区，帮助开发者提升技能、扩展视野，共同推动技术的发展。</p>
-
 <p>访问 <a href="https://21st.dev/">21st.dev</a>，探索更多开发者资源，加入我们的社区，一起成长。</p>
 
+					</div>
 				</article>
 
 				
@@ -480,11 +480,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -495,18 +494,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -516,7 +508,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -529,6 +521,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

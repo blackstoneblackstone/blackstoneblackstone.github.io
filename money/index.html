@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/0c0414c8.png"
+            alt="投资基本框架：共识、配置与三底策略"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -278,120 +288,116 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#投资" itemprop="item"><span itemprop="name">投资</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">投资基本框架：共识、配置与三底策略</span>
-							<meta itemprop="position" content="4" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#投资" itemprop="item"><span itemprop="name">投资</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">投资基本框架：共识、配置与三底策略</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="投资是在投什么">投资是在投什么？</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>投资是在投什么？</h2>
 <p><strong>投共识，傻逼的共识也是共识。</strong></p>
-
 <p>这句话看似粗俗，却道出了投资的本质。市场价格的波动本质上反映的是市场参与者对资产价值的共识。即使这个共识在理性分析下显得荒谬，但只要足够多的人相信，它就会成为现实的价格。</p>
-
 <p><strong>长期投资是在投好的共识。</strong></p>
-
 <p>真正的价值投资不是与市场对抗，而是识别那些能够持续产生正向共识的资产。这些资产通常具备：</p>
 <ul>
-  <li>持续创造价值的能力</li>
-  <li>护城河和竞争优势</li>
-  <li>长期成长潜力</li>
-  <li>良好的治理结构</li>
+<li>持续创造价值的能力</li>
+<li>护城河和竞争优势</li>
+<li>长期成长潜力</li>
+<li>良好的治理结构</li>
 </ul>
-
-<h2 id="稳健投资策略">稳健投资策略</h2>
-
+<h2>稳健投资策略</h2>
 <p>成功的投资需要三个核心要素：<strong>配置、三底、波段</strong>。</p>
-
-<h3 id="配置策略">配置策略</h3>
-
+<h3>配置策略</h3>
 <p>合理的资产配置是投资成功的基础，建议采用以下配置比例：</p>
-
 <p><strong>三成 纳指</strong></p>
 <ul>
-  <li>代表全球科技创新的核心</li>
-  <li>长期成长性确定</li>
-  <li>流动性好，便于调整</li>
+<li>代表全球科技创新的核心</li>
+<li>长期成长性确定</li>
+<li>流动性好，便于调整</li>
 </ul>
-
 <p><strong>三成 黄金</strong></p>
 <ul>
-  <li>通胀对冲工具</li>
-  <li>避险资产</li>
-  <li>与股票相关性低</li>
+<li>通胀对冲工具</li>
+<li>避险资产</li>
+<li>与股票相关性低</li>
 </ul>
-
 <p><strong>三成 三底</strong></p>
 <ul>
-  <li>寻找被严重低估的优质资产</li>
-  <li>需要深度研究和耐心等待</li>
-  <li>风险较高但收益潜力巨大</li>
+<li>寻找被严重低估的优质资产</li>
+<li>需要深度研究和耐心等待</li>
+<li>风险较高但收益潜力巨大</li>
 </ul>
-
 <p><strong>一成 偷鸡</strong></p>
 <ul>
-  <li>短线投机资金</li>
-  <li>满足交易欲望</li>
-  <li>控制风险，小赌怡情</li>
+<li>短线投机资金</li>
+<li>满足交易欲望</li>
+<li>控制风险，小赌怡情</li>
 </ul>
-
-<h3 id="什么是三底">什么是三底？</h3>
-
+<h3>什么是三底？</h3>
 <p>三底是判断投资时机的核心概念：</p>
-
 <p><strong>价格底</strong></p>
 <ul>
-  <li>技术面指标显示超卖</li>
-  <li>价格跌破重要支撑位</li>
-  <li>成交量萎缩，抛压减轻</li>
+<li>技术面指标显示超卖</li>
+<li>价格跌破重要支撑位</li>
+<li>成交量萎缩，抛压减轻</li>
 </ul>
-
 <p><strong>市场底</strong></p>
 <ul>
-  <li>基本面出现改善信号</li>
-  <li>政策环境转向友好</li>
-  <li>行业景气度开始回升</li>
+<li>基本面出现改善信号</li>
+<li>政策环境转向友好</li>
+<li>行业景气度开始回升</li>
 </ul>
-
 <p><strong>情绪底</strong></p>
 <ul>
-  <li>市场恐慌情绪达到极点</li>
-  <li>媒体普遍悲观</li>
-  <li>投资者信心跌至谷底</li>
+<li>市场恐慌情绪达到极点</li>
+<li>媒体普遍悲观</li>
+<li>投资者信心跌至谷底</li>
 </ul>
-
 <p>当三个底部同时出现时，往往是最佳的投资机会。但需要注意的是，三底判断需要丰富的经验和敏锐的洞察力，新手投资者应该谨慎使用。</p>
-
-<h2 id="实践建议">实践建议</h2>
-
+<h2>实践建议</h2>
 <ol>
-  <li><strong>保持纪律</strong>：严格按照配置比例执行，不要因为短期波动而频繁调整</li>
-  <li><strong>持续学习</strong>：市场在变化，投资策略也需要不断优化</li>
-  <li><strong>控制风险</strong>：永远不要把所有鸡蛋放在一个篮子里</li>
-  <li><strong>保持耐心</strong>：真正的投资机会需要等待，不要急于求成</li>
+<li><strong>保持纪律</strong>：严格按照配置比例执行，不要因为短期波动而频繁调整</li>
+<li><strong>持续学习</strong>：市场在变化，投资策略也需要不断优化</li>
+<li><strong>控制风险</strong>：永远不要把所有鸡蛋放在一个篮子里</li>
+<li><strong>保持耐心</strong>：真正的投资机会需要等待，不要急于求成</li>
 </ol>
-
 <p>记住，投资是一场马拉松，不是短跑。稳健的策略和长期的坚持，比短期的暴利更重要。</p>
 
+					</div>
 				</article>
 
 				
@@ -460,11 +466,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -475,18 +480,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -496,7 +494,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -509,6 +507,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

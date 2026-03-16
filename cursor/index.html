@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/cursor.svg"
+            alt="Cursor"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,178 +290,150 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#代码编辑器" itemprop="item"><span itemprop="name">代码编辑器</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Cursor</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#代码编辑器" itemprop="item"><span itemprop="name">代码编辑器</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Cursor</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="cursor---ai驱动的编程新体验">Cursor - AI驱动的编程新体验</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Cursor - AI驱动的编程新体验</h2>
 <p>在当今快速发展的软件开发领域，编程效率已成为开发者成功的关键因素。<a href="https://www.cursor.com/">Cursor</a>作为一款革命性的AI驱动代码编辑器，正在彻底改变开发者的编程体验和工作流程，帮助开发者实现编程效率的指数级提升。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
+<h2>核心功能</h2>
 <p>Cursor的独特之处在于深度集成了最先进的大型语言模型，为开发者提供强大的AI辅助功能：</p>
-
-<h3 id="1-智能代码生成">1. 智能代码生成</h3>
-
+<h3>1. 智能代码生成</h3>
 <p>通过自然语言描述功能需求，Cursor能够快速生成高质量代码片段或完整功能实现。这使得开发者可以专注于解决问题的逻辑，而不是语法细节和样板代码。</p>
-
-<h3 id="2-代码解释与理解">2. 代码解释与理解</h3>
-
+<h3>2. 代码解释与理解</h3>
 <p>遇到复杂的代码库或难以理解的函数？Cursor可以提供清晰的代码解释，帮助开发者快速理解代码功能和工作原理，大大降低了学习曲线。</p>
-
-<h3 id="3-自动错误修复">3. 自动错误修复</h3>
-
+<h3>3. 自动错误修复</h3>
 <p>Cursor能够识别代码中的错误和问题，并提供智能修复建议，显著减少调试时间。对于常见错误，甚至可以自动实现修复。</p>
-
-<h3 id="4-代码重构与优化">4. 代码重构与优化</h3>
-
+<h3>4. 代码重构与优化</h3>
 <p>通过简单的指令，Cursor可以帮助开发者重构和优化现有代码，提高代码质量和性能，同时保持功能完整性。</p>
-
-<h3 id="5-强大的聊天辅助">5. 强大的聊天辅助</h3>
-
+<h3>5. 强大的聊天辅助</h3>
 <p>内置的AI聊天功能让开发者可以与AI助手进行自然对话，讨论编程问题，获取建议和解决方案，就像有一个专业导师随时待命。</p>
-
-<h2 id="技术优势">技术优势</h2>
-
+<h2>技术优势</h2>
 <p>Cursor拥有多项技术优势，使其在众多编程工具中脱颖而出：</p>
-
 <ol>
-  <li><strong>强大的AI模型</strong>：基于最先进的大型语言模型，理解能力和代码生成质量领先业界</li>
-  <li><strong>上下文感知</strong>：能够理解整个代码库的上下文，提供更准确的建议和生成结果</li>
-  <li><strong>低延迟响应</strong>：优化的AI调用机制确保快速响应，不影响开发流程</li>
-  <li><strong>多语言支持</strong>：几乎支持所有主流编程语言，适用于各类开发场景</li>
-  <li><strong>VSCode兼容</strong>：基于VSCode构建，保留了熟悉的界面和扩展生态系统</li>
+<li><strong>强大的AI模型</strong>：基于最先进的大型语言模型，理解能力和代码生成质量领先业界</li>
+<li><strong>上下文感知</strong>：能够理解整个代码库的上下文，提供更准确的建议和生成结果</li>
+<li><strong>低延迟响应</strong>：优化的AI调用机制确保快速响应，不影响开发流程</li>
+<li><strong>多语言支持</strong>：几乎支持所有主流编程语言，适用于各类开发场景</li>
+<li><strong>VSCode兼容</strong>：基于VSCode构建，保留了熟悉的界面和扩展生态系统</li>
 </ol>
-
-<h2 id="适用场景">适用场景</h2>
-
+<h2>适用场景</h2>
 <p>Cursor在各种开发场景中都能显著提升效率：</p>
-
-<h3 id="快速原型开发">快速原型开发</h3>
-
+<h3>快速原型开发</h3>
 <p>当需要快速验证想法时，Cursor可以根据概念描述迅速生成功能原型，大幅缩短从创意到实现的时间。</p>
-
-<h3 id="学习新语言或框架">学习新语言或框架</h3>
-
+<h3>学习新语言或框架</h3>
 <p>学习新技术时，Cursor可以生成示例代码并提供详细解释，加速学习过程，降低入门门槛。</p>
-
-<h3 id="大型项目开发">大型项目开发</h3>
-
+<h3>大型项目开发</h3>
 <p>在处理复杂项目时，Cursor帮助开发者理解代码库，自动生成一致风格的新功能，确保代码质量。</p>
-
-<h3 id="调试与问题解决">调试与问题解决</h3>
-
+<h3>调试与问题解决</h3>
 <p>遇到难题时，Cursor可以分析问题，提供解决思路和代码修复建议，节省大量调试时间。</p>
-
-<h2 id="用户体验">用户体验</h2>
-
+<h2>用户体验</h2>
 <p>与传统编辑器相比，Cursor提供了更加流畅和直观的编码体验：</p>
-
 <ol>
-  <li><strong>自然语言交互</strong>：使用日常语言描述需求，无需记忆复杂命令和语法</li>
-  <li><strong>即时反馈</strong>：AI助手实时提供建议和反馈，减少开发中的不确定性</li>
-  <li><strong>专注核心逻辑</strong>：减少编写样板代码的时间，更专注于业务逻辑和创新功能</li>
-  <li><strong>持续学习</strong>：AI随着使用逐渐适应开发者的编码风格和偏好</li>
+<li><strong>自然语言交互</strong>：使用日常语言描述需求，无需记忆复杂命令和语法</li>
+<li><strong>即时反馈</strong>：AI助手实时提供建议和反馈，减少开发中的不确定性</li>
+<li><strong>专注核心逻辑</strong>：减少编写样板代码的时间，更专注于业务逻辑和创新功能</li>
+<li><strong>持续学习</strong>：AI随着使用逐渐适应开发者的编码风格和偏好</li>
 </ol>
-
-<h2 id="使用对比">使用对比</h2>
-
+<h2>使用对比</h2>
 <p>相比传统开发方式，Cursor带来了显著的效率提升：</p>
-
 <table>
-  <thead>
-    <tr>
-      <th>任务</th>
-      <th>传统方式</th>
-      <th>使用Cursor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>功能实现</td>
-      <td>需查阅文档，手动编写代码</td>
-      <td>描述需求，AI生成实现代码</td>
-    </tr>
-    <tr>
-      <td>代码理解</td>
-      <td>逐行分析，查找文档</td>
-      <td>AI提供即时解释和上下文</td>
-    </tr>
-    <tr>
-      <td>错误修复</td>
-      <td>手动调试，搜索解决方案</td>
-      <td>AI识别问题并提供修复</td>
-    </tr>
-    <tr>
-      <td>代码重构</td>
-      <td>耗时且容易引入bug</td>
-      <td>AI辅助快速安全重构</td>
-    </tr>
-    <tr>
-      <td>学习新框架</td>
-      <td>学习曲线陡峭</td>
-      <td>AI提供示例和指导</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>任务</th>
+<th>传统方式</th>
+<th>使用Cursor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>功能实现</td>
+<td>需查阅文档，手动编写代码</td>
+<td>描述需求，AI生成实现代码</td>
+</tr>
+<tr>
+<td>代码理解</td>
+<td>逐行分析，查找文档</td>
+<td>AI提供即时解释和上下文</td>
+</tr>
+<tr>
+<td>错误修复</td>
+<td>手动调试，搜索解决方案</td>
+<td>AI识别问题并提供修复</td>
+</tr>
+<tr>
+<td>代码重构</td>
+<td>耗时且容易引入bug</td>
+<td>AI辅助快速安全重构</td>
+</tr>
+<tr>
+<td>学习新框架</td>
+<td>学习曲线陡峭</td>
+<td>AI提供示例和指导</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="成功案例">成功案例</h2>
-
-<h3 id="创业团队的快速迭代">创业团队的快速迭代</h3>
-
+<h2>成功案例</h2>
+<h3>创业团队的快速迭代</h3>
 <p>某初创公司使用Cursor将产品迭代周期缩短了60%，使团队能够更快响应市场反馈，取得了显著的竞争优势。</p>
-
-<h3 id="大型代码库的维护">大型代码库的维护</h3>
-
+<h3>大型代码库的维护</h3>
 <p>一家企业软件公司借助Cursor帮助新开发者快速熟悉百万行级别的代码库，将入职培训时间从数月减少到数周。</p>
-
-<h3 id="全栈开发效率提升">全栈开发效率提升</h3>
-
+<h3>全栈开发效率提升</h3>
 <p>一位全栈开发者报告使用Cursor后，完成全栈应用的速度提高了3倍，特别是在不太熟悉的技术领域。</p>
-
-<h2 id="未来发展">未来发展</h2>
-
+<h2>未来发展</h2>
 <p>随着AI技术的不断发展，Cursor计划在以下方面持续创新：</p>
-
 <ol>
-  <li><strong>更精确的代码理解</strong>：通过模型优化提高对复杂代码和特定领域知识的理解能力</li>
-  <li><strong>协作功能增强</strong>：支持多开发者协同使用AI助手，实现团队效能提升</li>
-  <li><strong>定制化AI训练</strong>：允许企业使用自身代码库训练专属AI模型</li>
-  <li><strong>更深入的开发流程集成</strong>：与测试、部署等流程实现无缝集成</li>
+<li><strong>更精确的代码理解</strong>：通过模型优化提高对复杂代码和特定领域知识的理解能力</li>
+<li><strong>协作功能增强</strong>：支持多开发者协同使用AI助手，实现团队效能提升</li>
+<li><strong>定制化AI训练</strong>：允许企业使用自身代码库训练专属AI模型</li>
+<li><strong>更深入的开发流程集成</strong>：与测试、部署等流程实现无缝集成</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Cursor代表了软件开发工具的未来方向，它不仅是一个代码编辑器，更是开发者的智能助手和合作伙伴。通过将AI的创造力与开发者的专业知识相结合，Cursor正在帮助开发者突破传统开发方式的限制，实现前所未有的生产力提升。</p>
-
 <p>无论您是经验丰富的开发者还是编程新手，Cursor都能帮助您更快、更智能地编写代码，专注于真正重要的创新和问题解决。访问<a href="https://www.cursor.com/">Cursor官网</a>，体验AI驱动的编程新时代。</p>
 
+					</div>
 				</article>
 
 				
@@ -520,11 +502,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -535,18 +516,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -556,7 +530,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -569,6 +543,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

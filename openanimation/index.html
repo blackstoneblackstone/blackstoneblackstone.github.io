@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="https://pic.iu101.org/2198a300.gif"
+            alt="OpenAnimation - 让创意动起来的在线动画制作神器"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -278,192 +288,174 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#独立开发工具" itemprop="item"><span itemprop="name">独立开发工具</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">OpenAnimation - 让创意动起来的在线动画制作神器</span>
-							<meta itemprop="position" content="4" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#独立开发工具" itemprop="item"><span itemprop="name">独立开发工具</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">OpenAnimation - 让创意动起来的在线动画制作神器</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="为什么选择-openanimation">为什么选择 OpenAnimation？</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>为什么选择 OpenAnimation？</h2>
 <p>在数字化内容爆炸的时代，静态图片已经无法满足用户的需求。无论是产品演示、社交媒体内容，还是教学材料，动画都成为了吸引注意力的关键。但传统的动画制作软件往往价格昂贵、学习成本高，让很多创作者望而却步。</p>
-
 <p><a href="https://openanimation.web.app/">OpenAnimation</a> 的出现彻底改变了这一现状。这款基于Web的动画制作工具，让任何人都能在几分钟内创建出专业级的动画内容，无需安装任何软件，无需学习复杂的操作流程。</p>
-
 <p><img src="/assets/images/openanimation_screenshot.png" alt="OpenAnimation 主界面" /></p>
-
-<h2 id="核心功能深度解析">核心功能深度解析</h2>
-
-<h3 id="-智能动画编辑器">🎨 智能动画编辑器</h3>
+<h2>核心功能深度解析</h2>
+<h3>🎨 智能动画编辑器</h3>
 <p><strong>零门槛上手，专业级效果</strong></p>
-
 <ul>
-  <li><strong>即开即用</strong>：打开浏览器就能开始创作，告别软件安装的烦恼</li>
-  <li><strong>实时渲染</strong>：所见即所得，编辑过程中即时预览最终效果</li>
-  <li><strong>多图层管理</strong>：像Photoshop一样管理图层，复杂动画也能轻松掌控</li>
-  <li><strong>精确时间轴</strong>：毫秒级时间控制，让动画节奏完美无缺</li>
+<li><strong>即开即用</strong>：打开浏览器就能开始创作，告别软件安装的烦恼</li>
+<li><strong>实时渲染</strong>：所见即所得，编辑过程中即时预览最终效果</li>
+<li><strong>多图层管理</strong>：像Photoshop一样管理图层，复杂动画也能轻松掌控</li>
+<li><strong>精确时间轴</strong>：毫秒级时间控制，让动画节奏完美无缺</li>
 </ul>
-
-<h3 id="-丰富的动画效果库">✨ 丰富的动画效果库</h3>
+<h3>✨ 丰富的动画效果库</h3>
 <p><strong>从简单到复杂，满足所有需求</strong></p>
-
 <ul>
-  <li><strong>关键帧动画</strong>：设置起始和结束状态，系统自动生成中间过渡</li>
-  <li><strong>缓动函数</strong>：内置20+种缓动效果，让动画更自然流畅</li>
-  <li><strong>粒子系统</strong>：创建爆炸、火焰、雪花等复杂特效</li>
-  <li><strong>路径动画</strong>：让元素沿着自定义路径运动</li>
-  <li><strong>3D变换</strong>：支持旋转、缩放、倾斜等3D效果</li>
+<li><strong>关键帧动画</strong>：设置起始和结束状态，系统自动生成中间过渡</li>
+<li><strong>缓动函数</strong>：内置20+种缓动效果，让动画更自然流畅</li>
+<li><strong>粒子系统</strong>：创建爆炸、火焰、雪花等复杂特效</li>
+<li><strong>路径动画</strong>：让元素沿着自定义路径运动</li>
+<li><strong>3D变换</strong>：支持旋转、缩放、倾斜等3D效果</li>
 </ul>
-
-<h3 id="-灵活的导出选项">📤 灵活的导出选项</h3>
+<h3>📤 灵活的导出选项</h3>
 <p><strong>一次制作，多平台使用</strong></p>
-
 <ul>
-  <li><strong>格式齐全</strong>：GIF、MP4、WebM、APNG等主流格式全覆盖</li>
-  <li><strong>分辨率自由</strong>：从社交媒体小图到4K高清，随心选择</li>
-  <li><strong>智能压缩</strong>：自动优化文件大小，保持最佳视觉效果</li>
-  <li><strong>云端分享</strong>：生成永久链接，随时随地展示作品</li>
+<li><strong>格式齐全</strong>：GIF、MP4、WebM、APNG等主流格式全覆盖</li>
+<li><strong>分辨率自由</strong>：从社交媒体小图到4K高清，随心选择</li>
+<li><strong>智能压缩</strong>：自动优化文件大小，保持最佳视觉效果</li>
+<li><strong>云端分享</strong>：生成永久链接，随时随地展示作品</li>
 </ul>
-
-<h2 id="技术优势">技术优势</h2>
-
-<h3 id="-云端渲染引擎">🚀 云端渲染引擎</h3>
+<h2>技术优势</h2>
+<h3>🚀 云端渲染引擎</h3>
 <ul>
-  <li><strong>高性能处理</strong>：基于云端的强大计算能力，复杂动画也能快速渲染</li>
-  <li><strong>无需本地资源</strong>：不占用电脑内存和存储空间，低配置设备也能流畅使用</li>
-  <li><strong>自动备份</strong>：作品自动保存到云端，永不丢失</li>
+<li><strong>高性能处理</strong>：基于云端的强大计算能力，复杂动画也能快速渲染</li>
+<li><strong>无需本地资源</strong>：不占用电脑内存和存储空间，低配置设备也能流畅使用</li>
+<li><strong>自动备份</strong>：作品自动保存到云端，永不丢失</li>
 </ul>
-
-<h3 id="-真正的跨平台">🌐 真正的跨平台</h3>
+<h3>🌐 真正的跨平台</h3>
 <ul>
-  <li><strong>全平台支持</strong>：Windows、Mac、Linux、iPad、Android，一个工具走天下</li>
-  <li><strong>响应式界面</strong>：自动适配不同屏幕尺寸，移动端也能完美使用</li>
-  <li><strong>浏览器兼容</strong>：支持Chrome、Firefox、Safari、Edge等主流浏览器</li>
+<li><strong>全平台支持</strong>：Windows、Mac、Linux、iPad、Android，一个工具走天下</li>
+<li><strong>响应式界面</strong>：自动适配不同屏幕尺寸，移动端也能完美使用</li>
+<li><strong>浏览器兼容</strong>：支持Chrome、Firefox、Safari、Edge等主流浏览器</li>
 </ul>
-
-<h2 id="实际应用场景">实际应用场景</h2>
-
-<h3 id="-独立开发者必备">💼 独立开发者必备</h3>
+<h2>实际应用场景</h2>
+<h3>💼 独立开发者必备</h3>
 <p><strong>让产品更有说服力</strong></p>
-
 <ul>
-  <li><strong>App演示视频</strong>：为应用商店制作吸引人的演示动画</li>
-  <li><strong>功能说明动画</strong>：用动画解释复杂功能，用户更容易理解</li>
-  <li><strong>产品原型</strong>：快速制作交互原型，验证产品概念</li>
-  <li><strong>营销素材</strong>：为产品宣传制作各种尺寸的动画素材</li>
+<li><strong>App演示视频</strong>：为应用商店制作吸引人的演示动画</li>
+<li><strong>功能说明动画</strong>：用动画解释复杂功能，用户更容易理解</li>
+<li><strong>产品原型</strong>：快速制作交互原型，验证产品概念</li>
+<li><strong>营销素材</strong>：为产品宣传制作各种尺寸的动画素材</li>
 </ul>
-
-<h3 id="-内容创作者神器">📱 内容创作者神器</h3>
+<h3>📱 内容创作者神器</h3>
 <p><strong>让内容更有吸引力</strong></p>
-
 <ul>
-  <li><strong>社交媒体爆款</strong>：为抖音、小红书、Instagram制作吸睛动画</li>
-  <li><strong>博客配图</strong>：为技术博客添加生动的动画插图</li>
-  <li><strong>教学视频</strong>：制作步骤演示动画，让教程更清晰</li>
-  <li><strong>品牌宣传</strong>：为个人品牌或公司制作专业动画</li>
+<li><strong>社交媒体爆款</strong>：为抖音、小红书、Instagram制作吸睛动画</li>
+<li><strong>博客配图</strong>：为技术博客添加生动的动画插图</li>
+<li><strong>教学视频</strong>：制作步骤演示动画，让教程更清晰</li>
+<li><strong>品牌宣传</strong>：为个人品牌或公司制作专业动画</li>
 </ul>
-
-<h3 id="-设计师的得力助手">🎨 设计师的得力助手</h3>
+<h3>🎨 设计师的得力助手</h3>
 <p><strong>让设计更生动</strong></p>
-
 <ul>
-  <li><strong>UI动效设计</strong>：为网站和App设计流畅的交互动画</li>
-  <li><strong>产品展示</strong>：用动画展示设计作品，提升作品集质量</li>
-  <li><strong>客户演示</strong>：用动画向客户展示设计概念，提高沟通效率</li>
+<li><strong>UI动效设计</strong>：为网站和App设计流畅的交互动画</li>
+<li><strong>产品展示</strong>：用动画展示设计作品，提升作品集质量</li>
+<li><strong>客户演示</strong>：用动画向客户展示设计概念，提高沟通效率</li>
 </ul>
-
-<h2 id="为什么选择-openanimation-1">为什么选择 OpenAnimation？</h2>
-
-<h3 id="-极速上手">⚡ 极速上手</h3>
+<h2>为什么选择 OpenAnimation？</h2>
+<h3>⚡ 极速上手</h3>
 <p><strong>5分钟学会，终身受益</strong></p>
 <ul>
-  <li>直观的拖拽式操作，无需学习复杂软件</li>
-  <li>丰富的模板库，一键应用专业效果</li>
-  <li>详细的教程和帮助文档，新手也能快速掌握</li>
+<li>直观的拖拽式操作，无需学习复杂软件</li>
+<li>丰富的模板库，一键应用专业效果</li>
+<li>详细的教程和帮助文档，新手也能快速掌握</li>
 </ul>
-
-<h3 id="-成本优势">💰 成本优势</h3>
+<h3>💰 成本优势</h3>
 <p><strong>免费使用，专业效果</strong></p>
 <ul>
-  <li>基础功能完全免费，满足大部分创作需求</li>
-  <li>无需购买昂贵的专业软件授权</li>
-  <li>按需付费的高级功能，用多少付多少</li>
+<li>基础功能完全免费，满足大部分创作需求</li>
+<li>无需购买昂贵的专业软件授权</li>
+<li>按需付费的高级功能，用多少付多少</li>
 </ul>
-
-<h3 id="-效率提升">⏰ 效率提升</h3>
+<h3>⏰ 效率提升</h3>
 <p><strong>10倍速度，专业质量</strong></p>
 <ul>
-  <li>云端渲染，无需等待本地处理</li>
-  <li>一键导出多种格式，适配所有平台</li>
-  <li>实时协作功能，团队创作更高效</li>
+<li>云端渲染，无需等待本地处理</li>
+<li>一键导出多种格式，适配所有平台</li>
+<li>实时协作功能，团队创作更高效</li>
 </ul>
-
-<h3 id="-持续更新">🔄 持续更新</h3>
+<h3>🔄 持续更新</h3>
 <p><strong>永远保持最新</strong></p>
 <ul>
-  <li>定期更新新功能和效果</li>
-  <li>无需手动升级，始终使用最新版本</li>
-  <li>社区反馈驱动产品改进</li>
+<li>定期更新新功能和效果</li>
+<li>无需手动升级，始终使用最新版本</li>
+<li>社区反馈驱动产品改进</li>
 </ul>
-
-<h2 id="快速开始指南">快速开始指南</h2>
-
-<h3 id="第一步创建项目">第一步：创建项目</h3>
+<h2>快速开始指南</h2>
+<h3>第一步：创建项目</h3>
 <ol>
-  <li>访问 <a href="https://openanimation.web.app/">OpenAnimation</a></li>
-  <li>点击”开始创作”按钮</li>
-  <li>选择画布尺寸和背景</li>
+<li>访问 <a href="https://openanimation.web.app/">OpenAnimation</a></li>
+<li>点击”开始创作”按钮</li>
+<li>选择画布尺寸和背景</li>
 </ol>
-
-<h3 id="第二步添加元素">第二步：添加元素</h3>
+<h3>第二步：添加元素</h3>
 <ol>
-  <li>从素材库选择图形、文字或图片</li>
-  <li>拖拽到画布上调整位置</li>
-  <li>使用工具栏调整颜色、大小等属性</li>
+<li>从素材库选择图形、文字或图片</li>
+<li>拖拽到画布上调整位置</li>
+<li>使用工具栏调整颜色、大小等属性</li>
 </ol>
-
-<h3 id="第三步制作动画">第三步：制作动画</h3>
+<h3>第三步：制作动画</h3>
 <ol>
-  <li>在时间轴上设置关键帧</li>
-  <li>调整元素在不同时间点的状态</li>
-  <li>选择缓动效果让动画更自然</li>
+<li>在时间轴上设置关键帧</li>
+<li>调整元素在不同时间点的状态</li>
+<li>选择缓动效果让动画更自然</li>
 </ol>
-
-<h3 id="第四步导出分享">第四步：导出分享</h3>
+<h3>第四步：导出分享</h3>
 <ol>
-  <li>预览动画效果</li>
-  <li>选择导出格式和分辨率</li>
-  <li>下载或生成分享链接</li>
+<li>预览动画效果</li>
+<li>选择导出格式和分辨率</li>
+<li>下载或生成分享链接</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>在这个视觉至上的时代，动画已经成为内容创作不可或缺的元素。OpenAnimation 不仅降低了动画制作的门槛，更让每个创作者都能轻松表达自己的创意。</p>
-
 <p>无论你是独立开发者、内容创作者，还是设计师，OpenAnimation 都能成为你创作路上的得力助手。它让专业级的动画制作变得触手可及，让创意不再受技术限制。</p>
-
 <p><strong>立即开始你的动画创作之旅</strong> → <a href="https://openanimation.web.app/">OpenAnimation</a></p>
-
 <p>让每一个想法都动起来，让每一个创意都闪闪发光！</p>
 
+					</div>
 				</article>
 
 				
@@ -532,11 +524,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -547,18 +538,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -568,7 +552,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -581,6 +565,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

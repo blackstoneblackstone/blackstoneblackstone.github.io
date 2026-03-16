@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/template0.png"
+            alt="Template0"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,299 +290,251 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#one" itemprop="item"><span itemprop="name">One</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#独立开发工具" itemprop="item"><span itemprop="name">独立开发工具</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Template0</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#one" itemprop="item"><span itemprop="name">One</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#独立开发工具" itemprop="item"><span itemprop="name">独立开发工具</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Template0</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="template0让开发从模板开始而非从零开始">Template0：让开发从模板开始，而非从零开始</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Template0：让开发从模板开始，而非从零开始</h2>
 <p><a href="https://template0.com/">Template0</a> 是一个优质的前端模板资源库，为独立开发者、创业团队和设计师提供了大量精心筛选的免费网站模板。该平台收集整理了超过900种涵盖20多个类别的模板，帮助用户快速构建各类网站项目，从产品展示、企业官网到博客、作品集和电商平台。</p>
-
-<h2 id="核心价值">核心价值</h2>
-
-<h3 id="丰富多样的模板资源">丰富多样的模板资源</h3>
-
+<h2>核心价值</h2>
+<h3>丰富多样的模板资源</h3>
 <p>Template0提供了全面的模板分类体系，满足不同场景的开发需求：</p>
-
 <ul>
-  <li><strong>按类型分类</strong>：产品展示、企业网站、个人作品集、博客、电商等</li>
-  <li><strong>按技术栈分类</strong>：Next.js、React、Vue、Astro、Tailwind CSS等</li>
-  <li><strong>按功能分类</strong>：落地页、管理后台、产品展示、数据可视化等</li>
-  <li><strong>按设计风格分类</strong>：极简、现代、创意、企业等</li>
+<li><strong>按类型分类</strong>：产品展示、企业网站、个人作品集、博客、电商等</li>
+<li><strong>按技术栈分类</strong>：Next.js、React、Vue、Astro、Tailwind CSS等</li>
+<li><strong>按功能分类</strong>：落地页、管理后台、产品展示、数据可视化等</li>
+<li><strong>按设计风格分类</strong>：极简、现代、创意、企业等</li>
 </ul>
-
-<h3 id="高质量筛选">高质量筛选</h3>
-
+<h3>高质量筛选</h3>
 <p>平台对模板进行严格筛选，确保质量和实用性：</p>
-
 <ul>
-  <li><strong>审美品质</strong>：所有模板都经过设计评估，确保视觉效果专业</li>
-  <li><strong>代码质量</strong>：模板代码结构清晰，符合最佳实践</li>
-  <li><strong>完全免费</strong>：所有提供的模板均可免费使用</li>
-  <li><strong>持续更新</strong>：定期添加新模板，跟进最新技术趋势</li>
+<li><strong>审美品质</strong>：所有模板都经过设计评估，确保视觉效果专业</li>
+<li><strong>代码质量</strong>：模板代码结构清晰，符合最佳实践</li>
+<li><strong>完全免费</strong>：所有提供的模板均可免费使用</li>
+<li><strong>持续更新</strong>：定期添加新模板，跟进最新技术趋势</li>
 </ul>
-
-<h3 id="便捷的发现体验">便捷的发现体验</h3>
-
+<h3>便捷的发现体验</h3>
 <p>Template0提供了智能的模板发现机制：</p>
-
 <ul>
-  <li><strong>多维度筛选</strong>：按技术栈、功能、设计风格等筛选</li>
-  <li><strong>热门推荐</strong>：基于社区反馈推荐高质量模板</li>
-  <li><strong>精选合集</strong>：围绕特定主题或需求的模板合集</li>
-  <li><strong>最新上线</strong>：展示最新添加的模板资源</li>
+<li><strong>多维度筛选</strong>：按技术栈、功能、设计风格等筛选</li>
+<li><strong>热门推荐</strong>：基于社区反馈推荐高质量模板</li>
+<li><strong>精选合集</strong>：围绕特定主题或需求的模板合集</li>
+<li><strong>最新上线</strong>：展示最新添加的模板资源</li>
 </ul>
-
-<h2 id="为开发者提供的价值">为开发者提供的价值</h2>
-
+<h2>为开发者提供的价值</h2>
 <p>Template0为不同类型的开发者带来了显著的价值：</p>
-
-<h3 id="独立开发者">独立开发者</h3>
-
+<h3>独立开发者</h3>
 <ul>
-  <li><strong>加速产品开发</strong>：无需从零构建前端界面</li>
-  <li><strong>降低设计门槛</strong>：使用专业设计好的模板</li>
-  <li><strong>减少技术选型时间</strong>：直接采用成熟的技术栈</li>
-  <li><strong>专注核心功能</strong>：将更多精力投入产品差异化功能</li>
+<li><strong>加速产品开发</strong>：无需从零构建前端界面</li>
+<li><strong>降低设计门槛</strong>：使用专业设计好的模板</li>
+<li><strong>减少技术选型时间</strong>：直接采用成熟的技术栈</li>
+<li><strong>专注核心功能</strong>：将更多精力投入产品差异化功能</li>
 </ul>
-
-<h3 id="创业团队">创业团队</h3>
-
+<h3>创业团队</h3>
 <ul>
-  <li><strong>缩短上线周期</strong>：快速完成MVP版本开发</li>
-  <li><strong>节省开发成本</strong>：避免为初期界面投入过多资源</li>
-  <li><strong>保持设计一致性</strong>：基于完整模板构建统一体验</li>
-  <li><strong>多渠道展示</strong>：快速构建产品宣传、文档等辅助页面</li>
+<li><strong>缩短上线周期</strong>：快速完成MVP版本开发</li>
+<li><strong>节省开发成本</strong>：避免为初期界面投入过多资源</li>
+<li><strong>保持设计一致性</strong>：基于完整模板构建统一体验</li>
+<li><strong>多渠道展示</strong>：快速构建产品宣传、文档等辅助页面</li>
 </ul>
-
-<h3 id="前端学习者">前端学习者</h3>
-
+<h3>前端学习者</h3>
 <ul>
-  <li><strong>学习优质代码</strong>：通过研究高质量模板提升技能</li>
-  <li><strong>了解最佳实践</strong>：学习组件结构、状态管理等实现方式</li>
-  <li><strong>尝试新技术</strong>：探索不同技术栈的模板实现</li>
-  <li><strong>搭建个人项目</strong>：快速构建个人作品集和项目展示</li>
+<li><strong>学习优质代码</strong>：通过研究高质量模板提升技能</li>
+<li><strong>了解最佳实践</strong>：学习组件结构、状态管理等实现方式</li>
+<li><strong>尝试新技术</strong>：探索不同技术栈的模板实现</li>
+<li><strong>搭建个人项目</strong>：快速构建个人作品集和项目展示</li>
 </ul>
-
-<h2 id="精选模板类型">精选模板类型</h2>
-
+<h2>精选模板类型</h2>
 <p>Template0平台涵盖了多种实用的模板类型：</p>
-
-<h3 id="产品与saas模板">产品与SaaS模板</h3>
-
+<h3>产品与SaaS模板</h3>
 <p>为软件产品和SaaS服务提供专业的展示界面：</p>
-
 <ul>
-  <li><strong>产品落地页</strong>：突出核心功能和价值主张</li>
-  <li><strong>功能介绍页</strong>：详细展示产品特性和使用场景</li>
-  <li><strong>定价页面</strong>：呈现多层级订阅计划</li>
-  <li><strong>管理后台</strong>：用户控制面板和数据管理界面</li>
+<li><strong>产品落地页</strong>：突出核心功能和价值主张</li>
+<li><strong>功能介绍页</strong>：详细展示产品特性和使用场景</li>
+<li><strong>定价页面</strong>：呈现多层级订阅计划</li>
+<li><strong>管理后台</strong>：用户控制面板和数据管理界面</li>
 </ul>
-
-<h3 id="作品集与个人网站">作品集与个人网站</h3>
-
+<h3>作品集与个人网站</h3>
 <p>帮助创作者和专业人士展示个人品牌：</p>
-
 <ul>
-  <li><strong>创意作品集</strong>：展示设计、艺术和媒体作品</li>
-  <li><strong>开发者作品集</strong>：突出技术项目和开源贡献</li>
-  <li><strong>个人简历</strong>：专业经历和技能展示</li>
-  <li><strong>个人博客</strong>：内容创作和知识分享平台</li>
+<li><strong>创意作品集</strong>：展示设计、艺术和媒体作品</li>
+<li><strong>开发者作品集</strong>：突出技术项目和开源贡献</li>
+<li><strong>个人简历</strong>：专业经历和技能展示</li>
+<li><strong>个人博客</strong>：内容创作和知识分享平台</li>
 </ul>
-
-<h3 id="企业与服务网站">企业与服务网站</h3>
-
+<h3>企业与服务网站</h3>
 <p>满足企业形象展示和服务推广需求：</p>
-
 <ul>
-  <li><strong>公司官网</strong>：企业介绍、产品服务和团队展示</li>
-  <li><strong>服务介绍</strong>：专业服务内容和流程说明</li>
-  <li><strong>项目案例</strong>：客户成功案例和项目展示</li>
-  <li><strong>联系咨询</strong>：多渠道联系方式和表单收集</li>
+<li><strong>公司官网</strong>：企业介绍、产品服务和团队展示</li>
+<li><strong>服务介绍</strong>：专业服务内容和流程说明</li>
+<li><strong>项目案例</strong>：客户成功案例和项目展示</li>
+<li><strong>联系咨询</strong>：多渠道联系方式和表单收集</li>
 </ul>
-
-<h3 id="电子商务">电子商务</h3>
-
+<h3>电子商务</h3>
 <p>支持各类在线销售场景：</p>
-
 <ul>
-  <li><strong>产品目录</strong>：商品展示和分类浏览</li>
-  <li><strong>产品详情</strong>：详细的商品信息和规格说明</li>
-  <li><strong>购物车流程</strong>：流畅的结账体验</li>
-  <li><strong>会员中心</strong>：用户账户管理和订单追踪</li>
+<li><strong>产品目录</strong>：商品展示和分类浏览</li>
+<li><strong>产品详情</strong>：详细的商品信息和规格说明</li>
+<li><strong>购物车流程</strong>：流畅的结账体验</li>
+<li><strong>会员中心</strong>：用户账户管理和订单追踪</li>
 </ul>
-
-<h2 id="技术栈支持">技术栈支持</h2>
-
+<h2>技术栈支持</h2>
 <p>Template0收集的模板涵盖了现代前端开发的主流技术栈：</p>
-
-<h3 id="框架与库">框架与库</h3>
-
+<h3>框架与库</h3>
 <ul>
-  <li><strong>React</strong>：大量基于React生态的组件化模板</li>
-  <li><strong>Vue/Nuxt</strong>：Vue框架的SPA和SSR应用模板</li>
-  <li><strong>Next.js</strong>：同构渲染的React应用模板</li>
-  <li><strong>Astro</strong>：静态站点生成的内容型网站模板</li>
-  <li><strong>Svelte</strong>：轻量高效的现代UI模板</li>
+<li><strong>React</strong>：大量基于React生态的组件化模板</li>
+<li><strong>Vue/Nuxt</strong>：Vue框架的SPA和SSR应用模板</li>
+<li><strong>Next.js</strong>：同构渲染的React应用模板</li>
+<li><strong>Astro</strong>：静态站点生成的内容型网站模板</li>
+<li><strong>Svelte</strong>：轻量高效的现代UI模板</li>
 </ul>
-
-<h3 id="样式方案">样式方案</h3>
-
+<h3>样式方案</h3>
 <ul>
-  <li><strong>Tailwind CSS</strong>：原子化CSS框架模板</li>
-  <li><strong>Shadcn UI</strong>：可定制组件系统模板</li>
-  <li><strong>Bootstrap</strong>：经典响应式框架模板</li>
-  <li><strong>UnoCSS</strong>：即时原子化CSS引擎模板</li>
-  <li><strong>CSS Modules/Styled Components</strong>：组件化样式方案</li>
+<li><strong>Tailwind CSS</strong>：原子化CSS框架模板</li>
+<li><strong>Shadcn UI</strong>：可定制组件系统模板</li>
+<li><strong>Bootstrap</strong>：经典响应式框架模板</li>
+<li><strong>UnoCSS</strong>：即时原子化CSS引擎模板</li>
+<li><strong>CSS Modules/Styled Components</strong>：组件化样式方案</li>
 </ul>
-
-<h3 id="特殊功能">特殊功能</h3>
-
+<h3>特殊功能</h3>
 <ul>
-  <li><strong>国际化</strong>：多语言支持模板</li>
-  <li><strong>暗黑模式</strong>：支持明暗主题切换</li>
-  <li><strong>动画效果</strong>：内置精美交互动画</li>
-  <li><strong>响应式设计</strong>：适配各种屏幕尺寸</li>
-  <li><strong>无障碍支持</strong>：符合WCAG标准的可访问性设计</li>
+<li><strong>国际化</strong>：多语言支持模板</li>
+<li><strong>暗黑模式</strong>：支持明暗主题切换</li>
+<li><strong>动画效果</strong>：内置精美交互动画</li>
+<li><strong>响应式设计</strong>：适配各种屏幕尺寸</li>
+<li><strong>无障碍支持</strong>：符合WCAG标准的可访问性设计</li>
 </ul>
-
-<h2 id="使用与部署">使用与部署</h2>
-
+<h2>使用与部署</h2>
 <p>Template0上的模板通常提供简单的使用流程：</p>
-
 <ol>
-  <li><strong>浏览并选择</strong>：在平台上找到合适的模板</li>
-  <li><strong>访问源码</strong>：点击链接前往GitHub或源码仓库</li>
-  <li><strong>克隆项目</strong>：获取完整源代码和依赖配置</li>
-  <li><strong>本地开发</strong>：按照文档说明运行和修改</li>
-  <li><strong>自定义调整</strong>：根据需求修改内容和样式</li>
-  <li><strong>构建部署</strong>：生成静态文件或部署到服务器</li>
+<li><strong>浏览并选择</strong>：在平台上找到合适的模板</li>
+<li><strong>访问源码</strong>：点击链接前往GitHub或源码仓库</li>
+<li><strong>克隆项目</strong>：获取完整源代码和依赖配置</li>
+<li><strong>本地开发</strong>：按照文档说明运行和修改</li>
+<li><strong>自定义调整</strong>：根据需求修改内容和样式</li>
+<li><strong>构建部署</strong>：生成静态文件或部署到服务器</li>
 </ol>
-
 <p>大多数模板都提供了详细的使用文档，包括:</p>
-
 <ul>
-  <li>安装和运行指南</li>
-  <li>目录结构说明</li>
-  <li>自定义配置选项</li>
-  <li>部署建议</li>
+<li>安装和运行指南</li>
+<li>目录结构说明</li>
+<li>自定义配置选项</li>
+<li>部署建议</li>
 </ul>
-
-<h2 id="社区与生态">社区与生态</h2>
-
+<h2>社区与生态</h2>
 <p>Template0正在构建一个围绕模板资源的活跃社区：</p>
-
 <ul>
-  <li><strong>模板提交</strong>：开发者可以提交自己的模板作品</li>
-  <li><strong>社区推荐</strong>：用户可以为喜欢的模板投票点赞</li>
-  <li><strong>博客资源</strong>：提供模板使用技巧和前端开发指南</li>
-  <li><strong>赞助支持</strong>：通过Ko-fi等平台支持平台发展</li>
+<li><strong>模板提交</strong>：开发者可以提交自己的模板作品</li>
+<li><strong>社区推荐</strong>：用户可以为喜欢的模板投票点赞</li>
+<li><strong>博客资源</strong>：提供模板使用技巧和前端开发指南</li>
+<li><strong>赞助支持</strong>：通过Ko-fi等平台支持平台发展</li>
 </ul>
-
-<h2 id="与其他模板平台对比">与其他模板平台对比</h2>
-
+<h2>与其他模板平台对比</h2>
 <p>相比于其他模板资源平台，Template0的独特优势：</p>
-
 <table>
-  <thead>
-    <tr>
-      <th>特性</th>
-      <th>Template0</th>
-      <th>传统模板市场</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>价格</td>
-      <td>✓ 全部免费</td>
-      <td>✗ 大多收费</td>
-    </tr>
-    <tr>
-      <td>源码访问</td>
-      <td>✓ 完整源码</td>
-      <td>✗ 部分限制</td>
-    </tr>
-    <tr>
-      <td>专注现代技术</td>
-      <td>✓ 最新框架优先</td>
-      <td>✗ 混合新旧技术</td>
-    </tr>
-    <tr>
-      <td>持续更新</td>
-      <td>✓ 定期添加</td>
-      <td>✗ 更新不确定</td>
-    </tr>
-    <tr>
-      <td>社区导向</td>
-      <td>✓ 开发者社区驱动</td>
-      <td>✗ 商业模式主导</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特性</th>
+<th>Template0</th>
+<th>传统模板市场</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>价格</td>
+<td>✓ 全部免费</td>
+<td>✗ 大多收费</td>
+</tr>
+<tr>
+<td>源码访问</td>
+<td>✓ 完整源码</td>
+<td>✗ 部分限制</td>
+</tr>
+<tr>
+<td>专注现代技术</td>
+<td>✓ 最新框架优先</td>
+<td>✗ 混合新旧技术</td>
+</tr>
+<tr>
+<td>持续更新</td>
+<td>✓ 定期添加</td>
+<td>✗ 更新不确定</td>
+</tr>
+<tr>
+<td>社区导向</td>
+<td>✓ 开发者社区驱动</td>
+<td>✗ 商业模式主导</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="实用优势">实用优势</h2>
-
+<h2>实用优势</h2>
 <p>Template0为独立开发者带来的实际好处：</p>
-
-<h3 id="开发效率提升">开发效率提升</h3>
-
+<h3>开发效率提升</h3>
 <p>使用Template0的模板可以显著缩短项目周期：</p>
-
 <ul>
-  <li>产品原型搭建时间从数周缩短至数天</li>
-  <li>减少50-70%的前端开发时间</li>
-  <li>快速实现跨设备兼容性和响应式设计</li>
+<li>产品原型搭建时间从数周缩短至数天</li>
+<li>减少50-70%的前端开发时间</li>
+<li>快速实现跨设备兼容性和响应式设计</li>
 </ul>
-
-<h3 id="专业设计品质">专业设计品质</h3>
-
+<h3>专业设计品质</h3>
 <p>即使没有专业设计师，也能获得高质量视觉效果：</p>
-
 <ul>
-  <li>专业级的UI组件和布局</li>
-  <li>经过优化的用户体验流程</li>
-  <li>视觉一致性和品牌化支持</li>
+<li>专业级的UI组件和布局</li>
+<li>经过优化的用户体验流程</li>
+<li>视觉一致性和品牌化支持</li>
 </ul>
-
-<h3 id="技术债减少">技术债减少</h3>
-
+<h3>技术债减少</h3>
 <p>基于模板开发可以降低长期维护成本：</p>
-
 <ul>
-  <li>结构清晰的代码组织</li>
-  <li>符合最佳实践的架构模式</li>
-  <li>模块化设计便于后续扩展</li>
+<li>结构清晰的代码组织</li>
+<li>符合最佳实践的架构模式</li>
+<li>模块化设计便于后续扩展</li>
 </ul>
-
-<h2 id="开始使用">开始使用</h2>
-
+<h2>开始使用</h2>
 <p>访问<a href="https://template0.com/">Template0官网</a>，浏览超过900种分类完善的免费模板，为你的下一个项目选择完美的起点。无论是构建个人作品集、初创产品原型，还是企业官网，Template0都能提供适合的解决方案，让你的开发从模板开始，而非从零开始。</p>
 
+					</div>
 				</article>
 
 				
@@ -641,11 +603,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -656,18 +617,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -677,7 +631,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -690,6 +644,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

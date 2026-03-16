@@ -83,10 +83,7 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
-    
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -240,182 +237,181 @@ crossorigin="anonymous"></script>
 
     <!-- Content -->
     <main role="main" class="site-content">
-        <div class="container"><!-- Begin post excerpts, let's highlight the first 4 posts on top -->
-  <div class="row remove-site-content-margin">
-    <!-- latest post -->
-      
-    
-    <!-- 个人介绍区域 -->
-    <div class="col-md-12">
-      <div class="card border-0 shadow-sm">
-        <div class="card-body p-4">
-          <div class="row align-items-center">
-            <div class="col-md-4 text-center">
-              <img
-                src="/assets/images/me.png"
-                alt="黑石个人资料"
-                class="img-fluid rounded-circle"
-                style="max-width: 200px"
-              />
-            </div>
-            <div class="col-md-4">
-              <h2 class="mb-3 text-primary">黑石</h2>
-              <p class="lead mb-2">13年全栈开发经验</p>
-              <p class="lead mb-2">AI Agent 开发者</p>
-              <p class="lead mb-2">AI 编程研究员</p>
-              <p class="lead mb-0">善思考,勤读书</p>
-            </div>
-            <div class="col-md-4">
-              <a href="https://www.buymeacoffee.com/blackstone" target="_blank">
-                <img
-                  src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-                  alt="Buy Me A Coffee"
-                  style="height: 60px !important; width: 217px !important"
-                />
-              </a>
-              <br>
-              <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-            </div>
-          </div>
+        <div class="container">
+  <div class="home-page"><div class="row remove-site-content-margin">
+      <div class="col-12">
+    <!-- 简介区：紧凑 -->
+    <header class="home-intro">
+      <div class="home-intro-inner">
+        <img src="/assets/images/me.png" alt="黑石" class="home-intro-avatar" width="72" height="72" />
+        <div class="home-intro-text">
+          <h1 class="home-intro-title">黑石</h1>
+          <p class="home-intro-desc">13年全栈 · AI Agent 开发 · 善思考，勤读书</p>
+          <a href="https://www.buymeacoffee.com/blackstone" target="_blank" rel="noopener" class="home-intro-coffee">请我喝杯咖啡</a>
+          <span class="home-intro-pv text-muted" id="busuanzi_container_site_pv">访问 <span id="busuanzi_value_site_pv"></span> 次</span>
         </div>
       </div>
+    </header>
+      </div>
     </div>
-  </div>
+    
 
-  
-  <!--endif page url is / -->
+    <!-- 文章列表（仅分类「文章」） -->
+    
+    
+    
+    
+    
+    
 
-  <!-- Now the rest of the posts with the usual loop but with an offset:4 on the first page so we can skeep the first 4 posts displayed above -->
+    <div class="row home-main">
+      <section class="col-lg-8 home-posts">
+      <h2 class="home-posts-heading">文章</h2>
+      <div class="home-posts-list" id="home-posts-list">
+        
+          
+          
+        <article class="home-post-item" data-page="1">
+          <a href="/ai-vampire-efficiency-paradox/" class="home-post-link">
+            <h3 class="home-post-title">AI 吸血鬼：为什么效率越高，反而越忙碌</h3>
+            <p class="home-post-excerpt">当 AI 将效率推向极致，我们却陷入了前所未有的疲惫。这是一场关于「AI 吸血鬼效应」的深度反思。</p>
+            <time class="home-post-date" datetime="2026-03-16T10:30:00+08:00">2026-03-16</time>
+          </a>
+        </article>
+        
+          
+          
+        <article class="home-post-item" data-page="1">
+          <a href="/openclaw-feishu-integration-guide/" class="home-post-link">
+            <h3 class="home-post-title">OpenClaw 飞书机器人对接完全指南</h3>
+            <p class="home-post-excerpt">从安装配置到飞书对接，一步步教你部署 OpenClaw 个人 AI 操作系统，实现飞书机器人智能对话。</p>
+            <time class="home-post-date" datetime="2026-03-11T21:59:00+08:00">2026-03-11</time>
+          </a>
+        </article>
+        
+          
+          
+        <article class="home-post-item" data-page="1">
+          <a href="/openspec/" class="home-post-link">
+            <h3 class="home-post-title">OpenSpec：让 AI 编码回归规格驱动</h3>
+            <p class="home-post-excerpt">轻量化的规格驱动流程，帮你和 AI 助手先对齐需求再写代码。</p>
+            <time class="home-post-date" datetime="2025-11-23T00:00:00+08:00">2025-11-23</time>
+          </a>
+        </article>
+        
+          
+          
+        <article class="home-post-item" data-page="1">
+          <a href="/youtube-shorts/" class="home-post-link">
+            <h3 class="home-post-title">YouTube 短视频创作指南</h3>
+            <p class="home-post-excerpt">为什么要做直播切片？</p>
+            <time class="home-post-date" datetime="2025-10-10T20:00:00+08:00">2025-10-10</time>
+          </a>
+        </article>
+        
+          
+          
+        <article class="home-post-item" data-page="1">
+          <a href="/ins-image/" class="home-post-link">
+            <h3 class="home-post-title">Instagram 图片为什么总是那么亮？揭秘背后的技术真相</h3>
+            <p class="home-post-excerpt">为什么 Instagram 上的图片总是显得格外亮？这背后隐藏着 HDR 技术、算法推荐和用户行为的复杂交互。本文深度解析这一现象的技术原理。</p>
+            <time class="home-post-date" datetime="2025-09-26T00:00:00+08:00">2025-09-26</time>
+          </a>
+        </article>
+        
+          
+          
+        <article class="home-post-item" data-page="1">
+          <a href="/vibe-coding/" class="home-post-link">
+            <h3 class="home-post-title">为什么 Vibe Coding 在设计稿的还原度上那么差？</h3>
+            <p class="home-post-excerpt">分析 Vibe Coding 在设计稿还原度方面存在的问题，探讨 AI 代码生成工具在设计到代码转换过程中的技术挑战。</p>
+            <time class="home-post-date" datetime="2025-09-24T00:00:00+08:00">2025-09-24</time>
+          </a>
+        </article>
+        
+          
+          
+        <article class="home-post-item" data-page="1">
+          <a href="/linux-ops-tools/" class="home-post-link">
+            <h3 class="home-post-title">Linux 服务器运维工具</h3>
+            <p class="home-post-excerpt">全面介绍 Linux 服务器运维必备工具，提升运维效率</p>
+            <time class="home-post-date" datetime="2025-09-11T00:00:00+08:00">2025-09-11</time>
+          </a>
+        </article>
+        
+          
+          
+        <article class="home-post-item" data-page="1">
+          <a href="/mcp/" class="home-post-link">
+            <h3 class="home-post-title">MCP：下一代AI开发工具交互协议</h3>
+            <p class="home-post-excerpt">Agent 里的几大协议</p>
+            <time class="home-post-date" datetime="2025-09-10T00:00:00+08:00">2025-09-10</time>
+          </a>
+        </article>
+        
+          
+          
+        <article class="home-post-item" data-page="1">
+          <a href="/english-learning/" class="home-post-link">
+            <h3 class="home-post-title">英语学习方法汇总</h3>
+            <p class="home-post-excerpt">怎么学英语，有哪些好的工具？</p>
+            <time class="home-post-date" datetime="2025-09-10T00:00:00+08:00">2025-09-10</time>
+          </a>
+        </article>
+        
+          
+          
+        <article class="home-post-item" data-page="1">
+          <a href="/ai-tech-selection/" class="home-post-link">
+            <h3 class="home-post-title">面向AI时代的技术选型：如何为AI驱动项目选择最佳技术栈</h3>
+            <p class="home-post-excerpt">面向AI的技术选型挑战</p>
+            <time class="home-post-date" datetime="2025-06-01T00:00:00+08:00">2025-06-01</time>
+          </a>
+        </article>
+        
+          
+          
+        <article class="home-post-item" data-page="2">
+          <a href="/alpha-returns/" class="home-post-link">
+            <h3 class="home-post-title">获得 α 收益</h3>
+            <p class="home-post-excerpt">什么是 α 收益？</p>
+            <time class="home-post-date" datetime="2025-01-15T00:00:00+08:00">2025-01-15</time>
+          </a>
+        </article>
+        
+          
+          
+        <article class="home-post-item" data-page="2">
+          <a href="/web-interface/" class="home-post-link">
+            <h3 class="home-post-title">🔥 Vercel 官方设计指南大公开！Web 界面设计的 7 大黄金法则，让你的产品瞬间提升 10 倍用户体验</h3>
+            <p class="home-post-excerpt">Vercel「Web Interface Guidelines」页面的中文翻译，涵盖交互、动效、布局、内容、表单、性能和设计等方面的最佳实践。</p>
+            <time class="home-post-date" datetime="2024-09-24T00:00:00+08:00">2024-09-24</time>
+          </a>
+        </article>
+        
+          
+          
+        <article class="home-post-item" data-page="2">
+          <a href="/prompt-engineering/" class="home-post-link">
+            <h3 class="home-post-title">Prompt Engineering</h3>
+            <p class="home-post-excerpt">系统全面的Prompt工程师技能培训指南，助你掌握AI提示词编写技巧</p>
+            <time class="home-post-date" datetime="2024-04-16T00:00:00+08:00">2024-04-16</time>
+          </a>
+        </article>
+        
+      </div>
 
-  <div class="row mt-3">
-    <div class="col-md-8 main-loop">
-      <h4 class="font-weight-bold spanborder"><span>全部文章</span></h4>
-
-         
-      <div class="mb-3 pb-3 border-bottom">
-        <h5 class="mb-2">
-          <a class="text-dark" href="/openspec/"
-            >OpenSpec：让 AI 编码回归规格驱动</a
-          >
-        </h5>
-        <small class="text-muted">
-          2025年11月23日
-        </small>
-      </div>
       
-      <div class="mb-3 pb-3 border-bottom">
-        <h5 class="mb-2">
-          <a class="text-dark" href="/youtube-shorts/"
-            >YouTube 短视频创作指南</a
-          >
-        </h5>
-        <small class="text-muted">
-          2025年10月10日
-        </small>
-      </div>
+      <nav class="home-pagination" id="home-pagination" aria-label="文章分页" data-per-page="10" data-total-pages="2">
+        <div class="home-pagination-inner">
+          <button type="button" class="home-pagination-btn home-pagination-prev" aria-label="上一页">上一页</button>
+          <span class="home-pagination-pages" id="home-pagination-pages"></span>
+          <button type="button" class="home-pagination-btn home-pagination-next" aria-label="下一页">下一页</button>
+        </div>
+      </nav>
       
-      <div class="mb-3 pb-3 border-bottom">
-        <h5 class="mb-2">
-          <a class="text-dark" href="/ins-image/"
-            >Instagram 图片为什么总是那么亮？揭秘背后的技术真相</a
-          >
-        </h5>
-        <small class="text-muted">
-          2025年09月26日
-        </small>
-      </div>
-      
-      <div class="mb-3 pb-3 border-bottom">
-        <h5 class="mb-2">
-          <a class="text-dark" href="/vibe-coding/"
-            >为什么 Vibe Coding 在设计稿的还原度上那么差？</a
-          >
-        </h5>
-        <small class="text-muted">
-          2025年09月24日
-        </small>
-      </div>
-      
-      <div class="mb-3 pb-3 border-bottom">
-        <h5 class="mb-2">
-          <a class="text-dark" href="/linux-ops-tools/"
-            >Linux 服务器运维工具</a
-          >
-        </h5>
-        <small class="text-muted">
-          2025年09月11日
-        </small>
-      </div>
-      
-      <div class="mb-3 pb-3 border-bottom">
-        <h5 class="mb-2">
-          <a class="text-dark" href="/mcp/"
-            >MCP：下一代AI开发工具交互协议</a
-          >
-        </h5>
-        <small class="text-muted">
-          2025年09月10日
-        </small>
-      </div>
-      
-      <div class="mb-3 pb-3 border-bottom">
-        <h5 class="mb-2">
-          <a class="text-dark" href="/english-learning/"
-            >英语学习方法汇总</a
-          >
-        </h5>
-        <small class="text-muted">
-          2025年09月10日
-        </small>
-      </div>
-      
-      <div class="mb-3 pb-3 border-bottom">
-        <h5 class="mb-2">
-          <a class="text-dark" href="/ai-tech-selection/"
-            >面向AI时代的技术选型：如何为AI驱动项目选择最佳技术栈</a
-          >
-        </h5>
-        <small class="text-muted">
-          2025年06月01日
-        </small>
-      </div>
-      
-      <div class="mb-3 pb-3 border-bottom">
-        <h5 class="mb-2">
-          <a class="text-dark" href="/alpha-returns/"
-            >获得 α 收益</a
-          >
-        </h5>
-        <small class="text-muted">
-          2025年01月15日
-        </small>
-      </div>
-      
-      <div class="mb-3 pb-3 border-bottom">
-        <h5 class="mb-2">
-          <a class="text-dark" href="/web-interface/"
-            >🔥 Vercel 官方设计指南大公开！Web 界面设计的 7 大黄金法则，让你的产品瞬间提升 10 倍用户体验</a
-          >
-        </h5>
-        <small class="text-muted">
-          2024年09月24日
-        </small>
-      </div>
-      
-      <div class="mb-3 pb-3 border-bottom">
-        <h5 class="mb-2">
-          <a class="text-dark" href="/prompt-engineering/"
-            >Prompt Engineering</a
-          >
-        </h5>
-        <small class="text-muted">
-          2024年04月16日
-        </small>
-      </div>
-      
-    </div>
-
-    <div class="col-md-4"><div class="sticky-top sticky-top-offset">
+      </section>
+      <aside class="col-lg-4 home-sidebar"><div class="sticky-top sticky-top-offset">
     <h4 class="font-weight-bold spanborder"><span>优秀博客推荐</span></h4>  
     <ol class="list-featured">
         <!-- Lee Robinson 博客推荐 -->
@@ -442,9 +438,67 @@ crossorigin="anonymous"></script>
             </span>
         </li> 
     </ol>
-</div> </div>
+</div> </aside>
+    </div>
   </div>
 </div>
+
+<script>
+(function() {
+  var paginationEl = document.getElementById('home-pagination');
+  var list = document.getElementById('home-posts-list');
+  if (!paginationEl || !list) return;
+  var perPage = parseInt(paginationEl.getAttribute('data-per-page') || '10', 10);
+  var totalPages = parseInt(paginationEl.getAttribute('data-total-pages') || '1', 10);
+  if (totalPages <= 1) return;
+
+  var items = list.querySelectorAll('.home-post-item');
+  var currentPage = 1;
+
+  function renderPages() {
+    var pagesEl = document.getElementById('home-pagination-pages');
+    if (!pagesEl) return;
+    var buf = [];
+    for (var i = 1; i <= totalPages; i++) {
+      if (i === currentPage) {
+        buf.push('<span class="home-pagination-num home-pagination-num--current" aria-current="page">' + i + '</span>');
+      } else {
+        buf.push('<button type="button" class="home-pagination-num" data-page="' + i + '">' + i + '</button>');
+      }
+    }
+    pagesEl.innerHTML = buf.join('');
+    pagesEl.querySelectorAll('button[data-page]').forEach(function(btn) {
+      btn.addEventListener('click', function() { goTo(parseInt(btn.getAttribute('data-page'), 10)); });
+    });
+  }
+
+  function goTo(page) {
+    if (page < 1 || page > totalPages) return;
+    currentPage = page;
+    items.forEach(function(el) {
+      var p = parseInt(el.getAttribute('data-page'), 10);
+      el.style.display = p === currentPage ? '' : 'none';
+    });
+    renderPages();
+    document.querySelector('.home-pagination-prev').disabled = currentPage <= 1;
+    document.querySelector('.home-pagination-next').disabled = currentPage >= totalPages;
+  }
+
+  list.querySelectorAll('.home-post-item').forEach(function(el) {
+    var p = parseInt(el.getAttribute('data-page'), 10);
+    el.style.display = p === 1 ? '' : 'none';
+  });
+
+  var prevBtn = document.querySelector('.home-pagination-prev');
+  var nextBtn = document.querySelector('.home-pagination-next');
+  if (prevBtn) prevBtn.addEventListener('click', function() { goTo(currentPage - 1); });
+  if (nextBtn) nextBtn.addEventListener('click', function() { goTo(currentPage + 1); });
+
+  prevBtn.disabled = true;
+  nextBtn.disabled = totalPages <= 1;
+  renderPages();
+})();
+</script>
 
     </main>
 

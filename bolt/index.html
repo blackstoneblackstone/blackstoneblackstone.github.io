@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/bolt.svg"
+            alt="Bolt.new"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,178 +290,152 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#生成代码" itemprop="item"><span itemprop="name">生成代码</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Bolt.new</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#生成代码" itemprop="item"><span itemprop="name">生成代码</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Bolt.new</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="bolt让开发变得更简单">Bolt：让开发变得更简单</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Bolt：让开发变得更简单</h2>
 <p>在当今快速变化的技术世界中，开发效率成为了竞争的关键。<a href="https://bolt.new/">Bolt</a>作为一款革命性的AI驱动开发平台，正在彻底改变开发者构建Web和移动应用的方式。通过简单的自然语言提示，Bolt能够瞬间生成完整的应用代码，大幅提升开发效率。</p>
-
-<h2 id="核心功能与特点">核心功能与特点</h2>
-
-<h3 id="自然语言到代码转换">自然语言到代码转换</h3>
-
+<h2>核心功能与特点</h2>
+<h3>自然语言到代码转换</h3>
 <p>Bolt的核心功能在于将自然语言描述转换为可运行的代码。只需输入一句简短的需求描述，如”创建一个带登录功能的电商网站”，Bolt就能快速理解并生成相应的代码框架。</p>
-
-<h3 id="全栈应用开发">全栈应用开发</h3>
-
+<h3>全栈应用开发</h3>
 <p>不同于一些仅专注于前端或后端的工具，Bolt提供全栈支持：</p>
-
 <ul>
-  <li><strong>前端开发</strong>：自动生成响应式UI界面，支持现代前端框架</li>
-  <li><strong>后端逻辑</strong>：生成API、数据处理和业务逻辑代码</li>
-  <li><strong>数据库集成</strong>：自动创建数据模型和数据库交互代码</li>
+<li><strong>前端开发</strong>：自动生成响应式UI界面，支持现代前端框架</li>
+<li><strong>后端逻辑</strong>：生成API、数据处理和业务逻辑代码</li>
+<li><strong>数据库集成</strong>：自动创建数据模型和数据库交互代码</li>
 </ul>
-
-<h3 id="即时预览与编辑">即时预览与编辑</h3>
-
+<h3>即时预览与编辑</h3>
 <p>Bolt不仅生成代码，还提供即时预览功能，让开发者能够立即看到应用的实际效果。同时，其直观的界面允许开发者对生成的代码进行细致调整，实现个性化定制。</p>
-
-<h3 id="一键部署">一键部署</h3>
-
+<h3>一键部署</h3>
 <p>完成开发后，Bolt提供一键部署功能，让应用快速上线。无需复杂的配置过程，大大简化了从开发到部署的流程。</p>
-
-<h2 id="技术原理">技术原理</h2>
-
+<h2>技术原理</h2>
 <p>Bolt的强大功能建立在多项先进技术的基础上：</p>
-
 <ol>
-  <li><strong>大规模语言模型</strong>：使用先进的AI模型理解开发需求，将自然语言转换为代码</li>
-  <li><strong>多模态学习</strong>：能够理解和处理文本、图像等多种输入形式</li>
-  <li><strong>代码知识库</strong>：内置海量代码示例和最佳实践，确保生成高质量代码</li>
-  <li><strong>自适应学习</strong>：通过用户反馈不断优化代码生成能力</li>
+<li><strong>大规模语言模型</strong>：使用先进的AI模型理解开发需求，将自然语言转换为代码</li>
+<li><strong>多模态学习</strong>：能够理解和处理文本、图像等多种输入形式</li>
+<li><strong>代码知识库</strong>：内置海量代码示例和最佳实践，确保生成高质量代码</li>
+<li><strong>自适应学习</strong>：通过用户反馈不断优化代码生成能力</li>
 </ol>
-
-<h2 id="适用场景">适用场景</h2>
-
+<h2>适用场景</h2>
 <p>Bolt特别适合以下应用场景：</p>
-
-<h3 id="原型快速开发">原型快速开发</h3>
-
+<h3>原型快速开发</h3>
 <p>对于创业团队和产品经理，Bolt是快速验证产品创意的理想工具。只需几分钟即可从构思转变为可演示的产品原型，加速决策和迭代过程。</p>
-
-<h3 id="全栈开发加速">全栈开发加速</h3>
-
+<h3>全栈开发加速</h3>
 <p>对于全栈开发者，Bolt可以处理繁琐的样板代码生成，让开发者专注于创新功能和业务逻辑的实现，显著提高生产力。</p>
-
-<h3 id="学习编程">学习编程</h3>
-
+<h3>学习编程</h3>
 <p>对于编程初学者，Bolt提供了一个理想的学习平台。通过观察AI如何将需求转化为代码，初学者可以更直观地理解编程概念和最佳实践。</p>
-
-<h3 id="小型项目快速实现">小型项目快速实现</h3>
-
+<h3>小型项目快速实现</h3>
 <p>对于需要快速交付的小型项目，Bolt可以大幅缩短开发周期，降低人力成本，同时保持较高的代码质量。</p>
-
-<h2 id="使用体验">使用体验</h2>
-
+<h2>使用体验</h2>
 <p>Bolt的使用流程简单直观，主要包括以下步骤：</p>
-
 <ol>
-  <li><strong>输入需求</strong>：使用自然语言描述您想要构建的应用</li>
-  <li><strong>生成代码</strong>：Bolt分析需求并生成相应的代码</li>
-  <li><strong>预览效果</strong>：实时查看应用的外观和功能</li>
-  <li><strong>调整修改</strong>：根据需要对代码进行微调和定制</li>
-  <li><strong>部署应用</strong>：一键部署到云平台或导出代码到本地环境</li>
+<li><strong>输入需求</strong>：使用自然语言描述您想要构建的应用</li>
+<li><strong>生成代码</strong>：Bolt分析需求并生成相应的代码</li>
+<li><strong>预览效果</strong>：实时查看应用的外观和功能</li>
+<li><strong>调整修改</strong>：根据需要对代码进行微调和定制</li>
+<li><strong>部署应用</strong>：一键部署到云平台或导出代码到本地环境</li>
 </ol>
-
-<h2 id="与传统开发方式对比">与传统开发方式对比</h2>
-
+<h2>与传统开发方式对比</h2>
 <p>与传统开发方式相比，Bolt具有显著优势：</p>
-
 <table>
-  <thead>
-    <tr>
-      <th>特点</th>
-      <th>传统开发</th>
-      <th>Bolt开发</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>开发速度</td>
-      <td>需要数周或数月</td>
-      <td>可在几分钟内完成原型</td>
-    </tr>
-    <tr>
-      <td>技术门槛</td>
-      <td>需要专业编程知识</td>
-      <td>对编程知识要求较低</td>
-    </tr>
-    <tr>
-      <td>代码质量</td>
-      <td>依赖开发者经验</td>
-      <td>AI确保基本质量标准</td>
-    </tr>
-    <tr>
-      <td>迭代效率</td>
-      <td>修改耗时较长</td>
-      <td>快速调整和重新生成</td>
-    </tr>
-    <tr>
-      <td>资源需求</td>
-      <td>需要完整开发团队</td>
-      <td>单人即可操作</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特点</th>
+<th>传统开发</th>
+<th>Bolt开发</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>开发速度</td>
+<td>需要数周或数月</td>
+<td>可在几分钟内完成原型</td>
+</tr>
+<tr>
+<td>技术门槛</td>
+<td>需要专业编程知识</td>
+<td>对编程知识要求较低</td>
+</tr>
+<tr>
+<td>代码质量</td>
+<td>依赖开发者经验</td>
+<td>AI确保基本质量标准</td>
+</tr>
+<tr>
+<td>迭代效率</td>
+<td>修改耗时较长</td>
+<td>快速调整和重新生成</td>
+</tr>
+<tr>
+<td>资源需求</td>
+<td>需要完整开发团队</td>
+<td>单人即可操作</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="实际应用案例">实际应用案例</h2>
-
-<h3 id="电商平台原型">电商平台原型</h3>
-
+<h2>实际应用案例</h2>
+<h3>电商平台原型</h3>
 <p>一家初创电商企业使用Bolt在一天内完成了包含产品展示、购物车和支付流程的完整原型，为融资路演提供了强有力的支持。</p>
-
-<h3 id="内部管理系统">内部管理系统</h3>
-
+<h3>内部管理系统</h3>
 <p>某中型企业利用Bolt快速开发了一套内部任务管理系统，整个过程仅用了三天时间，相比传统开发节省了至少3周的开发周期。</p>
-
-<h3 id="个人作品集网站">个人作品集网站</h3>
-
+<h3>个人作品集网站</h3>
 <p>一位自由设计师使用Bolt在半天内创建了个人作品展示网站，无需聘请专业开发人员，大大节省了成本。</p>
-
-<h2 id="未来发展方向">未来发展方向</h2>
-
+<h2>未来发展方向</h2>
 <p>随着AI技术的不断进步，Bolt计划在以下方面持续创新：</p>
-
 <ol>
-  <li><strong>更深入的定制支持</strong>：提供更精细的代码和设计定制选项</li>
-  <li><strong>更强大的行业特化能力</strong>：为不同行业提供专门的解决方案</li>
-  <li><strong>更完善的协作功能</strong>：增强团队协作能力</li>
-  <li><strong>更广泛的集成生态</strong>：与更多第三方服务和工具实现无缝集成</li>
+<li><strong>更深入的定制支持</strong>：提供更精细的代码和设计定制选项</li>
+<li><strong>更强大的行业特化能力</strong>：为不同行业提供专门的解决方案</li>
+<li><strong>更完善的协作功能</strong>：增强团队协作能力</li>
+<li><strong>更广泛的集成生态</strong>：与更多第三方服务和工具实现无缝集成</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Bolt代表了AI驱动开发的未来趋势。通过将复杂的编程工作交给AI，它让开发者能够专注于创意和业务价值，而不是繁琐的代码编写。随着技术的不断发展，Bolt有望进一步降低软件开发的门槛，让更多人能够将创意转化为现实。</p>
-
 <p>无论您是专业开发者寻求提高效率的工具，还是非技术人员希望实现自己的创意，Bolt都提供了一种革命性的解决方案。想要探索这一创新平台，请访问<a href="https://bolt.new/">Bolt官方网站</a>开始您的AI开发之旅。</p>
 
+					</div>
 				</article>
 
 				
@@ -520,11 +504,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -535,18 +518,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -556,7 +532,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -569,6 +545,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

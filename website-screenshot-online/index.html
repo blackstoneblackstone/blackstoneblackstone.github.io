@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/screenshot.jpg"
+            alt="Website Screenshot Online"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -278,218 +288,194 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#优秀项目" itemprop="item"><span itemprop="name">优秀项目</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Website Screenshot Online</span>
-							<meta itemprop="position" content="4" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#优秀项目" itemprop="item"><span itemprop="name">优秀项目</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Website Screenshot Online</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="website-screenshot-online---在线网站截图工具">Website Screenshot Online - 在线网站截图工具</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Website Screenshot Online - 在线网站截图工具</h2>
 <p><a href="https://websitescreenshot.online/zh-CN">Website Screenshot Online</a> 是一款简单易用的在线网站截图工具，允许用户快速捕获任何网页的高质量截图。无论您是开发者、设计师、市场人员还是内容创作者，这款工具都能帮助您轻松获取网页的视觉呈现。</p>
-
-<p>同时可以使用 https://github.com/just-every/mcp-screenshot-website-fast 这个作为 MCP ，自动截图。</p>
-
+<p>同时可以使用 <a href="https://github.com/just-every/mcp-screenshot-website-fast">https://github.com/just-every/mcp-screenshot-website-fast</a> 这个作为 MCP ，自动截图。</p>
 <p><img src="/assets/images/main_interface.png" alt="Website Screenshot Online 主界面" /></p>
-
-<h2 id="核心功能">核心功能</h2>
-
-<h3 id="1-快速截图生成">1. 快速截图生成</h3>
-
+<h2>核心功能</h2>
+<h3>1. 快速截图生成</h3>
 <ul>
-  <li><strong>即时捕获</strong>：输入网址即可快速生成网页截图</li>
-  <li><strong>高质量输出</strong>：支持多种分辨率和尺寸选项</li>
-  <li><strong>批量处理</strong>：一次性截取多个网页</li>
-  <li><strong>无需安装</strong>：纯在线工具，无需下载或安装任何软件</li>
+<li><strong>即时捕获</strong>：输入网址即可快速生成网页截图</li>
+<li><strong>高质量输出</strong>：支持多种分辨率和尺寸选项</li>
+<li><strong>批量处理</strong>：一次性截取多个网页</li>
+<li><strong>无需安装</strong>：纯在线工具，无需下载或安装任何软件</li>
 </ul>
-
-<h3 id="2-多种截图选项">2. 多种截图选项</h3>
-
+<h3>2. 多种截图选项</h3>
 <ul>
-  <li><strong>全页面截图</strong>：捕获整个网页内容，包括滚动区域</li>
-  <li><strong>视口截图</strong>：仅截取当前屏幕显示的部分</li>
-  <li><strong>自定义尺寸</strong>：支持设置特定的宽度、高度和设备类型</li>
-  <li><strong>延时截图</strong>：为需要加载的页面设置延迟时间</li>
+<li><strong>全页面截图</strong>：捕获整个网页内容，包括滚动区域</li>
+<li><strong>视口截图</strong>：仅截取当前屏幕显示的部分</li>
+<li><strong>自定义尺寸</strong>：支持设置特定的宽度、高度和设备类型</li>
+<li><strong>延时截图</strong>：为需要加载的页面设置延迟时间</li>
 </ul>
-
-<h3 id="3-格式与导出">3. 格式与导出</h3>
-
+<h3>3. 格式与导出</h3>
 <ul>
-  <li><strong>多种格式支持</strong>：PNG、JPG、PDF等常见格式</li>
-  <li><strong>分辨率选择</strong>：从低分辨率到4K超高清选项</li>
-  <li><strong>一键下载</strong>：生成后直接下载到本地</li>
-  <li><strong>分享功能</strong>：生成可分享的链接</li>
+<li><strong>多种格式支持</strong>：PNG、JPG、PDF等常见格式</li>
+<li><strong>分辨率选择</strong>：从低分辨率到4K超高清选项</li>
+<li><strong>一键下载</strong>：生成后直接下载到本地</li>
+<li><strong>分享功能</strong>：生成可分享的链接</li>
 </ul>
-
-<h3 id="4-设备模拟">4. 设备模拟</h3>
-
+<h3>4. 设备模拟</h3>
 <ul>
-  <li><strong>跨设备预览</strong>：模拟桌面、平板、手机等不同设备</li>
-  <li><strong>响应式测试</strong>：查看网站在不同屏幕尺寸下的表现</li>
-  <li><strong>浏览器兼容性</strong>：模拟不同浏览器的渲染效果</li>
-  <li><strong>自定义User-Agent</strong>：设置特定的浏览器标识</li>
+<li><strong>跨设备预览</strong>：模拟桌面、平板、手机等不同设备</li>
+<li><strong>响应式测试</strong>：查看网站在不同屏幕尺寸下的表现</li>
+<li><strong>浏览器兼容性</strong>：模拟不同浏览器的渲染效果</li>
+<li><strong>自定义User-Agent</strong>：设置特定的浏览器标识</li>
 </ul>
-
 <p><img src="/assets/images/mobile_preview.png" alt="移动设备预览" /></p>
-
-<h2 id="技术特点">技术特点</h2>
-
+<h2>技术特点</h2>
 <ol>
-  <li><strong>云端处理</strong>：基于云的截图引擎，确保快速响应</li>
-  <li><strong>高兼容性</strong>：支持现代网页技术和JavaScript渲染</li>
-  <li><strong>安全隐私</strong>：不存储用户截图和访问记录</li>
-  <li><strong>简单直观</strong>：简洁的用户界面，易于操作</li>
+<li><strong>云端处理</strong>：基于云的截图引擎，确保快速响应</li>
+<li><strong>高兼容性</strong>：支持现代网页技术和JavaScript渲染</li>
+<li><strong>安全隐私</strong>：不存储用户截图和访问记录</li>
+<li><strong>简单直观</strong>：简洁的用户界面，易于操作</li>
 </ol>
-
-<h2 id="适用场景">适用场景</h2>
-
-<h3 id="网站开发与测试">网站开发与测试</h3>
-
+<h2>适用场景</h2>
+<h3>网站开发与测试</h3>
 <ul>
-  <li><strong>功能验证</strong>：检查网站在不同设备上的显示效果</li>
-  <li><strong>Bug报告</strong>：快速截取问题页面并分享给团队</li>
-  <li><strong>版本对比</strong>：记录网站更新前后的变化</li>
-  <li><strong>兼容性测试</strong>：验证网站在不同分辨率下的表现</li>
+<li><strong>功能验证</strong>：检查网站在不同设备上的显示效果</li>
+<li><strong>Bug报告</strong>：快速截取问题页面并分享给团队</li>
+<li><strong>版本对比</strong>：记录网站更新前后的变化</li>
+<li><strong>兼容性测试</strong>：验证网站在不同分辨率下的表现</li>
 </ul>
-
-<h3 id="数字营销与内容创作">数字营销与内容创作</h3>
-
+<h3>数字营销与内容创作</h3>
 <ul>
-  <li><strong>社交媒体素材</strong>：为社交平台创建吸引人的预览图</li>
-  <li><strong>内容展示</strong>：在博客或文章中展示网页效果</li>
-  <li><strong>竞品分析</strong>：截取竞争对手网站进行分析</li>
-  <li><strong>广告创意</strong>：制作网页广告的预览效果</li>
+<li><strong>社交媒体素材</strong>：为社交平台创建吸引人的预览图</li>
+<li><strong>内容展示</strong>：在博客或文章中展示网页效果</li>
+<li><strong>竞品分析</strong>：截取竞争对手网站进行分析</li>
+<li><strong>广告创意</strong>：制作网页广告的预览效果</li>
 </ul>
-
-<h3 id="教育与培训">教育与培训</h3>
-
+<h3>教育与培训</h3>
 <ul>
-  <li><strong>在线课程</strong>：截取教学网站作为学习材料</li>
-  <li><strong>操作演示</strong>：记录网站操作步骤制作教程</li>
-  <li><strong>学生作业</strong>：学生可以提交网站项目的截图</li>
-  <li><strong>远程协作</strong>：团队成员间分享网站状态和进展</li>
+<li><strong>在线课程</strong>：截取教学网站作为学习材料</li>
+<li><strong>操作演示</strong>：记录网站操作步骤制作教程</li>
+<li><strong>学生作业</strong>：学生可以提交网站项目的截图</li>
+<li><strong>远程协作</strong>：团队成员间分享网站状态和进展</li>
 </ul>
-
-<h3 id="设计与用户体验">设计与用户体验</h3>
-
+<h3>设计与用户体验</h3>
 <ul>
-  <li><strong>设计参考</strong>：收集优秀网站设计作为灵感</li>
-  <li><strong>UI审查</strong>：检查设计稿与实际实现的一致性</li>
-  <li><strong>用户流程</strong>：记录用户在网站上的操作路径</li>
-  <li><strong>可用性测试</strong>：分析网站的用户体验问题</li>
+<li><strong>设计参考</strong>：收集优秀网站设计作为灵感</li>
+<li><strong>UI审查</strong>：检查设计稿与实际实现的一致性</li>
+<li><strong>用户流程</strong>：记录用户在网站上的操作路径</li>
+<li><strong>可用性测试</strong>：分析网站的用户体验问题</li>
 </ul>
-
-<h2 id="使用优势">使用优势</h2>
-
-<h3 id="简单易用">简单易用</h3>
+<h2>使用优势</h2>
+<h3>简单易用</h3>
 <p>无需技术背景，任何人都能快速上手使用，只需输入网址即可获得截图。</p>
-
-<h3 id="时间节省">时间节省</h3>
+<h3>时间节省</h3>
 <p>相比传统的截图方式，使用在线工具可以大大节省时间，特别是在需要截取多个页面时。</p>
-
-<h3 id="跨平台访问">跨平台访问</h3>
+<h3>跨平台访问</h3>
 <p>基于Web的特性使得该工具可以在任何设备上使用，包括Windows、Mac、Linux甚至移动设备。</p>
-
-<h3 id="成本效益">成本效益</h3>
+<h3>成本效益</h3>
 <p>免费版本通常能满足基本需求，避免了购买专业软件的成本。</p>
-
-<h2 id="高级功能">高级功能</h2>
-
-<h3 id="1-定时截图">1. 定时截图</h3>
+<h2>高级功能</h2>
+<h3>1. 定时截图</h3>
 <ul>
-  <li>设置定期自动截图任务</li>
-  <li>监控网站变化和更新</li>
-  <li>创建网站历史记录</li>
+<li>设置定期自动截图任务</li>
+<li>监控网站变化和更新</li>
+<li>创建网站历史记录</li>
 </ul>
-
-<h3 id="2-注释与编辑">2. 注释与编辑</h3>
+<h3>2. 注释与编辑</h3>
 <ul>
-  <li>在截图上添加文字、箭头、框线等标记</li>
-  <li>突出显示重要信息</li>
-  <li>制作更专业的演示材料</li>
+<li>在截图上添加文字、箭头、框线等标记</li>
+<li>突出显示重要信息</li>
+<li>制作更专业的演示材料</li>
 </ul>
-
 <p><img src="/assets/images/editor_interface.png" alt="编辑功能界面" /></p>
-
-<h3 id="3-api集成">3. API集成</h3>
+<h3>3. API集成</h3>
 <ul>
-  <li>为开发者提供API接口</li>
-  <li>自动化截图工作流</li>
-  <li>与现有系统集成</li>
+<li>为开发者提供API接口</li>
+<li>自动化截图工作流</li>
+<li>与现有系统集成</li>
 </ul>
-
-<h2 id="与其他工具对比">与其他工具对比</h2>
-
+<h2>与其他工具对比</h2>
 <table>
-  <thead>
-    <tr>
-      <th>特性</th>
-      <th>Website Screenshot Online</th>
-      <th>传统截图工具</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>易用性</td>
-      <td>无需安装，直接使用</td>
-      <td>需要下载安装</td>
-    </tr>
-    <tr>
-      <td>跨平台</td>
-      <td>任何设备均可访问</td>
-      <td>受限于操作系统</td>
-    </tr>
-    <tr>
-      <td>更新维护</td>
-      <td>自动更新</td>
-      <td>需手动更新</td>
-    </tr>
-    <tr>
-      <td>成本</td>
-      <td>免费或低成本</td>
-      <td>可能需要付费购买</td>
-    </tr>
-    <tr>
-      <td>功能扩展</td>
-      <td>持续添加新功能</td>
-      <td>功能相对固定</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特性</th>
+<th>Website Screenshot Online</th>
+<th>传统截图工具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>易用性</td>
+<td>无需安装，直接使用</td>
+<td>需要下载安装</td>
+</tr>
+<tr>
+<td>跨平台</td>
+<td>任何设备均可访问</td>
+<td>受限于操作系统</td>
+</tr>
+<tr>
+<td>更新维护</td>
+<td>自动更新</td>
+<td>需手动更新</td>
+</tr>
+<tr>
+<td>成本</td>
+<td>免费或低成本</td>
+<td>可能需要付费购买</td>
+</tr>
+<tr>
+<td>功能扩展</td>
+<td>持续添加新功能</td>
+<td>功能相对固定</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="使用建议">使用建议</h2>
-
+<h2>使用建议</h2>
 <ol>
-  <li><strong>选择合适尺寸</strong>：根据使用场景选择合适的截图尺寸</li>
-  <li><strong>设置适当延迟</strong>：对于动态加载内容的网站，设置足够的加载时间</li>
-  <li><strong>批量处理</strong>：需要截取多个页面时，使用批量功能提高效率</li>
-  <li><strong>格式选择</strong>：根据用途选择合适的图片格式和质量</li>
+<li><strong>选择合适尺寸</strong>：根据使用场景选择合适的截图尺寸</li>
+<li><strong>设置适当延迟</strong>：对于动态加载内容的网站，设置足够的加载时间</li>
+<li><strong>批量处理</strong>：需要截取多个页面时，使用批量功能提高效率</li>
+<li><strong>格式选择</strong>：根据用途选择合适的图片格式和质量</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Website Screenshot Online 作为一款在线网站截图工具，为用户提供了便捷、高效的网页截图解决方案。无论是用于工作汇报、内容创作还是网站测试，它都能帮助用户快速获取所需的网页视觉资料。随着远程工作和数字化协作的普及，这类工具的价值将越来越明显。</p>
-
 <p>访问 <a href="https://websitescreenshot.online/zh-CN">Website Screenshot Online</a> 开始您的便捷截图体验，让网页截图变得简单而高效。</p>
 
+					</div>
 				</article>
 
 				
@@ -558,11 +544,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -573,18 +558,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -594,7 +572,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -607,6 +585,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/napkin.svg"
+            alt="Napkin.ai"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,244 +290,201 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#one" itemprop="item"><span itemprop="name">One</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#独立开发工具" itemprop="item"><span itemprop="name">独立开发工具</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Napkin.ai</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#one" itemprop="item"><span itemprop="name">One</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#独立开发工具" itemprop="item"><span itemprop="name">独立开发工具</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Napkin.ai</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="napkinai将想法转化为视觉原型">Napkin.ai：将想法转化为视觉原型</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Napkin.ai：将想法转化为视觉原型</h2>
 <p><a href="https://www.napkin.ai/">Napkin.ai</a> 是一款革命性的AI驱动创意工具，为独立开发者和创业团队提供了快速将想法可视化的能力。通过结合先进的AI生成技术与直观的用户界面，Napkin使得任何人都能在几分钟内创建出专业级的产品原型、线框图和设计草图，大大缩短了从创意构思到视觉呈现的过程。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
-<h3 id="ai驱动的创意草图">AI驱动的创意草图</h3>
-
+<h2>核心功能</h2>
+<h3>AI驱动的创意草图</h3>
 <p>Napkin.ai的核心功能围绕着AI生成设计展开：</p>
-
 <ul>
-  <li><strong>文本到设计转换</strong>：只需描述你的想法，AI即可生成相应的视觉效果</li>
-  <li><strong>草图优化</strong>：将手绘草图转换为精美的数字设计</li>
-  <li><strong>多样化风格</strong>：支持多种设计风格，从简约线框图到详细的高保真原型</li>
-  <li><strong>快速迭代</strong>：即时生成和修改，促进创意的快速演化</li>
+<li><strong>文本到设计转换</strong>：只需描述你的想法，AI即可生成相应的视觉效果</li>
+<li><strong>草图优化</strong>：将手绘草图转换为精美的数字设计</li>
+<li><strong>多样化风格</strong>：支持多种设计风格，从简约线框图到详细的高保真原型</li>
+<li><strong>快速迭代</strong>：即时生成和修改，促进创意的快速演化</li>
 </ul>
-
-<h3 id="团队协作与分享">团队协作与分享</h3>
-
+<h3>团队协作与分享</h3>
 <p>Napkin提供强大的协作功能，使团队创意过程更加高效：</p>
-
 <ul>
-  <li><strong>实时协作</strong>：多人同时在同一项目上工作</li>
-  <li><strong>评论与反馈</strong>：直接在设计上添加评论和建议</li>
-  <li><strong>版本控制</strong>：追踪设计变更历史，随时回溯</li>
-  <li><strong>一键分享</strong>：生成链接或导出设计，轻松与利益相关者分享</li>
+<li><strong>实时协作</strong>：多人同时在同一项目上工作</li>
+<li><strong>评论与反馈</strong>：直接在设计上添加评论和建议</li>
+<li><strong>版本控制</strong>：追踪设计变更历史，随时回溯</li>
+<li><strong>一键分享</strong>：生成链接或导出设计，轻松与利益相关者分享</li>
 </ul>
-
-<h3 id="设计资源库">设计资源库</h3>
-
+<h3>设计资源库</h3>
 <p>为提高工作效率，Napkin提供了丰富的预设元素：</p>
-
 <ul>
-  <li><strong>UI组件库</strong>：常用界面元素的集合</li>
-  <li><strong>设计模板</strong>：各类应用和网页的起始模板</li>
-  <li><strong>图标与插图</strong>：可自定义的视觉元素</li>
-  <li><strong>色彩方案</strong>：精心设计的配色组合</li>
+<li><strong>UI组件库</strong>：常用界面元素的集合</li>
+<li><strong>设计模板</strong>：各类应用和网页的起始模板</li>
+<li><strong>图标与插图</strong>：可自定义的视觉元素</li>
+<li><strong>色彩方案</strong>：精心设计的配色组合</li>
 </ul>
-
-<h3 id="导出与集成">导出与集成</h3>
-
+<h3>导出与集成</h3>
 <p>Napkin支持无缝衔接设计与开发流程：</p>
-
 <ul>
-  <li><strong>多格式导出</strong>：PNG、JPG、SVG、PDF等</li>
-  <li><strong>设计规范生成</strong>：自动生成颜色、字体和间距规范</li>
-  <li><strong>与设计工具集成</strong>：支持导出到Figma、Sketch等专业工具</li>
-  <li><strong>开发友好</strong>：提供CSS代码和设计标注</li>
+<li><strong>多格式导出</strong>：PNG、JPG、SVG、PDF等</li>
+<li><strong>设计规范生成</strong>：自动生成颜色、字体和间距规范</li>
+<li><strong>与设计工具集成</strong>：支持导出到Figma、Sketch等专业工具</li>
+<li><strong>开发友好</strong>：提供CSS代码和设计标注</li>
 </ul>
-
-<h2 id="技术亮点">技术亮点</h2>
-
-<h3 id="先进的ai视觉模型">先进的AI视觉模型</h3>
-
+<h2>技术亮点</h2>
+<h3>先进的AI视觉模型</h3>
 <p>Napkin.ai采用了最先进的AI技术：</p>
-
 <ul>
-  <li><strong>多模态理解</strong>：同时处理文本描述和视觉输入</li>
-  <li><strong>上下文感知</strong>：理解项目背景和用户意图</li>
-  <li><strong>风格一致性</strong>：保持生成内容的视觉连贯性</li>
-  <li><strong>细节关注</strong>：精确捕捉和呈现设计细节</li>
+<li><strong>多模态理解</strong>：同时处理文本描述和视觉输入</li>
+<li><strong>上下文感知</strong>：理解项目背景和用户意图</li>
+<li><strong>风格一致性</strong>：保持生成内容的视觉连贯性</li>
+<li><strong>细节关注</strong>：精确捕捉和呈现设计细节</li>
 </ul>
-
-<h3 id="智能设计辅助">智能设计辅助</h3>
-
+<h3>智能设计辅助</h3>
 <p>除了生成功能，Napkin还提供了智能设计建议：</p>
-
 <ul>
-  <li><strong>布局优化</strong>：自动调整元素位置提高视觉平衡</li>
-  <li><strong>配色建议</strong>：基于品牌和心理学原则推荐颜色</li>
-  <li><strong>可访问性检查</strong>：确保设计符合可访问性标准</li>
-  <li><strong>设计模式推荐</strong>：根据项目类型建议最佳实践</li>
+<li><strong>布局优化</strong>：自动调整元素位置提高视觉平衡</li>
+<li><strong>配色建议</strong>：基于品牌和心理学原则推荐颜色</li>
+<li><strong>可访问性检查</strong>：确保设计符合可访问性标准</li>
+<li><strong>设计模式推荐</strong>：根据项目类型建议最佳实践</li>
 </ul>
-
-<h3 id="高效工作流">高效工作流</h3>
-
+<h3>高效工作流</h3>
 <p>Napkin的工作流设计专注于提高效率：</p>
-
 <ul>
-  <li><strong>快捷命令</strong>：通过简单命令快速执行复杂操作</li>
-  <li><strong>智能历史</strong>：记住常用操作和偏好</li>
-  <li><strong>批量处理</strong>：一次性应用更改到多个元素</li>
-  <li><strong>智能组织</strong>：自动分类和管理设计资产</li>
+<li><strong>快捷命令</strong>：通过简单命令快速执行复杂操作</li>
+<li><strong>智能历史</strong>：记住常用操作和偏好</li>
+<li><strong>批量处理</strong>：一次性应用更改到多个元素</li>
+<li><strong>智能组织</strong>：自动分类和管理设计资产</li>
 </ul>
-
-<h2 id="使用场景">使用场景</h2>
-
+<h2>使用场景</h2>
 <p>Napkin.ai在多种情境下为独立开发者提供价值：</p>
-
-<h3 id="产品构思验证">产品构思验证</h3>
-
+<h3>产品构思验证</h3>
 <p>快速将产品创意转化为可视化原型，便于:</p>
-
 <ul>
-  <li><strong>收集早期反馈</strong>：在投入大量开发资源前验证想法</li>
-  <li><strong>吸引投资者</strong>：用视觉化方式展示产品愿景</li>
-  <li><strong>测试多种方案</strong>：并行生成不同设计方向进行比较</li>
-  <li><strong>降低沟通成本</strong>：清晰表达产品概念和用户流程</li>
+<li><strong>收集早期反馈</strong>：在投入大量开发资源前验证想法</li>
+<li><strong>吸引投资者</strong>：用视觉化方式展示产品愿景</li>
+<li><strong>测试多种方案</strong>：并行生成不同设计方向进行比较</li>
+<li><strong>降低沟通成本</strong>：清晰表达产品概念和用户流程</li>
 </ul>
-
-<h3 id="客户提案准备">客户提案准备</h3>
-
+<h3>客户提案准备</h3>
 <p>为自由职业者和代理商提供强大支持：</p>
-
 <ul>
-  <li><strong>快速生成提案视觉</strong>：在与客户首次会议前准备专业视觉材料</li>
-  <li><strong>现场调整</strong>：根据客户反馈即时修改设计</li>
-  <li><strong>多个方案比较</strong>：提供多种视觉选择增加成功率</li>
-  <li><strong>节省时间</strong>：减少前期设计投入风险</li>
+<li><strong>快速生成提案视觉</strong>：在与客户首次会议前准备专业视觉材料</li>
+<li><strong>现场调整</strong>：根据客户反馈即时修改设计</li>
+<li><strong>多个方案比较</strong>：提供多种视觉选择增加成功率</li>
+<li><strong>节省时间</strong>：减少前期设计投入风险</li>
 </ul>
-
-<h3 id="用户体验规划">用户体验规划</h3>
-
+<h3>用户体验规划</h3>
 <p>帮助规划完整的用户体验：</p>
-
 <ul>
-  <li><strong>用户旅程可视化</strong>：将复杂流程转化为清晰视觉地图</li>
-  <li><strong>交互模式探索</strong>：尝试不同的交互设计方案</li>
-  <li><strong>信息架构设计</strong>：构建并优化应用或网站结构</li>
-  <li><strong>跨平台一致性</strong>：确保设计在不同设备上的连贯性</li>
+<li><strong>用户旅程可视化</strong>：将复杂流程转化为清晰视觉地图</li>
+<li><strong>交互模式探索</strong>：尝试不同的交互设计方案</li>
+<li><strong>信息架构设计</strong>：构建并优化应用或网站结构</li>
+<li><strong>跨平台一致性</strong>：确保设计在不同设备上的连贯性</li>
 </ul>
-
-<h3 id="内部沟通与决策">内部沟通与决策</h3>
-
+<h3>内部沟通与决策</h3>
 <p>改善团队协作与决策过程：</p>
-
 <ul>
-  <li><strong>可视化会议笔记</strong>：将想法和决策转化为视觉参考</li>
-  <li><strong>产品路线图</strong>：创建视觉化的功能发展规划</li>
-  <li><strong>概念解释</strong>：通过视觉方式传达复杂概念</li>
-  <li><strong>团队头脑风暴</strong>：增强创意会议的输出效果</li>
+<li><strong>可视化会议笔记</strong>：将想法和决策转化为视觉参考</li>
+<li><strong>产品路线图</strong>：创建视觉化的功能发展规划</li>
+<li><strong>概念解释</strong>：通过视觉方式传达复杂概念</li>
+<li><strong>团队头脑风暴</strong>：增强创意会议的输出效果</li>
 </ul>
-
-<h2 id="独立开发者优势">独立开发者优势</h2>
-
+<h2>独立开发者优势</h2>
 <p>Napkin.ai特别适合独立开发者的需求：</p>
-
-<h3 id="降低设计门槛">降低设计门槛</h3>
-
+<h3>降低设计门槛</h3>
 <ul>
-  <li><strong>无需专业设计技能</strong>：依靠AI生成专业级设计</li>
-  <li><strong>设计系统自动化</strong>：自动创建一致的设计系统</li>
-  <li><strong>减少学习曲线</strong>：直观界面让非设计师也能轻松上手</li>
-  <li><strong>专业结果</strong>：创建具有专业水准的视觉效果</li>
+<li><strong>无需专业设计技能</strong>：依靠AI生成专业级设计</li>
+<li><strong>设计系统自动化</strong>：自动创建一致的设计系统</li>
+<li><strong>减少学习曲线</strong>：直观界面让非设计师也能轻松上手</li>
+<li><strong>专业结果</strong>：创建具有专业水准的视觉效果</li>
 </ul>
-
-<h3 id="提高开发效率">提高开发效率</h3>
-
+<h3>提高开发效率</h3>
 <ul>
-  <li><strong>快速从构思到开发</strong>：缩短设计阶段时间</li>
-  <li><strong>清晰的开发规范</strong>：生成明确的实现指南</li>
-  <li><strong>减少返工</strong>：在开发前解决设计问题</li>
-  <li><strong>前端指导</strong>：提供CSS和组件参考</li>
+<li><strong>快速从构思到开发</strong>：缩短设计阶段时间</li>
+<li><strong>清晰的开发规范</strong>：生成明确的实现指南</li>
+<li><strong>减少返工</strong>：在开发前解决设计问题</li>
+<li><strong>前端指导</strong>：提供CSS和组件参考</li>
 </ul>
-
-<h3 id="成本效益">成本效益</h3>
-
+<h3>成本效益</h3>
 <ul>
-  <li><strong>减少外包需求</strong>：自行完成早期设计工作</li>
-  <li><strong>灵活的订阅选项</strong>：适应不同预算和需求</li>
-  <li><strong>提高投资回报</strong>：加速产品上市时间</li>
-  <li><strong>高质量起点</strong>：从高质量设计开始开发</li>
+<li><strong>减少外包需求</strong>：自行完成早期设计工作</li>
+<li><strong>灵活的订阅选项</strong>：适应不同预算和需求</li>
+<li><strong>提高投资回报</strong>：加速产品上市时间</li>
+<li><strong>高质量起点</strong>：从高质量设计开始开发</li>
 </ul>
-
-<h2 id="定价模式">定价模式</h2>
-
+<h2>定价模式</h2>
 <p>Napkin.ai提供灵活的定价选项，满足不同用户需求：</p>
-
 <ol>
-  <li><strong>免费体验版</strong>：限量使用核心功能，适合初步尝试</li>
-  <li><strong>创作者计划</strong>：适合个人独立开发者的全功能访问</li>
-  <li><strong>团队版</strong>：提供协作功能和增强的存储空间</li>
-  <li><strong>企业定制</strong>：针对大型团队的专属解决方案</li>
+<li><strong>免费体验版</strong>：限量使用核心功能，适合初步尝试</li>
+<li><strong>创作者计划</strong>：适合个人独立开发者的全功能访问</li>
+<li><strong>团队版</strong>：提供协作功能和增强的存储空间</li>
+<li><strong>企业定制</strong>：针对大型团队的专属解决方案</li>
 </ol>
-
-<h2 id="用户评价">用户评价</h2>
-
+<h2>用户评价</h2>
 <p>Napkin.ai在独立开发社区获得了积极反响：</p>
-
 <blockquote>
-  <p>“作为一名后端开发者，我一直在寻找能够帮助我快速创建前端原型的工具。Napkin.ai完美解决了这个问题，现在我可以在几分钟内生成专业级的UI设计。”
+<p>“作为一名后端开发者，我一直在寻找能够帮助我快速创建前端原型的工具。Napkin.ai完美解决了这个问题，现在我可以在几分钟内生成专业级的UI设计。”
 — 独立开发者 Alex Chen</p>
 </blockquote>
-
 <blockquote>
-  <p>“Napkin.ai为我节省了大量时间和金钱。在创业初期，我们不需要聘请专职设计师，就能创建出令投资者印象深刻的产品原型。”
+<p>“Napkin.ai为我节省了大量时间和金钱。在创业初期，我们不需要聘请专职设计师，就能创建出令投资者印象深刻的产品原型。”
 — 初创公司创始人 Sarah Johnson</p>
 </blockquote>
-
-<h2 id="未来发展">未来发展</h2>
-
+<h2>未来发展</h2>
 <p>Napkin.ai团队正在持续改进产品，计划中的功能包括：</p>
-
 <ol>
-  <li><strong>交互原型</strong>：增强生成交互式原型的能力</li>
-  <li><strong>代码导出</strong>：直接生成前端代码框架</li>
-  <li><strong>增强的AI个性化</strong>：更好地学习用户偏好和风格</li>
-  <li><strong>扩展集成生态</strong>：与更多开发和设计工具集成</li>
-  <li><strong>高级协作功能</strong>：改进团队设计工作流程</li>
+<li><strong>交互原型</strong>：增强生成交互式原型的能力</li>
+<li><strong>代码导出</strong>：直接生成前端代码框架</li>
+<li><strong>增强的AI个性化</strong>：更好地学习用户偏好和风格</li>
+<li><strong>扩展集成生态</strong>：与更多开发和设计工具集成</li>
+<li><strong>高级协作功能</strong>：改进团队设计工作流程</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Napkin.ai代表了AI驱动设计工具的未来，它使独立开发者能够突破传统设计限制，将创意快速转化为可视化成果。通过降低设计门槛，缩短创意到实现的时间，Napkin.ai成为独立开发者工具箱中不可或缺的一部分。</p>
-
 <p>无论你是寻求验证产品创意、准备客户提案，还是规划用户体验，Napkin.ai都能提供直观、高效的解决方案，让你专注于创新而非工具操作的复杂性。</p>
-
 <p>访问<a href="https://www.napkin.ai/">Napkin.ai官网</a>，体验AI驱动的创意草图平台，开启你的下一个项目。</p>
 
+					</div>
 				</article>
 
 				
@@ -586,11 +553,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -601,18 +567,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -622,7 +581,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -635,6 +594,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

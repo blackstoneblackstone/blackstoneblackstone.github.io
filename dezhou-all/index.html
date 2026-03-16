@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="https://pic.iu101.org/cdn-cgi/image/width=800,quality=85,format=webp/5fabe110.jpeg"
+            alt="德州扑克的下注目的，只有三个！（人话版）"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -278,162 +288,147 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#poker" itemprop="item"><span itemprop="name">poker</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">德州扑克的下注目的，只有三个！（人话版）</span>
-							<meta itemprop="position" content="4" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#poker" itemprop="item"><span itemprop="name">poker</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">德州扑克的下注目的，只有三个！（人话版）</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<blockquote>
-  <p><strong>一句话</strong>：每次出手前先答这题——<strong>我这枪是为了：拿信息 / 收价值 / 打弃牌率</strong>？只选一个。</p>
+					<div id="article-body" class="markdown-body">
+						<blockquote>
+<p><strong>一句话</strong>：每次出手前先答这题——<strong>我这枪是为了：拿信息 / 收价值 / 打弃牌率</strong>？只选一个。</p>
 </blockquote>
-
 <hr />
-
-<h2 id="1打信息花小钱看他干嘛">1）打信息：花小钱看他干嘛</h2>
-
+<h2>1）打信息：花小钱看他干嘛</h2>
 <p><strong>用处</strong>：不确定对手强不强，先丢个小注，让他用行动“说实话”。
 <strong>怎么下</strong>：小注（20%–33% 彩池）。
 <strong>什么时候</strong>：牌面干、你位置差、对手偏老实。
 <strong>别犯的错</strong>：遇上爱加注的猛人，就别用小注给自己找麻烦。</p>
-
 <p><strong>例子</strong>
 翻牌 K-7-2 彩虹，你在前位 1/4 池探一下；他要么直接弃（弱），要么跟（有点东西），被加注就收手或改计划。</p>
-
 <hr />
-
-<h2 id="2打价值更差的牌会给你钱">2）打价值：更差的牌会给你钱</h2>
-
+<h2>2）打价值：更差的牌会给你钱</h2>
 <p><strong>用处</strong>：你多半是好牌，觉得<strong>更差的牌会跟</strong>。
 <strong>怎么下</strong>：看对手性格定价。</p>
-
 <ul>
-  <li>站桩跟注型：<strong>大点儿</strong>（60%–100%+）。</li>
-  <li>谨慎型：<strong>小到中</strong>（33%–60%），分三街慢慢收。</li>
-  <li>河牌薄价值：**小注（20%–40%）**也能挤出钱。</li>
+<li>站桩跟注型：<strong>大点儿</strong>（60%–100%+）。</li>
+<li>谨慎型：<strong>小到中</strong>（33%–60%），分三街慢慢收。</li>
+<li>河牌薄价值：**小注（20%–40%）**也能挤出钱。</li>
 </ul>
-
 <p><strong>别犯的错</strong>：只有更好的会跟还下注？那不是价值，是捐款。</p>
-
 <p><strong>例子</strong>
 你 KQ，牌面 K-J-6 两同花，对手爱跟。三街偏大注，收 Jx、差踢 Kx 和听牌的门票钱。</p>
-
 <hr />
-
-<h2 id="3打弃牌率让他现在就放弃">3）打弃牌率：让他现在就放弃</h2>
-
+<h2>3）打弃牌率：让他现在就放弃</h2>
 <p><strong>用处</strong>：手里不太行，但能把对手很多牌<strong>打走</strong>；最好还带点听牌（半诈唬）。
 <strong>怎么下</strong>：<strong>中到大</strong>（50%–100%+），尺寸要能“吓退”他那坨中等牌。
 <strong>关键</strong>：你的故事要像样（线要连、尺寸一致），人也要对（别对站桩讲故事）。</p>
-
 <p><strong>例子</strong>
 翻牌 A-7-2 彩虹，你 QJ 空气位持续枪小中注，多数人会直接放。转牌出 K/T/同花面，你再开一枪，故事就完整了。</p>
-
 <hr />
-
-<h2 id="三步走每手牌都这么想">三步走（每手牌都这么想）</h2>
-
+<h2>三步走（每手牌都这么想）</h2>
 <ol>
-  <li><strong>谁在这张牌面更占优</strong>（范围 vs. 牌面）？</li>
-  <li><strong>这枪的唯一目的是什么</strong>（信息/价值/弃牌）？</li>
-  <li><strong>配套</strong>：用合适尺寸 + 想好被跟/被加注/他过牌加注时的后手计划。</li>
+<li><strong>谁在这张牌面更占优</strong>（范围 vs. 牌面）？</li>
+<li><strong>这枪的唯一目的是什么</strong>（信息/价值/弃牌）？</li>
+<li><strong>配套</strong>：用合适尺寸 + 想好被跟/被加注/他过牌加注时的后手计划。</li>
 </ol>
-
 <hr />
-
-<h2 id="尺寸速查别纠结先这样用">尺寸速查（别纠结，先这样用）</h2>
-
+<h2>尺寸速查（别纠结，先这样用）</h2>
 <table>
-  <thead>
-    <tr>
-      <th>目的</th>
-      <th>常用尺寸</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>信息</td>
-      <td>20%–33%</td>
-      <td>花小钱逼他表态</td>
-    </tr>
-    <tr>
-      <td>价值</td>
-      <td>33%–100%+</td>
-      <td>对爱跟的大点儿，对谨慎的小点儿，河牌可薄收</td>
-    </tr>
-    <tr>
-      <td>弃牌率</td>
-      <td>50%–100%+</td>
-      <td>想让中段范围弃牌，就得给压力</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>目的</th>
+<th>常用尺寸</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>信息</td>
+<td>20%–33%</td>
+<td>花小钱逼他表态</td>
+</tr>
+<tr>
+<td>价值</td>
+<td>33%–100%+</td>
+<td>对爱跟的大点儿，对谨慎的小点儿，河牌可薄收</td>
+</tr>
+<tr>
+<td>弃牌率</td>
+<td>50%–100%+</td>
+<td>想让中段范围弃牌，就得给压力</td>
+</tr>
+</tbody>
 </table>
-
 <hr />
-
-<h2 id="位置--人设怎么调">位置 &amp; 人设怎么调</h2>
-
+<h2>位置 &amp; 人设怎么调</h2>
 <ul>
-  <li><strong>有位置（IP）</strong>：多用小注探测、薄价值，好控制锅。</li>
-  <li><strong>没位置（OOP）</strong>：两极化（要么强要么弃），少无脑小注。</li>
-  <li><strong>站桩跟注型</strong>：少诈唬、多价值、下大点儿。</li>
-  <li><strong>激进爱加注</strong>：少“打信息”，多<strong>过牌-加注</strong>或<strong>延迟持续枪</strong>。</li>
+<li><strong>有位置（IP）</strong>：多用小注探测、薄价值，好控制锅。</li>
+<li><strong>没位置（OOP）</strong>：两极化（要么强要么弃），少无脑小注。</li>
+<li><strong>站桩跟注型</strong>：少诈唬、多价值、下大点儿。</li>
+<li><strong>激进爱加注</strong>：少“打信息”，多<strong>过牌-加注</strong>或<strong>延迟持续枪</strong>。</li>
 </ul>
-
 <hr />
-
-<h2 id="快速自检打完牌复盘就看这几条">快速自检（打完牌复盘就看这几条）</h2>
-
+<h2>快速自检（打完牌复盘就看这几条）</h2>
 <ul>
-  <li>我这枪<strong>目的清楚吗</strong>？</li>
-  <li>尺寸和目的<strong>匹配吗</strong>？（价值别太小，诈唬别太软）</li>
-  <li><strong>故事连贯吗</strong>？（前后尺寸别打架）</li>
-  <li>对手会<strong>跟/弃</strong>吗？（选错人等于白忙）</li>
-  <li>河牌有没有<strong>薄价值</strong>漏掉？</li>
+<li>我这枪<strong>目的清楚吗</strong>？</li>
+<li>尺寸和目的<strong>匹配吗</strong>？（价值别太小，诈唬别太软）</li>
+<li><strong>故事连贯吗</strong>？（前后尺寸别打架）</li>
+<li>对手会<strong>跟/弃</strong>吗？（选错人等于白忙）</li>
+<li>河牌有没有<strong>薄价值</strong>漏掉？</li>
 </ul>
-
 <hr />
-
-<h2 id="10-个即刻练习今天就能用">10 个即刻练习（今天就能用）</h2>
-
+<h2>10 个即刻练习（今天就能用）</h2>
 <ol>
-  <li>每次下注前大声在心里说：<strong>信息 / 价值 / 弃牌率</strong>，只选一个。</li>
-  <li>给自己设三档尺寸：25%｜60%｜100%，先用这三档练习。</li>
-  <li>对站桩：减少诈唬，<strong>三街收钱</strong>。</li>
-  <li>对激进：少探测，多<strong>过-加</strong>或<strong>延迟二枪</strong>。</li>
-  <li>干燥高牌面：<strong>小 C-Bet</strong>拿弃牌率或薄价值。</li>
-  <li>潮湿牌面：<strong>中大尺寸</strong>，半诈唬优先。</li>
-  <li>配对面：要么小探，要么大压，别夹生。</li>
-  <li>河牌找<strong>薄价值</strong>：想想他会跟哪些更差牌，小注去收。</li>
-  <li>转牌有补牌就二枪：把弃牌率+听牌胜率叠加。</li>
-  <li>记录三件事：<strong>目的 / 尺寸 / 遇到反击的预案</strong>。</li>
+<li>每次下注前大声在心里说：<strong>信息 / 价值 / 弃牌率</strong>，只选一个。</li>
+<li>给自己设三档尺寸：25%｜60%｜100%，先用这三档练习。</li>
+<li>对站桩：减少诈唬，<strong>三街收钱</strong>。</li>
+<li>对激进：少探测，多<strong>过-加</strong>或<strong>延迟二枪</strong>。</li>
+<li>干燥高牌面：<strong>小 C-Bet</strong>拿弃牌率或薄价值。</li>
+<li>潮湿牌面：<strong>中大尺寸</strong>，半诈唬优先。</li>
+<li>配对面：要么小探，要么大压，别夹生。</li>
+<li>河牌找<strong>薄价值</strong>：想想他会跟哪些更差牌，小注去收。</li>
+<li>转牌有补牌就二枪：把弃牌率+听牌胜率叠加。</li>
+<li>记录三件事：<strong>目的 / 尺寸 / 遇到反击的预案</strong>。</li>
 </ol>
-
 <hr />
-
-<h2 id="最后一句">最后一句</h2>
-
+<h2>最后一句</h2>
 <p><strong>下注只有三个目的</strong>。别糊涂打一枪：先定目的，再配尺寸，再想后手。做到这三步，你的胜率自然上去。</p>
 
+					</div>
 				</article>
 
 				
@@ -502,11 +497,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -517,18 +511,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -538,7 +525,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -551,6 +538,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

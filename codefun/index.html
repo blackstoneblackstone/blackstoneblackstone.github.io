@@ -59,8 +59,8 @@
 <meta property="og:title" content="Code.fun" />
 <meta name="author" content="黑石" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="设计稿到代码的无缝转换" />
-<meta property="og:description" content="设计稿到代码的无缝转换" />
+<meta name="description" content="黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。" />
+<meta property="og:description" content="黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。" />
 <link rel="canonical" href="https://blackstones.xyz/codefun/" />
 <meta property="og:url" content="https://blackstones.xyz/codefun/" />
 <meta property="og:site_name" content="黑石的知识库 - AI编程、技术分享与开发经验" />
@@ -72,7 +72,7 @@
 <meta property="twitter:title" content="Code.fun" />
 <meta name="google-site-verification" content="" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"黑石"},"dateModified":"2025-07-20T00:00:00+08:00","datePublished":"2025-07-20T00:00:00+08:00","description":"设计稿到代码的无缝转换","headline":"Code.fun","image":"https://blackstones.xyz/assets/images/tools/codefun.svg","mainEntityOfPage":{"@type":"WebPage","@id":"https://blackstones.xyz/codefun/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://blackstones.xyz/assets/images/logo.png"},"name":"黑石"},"url":"https://blackstones.xyz/codefun/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"黑石"},"dateModified":"2025-07-20T00:00:00+08:00","datePublished":"2025-07-20T00:00:00+08:00","description":"黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。","headline":"Code.fun","image":"https://blackstones.xyz/assets/images/tools/codefun.svg","mainEntityOfPage":{"@type":"WebPage","@id":"https://blackstones.xyz/codefun/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://blackstones.xyz/assets/images/logo.png"},"name":"黑石"},"url":"https://blackstones.xyz/codefun/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/codefun.svg"
+            alt="Code.fun"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,216 +290,184 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#设计稿生成代码" itemprop="item"><span itemprop="name">设计稿生成代码</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Code.fun</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#ai coding" itemprop="item"><span itemprop="name">AI Coding</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#设计稿生成代码" itemprop="item"><span itemprop="name">设计稿生成代码</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Code.fun</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="设计稿到代码的无缝转换">设计稿到代码的无缝转换</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>设计稿到代码的无缝转换</h2>
 <p>在软件开发过程中，设计稿到代码的转换一直是一个耗时且容易出错的环节。<a href="https://code.fun/">Code.fun</a>作为新一代AI驱动的设计稿转代码工具，正在彻底改变这一痛点，让开发者能够将精力集中在创意和功能实现上，而不是繁琐的界面还原工作。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
+<h2>核心功能</h2>
 <p>Code.fun提供了一系列强大的功能，帮助设计师和开发者更高效地协作：</p>
-
-<h3 id="1-设计稿一键转代码">1. 设计稿一键转代码</h3>
-
+<h3>1. 设计稿一键转代码</h3>
 <p>平台支持将Figma、Sketch、PSD、AI等多种设计稿格式一键转换为可直接使用的前端代码，支持React、Vue、小程序等多种框架。转换过程快速精准，大大缩短了前端开发周期。</p>
-
-<h3 id="2-多框架支持">2. 多框架支持</h3>
-
+<h3>2. 多框架支持</h3>
 <p>Code.fun支持主流的前端框架，包括：</p>
 <ul>
-  <li>React (Next.js)</li>
-  <li>Vue (Nuxt.js)</li>
-  <li>微信小程序</li>
-  <li>支付宝小程序</li>
-  <li>Flutter</li>
-  <li>原生HTML/CSS/JS</li>
+<li>React (Next.js)</li>
+<li>Vue (Nuxt.js)</li>
+<li>微信小程序</li>
+<li>支付宝小程序</li>
+<li>Flutter</li>
+<li>原生HTML/CSS/JS</li>
 </ul>
-
 <p>无论您使用哪种技术栈，都能找到合适的代码转换方案。</p>
-
-<h3 id="3-代码定制与优化">3. 代码定制与优化</h3>
-
+<h3>3. 代码定制与优化</h3>
 <p>生成的代码不仅结构清晰，还支持自定义配置和优化：</p>
 <ul>
-  <li>组件化处理</li>
-  <li>代码结构优化</li>
-  <li>样式优化</li>
-  <li>特效实现</li>
-  <li>响应式布局</li>
+<li>组件化处理</li>
+<li>代码结构优化</li>
+<li>样式优化</li>
+<li>特效实现</li>
+<li>响应式布局</li>
 </ul>
-
-<h3 id="4-团队协作功能">4. 团队协作功能</h3>
-
+<h3>4. 团队协作功能</h3>
 <p>Code.fun提供团队工作空间，让设计师和开发者能够高效协作：</p>
 <ul>
-  <li>项目共享</li>
-  <li>权限管理</li>
-  <li>多人同时编辑</li>
-  <li>版本控制</li>
-  <li>评论与反馈</li>
+<li>项目共享</li>
+<li>权限管理</li>
+<li>多人同时编辑</li>
+<li>版本控制</li>
+<li>评论与反馈</li>
 </ul>
-
-<h2 id="技术优势">技术优势</h2>
-
+<h2>技术优势</h2>
 <p>Code.fun的核心竞争力在于其先进的AI技术：</p>
-
 <ol>
-  <li><strong>先进的图像识别算法</strong>：能精确识别设计稿中的UI元素、布局和样式</li>
-  <li><strong>智能布局引擎</strong>：自动分析组件间的关系，生成最优布局代码</li>
-  <li><strong>代码优化系统</strong>：生成符合最佳实践的代码，确保代码质量和性能</li>
-  <li><strong>自学习能力</strong>：系统会不断学习和改进，生成的代码质量持续提升</li>
-  <li><strong>细节还原度高</strong>：对设计稿中的微小细节都能准确还原，包括字体、阴影、渐变等</li>
+<li><strong>先进的图像识别算法</strong>：能精确识别设计稿中的UI元素、布局和样式</li>
+<li><strong>智能布局引擎</strong>：自动分析组件间的关系，生成最优布局代码</li>
+<li><strong>代码优化系统</strong>：生成符合最佳实践的代码，确保代码质量和性能</li>
+<li><strong>自学习能力</strong>：系统会不断学习和改进，生成的代码质量持续提升</li>
+<li><strong>细节还原度高</strong>：对设计稿中的微小细节都能准确还原，包括字体、阴影、渐变等</li>
 </ol>
-
-<h2 id="使用场景">使用场景</h2>
-
+<h2>使用场景</h2>
 <p>Code.fun在多种场景下展现出色价值：</p>
-
-<h3 id="前端开发效率提升">前端开发效率提升</h3>
-
+<h3>前端开发效率提升</h3>
 <p>将设计稿自动转换为代码，开发者无需从零实现UI，可以专注于业务逻辑开发，大幅提高前端开发效率。</p>
-
-<h3 id="设计与开发协作优化">设计与开发协作优化</h3>
-
+<h3>设计与开发协作优化</h3>
 <p>消除设计师和开发者之间的沟通壁垒，设计师可以直接看到自己设计的即时代码实现，便于调整和完善。</p>
-
-<h3 id="快速原型制作">快速原型制作</h3>
-
+<h3>快速原型制作</h3>
 <p>产品经理可以利用Code.fun快速将产品原型转化为可交互的demo，加速产品验证和反馈收集。</p>
-
-<h3 id="教育与学习">教育与学习</h3>
-
+<h3>教育与学习</h3>
 <p>初学者可以通过观察设计稿转代码的过程，学习前端开发技术和最佳实践，加速学习曲线。</p>
-
-<h2 id="使用流程">使用流程</h2>
-
+<h2>使用流程</h2>
 <p>Code.fun的使用流程简单直观：</p>
-
 <ol>
-  <li><strong>导入设计</strong>：上传Figma、Sketch等格式的设计稿文件</li>
-  <li><strong>框架选择</strong>：选择需要生成的代码框架（React、Vue等）</li>
-  <li><strong>转换配置</strong>：设置组件化、样式等转换参数</li>
-  <li><strong>生成代码</strong>：一键生成高质量前端代码</li>
-  <li><strong>下载或导出</strong>：下载代码包或直接导出到代码仓库</li>
+<li><strong>导入设计</strong>：上传Figma、Sketch等格式的设计稿文件</li>
+<li><strong>框架选择</strong>：选择需要生成的代码框架（React、Vue等）</li>
+<li><strong>转换配置</strong>：设置组件化、样式等转换参数</li>
+<li><strong>生成代码</strong>：一键生成高质量前端代码</li>
+<li><strong>下载或导出</strong>：下载代码包或直接导出到代码仓库</li>
 </ol>
-
-<h2 id="与传统开发方式对比">与传统开发方式对比</h2>
-
+<h2>与传统开发方式对比</h2>
 <p>与传统的手动UI实现相比，Code.fun具有显著优势：</p>
-
 <table>
-  <thead>
-    <tr>
-      <th>方面</th>
-      <th>传统方式</th>
-      <th>Code.fun</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>开发时间</td>
-      <td>数天到数周</td>
-      <td>几分钟到几小时</td>
-    </tr>
-    <tr>
-      <td>还原精度</td>
-      <td>依赖开发者经验</td>
-      <td>像素级精确还原</td>
-    </tr>
-    <tr>
-      <td>代码质量</td>
-      <td>参差不齐</td>
-      <td>一致的高质量标准</td>
-    </tr>
-    <tr>
-      <td>维护成本</td>
-      <td>较高</td>
-      <td>低（结构化、组件化）</td>
-    </tr>
-    <tr>
-      <td>跨平台适配</td>
-      <td>需要额外工作</td>
-      <td>内置支持</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>方面</th>
+<th>传统方式</th>
+<th>Code.fun</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>开发时间</td>
+<td>数天到数周</td>
+<td>几分钟到几小时</td>
+</tr>
+<tr>
+<td>还原精度</td>
+<td>依赖开发者经验</td>
+<td>像素级精确还原</td>
+</tr>
+<tr>
+<td>代码质量</td>
+<td>参差不齐</td>
+<td>一致的高质量标准</td>
+</tr>
+<tr>
+<td>维护成本</td>
+<td>较高</td>
+<td>低（结构化、组件化）</td>
+</tr>
+<tr>
+<td>跨平台适配</td>
+<td>需要额外工作</td>
+<td>内置支持</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="客户案例">客户案例</h2>
-
-<h3 id="互联网创业公司">互联网创业公司</h3>
-
+<h2>客户案例</h2>
+<h3>互联网创业公司</h3>
 <p>某电商创业公司使用Code.fun将设计师交付的UI设计稿快速转换为React代码，大幅缩短了产品上线时间，节省了前端开发成本。</p>
-
-<h3 id="大型企业内部系统">大型企业内部系统</h3>
-
+<h3>大型企业内部系统</h3>
 <p>某银行使用Code.fun为其内部管理系统生成前端界面，不仅实现了与设计完全一致的界面，还确保了代码的可维护性和扩展性。</p>
-
-<h3 id="设计机构">设计机构</h3>
-
+<h3>设计机构</h3>
 <p>一家UI设计公司使用Code.fun为客户提供”设计+代码”的一站式服务，显著提升了客户满意度和项目交付效率。</p>
-
-<h2 id="用户评价">用户评价</h2>
-
+<h2>用户评价</h2>
 <blockquote>
-  <p>“Code.fun彻底改变了我们的前端开发流程，以前至少需要一周的UI实现工作现在几小时就能完成。” —— 某科技公司CTO</p>
+<p>“Code.fun彻底改变了我们的前端开发流程，以前至少需要一周的UI实现工作现在几小时就能完成。” —— 某科技公司CTO</p>
 </blockquote>
-
 <blockquote>
-  <p>“作为设计师，我终于可以确保我的设计能被100%还原，不再为开发与设计的差异而烦恼。” —— UI设计师</p>
+<p>“作为设计师，我终于可以确保我的设计能被100%还原，不再为开发与设计的差异而烦恼。” —— UI设计师</p>
 </blockquote>
-
 <blockquote>
-  <p>“代码质量超出预期，生成的组件结构和样式组织方式比我们团队的标准还要好。” —— 资深前端工程师</p>
+<p>“代码质量超出预期，生成的组件结构和样式组织方式比我们团队的标准还要好。” —— 资深前端工程师</p>
 </blockquote>
-
-<h2 id="未来发展">未来发展</h2>
-
+<h2>未来发展</h2>
 <p>Code.fun团队计划在以下方面持续创新：</p>
-
 <ol>
-  <li><strong>交互效果增强</strong>：支持更复杂的动画和交互效果自动生成</li>
-  <li><strong>更多框架支持</strong>：扩展对Angular、Svelte等框架的支持</li>
-  <li><strong>后端代码生成</strong>：探索从前端界面自动推导后端API设计</li>
-  <li><strong>AI辅助设计</strong>：提供设计建议和最佳实践推荐</li>
-  <li><strong>低代码编辑功能</strong>：在生成代码基础上提供可视化编辑能力</li>
+<li><strong>交互效果增强</strong>：支持更复杂的动画和交互效果自动生成</li>
+<li><strong>更多框架支持</strong>：扩展对Angular、Svelte等框架的支持</li>
+<li><strong>后端代码生成</strong>：探索从前端界面自动推导后端API设计</li>
+<li><strong>AI辅助设计</strong>：提供设计建议和最佳实践推荐</li>
+<li><strong>低代码编辑功能</strong>：在生成代码基础上提供可视化编辑能力</li>
 </ol>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Code.fun作为设计稿转代码领域的革命性工具，正在重塑前端开发流程和效率标准。通过消除设计和开发之间的鸿沟，它不仅提高了开发效率，还确保了最终产品与设计愿景的一致性。</p>
-
 <p>在软件开发日益强调速度和体验的今天，Code.fun为企业和开发者提供了显著的竞争优势，让创意能够更快、更好地转化为现实产品。</p>
-
 <p>想亲身体验设计稿一键转代码的魔力，请访问<a href="https://code.fun/">Code.fun官方网站</a>。</p>
 
+					</div>
 				</article>
 
 				
@@ -558,11 +536,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -573,18 +550,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -594,7 +564,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -607,6 +577,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 

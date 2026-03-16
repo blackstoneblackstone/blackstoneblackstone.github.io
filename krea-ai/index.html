@@ -92,10 +92,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <!-- Prism.js 代码高亮 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Markdown 文章默认主题（https://github.com/shfshanyue/markdown-theme），JS 会按用户选择替换 -->
+    <link id="markdown-theme-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/github.css">
     
+   
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -257,6 +257,16 @@ crossorigin="anonymous"></script>
     <main role="main" class="site-content">
         
 <div class="post-layout">
+	
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="assets/images/tools/krea.svg"
+            alt="Krea"
+            loading="eager"
+        />
+	</div>
+	
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -280,210 +290,183 @@ crossorigin="anonymous"></script>
 		<div class="row">
 			<!-- 正文区 -->
 			<div class="col-lg-8 col-xl-9">
-				<nav class="post-breadcrumb" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#one" itemprop="item"><span itemprop="name">One</span></a>
-							<meta itemprop="position" content="3" />
-						</li>
-						
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a href="/categories.html#优秀项目" itemprop="item"><span itemprop="name">优秀项目</span></a>
-							<meta itemprop="position" content="4" />
-						</li>
-						
-						<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<span itemprop="name">Krea</span>
-							<meta itemprop="position" content="5" />
-						</li>
-					</ol>
-				</nav>
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#one" itemprop="item"><span itemprop="name">One</span></a>
+								<meta itemprop="position" content="3" />
+							</li>
+							
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="/categories.html#优秀项目" itemprop="item"><span itemprop="name">优秀项目</span></a>
+								<meta itemprop="position" content="4" />
+							</li>
+							
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Krea</span>
+								<meta itemprop="position" content="5" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
+						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
+							<option value="github">GitHub</option>
+							<option value="shanchui">山吹</option>
+							<option value="shanyue">山月</option>
+							<option value="condensed-night-purple">凝夜紫</option>
+							<option value="chocolate">巧克力</option>
+							<option value="v-green">微绿</option>
+							<option value="menglv">萌绿</option>
+							<option value="base">Base</option>
+						</select>
+					</div>
+				</div>
 
 				<article class="article-post" id="article-content">
-					<h2 id="krea---多功能ai创意平台">Krea - 多功能AI创意平台</h2>
-
+					<div id="article-body" class="markdown-body">
+						<h2>Krea - 多功能AI创意平台</h2>
 <p><a href="https://www.krea.ai/">Krea</a> 是一个强大而全面的AI创意平台，为创作者提供图像生成、视频制作、3D对象创建等多种创作工具。Krea整合了当前最先进的AI模型，让用户能够轻松创作高质量的数字内容。</p>
-
-<h2 id="核心功能">核心功能</h2>
-
-<h3 id="1-flux图像生成">1. Flux图像生成</h3>
-
+<h2>核心功能</h2>
+<h3>1. Flux图像生成</h3>
 <p>Krea的Flux图像生成功能提供了高质量、简单易用的AI图像创作体验：</p>
-
 <ul>
-  <li><strong>多种风格选择</strong>：探索各种创作风格和艺术效果</li>
-  <li><strong>图像提示</strong>：使用现有图像作为参考进行创作</li>
-  <li><strong>精准控制</strong>：出色的提示词执行能力，确保创作结果符合预期</li>
-  <li><strong>快速生成</strong>：高效的处理速度，迅速获得创作结果</li>
+<li><strong>多种风格选择</strong>：探索各种创作风格和艺术效果</li>
+<li><strong>图像提示</strong>：使用现有图像作为参考进行创作</li>
+<li><strong>精准控制</strong>：出色的提示词执行能力，确保创作结果符合预期</li>
+<li><strong>快速生成</strong>：高效的处理速度，迅速获得创作结果</li>
 </ul>
-
-<h3 id="2-视频生成">2. 视频生成</h3>
-
+<h3>2. 视频生成</h3>
 <p>整合多种顶级视频生成模型，提供全面的视频创作能力：</p>
-
 <ul>
-  <li><strong>多种模型支持</strong>：集成Wan、Hailuo、Hunyuan、Runway、Pika等模型</li>
-  <li><strong>高质量输出</strong>：生成令人惊艳的影片和动画</li>
-  <li><strong>视频风格迁移</strong>：改变任何视频的艺术风格</li>
-  <li><strong>动画功能</strong>：通过AI关键帧插值技术制作动画</li>
+<li><strong>多种模型支持</strong>：集成Wan、Hailuo、Hunyuan、Runway、Pika等模型</li>
+<li><strong>高质量输出</strong>：生成令人惊艳的影片和动画</li>
+<li><strong>视频风格迁移</strong>：改变任何视频的艺术风格</li>
+<li><strong>动画功能</strong>：通过AI关键帧插值技术制作动画</li>
 </ul>
-
-<h3 id="3-编辑功能">3. 编辑功能</h3>
-
+<h3>3. 编辑功能</h3>
 <p>强大的图像编辑能力，让修改变得简单：</p>
-
 <ul>
-  <li><strong>对象移动</strong>：轻松移动图像中的物体</li>
-  <li><strong>添加对象</strong>：在图像中添加新的元素</li>
-  <li><strong>图像扩展</strong>：扩展图像边界和内容</li>
-  <li><strong>内容替换</strong>：智能替换图像中的特定部分</li>
+<li><strong>对象移动</strong>：轻松移动图像中的物体</li>
+<li><strong>添加对象</strong>：在图像中添加新的元素</li>
+<li><strong>图像扩展</strong>：扩展图像边界和内容</li>
+<li><strong>内容替换</strong>：智能替换图像中的特定部分</li>
 </ul>
-
-<h3 id="4-3d内容创建">4. 3D内容创建</h3>
-
+<h3>4. 3D内容创建</h3>
 <p>最新推出的3D对象生成功能：</p>
-
 <ul>
-  <li><strong>文本到3D</strong>：通过文字描述生成3D对象</li>
-  <li><strong>图像到3D</strong>：从2D图像创建3D模型</li>
-  <li><strong>快速生成</strong>：在几秒钟内完成3D内容创建</li>
-  <li><strong>场景编辑</strong>：使用3D场景编辑器组织多个对象</li>
+<li><strong>文本到3D</strong>：通过文字描述生成3D对象</li>
+<li><strong>图像到3D</strong>：从2D图像创建3D模型</li>
+<li><strong>快速生成</strong>：在几秒钟内完成3D内容创建</li>
+<li><strong>场景编辑</strong>：使用3D场景编辑器组织多个对象</li>
 </ul>
-
-<h3 id="5-高级功能">5. 高级功能</h3>
-
+<h3>5. 高级功能</h3>
 <p>Krea还提供多种专业级功能：</p>
-
 <ul>
-  <li><strong>增强器</strong>：将真实或生成的图像提升至4K分辨率</li>
-  <li><strong>实时渲染</strong>：在画布上实时进行AI渲染，即时获得反馈</li>
-  <li><strong>训练定制</strong>：教会Krea复制你的风格、产品或角色</li>
-  <li><strong>资源管理</strong>：查找并组织在Krea中创建的图像</li>
+<li><strong>增强器</strong>：将真实或生成的图像提升至4K分辨率</li>
+<li><strong>实时渲染</strong>：在画布上实时进行AI渲染，即时获得反馈</li>
+<li><strong>训练定制</strong>：教会Krea复制你的风格、产品或角色</li>
+<li><strong>资源管理</strong>：查找并组织在Krea中创建的图像</li>
 </ul>
-
-<h2 id="技术特点">技术特点</h2>
-
+<h2>技术特点</h2>
 <p>Krea采用先进的AI技术：</p>
-
 <ol>
-  <li><strong>多模型集成</strong>：整合多种顶级AI生成模型</li>
-  <li><strong>跨媒体创作</strong>：支持图像、视频和3D内容的无缝创作</li>
-  <li><strong>用户友好界面</strong>：直观易用的设计，降低使用门槛</li>
-  <li><strong>云端处理</strong>：强大的云端计算能力，无需本地高性能硬件</li>
+<li><strong>多模型集成</strong>：整合多种顶级AI生成模型</li>
+<li><strong>跨媒体创作</strong>：支持图像、视频和3D内容的无缝创作</li>
+<li><strong>用户友好界面</strong>：直观易用的设计，降低使用门槛</li>
+<li><strong>云端处理</strong>：强大的云端计算能力，无需本地高性能硬件</li>
 </ol>
-
-<h2 id="适用场景">适用场景</h2>
-
+<h2>适用场景</h2>
 <p>Krea适用于多种创意场景：</p>
-
-<h3 id="内容创作者">内容创作者</h3>
-
+<h3>内容创作者</h3>
 <ul>
-  <li><strong>社交媒体内容</strong>：创建吸引眼球的社交媒体图像和短视频</li>
-  <li><strong>艺术探索</strong>：尝试不同的艺术风格和创作方向</li>
-  <li><strong>概念设计</strong>：快速生成概念艺术和视觉参考</li>
-  <li><strong>创意实验</strong>：探索新的创意可能性和表达方式</li>
+<li><strong>社交媒体内容</strong>：创建吸引眼球的社交媒体图像和短视频</li>
+<li><strong>艺术探索</strong>：尝试不同的艺术风格和创作方向</li>
+<li><strong>概念设计</strong>：快速生成概念艺术和视觉参考</li>
+<li><strong>创意实验</strong>：探索新的创意可能性和表达方式</li>
 </ul>
-
-<h3 id="专业设计师">专业设计师</h3>
-
+<h3>专业设计师</h3>
 <ul>
-  <li><strong>概念原型</strong>：快速生成设计概念和原型</li>
-  <li><strong>视觉灵感</strong>：寻找创意灵感和参考</li>
-  <li><strong>工作流优化</strong>：加速设计过程和迭代</li>
-  <li><strong>风格探索</strong>：测试不同的设计风格和方向</li>
+<li><strong>概念原型</strong>：快速生成设计概念和原型</li>
+<li><strong>视觉灵感</strong>：寻找创意灵感和参考</li>
+<li><strong>工作流优化</strong>：加速设计过程和迭代</li>
+<li><strong>风格探索</strong>：测试不同的设计风格和方向</li>
 </ul>
-
-<h3 id="营销团队">营销团队</h3>
-
+<h3>营销团队</h3>
 <ul>
-  <li><strong>广告素材</strong>：生成营销活动所需的图像和视频</li>
-  <li><strong>品牌内容</strong>：创建符合品牌调性的视觉内容</li>
-  <li><strong>社交媒体资产</strong>：设计吸引用户的社交媒体素材</li>
-  <li><strong>产品展示</strong>：制作产品的3D展示和演示</li>
+<li><strong>广告素材</strong>：生成营销活动所需的图像和视频</li>
+<li><strong>品牌内容</strong>：创建符合品牌调性的视觉内容</li>
+<li><strong>社交媒体资产</strong>：设计吸引用户的社交媒体素材</li>
+<li><strong>产品展示</strong>：制作产品的3D展示和演示</li>
 </ul>
-
-<h2 id="使用体验">使用体验</h2>
-
+<h2>使用体验</h2>
 <p>Krea提供出色的用户体验：</p>
-
 <ol>
-  <li><strong>简单直观</strong>：容易上手，无需深厚的技术背景</li>
-  <li><strong>强大功能</strong>：专业级的创作能力和结果质量</li>
-  <li><strong>集成平台</strong>：一站式解决多种创意需求</li>
-  <li><strong>持续更新</strong>：不断整合最新的AI技术和模型</li>
+<li><strong>简单直观</strong>：容易上手，无需深厚的技术背景</li>
+<li><strong>强大功能</strong>：专业级的创作能力和结果质量</li>
+<li><strong>集成平台</strong>：一站式解决多种创意需求</li>
+<li><strong>持续更新</strong>：不断整合最新的AI技术和模型</li>
 </ol>
-
-<h2 id="与其他ai创意工具对比">与其他AI创意工具对比</h2>
-
+<h2>与其他AI创意工具对比</h2>
 <p>相比其他AI创意工具，Krea具有以下优势：</p>
-
 <table>
-  <thead>
-    <tr>
-      <th>特点</th>
-      <th>Krea</th>
-      <th>其他AI创意工具</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>功能全面性</td>
-      <td>图像、视频、3D、编辑等全面覆盖</td>
-      <td>通常专注于单一或少数功能</td>
-    </tr>
-    <tr>
-      <td>模型多样性</td>
-      <td>集成多种顶级模型</td>
-      <td>通常使用单一模型</td>
-    </tr>
-    <tr>
-      <td>使用简易度</td>
-      <td>友好的界面设计，容易上手</td>
-      <td>可能需要更多专业知识</td>
-    </tr>
-    <tr>
-      <td>创作灵活性</td>
-      <td>多种创作方式和风格选择</td>
-      <td>选择和控制可能有限</td>
-    </tr>
-    <tr>
-      <td>集成生态系统</td>
-      <td>完整的创作和管理平台</td>
-      <td>可能需要多个工具配合使用</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特点</th>
+<th>Krea</th>
+<th>其他AI创意工具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>功能全面性</td>
+<td>图像、视频、3D、编辑等全面覆盖</td>
+<td>通常专注于单一或少数功能</td>
+</tr>
+<tr>
+<td>模型多样性</td>
+<td>集成多种顶级模型</td>
+<td>通常使用单一模型</td>
+</tr>
+<tr>
+<td>使用简易度</td>
+<td>友好的界面设计，容易上手</td>
+<td>可能需要更多专业知识</td>
+</tr>
+<tr>
+<td>创作灵活性</td>
+<td>多种创作方式和风格选择</td>
+<td>选择和控制可能有限</td>
+</tr>
+<tr>
+<td>集成生态系统</td>
+<td>完整的创作和管理平台</td>
+<td>可能需要多个工具配合使用</td>
+</tr>
+</tbody>
 </table>
-
-<h2 id="实际应用案例">实际应用案例</h2>
-
-<h3 id="独立创作者的全能助手">独立创作者的全能助手</h3>
-
+<h2>实际应用案例</h2>
+<h3>独立创作者的全能助手</h3>
 <p>独立内容创作者使用Krea创建跨平台的视觉内容，从图像到视频，再到3D展示，大大拓展了创作可能性。</p>
-
-<h3 id="设计团队的概念工具">设计团队的概念工具</h3>
-
+<h3>设计团队的概念工具</h3>
 <p>设计团队利用Krea快速生成和测试设计概念，加速了创意过程和客户沟通。</p>
-
-<h3 id="营销部门的内容工厂">营销部门的内容工厂</h3>
-
+<h3>营销部门的内容工厂</h3>
 <p>营销团队使用Krea为不同渠道创建定制化的视觉内容，提高了内容产出效率和质量。</p>
-
-<h2 id="结语">结语</h2>
-
+<h2>结语</h2>
 <p>Krea作为一个综合性AI创意平台，正在改变数字内容创作的方式。它将复杂的AI技术转化为简单易用的工具，让各类创作者能够充分发挥创意潜力，制作出高质量的数字内容。无论是图像、视频还是3D创作，Krea都提供了强大而灵活的解决方案。</p>
-
 <p>访问<a href="https://www.krea.ai/">Krea官网</a>，探索AI创意的无限可能，让你的创意更快、更好地变为现实。</p>
 
+					</div>
 				</article>
 
 				
@@ -552,11 +535,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (!article || !toc) return;
 		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		if (headings.length === 0) {
-			toc.innerHTML = '<p class="text-muted small mb-0">暂无大纲</p>';
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<ul class="list-unstyled mb-0">';
-		var currentLevel = 0;
+		var html = '<div class="toc-list">';
 		headings.forEach(function(heading, index) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
 			var id = 'heading-' + index;
@@ -567,18 +549,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			anchor.textContent = heading.textContent;
 			heading.innerHTML = '';
 			heading.appendChild(anchor);
-			if (level > currentLevel) {
-				for (var i = 0; i < level - currentLevel; i++) html += '<ul class="list-unstyled pl-3">';
-			} else if (level < currentLevel) {
-				for (var i = 0; i < currentLevel - level; i++) html += '</ul>';
-			}
-			html += '<li class="mb-1"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></li>';
-			currentLevel = level;
+			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
 		});
-		for (var j = 0; j < currentLevel; j++) html += '</ul>';
-		html += '</ul>';
+		html += '</div>';
 		toc.innerHTML = html;
-		toc.querySelectorAll('a').forEach(function(link) {
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
 				var target = document.querySelector(this.getAttribute('href'));
@@ -588,7 +563,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function highlightCurrentHeading() {
 		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-		var tocLinks = document.querySelectorAll('#toc a');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
 		if (!headings.length || !tocLinks.length) return;
 		var current = null;
 		headings.forEach(function(h) {
@@ -601,6 +576,40 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	generateTOC();
 	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'github';
+	var themeSelect = document.getElementById('markdown-theme-select');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		if (themeSelect) themeSelect.value = theme;
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeSelect && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
+		themeSelect.value = theme;
+		applyTheme(theme);
+		themeSelect.addEventListener('change', function() {
+			applyTheme(themeSelect.value || defaultTheme);
+		});
+	}
 });
 </script>
 
