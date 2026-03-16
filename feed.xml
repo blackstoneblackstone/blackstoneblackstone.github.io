@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://blackstones.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blackstones.xyz/" rel="alternate" type="text/html" hreflang="zh-CN" /><updated>2026-03-16T10:57:29+08:00</updated><id>https://blackstones.xyz/feed.xml</id><title type="html">黑石的知识库 - AI编程、技术分享与开发经验</title><subtitle>黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。</subtitle><author><name>黑石</name></author><entry><title type="html">AI 吸血鬼：为什么效率越高，反而越忙碌</title><link href="https://blackstones.xyz/ai-vampire-efficiency-paradox/" rel="alternate" type="text/html" title="AI 吸血鬼：为什么效率越高，反而越忙碌" /><published>2026-03-16T10:30:00+08:00</published><updated>2026-03-16T10:30:00+08:00</updated><id>https://blackstones.xyz/ai-vampire-efficiency-paradox</id><content type="html" xml:base="https://blackstones.xyz/ai-vampire-efficiency-paradox/"><![CDATA[<h2 id="困在效率里">困在效率里</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://blackstones.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blackstones.xyz/" rel="alternate" type="text/html" hreflang="zh-CN" /><updated>2026-03-16T16:40:22+08:00</updated><id>https://blackstones.xyz/feed.xml</id><title type="html">黑石的知识库 - AI编程、技术分享与开发经验</title><subtitle>黑石的知识库专注于AI编程、全栈开发、技术分享。13年开发经验，分享AI Agent开发、编程技巧、技术选型等实用内容。</subtitle><author><name>黑石</name></author><entry><title type="html">AI 吸血鬼：为什么效率越高，反而越忙碌</title><link href="https://blackstones.xyz/ai-vampire-efficiency-paradox/" rel="alternate" type="text/html" title="AI 吸血鬼：为什么效率越高，反而越忙碌" /><published>2026-03-16T10:30:00+08:00</published><updated>2026-03-16T10:30:00+08:00</updated><id>https://blackstones.xyz/ai-vampire-efficiency-paradox</id><content type="html" xml:base="https://blackstones.xyz/ai-vampire-efficiency-paradox/"><![CDATA[<h2 id="困在效率里">困在效率里</h2>
 
 <p>2026年的春天，我们正经历着一场看似矛盾的科技现实。</p>
 
 <p>作为一名软件工程师，我必须承认：像 Claude Code 搭配 Opus 4.6 这样的新一代 AI 编程工具，确实将我的工作效率推向了前所未有的高度。曾经那些关于「AI 到底有没有用」的争论早已失去意义，因为「10 倍生产力」已经从一句空洞的口号，变成了我每天真实的键盘敲击声。</p>
 
 <p>但诡异的是，在这场效率的狂欢中，我和我身边的同事们却被一种前所未有的疲惫感死死笼罩。有时在白天，我会毫无预兆地在电脑前陷入极度的疲倦——拥有40年硅谷软件工程经验，曾任职于谷歌、亚马逊的史蒂夫·耶格（Steve Yegge）将这种状态精准地概括为「AI 吸血鬼效应」：AI 并没有吸食我们的鲜血，只要和它待在同一个工作流里，它就在悄无声息地抽干我们的精力，这个概念灵感来自美剧《吸血鬼生活》里专吸能量的角色科林·罗宾逊，不少工程师甚至会毫无预兆地在白天突然陷入”瞌睡攻击”。</p>
+
+<p><img src="https://r2.blackstone.black/2026/03/ai-vampire/01-scene-ai-vampire-effect.png" alt="AI 吸血鬼效应 - 疲惫的工程师被 AI 能量体包围" /></p>
 
 <hr />
 
@@ -36,6 +38,8 @@
 <p>为了满足这种不断膨胀的预期，我只能更加深度地依赖 AI 工具，试图处理更广范围的任务。在没有老板明确下达加班指令的情况下，我在 AI 的效率加持下不自觉地承担了更多工作，彻底陷入了「工作量蔓延」的恶性循环——这是一个效率提升和组织预期调整之间，反复自我强化的过程，根本不需要老板主动施压。</p>
 
 <p>这种现象不止出现在编程领域：数字产品设计师萨默·克罗夫茨分享了设计行业的同样困境。社交媒体上那些「一分钟生成10个UI方案」「一个人顶一个团队」的炫技视频，更是在塑造一种不切实际的行业「美丽标准」：大家只看到了 AI 最光鲜的生成环节，却刻意忽视了后续由人类承担的筛选、落地和跨部门协调的巨大成本，还让没法高效用AI的从业者产生强烈的被淘汰焦虑，进一步加剧了精神压力。</p>
+
+<p><img src="https://r2.blackstone.black/2026/03/ai-vampire/02-infographic-efficiency-paradox.png" alt="效率悖论循环图 - AI 效率提升导致工作量蔓延的恶性循环" /></p>
 
 <hr />
 
