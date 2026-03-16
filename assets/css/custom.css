@@ -506,6 +506,222 @@ article mark {
     transform: translateY(-1px);
 }
 
+/* ========== 文章页布局（简洁版） ========== */
+.post-layout {
+    padding-bottom: 2rem;
+}
+
+.post-header {
+    padding: 1.5rem 0 1rem;
+    border-bottom: 1px solid #eaecef;
+    margin-bottom: 0;
+}
+
+.post-meta {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-categories {
+    margin-right: 0.75rem;
+}
+
+.post-category {
+    color: #0969da;
+    text-decoration: none;
+}
+
+.post-category:hover {
+    text-decoration: underline;
+}
+
+.post-date {
+    font-size: 0.8125rem;
+}
+
+.post-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #24292e;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+    .post-title {
+        font-size: 2rem;
+    }
+}
+
+.post-body {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.post-breadcrumb {
+    margin-bottom: 1.25rem;
+}
+
+.post-breadcrumb .breadcrumb {
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8125rem;
+    color: #6c757d;
+}
+
+.post-breadcrumb .breadcrumb-item.active {
+    color: #24292e;
+}
+
+.post-tags {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eaecef;
+}
+
+.post-tag {
+    display: inline-block;
+    margin: 0 0.35rem 0.35rem 0;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8125rem;
+    color: #57606a;
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 1em;
+    text-decoration: none;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.post-tag:hover {
+    color: #0969da;
+    background: #eaecef;
+    border-color: #0969da;
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding: 1rem 0;
+}
+
+.post-author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-author-name {
+    font-weight: 600;
+    color: #24292e;
+}
+
+.post-author-bio {
+    margin-top: 0.15rem;
+}
+
+.post-toc-wrap {
+    position: sticky;
+    top: 5rem;
+}
+
+.post-toc-card {
+    padding: 1rem;
+    border: 1px solid #eaecef;
+    border-radius: 8px;
+    background: #fafbfc;
+}
+
+.post-toc-title {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #57606a;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.post-toc-card .toc {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.post-toc-card .toc-link {
+    display: block;
+    padding: 0.25rem 0;
+    font-size: 0.8125rem;
+    color: #57606a;
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    padding-left: 0.5rem;
+    margin-left: 0;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.post-toc-card .toc-link:hover {
+    color: #0969da;
+}
+
+.post-toc-card .toc-link.active {
+    color: #0969da;
+    font-weight: 600;
+    border-left-color: #0969da;
+}
+
+.post-nav {
+    padding: 1rem 0;
+    border-top: 1px solid #eaecef;
+    background: #fafbfc;
+}
+
+.post-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.875rem;
+}
+
+.post-nav-link {
+    color: #24292e;
+    text-decoration: none;
+    max-width: 45%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color 0.15s;
+}
+
+.post-nav-link:hover {
+    color: #0969da;
+}
+
+.post-nav-prev {
+    text-align: left;
+}
+
+.post-nav-next {
+    text-align: right;
+}
+
+.post-nav-sep {
+    color: #d0d7de;
+    flex-shrink: 0;
+}
+
+.post-nav-empty {
+    color: #d0d7de;
+    cursor: default;
+}
+
 /* 响应式优化 */
 @media (max-width: 768px) {
     article {
@@ -540,5 +756,28 @@ article mark {
     
     .breadcrumb {
         font-size: 0.8rem;
+    }
+
+    .post-header {
+        padding: 1rem 0 0.75rem;
+    }
+
+    .post-title {
+        font-size: 1.5rem;
+    }
+
+    .post-nav-inner {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .post-nav-link {
+        max-width: 100%;
+    }
+
+    .post-nav-prev,
+    .post-nav-next {
+        text-align: center;
     }
 }
