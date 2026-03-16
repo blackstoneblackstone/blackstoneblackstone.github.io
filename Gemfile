@@ -21,7 +21,5 @@ group :jekyll_plugins do
     gem 'jekyll-sitemap'
     gem 'jekyll-paginate'
     gem 'jekyll-seo-tag'
+    gem 'jekyll-commonmark'
 end
-
-# Markdown parser
-gem "kramdown-parser-gfm"

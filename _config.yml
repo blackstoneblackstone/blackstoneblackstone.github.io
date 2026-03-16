@@ -58,18 +58,14 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-commonmark
 
-# Jekyll 4.x compatibility
-kramdown:
-  input: GFM
-  hard_wrap: false
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: 'highlight'
-    span:
-      line_numbers: true
-    block:
-      line_numbers: true
+# CommonMark（替代 Kramdown）
+markdown: CommonMark
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+highlighter: rouge
 
 # Ruby 3.3+ and Jekyll 4.4+ compatibility
 safe: false
@@ -113,9 +109,7 @@ defaults:
     values:
       layout: page
       
-# Syntax
-markdown: kramdown
-highlighter: rouge
+# Syntax（markdown 已在上方 CommonMark 块中设置）
 
 # Disable sass converter to avoid architecture compatibility issues
 sass:

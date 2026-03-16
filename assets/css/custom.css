@@ -156,237 +156,41 @@ body.homefirstpage .home-post-title::first-letter {
     vertical-align: baseline !important;
 }
 
-/* Markdown 内容样式优化 - GitHub 风格主题（仅文章页 .post-layout） */
-.post-layout article {
-    line-height: 1.6;
-    color: #24292e;
-    max-width: none;
+/* 文章工具栏：面包屑 + 主题选择 */
+.post-article-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-/* 标题样式优化 - GitHub 风格 */
-.post-layout article h1 {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #24292e;
-    margin: 24px 0 16px 0;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid #eaecef;
+.markdown-theme-select-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.post-layout article h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #24292e;
-    margin: 24px 0 16px 0;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid #eaecef;
+.markdown-theme-label {
+    font-size: 0.8125rem;
+    color: #8c8c8c;
 }
 
-.post-layout article h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #24292e;
-    margin: 24px 0 16px 0;
-}
-
-.post-layout article h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #24292e;
-    margin: 24px 0 16px 0;
-}
-
-.post-layout article h5 {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #24292e;
-    margin: 24px 0 16px 0;
-}
-
-.post-layout article h6 {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #586069;
-    margin: 24px 0 16px 0;
-}
-
-/* 段落样式 - GitHub 风格 */
-.post-layout article p {
-    margin-bottom: 16px;
-    word-wrap: break-word;
-}
-
-/* 列表样式优化 - GitHub 风格 */
-.post-layout article ul, .post-layout article ol {
-    margin: 0 0 16px 0;
-    padding-left: 2em;
-}
-
-.post-layout article li {
-    margin-bottom: 0.25em;
-    line-height: 1.6;
-}
-
-.post-layout article ul li {
-    list-style-type: disc;
-}
-
-.post-layout article ol li {
-    list-style-type: decimal;
-}
-
-/* 嵌套列表 */
-.post-layout article ul ul, .post-layout article ol ol, .post-layout article ul ol, .post-layout article ol ul {
-    margin: 0.25em 0;
-}
-
-/* 表格样式优化 - GitHub 风格 */
-.post-layout article table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 16px 0;
-    font-size: 14px;
-    border: 1px solid #d0d7de;
-    border-radius: 6px;
-    overflow: hidden;
-}
-
-.post-layout article th, .post-layout article td {
-    padding: 6px 13px;
-    text-align: left;
-    border-bottom: 1px solid #d0d7de;
-}
-
-.post-layout article th {
-    background-color: #f6f8fa;
-    font-weight: 600;
-    color: #24292e;
-}
-
-.post-layout article tr:last-child td {
-    border-bottom: none;
-}
-
-.post-layout article tr:nth-child(2n) {
-    background-color: #f6f8fa;
-}
-
-/* 引用块样式优化 - GitHub 风格 */
-.post-layout article blockquote {
-    margin: 16px 0;
-    padding: 0 1em;
-    color: #656d76;
-    border-left: 0.25em solid #d0d7de;
-    background-color: transparent;
-    font-style: normal;
-    position: relative;
-}
-
-.post-layout article blockquote:before {
-    display: none;
-}
-
-/* 代码块样式优化 - GitHub 风格 */
-.post-layout article pre {
-    background-color: #f6f8fa;
-    border: 1px solid #e1e4e8;
-    border-radius: 6px;
-    padding: 16px;
-    overflow-x: auto;
-    margin: 16px 0;
-    font-size: 85%;
-    line-height: 1.45;
-}
-
-.post-layout article code {
-    background-color: rgba(27, 31, 35, 0.05);
-    color: #24292e;
-    padding: 0.2em 0.4em;
-    border-radius: 3px;
-    font-size: 85%;
-}
-
-.post-layout article pre code {
-    background-color: transparent;
-    color: inherit;
-    padding: 0;
-    border-radius: 0;
-    font-size: 100%;
-}
-
-/* Prism.js 主题覆盖 */
-.post-layout article pre[class*="language-"] {
-    background-color: #f6f8fa;
-    border: 1px solid #e1e4e8;
-}
-
-.post-layout article pre[class*="language-"] code {
-    background-color: transparent;
-    color: #24292e;
-}
-
-/* 链接样式优化 - GitHub 风格 */
-.post-layout article a {
-    color: #0969da;
-    text-decoration: none;
-    background-color: transparent;
-}
-
-.post-layout article a:hover {
-    color: #0969da;
-    text-decoration: underline;
-}
-
-/* 图片样式优化 - GitHub 风格 */
-.post-layout article img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin: 16px 0;
-    display: block;
-    box-shadow: none;
-    border: 1px solid #d0d7de;
+.markdown-theme-select {
+    font-size: 0.8125rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    background: #fff;
+    color: #262626;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-.post-layout article img:hover {
-    border-color: #0969da;
-    box-shadow: 0 4px 12px rgba(9, 105, 218, 0.15);
-    transform: scale(1.02);
-}
-
-/* 水平分割线 - GitHub 风格 */
-.post-layout article hr {
-    border: none;
-    height: 0.25em;
-    background-color: #d0d7de;
-    margin: 24px 0;
-    border-radius: 1px;
-}
-
-/* 强调文本 - GitHub 风格 */
-.post-layout article strong {
-    font-weight: 600;
-    color: #24292e;
-}
-
-.post-layout article em {
-    font-style: italic;
-    color: #24292e;
-}
-
-/* 删除线 - GitHub 风格 */
-.post-layout article del {
-    text-decoration: line-through;
-    color: #656d76;
-}
-
-/* 标记文本 - GitHub 风格 */
-.post-layout article mark {
-    background-color: #fff8c5;
-    padding: 0.1em 0.2em;
-    border-radius: 3px;
+.markdown-theme-select:hover,
+.markdown-theme-select:focus {
+    border-color: #40a9ff;
+    outline: none;
 }
 
 /* 图片查看器样式 */
@@ -1019,30 +823,6 @@ body.homefirstpage .home-sidebar {
 
 /* 响应式优化 */
 @media (max-width: 768px) {
-    .post-layout article {
-        font-size: 16px;
-    }
-    
-    .post-layout article h1 {
-        font-size: 1.8rem;
-    }
-    
-    .post-layout article h2 {
-        font-size: 1.5rem;
-    }
-    
-    .post-layout article h3 {
-        font-size: 1.3rem;
-    }
-    
-    .post-layout article table {
-        font-size: 0.85rem;
-    }
-    
-    .post-layout article th, .post-layout article td {
-        padding: 8px 12px;
-    }
-    
     .image-viewer .close-btn {
         top: 10px;
         right: 15px;
