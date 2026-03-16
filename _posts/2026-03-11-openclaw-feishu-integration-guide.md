@@ -2,7 +2,7 @@
 layout: post
 title: "OpenClaw 飞书机器人对接完全指南"
 date: 2026-03-11 21:59:00 +0800
-categories: [AI 编程，OpenClaw]
+categories: [文章]
 tags: [AI 编程，飞书机器人，OpenClaw，Clawdbot，自动化]
 image: /assets/images/openclaw-feishu.png
 author: 黑石

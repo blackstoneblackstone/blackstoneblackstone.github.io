@@ -1,86 +1,123 @@
 ---
 title: "黑石的知识库"
 layout: default
-pagination:
-  enabled: true
 description: "黑石的知识库 - 分享知识和经验"
 ---
 
 <div class="container">
-  {%- if page.url == '/' -%}
-
-  <!-- Begin post excerpts, let's highlight the first 4 posts on top -->
-  <div class="row remove-site-content-margin">
-    <!-- latest post -->
-    {% assign posts_without_ai = site.posts %} {% assign filtered_posts = '' |
-    split: '' %} {% for post in posts_without_ai %} {% unless post.categories
-    contains 'One' or post.categories contains 'AI Coding' %} {% assign
-    filtered_posts = filtered_posts | push: post %} {% endunless %} {% endfor %}
-    {% assign latest_post = filtered_posts[0] %}
-    <!-- 个人介绍区域 -->
-    <div class="col-md-12">
-      <div class="card border-0 shadow-sm">
-        <div class="card-body p-4">
-          <div class="row align-items-center">
-            <div class="col-md-4 text-center">
-              <img
-                src="/assets/images/me.png"
-                alt="黑石个人资料"
-                class="img-fluid rounded-circle"
-                style="max-width: 200px"
-              />
-            </div>
-            <div class="col-md-4">
-              <h2 class="mb-3 text-primary">黑石</h2>
-              <p class="lead mb-2">13年全栈开发经验</p>
-              <p class="lead mb-2">AI Agent 开发者</p>
-              <p class="lead mb-2">AI 编程研究员</p>
-              <p class="lead mb-0">善思考,勤读书</p>
-            </div>
-            <div class="col-md-4">
-              <a href="https://www.buymeacoffee.com/blackstone" target="_blank">
-                <img
-                  src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-                  alt="Buy Me A Coffee"
-                  style="height: 60px !important; width: 217px !important"
-                />
-              </a>
-              <br>
-              <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-            </div>
-          </div>
+  <div class="home-page">
+    {%- if page.url == '/' -%}
+    <div class="row remove-site-content-margin">
+      <div class="col-12">
+    <!-- 简介区：紧凑 -->
+    <header class="home-intro">
+      <div class="home-intro-inner">
+        <img src="/assets/images/me.png" alt="黑石" class="home-intro-avatar" width="72" height="72" />
+        <div class="home-intro-text">
+          <h1 class="home-intro-title">黑石</h1>
+          <p class="home-intro-desc">13年全栈 · AI Agent 开发 · 善思考，勤读书</p>
+          <a href="https://www.buymeacoffee.com/blackstone" target="_blank" rel="noopener" class="home-intro-coffee">请我喝杯咖啡</a>
+          <span class="home-intro-pv text-muted" id="busuanzi_container_site_pv">访问 <span id="busuanzi_value_site_pv"></span> 次</span>
         </div>
       </div>
-    </div>
-  </div>
-
-  {% endif %}
-  <!--endif page url is / -->
-
-  <!-- Now the rest of the posts with the usual loop but with an offset:4 on the first page so we can skeep the first 4 posts displayed above -->
-
-  <div class="row mt-3">
-    <div class="col-md-8 main-loop">
-      <h4 class="font-weight-bold spanborder"><span>全部文章</span></h4>
-
-      {% assign all_posts = site.posts %} {% assign filtered_paginated_posts =
-      '' | split: '' %} {% for post in all_posts %} {% if post.categories
-      contains '文章' %} {% assign filtered_paginated_posts =
-      filtered_paginated_posts | push: post %} {% endif %} {% endfor %} {% for
-      post in filtered_paginated_posts %}
-      <div class="mb-3 pb-3 border-bottom">
-        <h5 class="mb-2">
-          <a class="text-dark" href="{{site.baseurl}}{{post.url}}"
-            >{{ post.title }}</a
-          >
-        </h5>
-        <small class="text-muted">
-          {{ post.date | date: '%Y年%m月%d日' }}
-        </small>
+    </header>
       </div>
-      {% endfor %}
     </div>
+    {% endif %}
 
-    <div class="col-md-4">{% include sidebar-featured.html %}</div>
+    <!-- 文章列表（仅分类「文章」） -->
+    {% assign article_posts = site.posts | where_exp: "item", "item.categories contains '文章'" %}
+    {% assign per_page = 10 %}
+    {% assign total_size = article_posts.size %}
+    {% assign total_pages = total_size | divided_by: per_page %}
+    {% assign remainder = total_size | modulo: per_page %}
+    {% if remainder > 0 %}{% assign total_pages = total_pages | plus: 1 %}{% endif %}
+
+    <div class="row home-main">
+      <section class="col-lg-8 home-posts">
+      <h2 class="home-posts-heading">文章</h2>
+      <div class="home-posts-list" id="home-posts-list">
+        {% for post in article_posts %}
+          {% assign idx = forloop.index0 %}
+          {% assign page_num = idx | divided_by: per_page | plus: 1 %}
+        <article class="home-post-item" data-page="{{ page_num }}">
+          <a href="{{ site.baseurl }}{{ post.url }}" class="home-post-link">
+            <h3 class="home-post-title">{{ post.title }}</h3>
+            {% if post.excerpt %}<p class="home-post-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>{% endif %}
+            <time class="home-post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+          </a>
+        </article>
+        {% endfor %}
+      </div>
+
+      {% if total_pages > 1 %}
+      <nav class="home-pagination" id="home-pagination" aria-label="文章分页" data-per-page="{{ per_page }}" data-total-pages="{{ total_pages }}">
+        <div class="home-pagination-inner">
+          <button type="button" class="home-pagination-btn home-pagination-prev" aria-label="上一页">上一页</button>
+          <span class="home-pagination-pages" id="home-pagination-pages"></span>
+          <button type="button" class="home-pagination-btn home-pagination-next" aria-label="下一页">下一页</button>
+        </div>
+      </nav>
+      {% endif %}
+      </section>
+      <aside class="col-lg-4 home-sidebar">{% include sidebar-featured.html %}</aside>
+    </div>
   </div>
 </div>
+
+<script>
+(function() {
+  var paginationEl = document.getElementById('home-pagination');
+  var list = document.getElementById('home-posts-list');
+  if (!paginationEl || !list) return;
+  var perPage = parseInt(paginationEl.getAttribute('data-per-page') || '10', 10);
+  var totalPages = parseInt(paginationEl.getAttribute('data-total-pages') || '1', 10);
+  if (totalPages <= 1) return;
+
+  var items = list.querySelectorAll('.home-post-item');
+  var currentPage = 1;
+
+  function renderPages() {
+    var pagesEl = document.getElementById('home-pagination-pages');
+    if (!pagesEl) return;
+    var buf = [];
+    for (var i = 1; i <= totalPages; i++) {
+      if (i === currentPage) {
+        buf.push('<span class="home-pagination-num home-pagination-num--current" aria-current="page">' + i + '</span>');
+      } else {
+        buf.push('<button type="button" class="home-pagination-num" data-page="' + i + '">' + i + '</button>');
+      }
+    }
+    pagesEl.innerHTML = buf.join('');
+    pagesEl.querySelectorAll('button[data-page]').forEach(function(btn) {
+      btn.addEventListener('click', function() { goTo(parseInt(btn.getAttribute('data-page'), 10)); });
+    });
+  }
+
+  function goTo(page) {
+    if (page < 1 || page > totalPages) return;
+    currentPage = page;
+    items.forEach(function(el) {
+      var p = parseInt(el.getAttribute('data-page'), 10);
+      el.style.display = p === currentPage ? '' : 'none';
+    });
+    renderPages();
+    document.querySelector('.home-pagination-prev').disabled = currentPage <= 1;
+    document.querySelector('.home-pagination-next').disabled = currentPage >= totalPages;
+  }
+
+  list.querySelectorAll('.home-post-item').forEach(function(el) {
+    var p = parseInt(el.getAttribute('data-page'), 10);
+    el.style.display = p === 1 ? '' : 'none';
+  });
+
+  var prevBtn = document.querySelector('.home-pagination-prev');
+  var nextBtn = document.querySelector('.home-pagination-next');
+  if (prevBtn) prevBtn.addEventListener('click', function() { goTo(currentPage - 1); });
+  if (nextBtn) nextBtn.addEventListener('click', function() { goTo(currentPage + 1); });
+
+  prevBtn.disabled = true;
+  nextBtn.disabled = totalPages <= 1;
+  renderPages();
+})();
+</script>

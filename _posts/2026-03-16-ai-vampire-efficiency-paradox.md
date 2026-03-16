@@ -2,10 +2,11 @@
 layout: post
 title: "AI 吸血鬼：为什么效率越高，反而越忙碌"
 date: 2026-03-16 10:30:00 +0800
-categories: [AI, 效率, 思考]
-image: https://pub-48e519ba51484a31972fff75f6b1ae16.r2.dev/2026/03/ai-vampire/01-scene-ai-vampire-effect.png
+categories: [文章]
+image: https://pub-48e519ba51484a31972fff75f6b1ae16.r2.dev/2026/03/ai-vampire/cover.png
 tags: [AI]
 author: 黑石
+comments: true
 excerpt: 当 AI 将效率推向极致，我们却陷入了前所未有的疲惫。这是一场关于「AI 吸血鬼效应」的深度反思。
 ---
 
