@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- 基础 SEO 标签 -->
+    <title>Anchor Relay | 黑石的知识库 - AI编程、技术分享与开发经验</title>
+    <meta name="description" content="免费生成HTTPS证书的独立开发工具">
+    <meta name="keywords" content="AI编程,全栈开发,技术博客,AI Agent,编程技巧,技术分享,黑石,开发经验">
+    <meta name="author" content="黑石">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="zh-CN">
+    
+    <!-- AI 爬虫友好标签 -->
+    
+    <meta name="ai-crawler" content="allowed">
+    <meta name="ai-training" content="permitted">
+    <meta name="content-license" content="CC-BY-SA-4.0">
+    <meta name="ai-usage" content="training, indexing, analysis">
+    
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://blackstones.xyz/anchor-relay/">
+    
+    <!-- Open Graph 标签 -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Anchor Relay">
+    <meta property="og:description" content="免费生成HTTPS证书的独立开发工具">
+    <meta property="og:url" content="https://blackstones.xyz/anchor-relay/">
+    <meta property="og:site_name" content="黑石的知识库">
+    <meta property="og:locale" content="zh_CN">
+    
+    <meta property="og:image" content="https://blackstones.xyz/assets/images/tools/anchor-relay.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    
+    <!-- Twitter Card 标签 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anchor Relay">
+    <meta name="twitter:description" content="免费生成HTTPS证书的独立开发工具">
+    
+    <meta name="twitter:image" content="https://blackstones.xyz/assets/images/tools/anchor-relay.svg">
+    
+    
+    <!-- 文章特定标签 -->
+    
+    <meta property="article:author" content="黑石">
+    <meta property="article:published_time" content="2025-09-01T00:00:00+08:00">
+    <meta property="article:modified_time" content="2025-09-01T00:00:00+08:00">
+    
+    
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Anchor Relay | 黑石的知识库 - AI编程、技术分享与开发经验</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Anchor Relay" />
+<meta name="author" content="黑石" />
+<meta property="og:locale" content="zh_CN" />
+<meta name="description" content="免费生成HTTPS证书的独立开发工具" />
+<meta property="og:description" content="免费生成HTTPS证书的独立开发工具" />
+<link rel="canonical" href="https://blackstones.xyz/anchor-relay/" />
+<meta property="og:url" content="https://blackstones.xyz/anchor-relay/" />
+<meta property="og:site_name" content="黑石的知识库 - AI编程、技术分享与开发经验" />
+<meta property="og:image" content="https://blackstones.xyz/assets/images/tools/anchor-relay.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-01T00:00:00+08:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://blackstones.xyz/assets/images/tools/anchor-relay.svg" />
+<meta property="twitter:title" content="Anchor Relay" />
+<meta name="google-site-verification" content="" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"黑石"},"dateModified":"2025-09-01T00:00:00+08:00","datePublished":"2025-09-01T00:00:00+08:00","description":"免费生成HTTPS证书的独立开发工具","headline":"Anchor Relay","image":"https://blackstones.xyz/assets/images/tools/anchor-relay.svg","mainEntityOfPage":{"@type":"WebPage","@id":"https://blackstones.xyz/anchor-relay/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://blackstones.xyz/assets/images/logo.png"},"name":"黑石"},"url":"https://blackstones.xyz/anchor-relay/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
+
+    <!-- Bootstrap Modified -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!-- Theme Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/theme.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    
+    <!-- Prism.js 代码高亮 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    
+    <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <!-- This goes before </head> closing tag, Google Analytics can be placed here --> 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4622040841439319"
+crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-4622040841439319">
+    
+    <!-- Google Search Console 验证 -->
+    
+    <meta name="google-site-verification" content="">
+    
+
+    <!-- Google Analytics -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '');
+    </script>
+    
+    
+    <!-- 结构化数据 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "name": "Anchor Relay",
+        "description": "免费生成HTTPS证书的独立开发工具",
+        "url": "https://blackstones.xyz/anchor-relay/",
+        "author": {
+            "@type": "Person",
+            "name": "黑石",
+            "url": "https://blackstones.xyz"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "黑石的知识库",
+            "url": "https://blackstones.xyz",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://blackstones.xyz/assets/images/logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://blackstones.xyz/anchor-relay/"
+        }
+        ,
+        "datePublished": "2025-09-01T00:00:00+08:00",
+        "dateModified": "2025-09-01T00:00:00+08:00",
+        "headline": "Anchor Relay",
+        "image": "https://blackstones.xyz/assets/images/tools/anchor-relay.svg",
+        "keywords": ""
+        
+    }
+    </script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJYB280FP1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-MJYB280FP1');
+    </script>
+</head>
+
+<body class="">
+
+    <!-- Navbar -->
+    <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/index.html">
+            <img src="/assets/images/favicon.ico" alt="网站图标" height="30px" style="margin-top: -5px;">
+            <strong>黑石的知识库</strong>
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarColor02" style="">
+            <ul class="navbar-nav mr-auto d-flex align-items-center">
+               <!--  Replace menu links here -->
+
+<li class="nav-item">
+  <a
+    class="nav-link "
+    href="/index.html"
+    >首页</a
+  >
+</li>
+<li class="nav-item">
+  <a
+    class="nav-link "
+    href="/course.html"
+    >课程</a
+  >
+</li>
+<li class="nav-item">
+  <a
+    class="nav-link "
+    href="/marketing-tools.html"
+    >营销工具</a
+  >
+</li>
+<li class="nav-item">
+  <a
+    class="nav-link "
+    href="/ai-coding-tools.html"
+    >AI Coding</a
+  >
+</li>
+<li class="nav-item">
+  <a
+    class="nav-link "
+    href="/indie-dev.html"
+    >独立开发</a
+  >
+</li>
+<li class="nav-item">
+  <a
+    class="nav-link "
+    href="/poker.html"
+    >德州扑克</a
+  >
+</li>
+<li class="nav-item">
+  <a
+    class="nav-link "
+    href="/investment.html"
+    >投资</a
+  >
+</li>
+<li class="nav-item">
+  <a
+    class="nav-link "
+    href="/immigration.html"
+    >移民</a
+  >
+</li>
+
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Search Results -->
+    <div id="lunrsearchresults">
+        <ul class="mb-0"></ul>
+    </div>
+
+    <!-- Content -->
+    <main role="main" class="site-content">
+        
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+		<div class="h-100 tofront">
+			<div class="row  justify-content-between ">
+				<div class=" col-md-12  pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+					<p class="text-uppercase font-weight-bold">
+                        <span class="catlist">
+						
+                          <a class="sscroll text-danger" href="/categories.html#独立开发工具">独立开发工具</a><span class="sep">, </span>
+                        
+                        </span>
+					</p>
+					<h1 class="display-4 mb-4 article-headline">Anchor Relay</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div class="container pt-4 pb-4">
+	<div class="row">
+        
+        <!-- 文章内容区域 -->
+		<div class="col-md-9 col-lg-9">
+            
+            <!-- 面包屑导航 -->
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb" style="background-color: transparent; padding: 0;" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="/" itemprop="item">
+                            <span itemprop="name">首页</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="/categories.html" itemprop="item">
+                            <span itemprop="name">分类</span>
+                        </a>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                    
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="/categories.html#独立开发工具" itemprop="item">
+                            <span itemprop="name">独立开发工具</span>
+                        </a>
+                        <meta itemprop="position" content="3" />
+                    </li>
+                    
+                    <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">Anchor Relay</span>
+                        <meta itemprop="position" content="4" />
+                    </li>
+                </ol>
+            </nav>
+            
+            <!-- Article -->
+			<article class="article-post" id="article-content">                
+			<h1 id="anchor-relay---免费生成https证书的独立开发工具">Anchor Relay - 免费生成HTTPS证书的独立开发工具</h1>
+
+<p><a href="https://anchor.dev/relay/5879edd1-bead-45a8-a070-25e13b4c1fd0">Anchor Relay</a> 是一款专为独立开发者设计的免费HTTPS证书生成工具。它基于Let’s Encrypt技术，为开发者提供快速、安全、免费的SSL/TLS证书解决方案，让网站安全部署变得简单高效。</p>
+
+<h2 id="核心功能">核心功能</h2>
+
+<h3 id="1-免费https证书生成">1. 免费HTTPS证书生成</h3>
+<p>Anchor Relay基于Let’s Encrypt的免费证书服务，为开发者提供90天有效期的SSL/TLS证书，完全免费且无需复杂的申请流程。</p>
+
+<h3 id="2-快速部署">2. 快速部署</h3>
+<p>通过简单的配置，开发者可以在几分钟内为网站配置HTTPS证书，大大简化了安全部署的流程。</p>
+
+<h3 id="3-自动续期支持">3. 自动续期支持</h3>
+<p>虽然证书有效期为90天，但Anchor Relay提供了自动续期的解决方案，确保网站持续保持安全连接。</p>
+
+<h3 id="4-浏览器信任">4. 浏览器信任</h3>
+<p>生成的证书被主流浏览器完全信任，确保用户访问时不会出现安全警告。</p>
+
+<h2 id="技术优势">技术优势</h2>
+
+<h3 id="lets-encrypt集成">Let’s Encrypt集成</h3>
+<ul>
+  <li><strong>权威认证</strong> - 基于Let’s Encrypt的免费证书颁发机构</li>
+  <li><strong>广泛支持</strong> - 被所有主流浏览器和操作系统信任</li>
+  <li><strong>自动化管理</strong> - 支持证书的自动申请和续期</li>
+</ul>
+
+<h3 id="开发者友好">开发者友好</h3>
+<ul>
+  <li><strong>零成本</strong> - 完全免费，无需付费订阅</li>
+  <li><strong>简单配置</strong> - 最小化配置要求，快速上手</li>
+  <li><strong>文档完善</strong> - 提供详细的使用文档和示例</li>
+</ul>
+
+<h3 id="安全可靠">安全可靠</h3>
+<ul>
+  <li><strong>加密强度</strong> - 支持现代加密算法和协议</li>
+  <li><strong>定期更新</strong> - 证书定期更新确保安全性</li>
+  <li><strong>合规标准</strong> - 符合行业安全标准</li>
+</ul>
+
+<h2 id="适用场景">适用场景</h2>
+
+<h3 id="独立开发者">独立开发者</h3>
+<ul>
+  <li><strong>个人项目</strong> - 为个人网站和项目快速配置HTTPS</li>
+  <li><strong>原型验证</strong> - 在开发阶段快速部署安全连接</li>
+  <li><strong>成本控制</strong> - 避免昂贵的商业证书费用</li>
+</ul>
+
+<h3 id="小型团队">小型团队</h3>
+<ul>
+  <li><strong>内部工具</strong> - 为内部管理系统配置安全连接</li>
+  <li><strong>测试环境</strong> - 在测试环境中验证HTTPS功能</li>
+  <li><strong>快速迭代</strong> - 支持快速的产品迭代和部署</li>
+</ul>
+
+<h3 id="学习项目">学习项目</h3>
+<ul>
+  <li><strong>技术学习</strong> - 学习HTTPS配置和SSL证书管理</li>
+  <li><strong>实验项目</strong> - 在实验性项目中测试安全功能</li>
+  <li><strong>开源贡献</strong> - 为开源项目提供安全的访问方式</li>
+</ul>
+
+<h2 id="使用流程">使用流程</h2>
+
+<h3 id="1-域名验证">1. 域名验证</h3>
+<ul>
+  <li>验证域名所有权</li>
+  <li>配置DNS记录</li>
+  <li>确认域名解析正确</li>
+</ul>
+
+<h3 id="2-证书申请">2. 证书申请</h3>
+<ul>
+  <li>填写域名信息</li>
+  <li>选择证书类型</li>
+  <li>提交申请请求</li>
+</ul>
+
+<h3 id="3-自动配置">3. 自动配置</h3>
+<ul>
+  <li>系统自动生成证书</li>
+  <li>提供配置文件和密钥</li>
+  <li>下载证书文件</li>
+</ul>
+
+<h3 id="4-服务器部署">4. 服务器部署</h3>
+<ul>
+  <li>上传证书到服务器</li>
+  <li>配置Web服务器</li>
+  <li>测试HTTPS连接</li>
+</ul>
+
+<h2 id="与其他证书服务的对比">与其他证书服务的对比</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>特性</th>
+      <th>Anchor Relay</th>
+      <th>商业证书</th>
+      <th>Let’s Encrypt直接使用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>费用</td>
+      <td>免费</td>
+      <td>付费</td>
+      <td>免费</td>
+    </tr>
+    <tr>
+      <td>配置难度</td>
+      <td>简单</td>
+      <td>中等</td>
+      <td>复杂</td>
+    </tr>
+    <tr>
+      <td>自动化程度</td>
+      <td>高</td>
+      <td>低</td>
+      <td>中等</td>
+    </tr>
+    <tr>
+      <td>技术支持</td>
+      <td>社区</td>
+      <td>专业</td>
+      <td>社区</td>
+    </tr>
+    <tr>
+      <td>证书有效期</td>
+      <td>90天</td>
+      <td>1-2年</td>
+      <td>90天</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="最佳实践">最佳实践</h2>
+
+<h3 id="证书管理">证书管理</h3>
+<ol>
+  <li><strong>定期检查</strong> - 定期检查证书有效期</li>
+  <li><strong>自动续期</strong> - 配置自动续期避免证书过期</li>
+  <li><strong>备份存储</strong> - 安全备份证书和私钥文件</li>
+</ol>
+
+<h3 id="安全配置">安全配置</h3>
+<ol>
+  <li><strong>强制HTTPS</strong> - 配置服务器强制使用HTTPS</li>
+  <li><strong>安全头设置</strong> - 配置适当的安全HTTP头</li>
+  <li><strong>定期更新</strong> - 保持服务器和证书的定期更新</li>
+</ol>
+
+<h3 id="监控告警">监控告警</h3>
+<ol>
+  <li><strong>证书监控</strong> - 设置证书过期监控</li>
+  <li><strong>服务监控</strong> - 监控HTTPS服务可用性</li>
+  <li><strong>性能监控</strong> - 监控SSL握手性能</li>
+</ol>
+
+<h2 id="技术限制">技术限制</h2>
+
+<h3 id="证书限制">证书限制</h3>
+<ul>
+  <li><strong>有效期</strong> - 证书有效期为90天，需要定期续期</li>
+  <li><strong>域名限制</strong> - 仅支持已验证的域名</li>
+  <li><strong>通配符</strong> - 支持通配符证书申请</li>
+</ul>
+
+<h3 id="使用限制">使用限制</h3>
+<ul>
+  <li><strong>申请频率</strong> - 有申请频率限制，避免滥用</li>
+  <li><strong>域名数量</strong> - 单个账户有域名数量限制</li>
+  <li><strong>技术支持</strong> - 主要依靠社区支持</li>
+</ul>
+
+<h2 id="发展前景">发展前景</h2>
+
+<h3 id="市场需求">市场需求</h3>
+<p>随着网络安全意识的提升和HTTPS的普及，免费证书服务的需求持续增长，特别是对独立开发者和小型团队。</p>
+
+<h3 id="技术发展">技术发展</h3>
+<ul>
+  <li><strong>自动化程度提升</strong> - 进一步简化证书申请和部署流程</li>
+  <li><strong>集成能力增强</strong> - 与更多开发工具和平台集成</li>
+  <li><strong>安全标准更新</strong> - 跟上最新的安全标准和最佳实践</li>
+</ul>
+
+<h3 id="生态建设">生态建设</h3>
+<ul>
+  <li><strong>开发者社区</strong> - 建设活跃的开发者社区</li>
+  <li><strong>工具集成</strong> - 与主流开发工具和平台深度集成</li>
+  <li><strong>文档完善</strong> - 持续完善使用文档和最佳实践指南</li>
+</ul>
+
+<h2 id="访问地址">访问地址</h2>
+
+<p><a href="https://anchor.dev/relay/5879edd1-bead-45a8-a070-25e13b4c1fd0">Anchor Relay</a></p>
+
+<hr />
+
+<p><em>Anchor Relay为独立开发者提供了简单、免费、可靠的HTTPS证书解决方案，让网站安全部署不再是技术门槛。无论是个人项目还是小型团队，都能快速获得专业级的SSL/TLS证书保护。</em></p>
+                
+			</article>
+			
+			<!-- Tags -->
+			<div class="mb-4">
+				<span class="taglist">
+				
+				</span>
+			</div>
+ 
+             <!-- Author Box -->
+                				
+				<div class="row mt-5">
+					<div class="col-md-2 align-self-center">
+                          
+					</div>
+				</div>				
+                
+            
+            <!-- Comments -->
+            
+                <!-- Giscus Comments -->
+<div id="comments" class="mt-5">
+    <script src="https://giscus.app/client.js"
+            data-repo="blackstoneblackstone/blackstoneblackstone.github.io"
+            data-repo-id="R_kgDOORMv6Q"
+            data-category="Announcements"
+            data-category-id="DIC_kwDOORMv6c4CvOy7"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="light"
+            data-lang="zh-CN"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
+
+            
+            
+		</div>
+        
+        <!-- 文章大纲侧边栏 -->
+        <div class="col-md-3 col-lg-3 d-none d-lg-block">
+            <div class="sticky-top" style="top: 20px;">
+                <div class="card">
+                    <div class="card-header">
+                        <h6 class="mb-0">文章大纲</h6>
+                    </div>
+                    <div class="card-body">
+                        <nav id="toc" class="toc">
+                            <!-- 大纲内容将通过 JavaScript 生成 -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+	</div>
+</div>
+
+
+<!-- Aletbar Prev/Next -->
+<div class="alertbar">
+    <div class="container">
+        <div class="row prevnextlinks small font-weight-bold">
+          
+            <div class="col-md-6 rightborder pl-0">
+                <a class="text-dark" href="/claude-code/"> <img height="30px" class="mr-1" src="/assets/images/tools/claude.svg">  Claude Code</a>
+            </div>
+          
+          
+            <div class="col-md-6 text-right pr-0">
+                <a class="text-dark" href="/english-learning/"> 英语学习方法汇总  <img height="30px" class="ml-1" src="/assets/images/tools/youglish.svg"> </a>
+            </div>
+          
+        </div>
+    </div>
+</div>
+
+<!-- 文章大纲生成脚本 -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 生成文章大纲
+    function generateTOC() {
+        const article = document.getElementById('article-content');
+        const toc = document.getElementById('toc');
+        
+        if (!article || !toc) return;
+        
+        // 获取所有标题
+        const headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        
+        if (headings.length === 0) {
+            toc.innerHTML = '<p class="text-muted small">暂无大纲</p>';
+            return;
+        }
+        
+        let tocHTML = '<ul class="list-unstyled">';
+        let currentLevel = 0;
+        
+        headings.forEach((heading, index) => {
+            const level = parseInt(heading.tagName.charAt(1));
+            const id = 'heading-' + index;
+            heading.id = id;
+            
+            // 添加锚点链接
+            const anchor = document.createElement('a');
+            anchor.href = '#' + id;
+            anchor.className = 'text-decoration-none';
+            anchor.innerHTML = heading.textContent;
+            heading.innerHTML = '';
+            heading.appendChild(anchor);
+            
+            // 生成大纲结构
+            if (level > currentLevel) {
+                tocHTML += '<ul class="list-unstyled ml-3">'.repeat(level - currentLevel);
+            } else if (level < currentLevel) {
+                tocHTML += '</ul>'.repeat(currentLevel - level);
+            }
+            
+            tocHTML += `<li class="mb-1">
+                <a href="#${id}" class="text-decoration-none small" style="color: #6c757d;">
+                    ${heading.textContent}
+                </a>
+            </li>`;
+            
+            currentLevel = level;
+        });
+        
+        // 关闭未闭合的 ul 标签
+        tocHTML += '</ul>'.repeat(currentLevel);
+        tocHTML += '</ul>';
+        
+        toc.innerHTML = tocHTML;
+        
+        // 添加平滑滚动
+        toc.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    }
+    
+    // 高亮当前阅读的标题
+    function highlightCurrentHeading() {
+        const headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
+        const tocLinks = document.querySelectorAll('#toc a');
+        
+        if (headings.length === 0 || tocLinks.length === 0) return;
+        
+        let currentHeading = null;
+        
+        headings.forEach(heading => {
+            const rect = heading.getBoundingClientRect();
+            if (rect.top <= 100) {
+                currentHeading = heading;
+            }
+        });
+        
+        // 移除所有高亮
+        tocLinks.forEach(link => {
+            link.style.color = '#6c757d';
+            link.style.fontWeight = 'normal';
+        });
+        
+        // 高亮当前标题
+        if (currentHeading) {
+            const currentLink = document.querySelector(`#toc a[href="#${currentHeading.id}"]`);
+            if (currentLink) {
+                currentLink.style.color = '#007bff';
+                currentLink.style.fontWeight = 'bold';
+            }
+        }
+    }
+    
+    // 初始化
+    generateTOC();
+    
+    // 监听滚动事件
+    window.addEventListener('scroll', highlightCurrentHeading);
+});
+</script>
+
+    </main>
+
+    <!-- 图片查看器 -->
+    <div class="image-viewer" id="imageViewer">
+        <button class="close-btn" id="closeImageViewer">&times;</button>
+        <img id="viewerImage" src="" alt="">
+    </div>
+
+
+    <!-- Scripts: popper, bootstrap, theme, lunr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script src="/assets/js/theme.js"></script>
+    
+    <!-- Prism.js 代码高亮脚本 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <!-- 图片查看器脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageViewer = document.getElementById('imageViewer');
+            const viewerImage = document.getElementById('viewerImage');
+            const closeBtn = document.getElementById('closeImageViewer');
+            
+            // 为所有文章中的图片添加点击事件
+            const articleImages = document.querySelectorAll('article img');
+            
+            articleImages.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    viewerImage.src = this.src;
+                    viewerImage.alt = this.alt;
+                    imageViewer.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // 防止背景滚动
+                });
+            });
+            
+            // 关闭图片查看器
+            function closeViewer() {
+                imageViewer.classList.remove('active');
+                document.body.style.overflow = 'auto'; // 恢复滚动
+            }
+            
+            closeBtn.addEventListener('click', closeViewer);
+            imageViewer.addEventListener('click', function(e) {
+                if (e.target === imageViewer) {
+                    closeViewer();
+                }
+            });
+            
+            // ESC 键关闭
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && imageViewer.classList.contains('active')) {
+                    closeViewer();
+                }
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top p-3 text-muted small">
+        <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div>
+                <span class="navbar-brand mr-2 mb-0"><strong>黑石的知识库</strong></span>
+                <span>Copyright © <script>document.write(new Date().getFullYear())</script>.</span>
+
+                <!--  Github Repo Star Btn-->
+                <a class="text-dark ml-1" target="_blank" href="https://github.com/blackstoneblackstone/blackstoneblackstone.github.io"><i class="fab fa-github"></i> Github</a>
+
+            </div>
+            <div>
+                黑石的知识库 - https://blackstones.xyz
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- All this area goes before </body> closing tag --> 
+
+
+</body>
+
+</html>
