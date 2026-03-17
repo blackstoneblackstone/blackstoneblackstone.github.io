@@ -5,6 +5,7 @@ build_command = "bundle exec jekyll build --safe --trace"
 preview_build_command = "bundle exec jekyll build --safe --trace"
 
 [vars]
-RUBY_VERSION = "3.4.0"
+# 使用 3.3.x 避免 Cloudflare 构建时 google-protobuf/sass-embedded 在 3.4 下 ABI 报错
+RUBY_VERSION = "3.3.6"
 BUNDLER_VERSION = "2.6.9"
 JEKYLL_ENV = "production"
