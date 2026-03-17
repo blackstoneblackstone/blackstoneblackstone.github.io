@@ -170,27 +170,55 @@ body.homefirstpage .home-post-title::first-letter {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .markdown-theme-label {
     font-size: 0.8125rem;
     color: #8c8c8c;
+    margin-right: 0.25rem;
 }
 
-.markdown-theme-select {
-    font-size: 0.8125rem;
-    padding: 0.25rem 0.5rem;
-    border: 1px solid #e8e8e8;
-    border-radius: 4px;
-    background: #fff;
-    color: #262626;
+/* 阅读主题：按颜色平铺的可选图标 */
+.markdown-theme-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.markdown-theme-tile {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 2px solid #e8e8e8;
+    border-radius: 6px;
     cursor: pointer;
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    /* 覆盖主题/ Bootstrap 的 button 样式，保证色块颜色显示 */
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: none;
+    box-shadow: none;
 }
 
-.markdown-theme-select:hover,
-.markdown-theme-select:focus {
+.markdown-theme-tile::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+.markdown-theme-tile:hover {
+    border-color: #bfbfbf;
+    transform: scale(1.08);
+}
+
+.markdown-theme-tile.active {
     border-color: #40a9ff;
+    box-shadow: 0 0 0 1px #40a9ff;
+}
+
+.markdown-theme-tile:focus {
     outline: none;
+    border-color: #40a9ff;
 }
 
 /* 图片查看器样式 */

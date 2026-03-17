@@ -58,17 +58,17 @@ layout: default
 						</ol>
 					</nav>
 					<div class="markdown-theme-select-wrap">
-						<label for="markdown-theme-select" class="markdown-theme-label">阅读主题</label>
-						<select id="markdown-theme-select" class="markdown-theme-select" aria-label="选择 Markdown 阅读主题">
-							<option value="github">GitHub</option>
-							<option value="shanchui">山吹</option>
-							<option value="shanyue">山月</option>
-							<option value="condensed-night-purple">凝夜紫</option>
-							<option value="chocolate">巧克力</option>
-							<option value="v-green">微绿</option>
-							<option value="menglv">萌绿</option>
-							<option value="base">Base</option>
-						</select>
+						<span class="markdown-theme-label">阅读主题</span>
+						<div class="markdown-theme-tiles" role="group" aria-label="选择 Markdown 阅读主题">
+							<button type="button" class="markdown-theme-tile" data-theme="github" title="GitHub" style="background-color:#24292e;"></button>
+							<button type="button" class="markdown-theme-tile" data-theme="shanchui" title="山吹" style="background-color:#e6a23c;"></button>
+							<button type="button" class="markdown-theme-tile" data-theme="shanyue" title="山月" style="background-color:#667eea;"></button>
+							<button type="button" class="markdown-theme-tile" data-theme="condensed-night-purple" title="凝夜紫" style="background-color:#4a148c;"></button>
+							<button type="button" class="markdown-theme-tile" data-theme="chocolate" title="巧克力" style="background-color:#5d4037;"></button>
+							<button type="button" class="markdown-theme-tile" data-theme="v-green" title="微绿" style="background-color:#2e7d32;"></button>
+							<button type="button" class="markdown-theme-tile" data-theme="menglv" title="萌绿" style="background-color:#81c784;"></button>
+							<button type="button" class="markdown-theme-tile" data-theme="base" title="Base" style="background-color:#607d8b;"></button>
+						</div>
 					</div>
 				</div>
 
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
 	var themeKey = 'markdown-theme';
 	var defaultTheme = 'github';
-	var themeSelect = document.getElementById('markdown-theme-select');
+	var themeTiles = document.querySelectorAll('.markdown-theme-tile');
 	var articleBody = document.getElementById('article-body');
 	var themeLinkId = 'markdown-theme-css';
 	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
@@ -206,18 +206,22 @@ document.addEventListener('DOMContentLoaded', function() {
 			document.head.appendChild(link);
 		}
 		link.href = cdnBase + theme + '.css';
-		if (themeSelect) themeSelect.value = theme;
+		themeTiles.forEach(function(tile) {
+			tile.classList.toggle('active', tile.getAttribute('data-theme') === theme);
+		});
 		try { localStorage.setItem(themeKey, theme); } catch (e) {}
 	}
 
-	if (themeSelect && articleBody) {
+	if (themeTiles.length && articleBody) {
 		var saved = '';
 		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
-		var theme = saved && themeSelect.querySelector('option[value="' + saved + '"]') ? saved : defaultTheme;
-		themeSelect.value = theme;
+		var valid = Array.prototype.some.call(themeTiles, function(t) { return t.getAttribute('data-theme') === saved; });
+		var theme = valid ? saved : defaultTheme;
 		applyTheme(theme);
-		themeSelect.addEventListener('change', function() {
-			applyTheme(themeSelect.value || defaultTheme);
+		themeTiles.forEach(function(tile) {
+			tile.addEventListener('click', function() {
+				applyTheme(tile.getAttribute('data-theme') || defaultTheme);
+			});
 		});
 	}
 });
