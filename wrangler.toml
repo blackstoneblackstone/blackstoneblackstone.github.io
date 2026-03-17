@@ -5,6 +5,6 @@ build_command = "bundle exec jekyll build --safe --trace"
 preview_build_command = "bundle exec jekyll build --safe --trace"
 
 [vars]
-RUBY_VERSION = "3.3.4"
+RUBY_VERSION = "3.4.0"
 BUNDLER_VERSION = "2.6.9"
 JEKYLL_ENV = "production"
