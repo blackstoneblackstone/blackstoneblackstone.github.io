@@ -3,6 +3,7 @@ layout: post
 title: "构建 Claude Code 的经验：我们如何使用 Skills"
 date: 2026-03-18 10:00:00 +0800
 categories: [文章]
+image: https://pub-48e519ba51484a31972fff75f6b1ae16.r2.dev/2026/03/claude-code-skills/cover.png
 tags: [AI, Claude Code]
 author: 黑石
 comments: true
