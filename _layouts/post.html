@@ -143,26 +143,59 @@ document.addEventListener('DOMContentLoaded', function() {
 		var article = document.getElementById('article-content');
 		var toc = document.getElementById('toc');
 		if (!article || !toc) return;
-		var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
+		var allHeadings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
+		if (allHeadings.length === 0) {
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
+			return;
+		}
+		allHeadings.forEach(function(heading, index) {
+			heading.id = 'heading-' + index;
+		});
+		allHeadings.forEach(function(heading) {
+			var level = parseInt(heading.tagName.charAt(1), 10);
+			if (level > 2) return;
+			var text = heading.textContent;
+			var id = heading.id;
+			heading.innerHTML = '';
+			var innerA = document.createElement('a');
+			innerA.href = '#' + id;
+			innerA.className = 'toc-link';
+			innerA.textContent = text;
+			heading.appendChild(innerA);
+		});
+		var headings = article.querySelectorAll('h1, h2');
 		if (headings.length === 0) {
 			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
 			return;
 		}
-		var html = '<div class="toc-list">';
-		headings.forEach(function(heading, index) {
+		var rootUl = document.createElement('ul');
+		rootUl.className = 'toc-tree';
+		var stack = [{ level: 0, ul: rootUl }];
+		headings.forEach(function(heading) {
 			var level = parseInt(heading.tagName.charAt(1), 10);
-			var id = 'heading-' + index;
-			heading.id = id;
-			var anchor = document.createElement('a');
-			anchor.href = '#' + id;
-			anchor.className = 'toc-link';
-			anchor.textContent = heading.textContent;
-			heading.innerHTML = '';
-			heading.appendChild(anchor);
-			html += '<div class="toc-item toc-item--level-' + level + '"><a href="#' + id + '" class="toc-link">' + heading.textContent + '</a></div>';
+			while (stack.length > 1 && stack[stack.length - 1].level >= level) {
+				stack.pop();
+			}
+			var parentUl = stack[stack.length - 1].ul;
+			var id = heading.id;
+			var li = document.createElement('li');
+			li.className = 'toc-item toc-depth-' + level;
+			var a = document.createElement('a');
+			a.href = '#' + id;
+			a.className = 'toc-link';
+			a.textContent = heading.textContent;
+			li.appendChild(a);
+			var branchUl = document.createElement('ul');
+			branchUl.className = 'toc-branch';
+			li.appendChild(branchUl);
+			parentUl.appendChild(li);
+			stack.push({ level: level, ul: branchUl });
 		});
-		html += '</div>';
-		toc.innerHTML = html;
+		rootUl.querySelectorAll('li > ul.toc-branch').forEach(function(ul) {
+			if (ul.children.length === 0) ul.remove();
+		});
+		toc.innerHTML = '';
+		toc.appendChild(rootUl);
 		toc.querySelectorAll('a.toc-link').forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
@@ -179,9 +212,26 @@ document.addEventListener('DOMContentLoaded', function() {
 		headings.forEach(function(h) {
 			if (h.getBoundingClientRect().top <= 100) current = h;
 		});
+		var activeId = null;
+		if (current) {
+			var tag = current.tagName.toLowerCase();
+			if (tag === 'h1' || tag === 'h2') {
+				activeId = current.id;
+			} else {
+				var list = Array.prototype.slice.call(headings);
+				var idx = list.indexOf(current);
+				for (var i = idx; i >= 0; i--) {
+					var t = list[i].tagName.toLowerCase();
+					if (t === 'h1' || t === 'h2') {
+						activeId = list[i].id;
+						break;
+					}
+				}
+			}
+		}
 		tocLinks.forEach(function(link) {
 			link.classList.remove('active');
-			if (current && link.getAttribute('href') === '#' + current.id) link.classList.add('active');
+			if (activeId && link.getAttribute('href') === '#' + activeId) link.classList.add('active');
 		});
 	}
 	generateTOC();
@@ -189,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
 	var themeKey = 'markdown-theme';
-	var defaultTheme = 'github';
+	var defaultTheme = 'menglv';
 	var themeTiles = document.querySelectorAll('.markdown-theme-tile');
 	var articleBody = document.getElementById('article-body');
 	var themeLinkId = 'markdown-theme-css';

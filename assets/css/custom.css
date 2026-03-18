@@ -55,6 +55,7 @@
 
 .toc ul {
     margin-bottom: 0;
+    padding-left: 0;
 }
 
 .toc li {
@@ -757,10 +758,17 @@ body.homefirstpage .home-sidebar {
     color: #8c959f;
 }
 
-.post-toc-card .toc-list {
-    display: block;
+/* 分级大纲：根列表 + 子级缩进与左边线表示从属 */
+.post-toc-card .toc-tree {
+    list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.post-toc-card .toc-branch {
+    list-style: none;
+    margin: 0.1rem 0 0.2rem 0;
+    padding: 0 0 0 1rem;
 }
 
 .post-toc-card .toc-item {
@@ -769,21 +777,17 @@ body.homefirstpage .home-sidebar {
     padding: 0;
 }
 
-/* 一级与标题左缘一致；子级每级 +0.75rem */
-.post-toc-card .toc-item--level-1 .toc-link { padding-left: 0.75rem; }
-.post-toc-card .toc-item--level-2 .toc-link { padding-left: 1.5rem; }
-.post-toc-card .toc-item--level-3 .toc-link { padding-left: 2.25rem; }
-.post-toc-card .toc-item--level-4 .toc-link { padding-left: 3rem; }
-.post-toc-card .toc-item--level-5 .toc-link { padding-left: 3.75rem; }
-.post-toc-card .toc-item--level-6 .toc-link { padding-left: 4.5rem; }
+.post-toc-card .toc-item + .toc-item {
+    margin-top: 0.05rem;
+}
 
-/* 条目链接：与标题同一左基准（2px 竖线 + 0.75rem 为文字） */
+/* 条目链接：顶层与标题左缘对齐；子级缩进靠外层 .toc-branch */
 .post-toc-card .toc .toc-link {
     display: block;
     width: 100%;
     box-sizing: border-box;
     margin: 0;
-    padding: 0.35rem 0 0.35rem 0.75rem;
+    padding: 0.35rem 0.35rem 0.35rem 0.75rem;
     font-size: 0.8125rem;
     line-height: 1.5;
     color: #57606a;
@@ -791,6 +795,10 @@ body.homefirstpage .home-sidebar {
     border-left: 2px solid transparent;
     text-align: left;
     transition: color 0.15s, border-color 0.15s;
+}
+
+.post-toc-card .toc .toc-branch .toc-link {
+    padding-left: 0.35rem;
 }
 
 .post-toc-card .toc-link:hover {
