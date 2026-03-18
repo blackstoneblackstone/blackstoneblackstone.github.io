@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-# Specify Ruby version for Cloudflare Pages compatibility
-ruby "3.3.4"
+# Ruby 版本：兼容 Cloudflare（含 3.3.x / 3.4.0.dev / 3.4.x）
+ruby ">= 3.3.0"
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -21,7 +21,5 @@ group :jekyll_plugins do
     gem 'jekyll-sitemap'
     gem 'jekyll-paginate'
     gem 'jekyll-seo-tag'
+    gem 'jekyll-commonmark'
 end
-
-# Markdown parser
-gem "kramdown-parser-gfm"

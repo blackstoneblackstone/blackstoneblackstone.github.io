@@ -55,6 +55,7 @@
 
 .toc ul {
     margin-bottom: 0;
+    padding-left: 0;
 }
 
 .toc li {
@@ -136,8 +137,9 @@
     }
 }
 
-/* 移除文章首字母大字母样式 */
-article:first-letter {
+/* 取消标题与正文首字放大（文章页） */
+.post-layout .post-title::first-letter,
+.post-layout article::first-letter {
     float: none !important;
     font-size: inherit !important;
     line-height: inherit !important;
@@ -145,237 +147,79 @@ article:first-letter {
     vertical-align: baseline !important;
 }
 
-/* Markdown 内容样式优化 - GitHub 风格主题 */
-article {
-    line-height: 1.6;
-    color: #24292e;
-    max-width: none;
+/* 首页文章列表：取消首字放大（theme 的 article:first-letter 会作用到 home-post-item） */
+body.homefirstpage .home-post-item::first-letter,
+body.homefirstpage .home-post-title::first-letter {
+    float: none !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    margin: 0 !important;
+    vertical-align: baseline !important;
 }
 
-/* 标题样式优化 - GitHub 风格 */
-article h1 {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #24292e;
-    margin: 24px 0 16px 0;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid #eaecef;
+/* 文章工具栏：面包屑 + 主题选择 */
+.post-article-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-article h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #24292e;
-    margin: 24px 0 16px 0;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid #eaecef;
+.markdown-theme-select-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
-article h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #24292e;
-    margin: 24px 0 16px 0;
+.markdown-theme-label {
+    font-size: 0.8125rem;
+    color: #8c8c8c;
+    margin-right: 0.25rem;
 }
 
-article h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #24292e;
-    margin: 24px 0 16px 0;
+/* 阅读主题：按颜色平铺的可选图标 */
+.markdown-theme-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
 }
 
-article h5 {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #24292e;
-    margin: 24px 0 16px 0;
-}
-
-article h6 {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #586069;
-    margin: 24px 0 16px 0;
-}
-
-/* 段落样式 - GitHub 风格 */
-article p {
-    margin-bottom: 16px;
-    word-wrap: break-word;
-}
-
-/* 列表样式优化 - GitHub 风格 */
-article ul, article ol {
-    margin: 0 0 16px 0;
-    padding-left: 2em;
-}
-
-article li {
-    margin-bottom: 0.25em;
-    line-height: 1.6;
-}
-
-article ul li {
-    list-style-type: disc;
-}
-
-article ol li {
-    list-style-type: decimal;
-}
-
-/* 嵌套列表 */
-article ul ul, article ol ol, article ul ol, article ol ul {
-    margin: 0.25em 0;
-}
-
-/* 表格样式优化 - GitHub 风格 */
-article table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 16px 0;
-    font-size: 14px;
-    border: 1px solid #d0d7de;
-    border-radius: 6px;
-    overflow: hidden;
-}
-
-article th, article td {
-    padding: 6px 13px;
-    text-align: left;
-    border-bottom: 1px solid #d0d7de;
-}
-
-article th {
-    background-color: #f6f8fa;
-    font-weight: 600;
-    color: #24292e;
-}
-
-article tr:last-child td {
-    border-bottom: none;
-}
-
-article tr:nth-child(2n) {
-    background-color: #f6f8fa;
-}
-
-/* 引用块样式优化 - GitHub 风格 */
-article blockquote {
-    margin: 16px 0;
-    padding: 0 1em;
-    color: #656d76;
-    border-left: 0.25em solid #d0d7de;
-    background-color: transparent;
-    font-style: normal;
-    position: relative;
-}
-
-article blockquote:before {
-    display: none;
-}
-
-/* 代码块样式优化 - GitHub 风格 */
-article pre {
-    background-color: #f6f8fa;
-    border: 1px solid #e1e4e8;
-    border-radius: 6px;
-    padding: 16px;
-    overflow-x: auto;
-    margin: 16px 0;
-    font-size: 85%;
-    line-height: 1.45;
-}
-
-article code {
-    background-color: rgba(27, 31, 35, 0.05);
-    color: #24292e;
-    padding: 0.2em 0.4em;
-    border-radius: 3px;
-    font-size: 85%;
-}
-
-article pre code {
-    background-color: transparent;
-    color: inherit;
+.markdown-theme-tile {
+    width: 24px;
+    height: 24px;
     padding: 0;
-    border-radius: 0;
-    font-size: 100%;
-}
-
-/* Prism.js 主题覆盖 */
-article pre[class*="language-"] {
-    background-color: #f6f8fa;
-    border: 1px solid #e1e4e8;
-}
-
-article pre[class*="language-"] code {
-    background-color: transparent;
-    color: #24292e;
-}
-
-/* 链接样式优化 - GitHub 风格 */
-article a {
-    color: #0969da;
-    text-decoration: none;
-    background-color: transparent;
-}
-
-article a:hover {
-    color: #0969da;
-    text-decoration: underline;
-}
-
-/* 图片样式优化 - GitHub 风格 */
-article img {
-    max-width: 100%;
-    height: auto;
+    border: 2px solid #e8e8e8;
     border-radius: 6px;
-    margin: 16px 0;
-    display: block;
-    box-shadow: none;
-    border: 1px solid #d0d7de;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    /* 覆盖主题/ Bootstrap 的 button 样式，保证色块颜色显示 */
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: none;
+    box-shadow: none;
 }
 
-article img:hover {
-    border-color: #0969da;
-    box-shadow: 0 4px 12px rgba(9, 105, 218, 0.15);
-    transform: scale(1.02);
+.markdown-theme-tile::-moz-focus-inner {
+    border: 0;
+    padding: 0;
 }
 
-/* 水平分割线 - GitHub 风格 */
-article hr {
-    border: none;
-    height: 0.25em;
-    background-color: #d0d7de;
-    margin: 24px 0;
-    border-radius: 1px;
+.markdown-theme-tile:hover {
+    border-color: #bfbfbf;
+    transform: scale(1.08);
 }
 
-/* 强调文本 - GitHub 风格 */
-article strong {
-    font-weight: 600;
-    color: #24292e;
+.markdown-theme-tile.active {
+    border-color: #40a9ff;
+    box-shadow: 0 0 0 1px #40a9ff;
 }
 
-article em {
-    font-style: italic;
-    color: #24292e;
-}
-
-/* 删除线 - GitHub 风格 */
-article del {
-    text-decoration: line-through;
-    color: #656d76;
-}
-
-/* 标记文本 - GitHub 风格 */
-article mark {
-    background-color: #fff8c5;
-    padding: 0.1em 0.2em;
-    border-radius: 3px;
+.markdown-theme-tile:focus {
+    outline: none;
+    border-color: #40a9ff;
 }
 
 /* 图片查看器样式 */
@@ -506,32 +350,515 @@ article mark {
     transform: translateY(-1px);
 }
 
+/* ========== 首页布局（仅 body.homefirstpage） ========== */
+/* 去掉首页主内容区顶部留白，让简介紧贴导航下 */
+body.homefirstpage .site-content {
+  margin-top: 0;
+}
+
+body.homefirstpage .home-page {
+  padding-bottom: 3rem;
+}
+
+body.homefirstpage .home-page > .row.remove-site-content-margin {
+  margin-top: 0;
+}
+
+body.homefirstpage .home-intro {
+  padding: 1rem 0 1.5rem;
+  border-bottom: 1px solid #eaecef;
+}
+
+body.homefirstpage .home-intro-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+body.homefirstpage .home-intro-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+body.homefirstpage .home-intro-text {
+  flex: 1;
+  min-width: 0;
+}
+
+body.homefirstpage .home-intro-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #24292e;
+  margin: 0 0 0.25rem 0;
+}
+
+body.homefirstpage .home-intro-desc {
+  font-size: 0.9375rem;
+  color: #57606a;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.5;
+}
+
+body.homefirstpage .home-intro-coffee {
+  font-size: 0.875rem;
+  color: #0969da;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+body.homefirstpage .home-intro-coffee:hover {
+  text-decoration: underline;
+}
+
+body.homefirstpage .home-intro-pv {
+  font-size: 0.8125rem;
+}
+
+body.homefirstpage .home-main {
+  margin-top: 2rem;
+}
+
+body.homefirstpage .home-posts-heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #24292e;
+  margin: 0 0 1.25rem 0;
+  padding-bottom: 0.5rem;
+}
+
+body.homefirstpage .home-posts-list {
+  margin-bottom: 2rem;
+}
+
+body.homefirstpage .home-post-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eaecef;
+}
+
+body.homefirstpage .home-post-item:last-child {
+  border-bottom: none;
+}
+
+body.homefirstpage .home-post-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+body.homefirstpage .home-post-link:hover .home-post-title {
+  color: #0969da;
+}
+
+body.homefirstpage .home-post-title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #24292e;
+  margin: 0 0 0.35rem 0;
+  line-height: 1.4;
+}
+
+body.homefirstpage .home-post-excerpt {
+  font-size: 0.875rem;
+  color: #57606a;
+  margin: 0 0 0.35rem 0;
+  line-height: 1.5;
+}
+
+body.homefirstpage .home-post-date {
+  font-size: 0.8125rem;
+  color: #8c959f;
+}
+
+body.homefirstpage .home-pagination {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+body.homefirstpage .home-pagination-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+body.homefirstpage .home-pagination-btn {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.875rem;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background: #fff;
+  color: #24292e;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+body.homefirstpage .home-pagination-btn:hover:not(:disabled) {
+  background: #f6f8fa;
+  border-color: #8c959f;
+}
+
+body.homefirstpage .home-pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+body.homefirstpage .home-pagination-pages {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+body.homefirstpage .home-pagination-num {
+  min-width: 2rem;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.875rem;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background: #fff;
+  color: #24292e;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+body.homefirstpage .home-pagination-num:hover {
+  background: #f6f8fa;
+}
+
+body.homefirstpage .home-pagination-num--current {
+  background: #24292e;
+  border-color: #24292e;
+  color: #fff;
+  cursor: default;
+  font-weight: 600;
+}
+
+body.homefirstpage .home-sidebar {
+  margin-top: 0;
+}
+
+@media (max-width: 991.98px) {
+  body.homefirstpage .home-sidebar {
+    margin-top: 2rem;
+  }
+}
+
+/* ========== 文章页布局（简洁版） ========== */
+.post-layout {
+    padding-bottom: 2rem;
+}
+
+/* 文章封面图 */
+.post-cover {
+    margin-top: -1px; /* 紧贴导航栏 */
+    margin-bottom: 0;
+    background: #f6f8fa;
+    overflow: hidden;
+}
+
+.post-cover .container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.post-cover-img {
+    display: block;
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 768px) {
+    .post-cover-img {
+        max-height: 280px;
+        border-radius: 0;
+    }
+}
+
+.post-header {
+    padding: 1.5rem 0 1rem;
+    border-bottom: 1px solid #eaecef;
+    margin-bottom: 0;
+}
+
+.post-meta {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-categories {
+    margin-right: 0.75rem;
+}
+
+.post-category {
+    color: #0969da;
+    text-decoration: none;
+}
+
+.post-category:hover {
+    text-decoration: underline;
+}
+
+.post-date {
+    font-size: 0.8125rem;
+}
+
+.post-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #24292e;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+    .post-title {
+        font-size: 2rem;
+    }
+}
+
+.post-body {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.post-breadcrumb {
+    margin-bottom: 1.25rem;
+}
+
+.post-breadcrumb .breadcrumb {
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8125rem;
+    color: #6c757d;
+}
+
+.post-breadcrumb .breadcrumb-item.active {
+    color: #24292e;
+}
+
+.post-tags {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eaecef;
+}
+
+.post-tag {
+    display: inline-block;
+    margin: 0 0.35rem 0.35rem 0;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8125rem;
+    color: #57606a;
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 1em;
+    text-decoration: none;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.post-tag:hover {
+    color: #0969da;
+    background: #eaecef;
+    border-color: #0969da;
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding: 1rem 0;
+}
+
+.post-author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-author-name {
+    font-weight: 600;
+    color: #24292e;
+}
+
+.post-author-bio {
+    margin-top: 0.15rem;
+}
+
+/* 侧栏内大纲容器：保证内容靠左 */
+.post-layout aside .post-toc-wrap {
+    display: block;
+    text-align: left;
+}
+
+.post-toc-wrap {
+    position: sticky;
+    top: 5rem;
+    width: 100%;
+}
+
+.post-toc-card {
+    padding: 1rem 1rem 1.25rem;
+    border: 1px solid #eaecef;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    direction: ltr;
+}
+
+/* 大纲标题与条目共用同一左基准：距卡片左内边 0 再 2px 竖线 + 0.75rem 后为文字 */
+.post-toc-card .post-toc-title {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 0.75rem 0;
+    padding: 0 0 0.5rem 0;
+    padding-left: 0.75rem;
+    border-left: 2px solid #0969da;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #24292e;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* 大纲 nav：与标题同一左基准 */
+.post-toc-card > .toc {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 70vh;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.post-toc-card .toc-empty {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: #8c959f;
+}
+
+/* 分级大纲：根列表 + 子级缩进与左边线表示从属 */
+.post-toc-card .toc-tree {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.post-toc-card .toc-branch {
+    list-style: none;
+    margin: 0.1rem 0 0.2rem 0;
+    padding: 0 0 0 1rem;
+}
+
+.post-toc-card .toc-item {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.post-toc-card .toc-item + .toc-item {
+    margin-top: 0.05rem;
+}
+
+/* 条目链接：顶层与标题左缘对齐；子级缩进靠外层 .toc-branch */
+.post-toc-card .toc .toc-link {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0.35rem 0.35rem 0.35rem 0.75rem;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: #57606a;
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    text-align: left;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.post-toc-card .toc .toc-branch .toc-link {
+    padding-left: 0.35rem;
+}
+
+.post-toc-card .toc-link:hover {
+    color: #0969da;
+}
+
+.post-toc-card .toc-link.active {
+    color: #0969da;
+    font-weight: 600;
+    border-left-color: #0969da;
+}
+
+.post-nav {
+    padding: 1rem 0;
+    border-top: 1px solid #eaecef;
+    background: #fafbfc;
+}
+
+.post-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.875rem;
+}
+
+.post-nav-link {
+    color: #24292e;
+    text-decoration: none;
+    max-width: 45%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color 0.15s;
+}
+
+.post-nav-link:hover {
+    color: #0969da;
+}
+
+.post-nav-prev {
+    text-align: left;
+}
+
+.post-nav-next {
+    text-align: right;
+}
+
+.post-nav-sep {
+    color: #d0d7de;
+    flex-shrink: 0;
+}
+
+.post-nav-empty {
+    color: #d0d7de;
+    cursor: default;
+}
+
 /* 响应式优化 */
 @media (max-width: 768px) {
-    article {
-        font-size: 16px;
-    }
-    
-    article h1 {
-        font-size: 1.8rem;
-    }
-    
-    article h2 {
-        font-size: 1.5rem;
-    }
-    
-    article h3 {
-        font-size: 1.3rem;
-    }
-    
-    article table {
-        font-size: 0.85rem;
-    }
-    
-    article th, article td {
-        padding: 8px 12px;
-    }
-    
     .image-viewer .close-btn {
         top: 10px;
         right: 15px;
@@ -540,5 +867,28 @@ article mark {
     
     .breadcrumb {
         font-size: 0.8rem;
+    }
+
+    .post-header {
+        padding: 1rem 0 0.75rem;
+    }
+
+    .post-title {
+        font-size: 1.5rem;
+    }
+
+    .post-nav-inner {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .post-nav-link {
+        max-width: 100%;
+    }
+
+    .post-nav-prev,
+    .post-nav-next {
+        text-align: center;
     }
 }

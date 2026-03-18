@@ -2,239 +2,277 @@
 layout: default
 ---
 {% assign author = site.authors[page.author] %}
-<div class="container">
-<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
-		<div class="h-100 tofront">
-			<div class="row {% if page.image %} justify-content-between {% else %} justify-content-center {% endif %}">
-				<div class="{% if page.image %} col-md-12 {% else %} col-md-8 {% endif %} pr-0 pr-md-4 pt-4 pb-4 align-self-center">
-					<p class="text-uppercase font-weight-bold">
-                        <span class="catlist">
-						{% for category in page.categories %}
-                          <a class="sscroll text-danger" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category | downcase }}</a><span class="sep">, </span>
-                        {% endfor %}
-                        </span>
-					</p>
-					<h1 class="display-4 mb-4 article-headline">{{ page.title }}</h1>
-				</div>
-			</div>
-		</div>
+<div class="post-layout">
+	{% if page.image %}
+	<div class="post-cover">
+        <img
+            class="post-cover-img"
+            src="{% if page.image contains 'http' %}{{ page.image }}{% else %}{{ site.baseurl }}{{ page.image }}{% endif %}"
+            alt="{{ page.title }}"
+            loading="eager"
+        />
 	</div>
-</div>
-
-
-
-
-
-<div class="container pt-4 pb-4">
-	<div class="row">
-        
-        <!-- 文章内容区域 -->
-		<div class="col-md-9 col-lg-9">
-            
-            <!-- 面包屑导航 -->
-            <nav aria-label="breadcrumb" class="mb-4">
-                <ol class="breadcrumb" style="background-color: transparent; padding: 0;" itemscope itemtype="https://schema.org/BreadcrumbList">
-                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a href="{{ site.baseurl }}/" itemprop="item">
-                            <span itemprop="name">首页</span>
-                        </a>
-                        <meta itemprop="position" content="1" />
-                    </li>
-                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a href="{{ site.baseurl }}/categories.html" itemprop="item">
-                            <span itemprop="name">分类</span>
-                        </a>
-                        <meta itemprop="position" content="2" />
-                    </li>
-                    {% for category in page.categories %}
-                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a href="{{ site.baseurl }}/categories.html#{{ category | downcase }}" itemprop="item">
-                            <span itemprop="name">{{ category }}</span>
-                        </a>
-                        <meta itemprop="position" content="{{ forloop.index | plus: 2 }}" />
-                    </li>
-                    {% endfor %}
-                    <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <span itemprop="name">{{ page.title }}</span>
-                        <meta itemprop="position" content="{{ page.categories.size | plus: 3 }}" />
-                    </li>
-                </ol>
-            </nav>
-            
-            <!-- Article -->
-			<article class="article-post" id="article-content">                
-			{{ content }}                
-			</article>
-			
-			<!-- Tags -->
-			<div class="mb-4">
-				<span class="taglist">
-				{% for tag in page.tags %}
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="{{site.baseurl}}/tags.html#{{ tag | downcase }}">{{ tag | downcase }}</a>
-				{% endfor %}
+	{% endif %}
+	<!-- 文章头部：分类 + 标题 -->
+	<header class="post-header">
+		<div class="container">
+			<div class="post-meta">
+				<span class="post-categories">
+					{% for category in page.categories %}
+						<a class="post-category" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a>{% unless forloop.last %} · {% endunless %}
+					{% endfor %}
 				</span>
+				{% if page.date %}
+					<span class="post-date text-muted">{{ page.date | date: "%Y年%m月%d日" }}</span>
+				{% endif %}
 			</div>
- 
-             <!-- Author Box -->
-                {% if page.author %}				
-				<div class="row mt-5">
-					<div class="col-md-2 align-self-center">
-                         {% if author.avatar %}
-                        <img class="rounded-circle" src="{{site.baseurl}}/{{author.avatar}}" alt="{{author.name}}" width="90"/>
-                        {% endif %} 
-					</div>
-				</div>				
-                {% endif %}
-            
-            <!-- Comments -->
-            {% if page.comments != false %}
-                {% include comments.html %}
-            {% endif %}
-            
+			<h1 class="post-title">{{ page.title }}</h1>
 		</div>
-        
-        <!-- 文章大纲侧边栏 -->
-        <div class="col-md-3 col-lg-3 d-none d-lg-block">
-            <div class="sticky-top" style="top: 20px;">
-                <div class="card">
-                    <div class="card-header">
-                        <h6 class="mb-0">文章大纲</h6>
-                    </div>
-                    <div class="card-body">
-                        <nav id="toc" class="toc">
-                            <!-- 大纲内容将通过 JavaScript 生成 -->
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+	</header>
+
+	<div class="container post-body">
+		<div class="row">
+			<!-- 正文区 -->
+			<div class="col-lg-8 col-xl-9">
+				<div class="post-article-toolbar">
+					<nav class="post-breadcrumb" aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="{{ site.baseurl }}/" itemprop="item"><span itemprop="name">首页</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="{{ site.baseurl }}/categories.html" itemprop="item"><span itemprop="name">分类</span></a>
+								<meta itemprop="position" content="2" />
+							</li>
+							{% for category in page.categories %}
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a href="{{ site.baseurl }}/categories.html#{{ category | downcase }}" itemprop="item"><span itemprop="name">{{ category }}</span></a>
+								<meta itemprop="position" content="{{ forloop.index | plus: 2 }}" />
+							</li>
+							{% endfor %}
+							<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">{{ page.title }}</span>
+								<meta itemprop="position" content="{{ page.categories.size | plus: 3 }}" />
+							</li>
+						</ol>
+					</nav>
+					<div class="markdown-theme-select-wrap">
+						<span class="markdown-theme-label">阅读主题</span>
+						<div class="markdown-theme-tiles" role="group" aria-label="选择 Markdown 阅读主题">
+							<button type="button" class="markdown-theme-tile" data-theme="github" title="GitHub" style="background-color:#24292e;"></button>
+							<button type="button" class="markdown-theme-tile" data-theme="shanchui" title="山吹" style="background-color:#e6a23c;"></button>
+							<button type="button" class="markdown-theme-tile" data-theme="shanyue" title="山月" style="background-color:#667eea;"></button>
+							<button type="button" class="markdown-theme-tile" data-theme="condensed-night-purple" title="凝夜紫" style="background-color:#4a148c;"></button>
+							<button type="button" class="markdown-theme-tile" data-theme="chocolate" title="巧克力" style="background-color:#5d4037;"></button>
+							<button type="button" class="markdown-theme-tile" data-theme="v-green" title="微绿" style="background-color:#2e7d32;"></button>
+							<button type="button" class="markdown-theme-tile" data-theme="menglv" title="萌绿" style="background-color:#81c784;"></button>
+							<button type="button" class="markdown-theme-tile" data-theme="base" title="Base" style="background-color:#607d8b;"></button>
+						</div>
+					</div>
+				</div>
+
+				<article class="article-post" id="article-content">
+					<div id="article-body" class="markdown-body">
+						{{ content }}
+					</div>
+				</article>
+
+				{% if page.tags.size > 0 %}
+				<div class="post-tags">
+					{% for tag in page.tags %}
+						<a class="post-tag" href="{{ site.baseurl }}/tags.html#{{ tag | downcase }}">{{ tag }}</a>
+					{% endfor %}
+				</div>
+				{% endif %}
+
+				{% if page.author and author %}
+				<div class="post-author">
+					{% if author.avatar %}
+						<img class="post-author-avatar" src="{{ site.baseurl }}/{{ author.avatar }}" alt="{{ author.name }}" width="40" height="40" />
+					{% endif %}
+					<div class="post-author-info">
+						<span class="post-author-name">{{ author.name }}</span>
+						{% if author.bio %}<span class="post-author-bio text-muted small">{{ author.bio }}</span>{% endif %}
+					</div>
+				</div>
+				{% endif %}
+
+				{% if page.comments != false %}
+					{% include comments.html %}
+				{% endif %}
+			</div>
+
+			<!-- 大纲侧栏 -->
+			<aside class="col-lg-4 col-xl-3 d-none d-lg-block">
+				<div class="post-toc-wrap">
+					<div class="post-toc-card">
+						<div class="post-toc-title">文章大纲</div>
+						<nav id="toc" class="toc"></nav>
+					</div>
+				</div>
+			</aside>
+		</div>
 	</div>
+
+	<!-- 上一篇 / 下一篇 -->
+	{% if page.previous.url or page.next.url %}
+	<nav class="post-nav">
+		<div class="container">
+			<div class="post-nav-inner">
+				{% if page.previous.url %}
+					<a class="post-nav-link post-nav-prev" href="{{ site.baseurl }}{{ page.previous.url }}">{{ page.previous.title }}</a>
+				{% else %}
+					<span class="post-nav-link post-nav-prev post-nav-empty"></span>
+				{% endif %}
+				<span class="post-nav-sep">·</span>
+				{% if page.next.url %}
+					<a class="post-nav-link post-nav-next" href="{{ site.baseurl }}{{ page.next.url }}">{{ page.next.title }}</a>
+				{% else %}
+					<span class="post-nav-link post-nav-next post-nav-empty"></span>
+				{% endif %}
+			</div>
+		</div>
+	</nav>
+	{% endif %}
 </div>
 
-
-<!-- Aletbar Prev/Next -->
-<div class="alertbar">
-    <div class="container">
-        <div class="row prevnextlinks small font-weight-bold">
-          {% if page.previous.url %}
-            <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="{{ site.baseurl }}{{ page.previous.url }}">{% if page.previous.image %} <img height="30px" class="mr-1" src="{% if page.previous.image contains 'http' %}{{page.previous.image}}{% else %}{{site.baseurl}}/{{page.previous.image}}{% endif %}"> {% endif %} {{page.previous.title}}</a>
-            </div>
-          {% endif %}
-          {% if page.next.url %}
-            <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="{{ site.baseurl }}{{ page.next.url }}"> {{page.next.title}} {% if page.next.image %} <img height="30px" class="ml-1" src="{% if page.next.image contains 'http' %}{{page.next.image}}{% else %}{{site.baseurl}}/{{page.next.image}}{% endif %}"> {% endif %}</a>
-            </div>
-          {% endif %}
-        </div>
-    </div>
-</div>
-
-<!-- 文章大纲生成脚本 -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // 生成文章大纲
-    function generateTOC() {
-        const article = document.getElementById('article-content');
-        const toc = document.getElementById('toc');
-        
-        if (!article || !toc) return;
-        
-        // 获取所有标题
-        const headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
-        
-        if (headings.length === 0) {
-            toc.innerHTML = '<p class="text-muted small">暂无大纲</p>';
-            return;
-        }
-        
-        let tocHTML = '<ul class="list-unstyled">';
-        let currentLevel = 0;
-        
-        headings.forEach((heading, index) => {
-            const level = parseInt(heading.tagName.charAt(1));
-            const id = 'heading-' + index;
-            heading.id = id;
-            
-            // 添加锚点链接
-            const anchor = document.createElement('a');
-            anchor.href = '#' + id;
-            anchor.className = 'text-decoration-none';
-            anchor.innerHTML = heading.textContent;
-            heading.innerHTML = '';
-            heading.appendChild(anchor);
-            
-            // 生成大纲结构
-            if (level > currentLevel) {
-                tocHTML += '<ul class="list-unstyled ml-3">'.repeat(level - currentLevel);
-            } else if (level < currentLevel) {
-                tocHTML += '</ul>'.repeat(currentLevel - level);
-            }
-            
-            tocHTML += `<li class="mb-1">
-                <a href="#${id}" class="text-decoration-none small" style="color: #6c757d;">
-                    ${heading.textContent}
-                </a>
-            </li>`;
-            
-            currentLevel = level;
-        });
-        
-        // 关闭未闭合的 ul 标签
-        tocHTML += '</ul>'.repeat(currentLevel);
-        tocHTML += '</ul>';
-        
-        toc.innerHTML = tocHTML;
-        
-        // 添加平滑滚动
-        toc.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    }
-    
-    // 高亮当前阅读的标题
-    function highlightCurrentHeading() {
-        const headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
-        const tocLinks = document.querySelectorAll('#toc a');
-        
-        if (headings.length === 0 || tocLinks.length === 0) return;
-        
-        let currentHeading = null;
-        
-        headings.forEach(heading => {
-            const rect = heading.getBoundingClientRect();
-            if (rect.top <= 100) {
-                currentHeading = heading;
-            }
-        });
-        
-        // 移除所有高亮
-        tocLinks.forEach(link => {
-            link.style.color = '#6c757d';
-            link.style.fontWeight = 'normal';
-        });
-        
-        // 高亮当前标题
-        if (currentHeading) {
-            const currentLink = document.querySelector(`#toc a[href="#${currentHeading.id}"]`);
-            if (currentLink) {
-                currentLink.style.color = '#007bff';
-                currentLink.style.fontWeight = 'bold';
-            }
-        }
-    }
-    
-    // 初始化
-    generateTOC();
-    
-    // 监听滚动事件
-    window.addEventListener('scroll', highlightCurrentHeading);
+	function generateTOC() {
+		var article = document.getElementById('article-content');
+		var toc = document.getElementById('toc');
+		if (!article || !toc) return;
+		var allHeadings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
+		if (allHeadings.length === 0) {
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
+			return;
+		}
+		allHeadings.forEach(function(heading, index) {
+			heading.id = 'heading-' + index;
+		});
+		allHeadings.forEach(function(heading) {
+			var level = parseInt(heading.tagName.charAt(1), 10);
+			if (level > 2) return;
+			var text = heading.textContent;
+			var id = heading.id;
+			heading.innerHTML = '';
+			var innerA = document.createElement('a');
+			innerA.href = '#' + id;
+			innerA.className = 'toc-link';
+			innerA.textContent = text;
+			heading.appendChild(innerA);
+		});
+		var headings = article.querySelectorAll('h1, h2');
+		if (headings.length === 0) {
+			toc.innerHTML = '<p class="toc-empty">暂无大纲</p>';
+			return;
+		}
+		var rootUl = document.createElement('ul');
+		rootUl.className = 'toc-tree';
+		var stack = [{ level: 0, ul: rootUl }];
+		headings.forEach(function(heading) {
+			var level = parseInt(heading.tagName.charAt(1), 10);
+			while (stack.length > 1 && stack[stack.length - 1].level >= level) {
+				stack.pop();
+			}
+			var parentUl = stack[stack.length - 1].ul;
+			var id = heading.id;
+			var li = document.createElement('li');
+			li.className = 'toc-item toc-depth-' + level;
+			var a = document.createElement('a');
+			a.href = '#' + id;
+			a.className = 'toc-link';
+			a.textContent = heading.textContent;
+			li.appendChild(a);
+			var branchUl = document.createElement('ul');
+			branchUl.className = 'toc-branch';
+			li.appendChild(branchUl);
+			parentUl.appendChild(li);
+			stack.push({ level: level, ul: branchUl });
+		});
+		rootUl.querySelectorAll('li > ul.toc-branch').forEach(function(ul) {
+			if (ul.children.length === 0) ul.remove();
+		});
+		toc.innerHTML = '';
+		toc.appendChild(rootUl);
+		toc.querySelectorAll('a.toc-link').forEach(function(link) {
+			link.addEventListener('click', function(e) {
+				e.preventDefault();
+				var target = document.querySelector(this.getAttribute('href'));
+				if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			});
+		});
+	}
+	function highlightCurrentHeading() {
+		var headings = document.querySelectorAll('#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6');
+		var tocLinks = document.querySelectorAll('#toc a.toc-link');
+		if (!headings.length || !tocLinks.length) return;
+		var current = null;
+		headings.forEach(function(h) {
+			if (h.getBoundingClientRect().top <= 100) current = h;
+		});
+		var activeId = null;
+		if (current) {
+			var tag = current.tagName.toLowerCase();
+			if (tag === 'h1' || tag === 'h2') {
+				activeId = current.id;
+			} else {
+				var list = Array.prototype.slice.call(headings);
+				var idx = list.indexOf(current);
+				for (var i = idx; i >= 0; i--) {
+					var t = list[i].tagName.toLowerCase();
+					if (t === 'h1' || t === 'h2') {
+						activeId = list[i].id;
+						break;
+					}
+				}
+			}
+		}
+		tocLinks.forEach(function(link) {
+			link.classList.remove('active');
+			if (activeId && link.getAttribute('href') === '#' + activeId) link.classList.add('active');
+		});
+	}
+	generateTOC();
+	window.addEventListener('scroll', highlightCurrentHeading);
+
+	// Markdown 主题切换（仅使用 https://github.com/shfshanyue/markdown-theme 主题）
+	var themeKey = 'markdown-theme';
+	var defaultTheme = 'menglv';
+	var themeTiles = document.querySelectorAll('.markdown-theme-tile');
+	var articleBody = document.getElementById('article-body');
+	var themeLinkId = 'markdown-theme-css';
+	var cdnBase = 'https://cdn.jsdelivr.net/npm/markdown-theme@latest/themes/';
+
+	function applyTheme(theme) {
+		if (!articleBody) return;
+		theme = theme || defaultTheme;
+		var link = document.getElementById(themeLinkId);
+		if (!link) {
+			link = document.createElement('link');
+			link.id = themeLinkId;
+			link.rel = 'stylesheet';
+			document.head.appendChild(link);
+		}
+		link.href = cdnBase + theme + '.css';
+		themeTiles.forEach(function(tile) {
+			tile.classList.toggle('active', tile.getAttribute('data-theme') === theme);
+		});
+		try { localStorage.setItem(themeKey, theme); } catch (e) {}
+	}
+
+	if (themeTiles.length && articleBody) {
+		var saved = '';
+		try { saved = localStorage.getItem(themeKey) || ''; } catch (e) {}
+		var valid = Array.prototype.some.call(themeTiles, function(t) { return t.getAttribute('data-theme') === saved; });
+		var theme = valid ? saved : defaultTheme;
+		applyTheme(theme);
+		themeTiles.forEach(function(tile) {
+			tile.addEventListener('click', function() {
+				applyTheme(tile.getAttribute('data-theme') || defaultTheme);
+			});
+		});
+	}
 });
 </script>
