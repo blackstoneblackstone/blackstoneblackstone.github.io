@@ -1051,7 +1051,7 @@ Anthropic 资源：
 博客文章：
 - [《AgentSkill 介绍》](https://claude.com/blog/skills)
 - [工程博客：《为智能体装备能力，应对真实世界》](https://claude.com/blog/equipping-agents-for-the-real-world-with-agent-skills)
-- [《Skill 详解》]（https://claude.com/blog/skills-explained）
+- [Skill 详解](https://claude.com/blog/skills-explained)
 - [《如何为 Claude 创建 Skill》](https://claude.com/blog/how-to-create-skills-key-steps-limitations-and-examples)
 - [《为 Claude Code 构建 Skill》](https://claude.com/blog/building-skills-for-claude-code)
 - [《通过 Skill 提升前端设计质量》](https://claude.com/blog/improving-frontend-design-through-skills)
