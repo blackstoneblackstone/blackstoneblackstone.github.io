@@ -2,7 +2,7 @@
 layout: post
 title: "长时运行 AI Agent 完整方案：基于 Anthropic 三篇研究的综合实践指南"
 date: 2026-04-30 20:00:00 +0800
-categories: [AI 编程，Agent 架构]
+categories: [文章, AI 编程，Agent 架构]
 tags: [AI 编程, Agent, Anthropic, Claude, Harness 设计, 架构方案, 最佳实践]
 image: /assets/images/long-running-agent-framework.png
 author: 黑石
