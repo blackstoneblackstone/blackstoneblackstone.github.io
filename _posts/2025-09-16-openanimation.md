@@ -3,7 +3,7 @@ layout: post
 title: "OpenAnimation - 让创意动起来的在线动画制作神器"
 author: 黑石
 categories: [ 独立开发工具 ]
-image: https://pic.iu101.org/2198a300.gif
+image: assets/images/tools/openanimation.svg
 excerpt: 无需专业软件，打开浏览器就能制作专业级动画。OpenAnimation 让每个创作者都能轻松实现动画梦想，从产品演示到社交媒体内容，一键搞定。
 ---
 
