@@ -2705,3 +2705,1151 @@ footer.bg-white {
         animation-iteration-count: 1 !important;
     }
 }
+
+/* ============================================================
+   VISUAL REFRESH 2026 — Blackstone Design System v2
+   Preserve brand, modernize everything else.
+   Dials: VARIANCE 5 / MOTION 3 / DENSITY 4
+   ============================================================ */
+
+/* --- 1. Token Refresh --- */
+:root {
+    --site-accent: #d6422b;
+    --site-accent-dark: #a92f1e;
+    --site-accent-light: rgba(214, 66, 43, 0.06);
+    --site-accent-glow: rgba(214, 66, 43, 0.15);
+    --site-ink: #111318;
+    --site-ink-soft: #525c6e;
+    --site-muted: #8892a2;
+    --site-paper: #f4f5f7;
+    --site-surface: #ffffff;
+    --site-surface-subtle: #f0f2f5;
+    --site-surface-elevated: #ffffff;
+    --site-line: #e4e7ec;
+    --site-line-strong: #cdd2da;
+    --site-shadow-soft: 0 1px 3px rgba(17, 19, 24, 0.04), 0 6px 16px rgba(17, 19, 24, 0.06);
+    --site-shadow-raised: 0 4px 12px rgba(17, 19, 24, 0.06), 0 20px 48px rgba(17, 19, 24, 0.1);
+    --site-shadow-button: 0 2px 8px rgba(17, 19, 24, 0.06);
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-pill: 999px;
+}
+
+/* --- 2. Body & Typography --- */
+body {
+    background:
+        linear-gradient(180deg, var(--site-surface) 0%, var(--site-paper) 28rem),
+        var(--site-paper);
+    letter-spacing: 0.005em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--site-accent);
+    transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+a:hover {
+    color: var(--site-accent-dark);
+}
+
+/* --- 3. Navbar — cleaner, more breathing room --- */
+.topnav.navbar {
+    min-height: 58px;
+    border-bottom: 1px solid var(--site-line);
+    background: rgba(255, 255, 255, 0.88) !important;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: 0 1px 0 rgba(17, 19, 24, 0.03);
+}
+
+.navbar-brand {
+    gap: 0.6rem;
+    font-size: 1.25rem;
+    transition: opacity 0.15s ease;
+}
+
+.navbar-brand:hover {
+    opacity: 0.82;
+}
+
+.navbar-brand img {
+    border-radius: var(--radius-sm);
+}
+
+.navbar-nav .nav-link {
+    font-size: 0.88rem;
+    font-weight: 650;
+    letter-spacing: 0.01em;
+    padding: 0.55rem 0.35rem;
+    margin: 0 0.3rem;
+    border-bottom-width: 1.5px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: 750;
+}
+
+/* --- 4. Cards — softer borders, better shadows, subtle lift --- */
+.tool-card,
+.course-card,
+.feature-card,
+.author-page .main-loop-card,
+.taxonomy-page .main-loop-card,
+.topic-page .topic-post-item,
+.image-prompts-page .prompt-card,
+.related-posts,
+.authors-page .listauthor .p-4,
+.marketing-page .mb-5 {
+    border-radius: var(--radius-md);
+    border-color: var(--site-line);
+    background: var(--site-surface);
+    box-shadow: var(--site-shadow-soft);
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease, background-color 0.18s ease;
+}
+
+.tool-card:hover,
+.course-card:hover,
+.feature-card:hover,
+.author-page .main-loop-card:hover,
+.taxonomy-page .main-loop-card:hover,
+.topic-page .topic-post-item:hover,
+.image-prompts-page .prompt-card:hover,
+.related-posts:hover,
+.authors-page .listauthor .p-4:hover,
+.marketing-page .mb-5:hover {
+    border-color: transparent;
+    box-shadow: var(--site-shadow-raised);
+    transform: translateY(-3px);
+}
+
+/* --- 5. Buttons — tactile feedback, consistent radius --- */
+.btn {
+    border-radius: var(--radius-md);
+    font-weight: 650;
+    letter-spacing: 0.01em;
+    box-shadow: var(--site-shadow-button);
+    transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.btn-primary,
+.btn-outline-primary:hover {
+    background-color: var(--site-accent);
+    border-color: var(--site-accent);
+    box-shadow: 0 2px 8px rgba(214, 66, 43, 0.12);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--site-accent-dark);
+    border-color: var(--site-accent-dark);
+    box-shadow: 0 6px 20px rgba(214, 66, 43, 0.2);
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0) scale(0.985);
+    box-shadow: var(--site-shadow-button);
+}
+
+.btn-outline-primary {
+    border-radius: var(--radius-pill);
+    border-width: 1.5px;
+    padding: 0.45rem 1.2rem;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.btn-outline-primary:hover {
+    transform: translateY(-1px);
+}
+
+/* --- 6. Homepage Hero — cleaner, more breathing room --- */
+body.homefirstpage .home-intro {
+    border-radius: var(--radius-lg);
+    border-color: var(--site-line);
+    box-shadow: var(--site-shadow-soft);
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.78) 48%, rgba(255, 255, 255, 0.22) 100%),
+        linear-gradient(180deg, rgba(244, 245, 247, 0.06) 0%, rgba(244, 245, 247, 0.32) 100%),
+        var(--site-page-bg) right 44% / cover no-repeat,
+        var(--site-surface);
+}
+
+body.homefirstpage .home-intro-avatar {
+    border-radius: 50%;
+    border-width: 2.5px;
+    border-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 12px 32px rgba(17, 19, 24, 0.1);
+}
+
+body.homefirstpage .home-intro-title {
+    letter-spacing: -0.02em;
+}
+
+body.homefirstpage .home-intro-desc {
+    font-weight: 580;
+    line-height: 1.65;
+}
+
+body.homefirstpage .home-intro-coffee {
+    border-radius: var(--radius-pill);
+    border-width: 1.5px;
+    padding: 0.42rem 1.05rem;
+    font-size: 0.84rem;
+    font-weight: 800;
+    box-shadow: 0 6px 18px rgba(214, 66, 43, 0.14);
+    transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+body.homefirstpage .home-intro-coffee:hover {
+    box-shadow: 0 12px 28px rgba(169, 47, 30, 0.22);
+    transform: translateY(-1.5px);
+}
+
+body.homefirstpage .home-intro-coffee:active {
+    transform: translateY(0) scale(0.985);
+}
+
+/* --- 7. Homepage Post List — cleaner rows --- */
+body.homefirstpage .home-posts-heading {
+    border-bottom-width: 2px;
+    border-bottom-color: var(--site-ink);
+    padding-bottom: 0.65rem;
+    font-weight: 850;
+    letter-spacing: -0.01em;
+}
+
+body.homefirstpage .home-post-link {
+    border-radius: var(--radius-sm);
+    padding: 1.2rem 0.65rem;
+    gap: 0.5rem 1.2rem;
+}
+
+body.homefirstpage .home-post-link:hover {
+    background: var(--site-accent-light);
+    transform: none;
+}
+
+body.homefirstpage .home-post-link::after {
+    width: 2.5px;
+    border-radius: var(--radius-pill);
+}
+
+body.homefirstpage .home-post-title {
+    font-weight: 850;
+    letter-spacing: -0.01em;
+}
+
+body.homefirstpage .home-post-date {
+    font-weight: 700;
+    color: var(--site-muted);
+}
+
+body.homefirstpage .home-post-excerpt {
+    line-height: 1.7;
+    color: var(--site-ink-soft);
+}
+
+body.homefirstpage .home-pagination-btn,
+body.homefirstpage .home-pagination-num {
+    border-radius: var(--radius-pill);
+    border-width: 1px;
+    font-weight: 650;
+    padding: 0.35rem 0.7rem;
+    min-width: 2.1rem;
+    transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+
+body.homefirstpage .home-pagination-num--current {
+    border-color: var(--site-ink);
+    background: var(--site-ink);
+    box-shadow: 0 2px 6px rgba(17, 19, 24, 0.12);
+}
+
+/* --- 8. Sidebar --- */
+body.homefirstpage .home-sidebar .sticky-top-offset {
+    border-radius: var(--radius-md);
+    border-color: var(--site-line);
+    box-shadow: var(--site-shadow-soft);
+    background: var(--site-surface);
+    opacity: 1;
+}
+
+.list-featured li::before {
+    font-weight: 850;
+    color: var(--site-muted);
+}
+
+/* --- 9. Page Hero (sub-pages) --- */
+.page-hero {
+    border-radius: var(--radius-lg);
+    border-color: var(--site-line);
+    box-shadow: var(--site-shadow-soft);
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.995) 0%, rgba(255, 255, 255, 0.94) 58%, rgba(255, 255, 255, 0.78) 100%),
+        var(--site-page-bg) right center / cover no-repeat,
+        var(--site-surface);
+}
+
+.page-hero h1 {
+    letter-spacing: -0.02em;
+    font-weight: 880;
+}
+
+/* --- 10. Tool Cards --- */
+.tool-card .card-body {
+    padding: 1rem;
+    gap: 0.3rem 0.85rem;
+}
+
+.tool-logo-container {
+    border-radius: var(--radius-md);
+    border-width: 1px;
+}
+
+.tool-card .card-title {
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+/* --- 11. Course Page --- */
+.course-hero {
+    border-radius: var(--radius-lg);
+    border-color: var(--site-line);
+}
+
+.course-hero h1 {
+    letter-spacing: -0.03em;
+}
+
+.course-card {
+    border-radius: var(--radius-md);
+    border-color: var(--site-line);
+}
+
+.course-card-body {
+    padding: clamp(0.9rem, 1.6vw, 1.15rem);
+}
+
+.course-title {
+    font-weight: 880;
+    letter-spacing: -0.01em;
+}
+
+.course-action {
+    border-radius: var(--radius-md);
+    border-width: 1.5px;
+    font-weight: 800;
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.course-action:hover {
+    box-shadow: 0 8px 22px rgba(214, 66, 43, 0.18);
+    transform: translateY(-1px);
+}
+
+.course-feature-grid .feature-card {
+    border-radius: var(--radius-md);
+}
+
+.course-feature-grid .feature-card i {
+    border-radius: var(--radius-sm);
+    background: var(--site-accent-light);
+}
+
+/* --- 12. Category Sidebar Buttons --- */
+.sticky-top-offset .btn-light {
+    border-radius: var(--radius-pill);
+    border-width: 1px;
+    font-weight: 600;
+    padding: 0.32rem 0.8rem;
+    transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+
+.highlight-category {
+    border-radius: var(--radius-sm);
+}
+
+/* --- 13. Post Page --- */
+.post-header {
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.995) 0%, rgba(255, 255, 255, 0.96) 58%, rgba(255, 255, 255, 0.86) 100%),
+        var(--site-page-bg) right center / cover no-repeat,
+        var(--site-surface);
+}
+
+.post-title {
+    letter-spacing: -0.02em;
+    font-weight: 880;
+}
+
+.article-post img {
+    border-radius: var(--radius-md);
+    box-shadow: var(--site-shadow-soft);
+}
+
+.article-post pre {
+    border-radius: var(--radius-md);
+    border-width: 1px;
+}
+
+.article-post blockquote {
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    border-left-width: 3px;
+    background: var(--site-accent-light);
+}
+
+.copy-rich-text-btn {
+    border-radius: var(--radius-pill);
+    border-width: 1px;
+    box-shadow: var(--site-shadow-button);
+    transition: border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.copy-rich-text-btn:hover {
+    box-shadow: 0 3px 10px rgba(17, 19, 24, 0.08);
+}
+
+/* --- 14. Tags & Pills --- */
+.post-tag,
+.tag-cloud a {
+    border-radius: var(--radius-pill);
+    border-width: 1px;
+    font-weight: 550;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.82rem;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.post-tag:hover,
+.tag-cloud a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(214, 66, 43, 0.12);
+}
+
+/* --- 15. Badges --- */
+.badge {
+    border-radius: var(--radius-pill);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding: 0.32em 0.6em;
+}
+
+.badge-success {
+    background-color: #1a8a5e;
+}
+
+.badge-primary {
+    background-color: #1d56c4;
+}
+
+.badge-info {
+    background-color: #357a86;
+}
+
+/* --- 16. Tool section headings --- */
+.tool-index-page h2 {
+    font-weight: 850;
+    letter-spacing: -0.01em;
+}
+
+.tool-index-page h2::before {
+    border-radius: 2px;
+    width: 3px;
+    height: 1.15rem;
+}
+
+/* --- 17. Image Prompts Page --- */
+.image-prompts-page .prompt-card {
+    border-radius: var(--radius-md);
+    border-color: var(--site-line);
+}
+
+.image-prompts-page .prompt-copy-btn {
+    border-radius: var(--radius-pill);
+    border-width: 1px;
+    font-weight: 700;
+    transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.image-prompts-page .prompt-card-prompt {
+    border-radius: var(--radius-sm);
+    border-width: 1px;
+    background: var(--site-surface-subtle);
+}
+
+/* --- 18. Author Page --- */
+.author-page > .row > [class*="col-"] > .row.align-items-center {
+    border-radius: var(--radius-lg);
+    border-color: var(--site-line);
+}
+
+.author-page h2 {
+    letter-spacing: -0.02em;
+}
+
+.author-page img.rounded-circle {
+    border-width: 2px;
+    box-shadow: 0 8px 24px rgba(17, 19, 24, 0.08);
+}
+
+/* --- 19. Taxonomy / Topic Pages --- */
+.taxonomy-page .title::before,
+.author-page .spanborder::before,
+.authors-page > .spanborder::before {
+    border-radius: 2px;
+    width: 3px;
+}
+
+/* --- 20. Footer --- */
+footer.bg-white {
+    border-top-width: 1px;
+    border-top-color: var(--site-line) !important;
+    background: var(--site-surface) !important;
+    padding: 0.65rem 0 !important;
+}
+
+/* --- 21. Scroll & selection --- */
+::selection {
+    background: rgba(214, 66, 43, 0.12);
+    color: var(--site-ink);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- 22. Page reveal animation --- */
+.tool-index-page > .row,
+.course-page > .row,
+.marketing-page > .row,
+.taxonomy-page > .row,
+.topic-page > .row,
+.author-page > .row {
+    animation: pageRevealIn 480ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* --- 23. TOC improvements --- */
+.toc .card {
+    border-radius: var(--radius-md);
+    border-width: 1px;
+    box-shadow: var(--site-shadow-soft);
+}
+
+.toc .card-header {
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.toc a {
+    border-radius: var(--radius-sm);
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.toc a:hover {
+    background-color: var(--site-accent-light);
+    color: var(--site-accent-dark) !important;
+    transform: translateX(3px);
+}
+
+.toc a.active {
+    background-color: var(--site-accent-light);
+    color: var(--site-accent) !important;
+    font-weight: 700;
+    border-left: 2px solid var(--site-accent);
+    padding-left: 0.4rem;
+}
+
+/* --- 24. Post navigation --- */
+.post-nav-link {
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0;
+    transition: color 0.15s ease;
+}
+
+.post-nav-link:hover {
+    color: var(--site-accent-dark);
+}
+
+/* --- 25. Content page readability --- */
+.content-page .page-content {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.content-page .page-content h2,
+.content-page .page-content h3 {
+    letter-spacing: -0.015em;
+    font-weight: 820;
+}
+
+/* --- 26. Spanborder consistency --- */
+.spanborder span {
+    border-bottom-width: 1.5px;
+}
+
+/* --- 27. Tightened entrance animations --- */
+@keyframes homeIntroIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.995);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes avatarPop {
+    from {
+        opacity: 0;
+        transform: translateY(6px) scale(0.94);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes pageRevealIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================================
+   DARK MODE — prefers-color-scheme: dark
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --site-ink: #e8eaed;
+        --site-ink-soft: #a8b0be;
+        --site-muted: #7a8394;
+        --site-paper: #0d0f13;
+        --site-surface: #151820;
+        --site-surface-subtle: #1c2030;
+        --site-surface-elevated: #1a1e2a;
+        --site-line: #262b38;
+        --site-line-strong: #343b4d;
+        --site-shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.2), 0 6px 16px rgba(0, 0, 0, 0.25);
+        --site-shadow-raised: 0 4px 12px rgba(0, 0, 0, 0.3), 0 20px 48px rgba(0, 0, 0, 0.35);
+        --site-shadow-button: 0 2px 8px rgba(0, 0, 0, 0.2);
+        --site-accent-light: rgba(220, 80, 60, 0.08);
+        --site-accent-glow: rgba(220, 80, 60, 0.2);
+    }
+
+    body {
+        background:
+            linear-gradient(180deg, var(--site-surface) 0%, var(--site-paper) 28rem),
+            var(--site-paper);
+    }
+
+    .topnav.navbar {
+        background: rgba(21, 24, 32, 0.92) !important;
+        border-bottom-color: var(--site-line);
+    }
+
+    .navbar-brand {
+        color: var(--site-ink) !important;
+    }
+
+    .navbar-nav .nav-link {
+        color: var(--site-ink-soft) !important;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        color: #e06050 !important;
+    }
+
+    body.homefirstpage .home-intro {
+        background:
+            linear-gradient(90deg, rgba(21, 24, 32, 0.96) 0%, rgba(21, 24, 32, 0.82) 48%, rgba(21, 24, 32, 0.3) 100%),
+            linear-gradient(180deg, rgba(13, 15, 19, 0.08) 0%, rgba(13, 15, 19, 0.4) 100%),
+            var(--site-page-bg) right 44% / cover no-repeat,
+            var(--site-surface);
+        border-color: var(--site-line);
+    }
+
+    body.homefirstpage .home-intro-avatar {
+        border-color: rgba(21, 24, 32, 0.8);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    body.homefirstpage .home-intro-title {
+        color: var(--site-ink);
+    }
+
+    body.homefirstpage .home-intro-desc {
+        color: var(--site-ink-soft);
+    }
+
+    body.homefirstpage .home-posts-heading {
+        color: var(--site-ink);
+        border-bottom-color: var(--site-ink-soft);
+    }
+
+    body.homefirstpage .home-post-title {
+        color: var(--site-ink);
+    }
+
+    body.homefirstpage .home-post-excerpt {
+        color: var(--site-ink-soft);
+    }
+
+    body.homefirstpage .home-post-link:hover {
+        background: var(--site-accent-light);
+    }
+
+    body.homefirstpage .home-post-date {
+        color: var(--site-muted);
+    }
+
+    body.homefirstpage .home-pagination-btn,
+    body.homefirstpage .home-pagination-num {
+        background: var(--site-surface);
+        border-color: var(--site-line-strong);
+        color: var(--site-ink);
+    }
+
+    body.homefirstpage .home-pagination-num--current {
+        border-color: var(--site-ink-soft);
+        background: var(--site-ink-soft);
+    }
+
+    body.homefirstpage .home-sidebar .sticky-top-offset {
+        background: var(--site-surface);
+        border-color: var(--site-line);
+    }
+
+    .page-hero {
+        background:
+            linear-gradient(90deg, rgba(21, 24, 32, 0.995) 0%, rgba(21, 24, 32, 0.94) 58%, rgba(21, 24, 32, 0.8) 100%),
+            var(--site-page-bg) right center / cover no-repeat,
+            var(--site-surface);
+        border-color: var(--site-line);
+    }
+
+    .page-hero h1 {
+        color: var(--site-ink);
+    }
+
+    .tool-card,
+    .course-card,
+    .feature-card,
+    .author-page .main-loop-card,
+    .taxonomy-page .main-loop-card,
+    .topic-page .topic-post-item,
+    .image-prompts-page .prompt-card,
+    .related-posts,
+    .authors-page .listauthor .p-4,
+    .marketing-page .mb-5 {
+        background: var(--site-surface);
+        border-color: var(--site-line);
+    }
+
+    .tool-card .card-title,
+    .course-card .card-title {
+        color: var(--site-ink);
+    }
+
+    .tool-card .card-text,
+    .course-card .card-text {
+        color: var(--site-ink-soft);
+    }
+
+    .tool-logo-container {
+        background: var(--site-surface-subtle);
+        border-color: var(--site-line);
+    }
+
+    .tool-card:hover .card-title {
+        color: #e06050;
+    }
+
+    .course-hero {
+        background:
+            linear-gradient(90deg, rgba(21, 24, 32, 0.98) 0%, rgba(21, 24, 32, 0.92) 36%, rgba(21, 24, 32, 0.48) 67%, rgba(21, 24, 32, 0.28) 100%),
+            linear-gradient(180deg, rgba(13, 15, 19, 0.08) 0%, rgba(13, 15, 19, 0.7) 100%),
+            var(--site-page-bg) right 42% / cover no-repeat,
+            var(--site-surface);
+        border-color: var(--site-line);
+    }
+
+    .course-hero h1 {
+        color: var(--site-ink);
+    }
+
+    .course-hero p {
+        color: var(--site-ink-soft);
+    }
+
+    .course-hero-kicker {
+        color: #e06050;
+    }
+
+    .course-title {
+        color: var(--site-ink);
+    }
+
+    .course-desc {
+        color: var(--site-ink-soft);
+    }
+
+    .course-card {
+        background: var(--site-surface);
+        border-color: var(--site-line);
+    }
+
+    .course-card:hover {
+        border-color: var(--site-line-strong);
+    }
+
+    .feature-card h5 {
+        color: var(--site-ink);
+    }
+
+    .course-feature-grid .feature-card p {
+        color: var(--site-ink-soft);
+    }
+
+    .course-feature-grid .feature-card i {
+        background: var(--site-accent-light);
+    }
+
+    .sticky-top-offset .btn-light {
+        background: var(--site-surface);
+        border-color: var(--site-line);
+        color: var(--site-ink-soft);
+    }
+
+    .sticky-top-offset .btn-light:hover {
+        border-color: #e06050;
+        background: var(--site-accent-light);
+        color: #e06050;
+    }
+
+    .post-header {
+        background:
+            linear-gradient(90deg, rgba(21, 24, 32, 0.995) 0%, rgba(21, 24, 32, 0.96) 58%, rgba(21, 24, 32, 0.88) 100%),
+            var(--site-page-bg) right center / cover no-repeat,
+            var(--site-surface);
+    }
+
+    .post-title {
+        color: var(--site-ink);
+    }
+
+    .post-meta,
+    .post-date,
+    .reading-time {
+        color: var(--site-muted) !important;
+    }
+
+    .post-category {
+        color: #e06050;
+    }
+
+    .article-post pre {
+        border-color: var(--site-line);
+    }
+
+    .article-post blockquote {
+        background: var(--site-accent-light);
+        border-left-color: #e06050;
+    }
+
+    .copy-rich-text-btn {
+        background: var(--site-surface);
+        border-color: var(--site-line);
+        color: var(--site-ink);
+    }
+
+    .copy-rich-text-btn:hover {
+        border-color: #e06050;
+        color: #e06050;
+    }
+
+    .post-tag,
+    .tag-cloud a {
+        background: var(--site-surface-subtle);
+        border-color: var(--site-line);
+        color: var(--site-ink-soft);
+    }
+
+    .post-tag:hover,
+    .tag-cloud a:hover {
+        background: #e06050;
+        border-color: #e06050;
+        color: #fff;
+    }
+
+    .image-prompts-page .prompt-card-prompt {
+        background: var(--site-surface-subtle);
+        border-color: var(--site-line);
+    }
+
+    .image-prompts-page .prompt-copy-btn {
+        background: var(--site-surface);
+        border-color: var(--site-line);
+        color: var(--site-ink-soft);
+    }
+
+    .image-prompts-page .prompt-copy-btn:hover {
+        border-color: #e06050;
+        background: var(--site-accent-light);
+        color: #e06050;
+    }
+
+    .image-prompts-page .prompt-card-title {
+        color: var(--site-ink);
+    }
+
+    .image-prompts-page .prompt-card-desc {
+        color: var(--site-ink-soft);
+    }
+
+    .image-prompts-page .prompt-card-label {
+        color: var(--site-muted);
+        border-bottom-color: var(--site-line);
+    }
+
+    .image-prompts-page .prompt-card-prompt pre {
+        color: var(--site-ink);
+    }
+
+    .toc .card {
+        background: var(--site-surface);
+        border-color: var(--site-line);
+    }
+
+    .toc .card-header {
+        background: var(--site-surface-subtle);
+        border-bottom-color: var(--site-line);
+    }
+
+    .toc .card-header h6 {
+        color: var(--site-ink-soft);
+    }
+
+    .toc a:hover {
+        background-color: var(--site-accent-light);
+        color: #e06050 !important;
+    }
+
+    .toc a.active {
+        background-color: var(--site-accent-light);
+        color: #e06050 !important;
+    }
+
+    .post-toc-card {
+        background: var(--site-surface);
+        border-color: var(--site-line);
+    }
+
+    .post-toc-card .post-toc-title {
+        color: var(--site-ink);
+        border-left-color: #e06050;
+    }
+
+    .post-toc-card .toc .toc-link {
+        color: var(--site-ink-soft);
+    }
+
+    .post-toc-card .toc-link:hover,
+    .post-toc-card .toc-link.active {
+        color: #e06050;
+    }
+
+    .post-nav {
+        background: var(--site-surface-subtle);
+        border-top-color: var(--site-line);
+    }
+
+    .post-nav-link {
+        color: var(--site-ink);
+    }
+
+    .post-nav-link:hover {
+        color: #e06050;
+    }
+
+    .related-posts {
+        background: var(--site-surface);
+        border-color: var(--site-line);
+    }
+
+    .related-posts h4 {
+        color: var(--site-ink);
+    }
+
+    footer.bg-white {
+        background: var(--site-surface) !important;
+        border-top-color: var(--site-line) !important;
+    }
+
+    .content-page .page-content h2,
+    .content-page .page-content h3,
+    .content-page .page-content h4 {
+        color: var(--site-ink);
+    }
+
+    .taxonomy-page .title {
+        color: var(--site-muted);
+    }
+
+    .author-page > .row > [class*="col-"] > .row.align-items-center {
+        background:
+            linear-gradient(90deg, rgba(21, 24, 32, 0.99) 0%, rgba(21, 24, 32, 0.92) 58%, rgba(21, 24, 32, 0.78) 100%),
+            var(--site-page-bg) right center / cover no-repeat,
+            var(--site-surface);
+        border-color: var(--site-line);
+    }
+
+    .author-page h2 {
+        color: var(--site-ink);
+    }
+
+    .author-page .excerpt {
+        color: var(--site-ink-soft);
+    }
+
+    .author-page img.rounded-circle {
+        background:
+            url("/assets/images/avatar.png") center / cover no-repeat,
+            var(--site-surface);
+        border-color: var(--site-line);
+    }
+
+    .author-page .main-loop-card,
+    .taxonomy-page .main-loop-card,
+    .topic-page .topic-post-item {
+        background: var(--site-surface);
+        border-color: var(--site-line);
+    }
+
+    .topic-page h5 a {
+        color: var(--site-ink) !important;
+    }
+
+    .topic-page h5 a:hover {
+        color: #e06050 !important;
+    }
+
+    .topic-page .text-muted {
+        color: var(--site-muted) !important;
+    }
+
+    .marketing-page .mb-5 {
+        background: var(--site-surface);
+        border-color: var(--site-line);
+    }
+
+    .marketing-page h3 a:hover {
+        color: #e06050 !important;
+    }
+
+    .tool-index-page h2 {
+        color: var(--site-ink);
+    }
+
+    .course-page > .row > .col-md-12 > h1,
+    .marketing-page h1 {
+        color: var(--site-ink);
+    }
+
+    .course-page > .row > .col-md-12 > p,
+    .marketing-page > .row > .col-md-8 > p {
+        color: var(--site-ink-soft);
+    }
+
+    .course-feature-section {
+        border-top-color: var(--site-line);
+    }
+
+    .course-feature-section h2 {
+        color: var(--site-ink);
+    }
+
+    .spanborder {
+        border-bottom-color: var(--site-line);
+    }
+
+    .spanborder span {
+        border-bottom-color: #e06050;
+    }
+
+    .btn-primary,
+    .btn-outline-primary:hover {
+        background-color: var(--site-accent);
+        border-color: var(--site-accent);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: #e06050;
+        border-color: #e06050;
+    }
+
+    .btn-outline-primary {
+        border-color: var(--site-accent);
+        color: #e06050;
+    }
+
+    .badge-success {
+        background-color: #1a8a5e;
+    }
+
+    .badge-primary {
+        background-color: #3b6fd4;
+    }
+
+    .badge-info {
+        background-color: #3a808c;
+    }
+
+    .highlight-category {
+        background: var(--site-accent-light);
+    }
+
+    .ai-coding-page > .row > .col-md-4 {
+        border-left-color: var(--site-line);
+    }
+
+    .markdown-theme-tile {
+        border-color: var(--site-line);
+    }
+
+    .markdown-theme-tile.active,
+    .markdown-theme-tile:focus {
+        border-color: #e06050;
+        box-shadow: 0 0 0 2px rgba(224, 96, 80, 0.2);
+    }
+
+    .markdown-theme-label {
+        color: var(--site-muted);
+    }
+
+    .post-cover {
+        border-bottom-color: var(--site-line);
+        background: var(--site-surface-subtle);
+    }
+
+    ::selection {
+        background: rgba(224, 96, 80, 0.18);
+        color: var(--site-ink);
+    }
+
+    .course-image-link::after {
+        background: linear-gradient(180deg, transparent 64%, rgba(0, 0, 0, 0.2));
+    }
+}
