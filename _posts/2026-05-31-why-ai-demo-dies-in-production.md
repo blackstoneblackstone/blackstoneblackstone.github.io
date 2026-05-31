@@ -4,14 +4,14 @@ title: "为什么 AI Demo 会死在生产环境"
 date: 2026-05-31 23:50:00 +0800
 categories: [文章, AI]
 tags: [AI, AI Agent, 生产环境, 工程化, MLOps, 技术债]
-image: /assets/images/ai-demo-product-gap-cover.png
+image: /assets/images/why-ai-demo-dies-production-cover.png
 author: 黑石
 excerpt: 一篇来自 Towards Data Science 的文章提醒我们：AI Demo 失败的根源通常不是模型不够强，而是团队在技术、运营、评估、集成和治理上欠下了生产债。
 ---
 
 # 为什么 AI Demo 会死在生产环境
 
-![为什么 AI Demo 会死在生产环境](/assets/images/ai-demo-product-gap-cover.png)
+![为什么 AI Demo 会死在生产环境](/assets/images/why-ai-demo-dies-production-cover.png)
 
 > 原文：[Why Your AI Demo Will Die in Production](https://towardsdatascience.com/why-your-ai-demo-will-die-in-production/)  
 > 来源：Towards Data Science  

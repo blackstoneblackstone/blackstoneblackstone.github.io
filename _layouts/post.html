@@ -3,16 +3,6 @@ layout: default
 ---
 {% assign author = site.authors[page.author] %}
 <div class="post-layout">
-	{% if page.image %}
-	<div class="post-cover">
-        <img
-            class="post-cover-img"
-            src="{% if page.image contains 'http' %}{{ page.image }}{% else %}{{ site.baseurl }}{{ page.image }}{% endif %}"
-            alt="{{ page.title }}"
-            loading="eager"
-        />
-	</div>
-	{% endif %}
 	<!-- 文章头部：分类 + 标题 -->
 	<header class="post-header">
 		<div class="container">
@@ -69,6 +59,7 @@ layout: default
 							<button type="button" class="markdown-theme-tile" data-theme="menglv" title="萌绿" style="background-color:#81c784;"></button>
 							<button type="button" class="markdown-theme-tile" data-theme="base" title="Base" style="background-color:#607d8b;"></button>
 						</div>
+						<button type="button" class="copy-rich-text-btn" id="copyRichTextBtn" aria-label="复制文章富文本">复制全文</button>
 					</div>
 				</div>
 
@@ -271,6 +262,156 @@ document.addEventListener('DOMContentLoaded', function() {
 		themeTiles.forEach(function(tile) {
 			tile.addEventListener('click', function() {
 				applyTheme(tile.getAttribute('data-theme') || defaultTheme);
+			});
+		});
+	}
+
+	var copyBtn = document.getElementById('copyRichTextBtn');
+	if (copyBtn && articleBody) {
+		var copyStyleProps = [
+			'border-bottom',
+			'border-bottom-left-radius',
+			'border-bottom-right-radius',
+			'border-left',
+			'border-radius',
+			'border-right',
+			'border-top',
+			'border-top-left-radius',
+			'border-top-right-radius',
+			'color',
+			'display',
+			'font-family',
+			'font-size',
+			'font-style',
+			'font-weight',
+			'letter-spacing',
+			'line-height',
+			'list-style-position',
+			'list-style-type',
+			'margin-bottom',
+			'margin-left',
+			'margin-right',
+			'margin-top',
+			'max-width',
+			'padding-bottom',
+			'padding-left',
+			'padding-right',
+			'padding-top',
+			'text-align',
+			'text-decoration',
+			'text-decoration-color',
+			'text-decoration-line',
+			'text-decoration-style',
+			'text-transform',
+			'vertical-align',
+			'width'
+		];
+
+		function inlineCopyStyles(sourceRoot, cloneRoot) {
+			var sourceNodes = [sourceRoot].concat(Array.prototype.slice.call(sourceRoot.querySelectorAll('*')));
+			var cloneNodes = [cloneRoot].concat(Array.prototype.slice.call(cloneRoot.querySelectorAll('*')));
+			sourceNodes.forEach(function(sourceNode, index) {
+				var cloneNode = cloneNodes[index];
+				if (!cloneNode || sourceNode.nodeType !== 1 || cloneNode.nodeType !== 1) return;
+				var computed = window.getComputedStyle(sourceNode);
+				var styles = [];
+				copyStyleProps.forEach(function(prop) {
+					var value = computed.getPropertyValue(prop);
+					if (value) styles.push(prop + ':' + value);
+				});
+				if (styles.length) cloneNode.setAttribute('style', styles.join(';'));
+				cloneNode.removeAttribute('class');
+				cloneNode.removeAttribute('data-theme');
+				cloneNode.removeAttribute('bgcolor');
+			});
+		}
+
+		function buildRichCopyPayload() {
+			var clone = articleBody.cloneNode(true);
+			inlineCopyStyles(articleBody, clone);
+			clone.querySelectorAll('h1 a, h2 a').forEach(function(link) {
+				var span = document.createElement('span');
+				span.innerHTML = link.innerHTML;
+				if (link.getAttribute('style')) span.setAttribute('style', link.getAttribute('style'));
+				link.replaceWith(span);
+			});
+			clone.querySelectorAll('script, style').forEach(function(node) {
+				node.remove();
+			});
+			clone.querySelectorAll('[id]').forEach(function(node) {
+				node.removeAttribute('id');
+			});
+			clone.querySelectorAll('[style]').forEach(function(node) {
+				node.style.removeProperty('background');
+				node.style.removeProperty('background-color');
+				node.style.removeProperty('background-image');
+				if (!node.getAttribute('style')) node.removeAttribute('style');
+			});
+			clone.querySelectorAll('img').forEach(function(img) {
+				if (img.getAttribute('src') && img.src) img.setAttribute('src', img.src);
+			});
+			var html = '<article>' + clone.innerHTML + '</article>';
+			var text = clone.textContent.replace(/\n{3,}/g, '\n\n').trim();
+			return { html: html, text: text };
+		}
+
+		function setCopyStatus(text, state) {
+			copyBtn.textContent = text;
+			copyBtn.classList.toggle('copied', state === 'copied');
+			copyBtn.classList.toggle('copy-failed', state === 'failed');
+			window.setTimeout(function() {
+				copyBtn.textContent = '复制全文';
+				copyBtn.classList.remove('copied', 'copy-failed');
+			}, 1800);
+		}
+
+		function fallbackCopyRichText(html, text) {
+			var container = document.createElement('div');
+			container.contentEditable = 'true';
+			container.setAttribute('aria-hidden', 'true');
+			container.style.position = 'fixed';
+			container.style.left = '-9999px';
+			container.style.top = '0';
+			container.style.whiteSpace = 'normal';
+			container.innerHTML = html;
+			document.body.appendChild(container);
+			container.focus();
+			var range = document.createRange();
+			range.selectNodeContents(container);
+			var selection = window.getSelection();
+			selection.removeAllRanges();
+			selection.addRange(range);
+			var ok = document.execCommand('copy');
+			selection.removeAllRanges();
+			container.remove();
+			if (!ok && window.navigator && window.navigator.clipboard && window.navigator.clipboard.writeText) {
+				return window.navigator.clipboard.writeText(text).then(function() { return true; }).catch(function() { return false; });
+			}
+			return ok;
+		}
+
+		copyBtn.addEventListener('click', function() {
+			var payload = buildRichCopyPayload();
+			if (!payload.text) {
+				setCopyStatus('无内容', 'failed');
+				return;
+			}
+			if (window.navigator && window.navigator.clipboard && window.navigator.clipboard.write && window.ClipboardItem) {
+				var item = new ClipboardItem({
+					'text/html': new Blob([payload.html], { type: 'text/html' }),
+					'text/plain': new Blob([payload.text], { type: 'text/plain' })
+				});
+				window.navigator.clipboard.write([item]).then(function() {
+					setCopyStatus('已复制', 'copied');
+				}).catch(function() {
+					Promise.resolve(fallbackCopyRichText(payload.html, payload.text)).then(function(copied) {
+						setCopyStatus(copied ? '已复制' : '复制失败', copied ? 'copied' : 'failed');
+					});
+				});
+				return;
+			}
+			Promise.resolve(fallbackCopyRichText(payload.html, payload.text)).then(function(copied) {
+				setCopyStatus(copied ? '已复制' : '复制失败', copied ? 'copied' : 'failed');
 			});
 		});
 	}
