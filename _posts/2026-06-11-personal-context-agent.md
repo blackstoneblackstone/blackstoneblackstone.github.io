@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "AI 时代，企业真正的护城河是人的上下文"
+title: "企业最缺的就是一套可以让大家「心甘情愿」沉淀上下文的系统"
 date: 2026-06-11 10:00:00 +0800
 categories: [文章, AI]
 tags: [AI, AI Agent, 数字分身, 企业 AI, 知识管理, 上下文]
-image: /assets/images/personal-context-agent-cover.png
+image: /assets/images/personal-context-agent-wechat-cover-title.png
 author: 黑石
-excerpt: AI 时代，企业真正拉开差距的，可能不是谁用了更强的模型，而是谁拥有更好的上下文。
+excerpt: AI 时代，企业真正缺的不是更强的通用 Agent，而是一套让每个人都愿意持续沉淀上下文、训练数字分身的系统。
 ---
 
-# AI 时代，企业真正的护城河是人的上下文
+# 企业最缺的就是一套可以让大家「心甘情愿」沉淀上下文的系统
 
-![AI 时代，企业真正的护城河是人的上下文](/assets/images/personal-context-agent-cover.png)
+![企业最缺的就是一套可以让大家「心甘情愿」沉淀上下文的系统](/assets/images/personal-context-agent-wechat-cover-title.png)
 
 AI 时代，企业真正拉开差距的，可能不是谁用了更强的模型，而是谁拥有更好的上下文。
 
