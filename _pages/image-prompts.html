@@ -1,0 +1,156 @@
+---
+title: "生图提示词"
+layout: default
+permalink: "/image-prompts.html"
+---
+
+<div class="container topic-page image-prompts-page">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <header class="page-hero page-hero-compact">
+                <h1>{{ page.title }}</h1>
+            </header>
+
+            {% assign prompt_posts = "" | split: "" %}
+            {% for post in site.posts %}
+              {% if post.categories contains '生图提示词' and post.prompt %}
+                {% assign prompt_posts = prompt_posts | push: post %}
+              {% endif %}
+            {% endfor %}
+
+            {% assign sorted_posts = prompt_posts | sort: 'date' | reverse %}
+
+            {% if sorted_posts.size > 0 %}
+              <div class="prompt-masonry" aria-label="生图提示词列表">
+                {% for post in sorted_posts %}
+                  <article class="prompt-card">
+                    {% if post.image %}
+                      <a class="prompt-card-image-link" href="{{ post.url | relative_url }}" aria-label="查看 {{ post.title }}">
+                        <img src="{% if post.image contains 'http' %}{{ post.image }}{% else %}{{ post.image | relative_url }}{% endif %}"
+                             alt="{{ post.title }}"
+                             class="prompt-card-image">
+                      </a>
+                    {% endif %}
+                    <div class="prompt-card-body">
+                      <div class="prompt-card-header" role="button" tabindex="0" data-prompt="{{ post.prompt | escape }}" aria-label="复制 {{ post.title }} 的完整提示词">
+                        <h2 class="prompt-card-title">
+                          {{ post.title }}
+                        </h2>
+                        <button type="button" class="prompt-copy-btn" data-prompt="{{ post.prompt | escape }}" aria-label="复制 {{ post.title }} 的完整提示词">
+                          <i class="far fa-copy" aria-hidden="true"></i>
+                          <span>复制</span>
+                        </button>
+                      </div>
+                      <p class="prompt-card-desc">{{ post.excerpt | strip_html }}</p>
+                      <div class="prompt-card-meta">
+                        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y年%m月%d日' }}</time>
+                      </div>
+                      <div class="prompt-card-prompt">
+                        <div class="prompt-card-label">完整提示词</div>
+                        <pre><code>{{ post.prompt | escape }}</code></pre>
+                      </div>
+                    </div>
+                  </article>
+                {% endfor %}
+              </div>
+            {% else %}
+              <div class="text-center py-5">
+                <p class="text-muted">暂无生图提示词相关文章</p>
+              </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  function fallbackCopy(text) {
+    return new Promise(function (resolve, reject) {
+      var textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'fixed';
+      textarea.style.left = '-9999px';
+      textarea.style.top = '0';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      textarea.setSelectionRange(0, textarea.value.length);
+
+      try {
+        document.execCommand('copy') ? resolve() : reject(new Error('copy failed'));
+      } catch (error) {
+        reject(error);
+      } finally {
+        document.body.removeChild(textarea);
+      }
+    });
+  }
+
+  function copyPromptText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).catch(function () {
+        return fallbackCopy(text);
+      });
+    }
+
+    return fallbackCopy(text);
+  }
+
+  function setCopyState(button, text, className) {
+    var label = button.querySelector('span');
+    var original = label.textContent;
+    label.textContent = text;
+    button.classList.add(className);
+    window.setTimeout(function () {
+      label.textContent = original;
+      button.classList.remove(className);
+    }, 1600);
+  }
+
+  function selectPromptText(button) {
+    var card = button.closest('.prompt-card');
+    var code = card ? card.querySelector('.prompt-card-prompt code') : null;
+    if (!code || !window.getSelection) return;
+
+    var range = document.createRange();
+    range.selectNodeContents(code);
+    var selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }
+
+  function runCopy(button, text) {
+    text = text.trim();
+    if (!text) return;
+
+    copyPromptText(text).then(function () {
+      setCopyState(button, '已复制', 'copied');
+    }).catch(function () {
+      selectPromptText(button);
+      setCopyState(button, '按 ⌘C', 'copy-failed');
+    });
+  }
+
+  document.querySelectorAll('.prompt-card-header').forEach(function (header) {
+    header.addEventListener('click', function (event) {
+      var button = header.querySelector('.prompt-copy-btn');
+      var card = header.closest('.prompt-card');
+      var code = card ? card.querySelector('.prompt-card-prompt code') : null;
+      var text = header.getAttribute('data-prompt') || (code ? code.textContent : '');
+      runCopy(button, text);
+    });
+
+    header.addEventListener('keydown', function (event) {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      var button = header.querySelector('.prompt-copy-btn');
+      var card = header.closest('.prompt-card');
+      var code = card ? card.querySelector('.prompt-card-prompt code') : null;
+      var text = header.getAttribute('data-prompt') || (code ? code.textContent : '');
+      runCopy(button, text);
+    });
+  });
+});
+</script>

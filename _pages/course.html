@@ -4,20 +4,27 @@ layout: default
 permalink: "/course.html"
 ---
 
-<div class="container">
+<div class="container course-page">
   <div class="row justify-content-center">
     <div class="col-md-12">
-      <h1 class="mb-4 text-center">我的课程</h1>
-      <p class="text-center mb-5">在这里展示我在慕课网、九章算法发布的课程，分享我的知识和经验。</p>
+      <header class="course-hero">
+        <div class="course-hero-content">
+          <span class="course-hero-kicker">Courses</span>
+          <h1>我的课程</h1>
+          <p>在这里展示我在慕课网、九章算法发布的课程，分享我的知识和经验。</p>
+        </div>
+      </header>
       
-      <div class="row">
+      <div class="course-showcase">
         <!-- 课程卡片 1 -->
-        <div class="col-md-6 col-lg-6 mb-4">
-          <div class="card h-100 course-card">
-            <img src="https://i.ibb.co/xqCzFKbY/image.png" class="card-img-top course-image" alt="TypeScript极速入门">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">TypeScript极速入门</h5>
-              <p class="card-text flex-grow-1">免费课程，快速掌握TypeScript基础知识</p>
+        <article class="course-card">
+          <a class="course-image-link" href="https://www.imooc.com/learn/1408" target="_blank" rel="noopener">
+            <img src="https://i.ibb.co/xS9CrRCp/image.png" class="course-image" alt="TypeScript极速入门">
+          </a>
+          <div class="course-card-body">
+            <div class="course-card-main">
+              <h2 class="course-title">TypeScript极速入门</h2>
+              <p class="course-desc">免费课程，快速掌握TypeScript基础知识</p>
               <div class="course-details mb-2">
                 <span class="badge badge-success">免费</span>
                 <span class="badge badge-primary">初级</span>
@@ -25,18 +32,23 @@ permalink: "/course.html"
                 <span class="badge badge-warning">4287人学习</span>
                 <span class="badge badge-dark">10.00分</span>
               </div>
-              <a href="https://www.imooc.com/learn/1408" class="btn btn-primary mt-auto" target="_blank">查看详情</a>
             </div>
+            <a href="https://www.imooc.com/learn/1408" class="course-action" target="_blank" rel="noopener">
+              <span>查看详情</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
-        </div>
+        </article>
         
         <!-- 课程卡片 2 -->
-        <div class="col-md-6 col-lg-6 mb-4">
-          <div class="card h-100 course-card">
-            <img src="https://i.ibb.co/xS9CrRCp/image.png" class="card-img-top course-image" alt="React18+TS+NestJS+GraphQL 全栈开发在线教育平台">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">React18+TS+NestJS+GraphQL 全栈开发在线教育平台</h5>
-              <p class="card-text flex-grow-1">高质量平台级应用+流行全栈技术+实用职场技巧+通用面试策略 助你提速升职加薪</p>
+        <article class="course-card course-card-featured">
+          <a class="course-image-link" href="https://coding.imooc.com/class/643.html" target="_blank" rel="noopener">
+            <img src="https://i.ibb.co/xqCzFKbY/image.png" class="course-image" alt="React18+TS+NestJS+GraphQL 全栈开发在线教育平台">
+          </a>
+          <div class="course-card-body">
+            <div class="course-card-main">
+              <h2 class="course-title">React18+TS+NestJS+GraphQL 全栈开发在线教育平台</h2>
+              <p class="course-desc">高质量平台级应用+流行全栈技术+实用职场技巧+通用面试策略 助你提速升职加薪</p>
               <div class="course-details mb-2">
                 <span class="badge badge-success">已完结</span>
                 <span class="badge badge-warning">中级</span>
@@ -44,185 +56,58 @@ permalink: "/course.html"
                 <span class="badge badge-primary">449人学习</span>
                 <span class="badge badge-dark">9.20分</span>
               </div>
-              <a href="https://coding.imooc.com/class/643.html" class="btn btn-primary mt-auto" target="_blank">查看详情</a>
             </div>
+            <a href="https://coding.imooc.com/class/643.html" class="course-action" target="_blank" rel="noopener">
+              <span>查看详情</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
-        </div>
+        </article>
         
         <!-- 课程卡片 3 -->
-        <div class="col-md-6 col-lg-6 mb-4">
-          <div class="card h-100 course-card">
-            <img src="https://i.ibb.co/d4hFPQGS/origin-img-v2-19a5fe44-c187-45ab-9b81-1af10adffecg.png" class="card-img-top course-image" alt="Twitter/微博前端 - React 项目实战">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Twitter/微博前端 - React 项目实战</h5>
-              <p class="card-text flex-grow-1">10年技术专家，从0-1完成前端工业级项目搭建，4周完成简历镀金</p>
+        <article class="course-card">
+          <a class="course-image-link" href="https://www.jiuzhang.com/course/119" target="_blank" rel="noopener">
+            <img src="https://i.ibb.co/d4hFPQGS/origin-img-v2-19a5fe44-c187-45ab-9b81-1af10adffecg.png" class="course-image" alt="Twitter/微博前端 - React 项目实战">
+          </a>
+          <div class="course-card-body">
+            <div class="course-card-main">
+              <h2 class="course-title">Twitter/微博前端 - React 项目实战</h2>
+              <p class="course-desc">10年技术专家，从0-1完成前端工业级项目搭建，4周完成简历镀金</p>
               <div class="course-details mb-2">
                 <span class="badge badge-success">已完结</span>
                 <span class="badge badge-warning">高级</span>
                 <span class="badge badge-info">4周</span>
                 <span class="badge badge-primary">工业级项目</span>
               </div>
-              <a href="https://www.jiuzhang.com/course/119" class="btn btn-primary mt-auto" target="_blank">查看详情</a>
             </div>
+            <a href="https://www.jiuzhang.com/course/119" class="course-action" target="_blank" rel="noopener">
+              <span>查看详情</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
-        </div>
+        </article>
       </div>
       
-      <div class="mt-5">
-        <h2 class="mb-4">课程特色</h2>
-        <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="feature-card text-center p-4">
+      <section class="course-feature-section">
+        <h2>课程特色</h2>
+        <div class="course-feature-grid">
+            <div class="feature-card">
               <i class="fas fa-video fa-2x mb-3"></i>
               <h5>高清视频</h5>
               <p>所有课程都提供高清视频，确保学习体验。</p>
             </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="feature-card text-center p-4">
+            <div class="feature-card">
               <i class="fas fa-file-code fa-2x mb-3"></i>
               <h5>实战项目</h5>
               <p>每个课程都包含实战项目，巩固所学知识。</p>
             </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="feature-card text-center p-4">
+            <div class="feature-card">
               <i class="fas fa-comments fa-2x mb-3"></i>
               <h5>社区支持</h5>
               <p>提供课程问答社区，解决学习中的问题。</p>
             </div>
-          </div>
         </div>
-      </div>
+      </section>
     </div>
   </div>
 </div>
-
-<style>
-  .course-card {
-    transition: all 0.3s ease;
-    border: none;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    height: 100%;
-  }
-  
-  .course-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-    border-color: rgba(0,0,0,0);
-  }
-  
-  .course-image {
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .card-body {
-    padding: 1.5rem;
-  }
-  
-  .card-title {
-    color: #ff5c58;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-  }
-  
-  .card-text {
-    color: #6c757d;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-  
-  .course-details {
-    margin-bottom: 1.5rem;
-  }
-  
-  .course-details .badge {
-    margin-right: 5px;
-    margin-bottom: 5px;
-    font-size: 0.75rem;
-    padding: 0.4em 0.6em;
-    border-radius: 15px;
-  }
-  
-  .btn-primary {
-    background-color: #ff5c58;
-    border-color: #ff5c58;
-    font-weight: 500;
-    padding: 0.5rem 1.25rem;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-primary:hover {
-    background-color: #e04a47;
-    border-color: #e04a47;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 92, 88, 0.3);
-  }
-  
-  .feature-card {
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    height: 100%;
-  }
-  
-  .feature-card:hover {
-    background-color: #e9ecef;
-    transform: translateY(-5px);
-  }
-  
-  .feature-card i {
-    color: #ff5c58;
-  }
-  
-  .badge-success {
-    background-color: #28a745;
-  }
-  
-  .badge-primary {
-    background-color: #007bff;
-  }
-  
-  .badge-info {
-    background-color: #17a2b8;
-  }
-  
-  .badge-warning {
-    background-color: #ffc107;
-    color: #212529;
-  }
-  
-  .badge-dark {
-    background-color: #343a40;
-  }
-  
-  h1 {
-    color: #333;
-    font-weight: 700;
-  }
-  
-  h2 {
-    color: #ff5c58;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 15px;
-  }
-  
-  h2:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background-color: #ff5c58;
-    border-radius: 3px;
-  }
-</style>

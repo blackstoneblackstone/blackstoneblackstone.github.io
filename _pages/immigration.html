@@ -4,9 +4,12 @@ layout: default
 permalink: "/immigration.html"
 ---
 
-<div class="container">
+<div class="container topic-page immigration-page">
     <div class="row justify-content-center">
         <div class="col-md-12">
+            <header class="page-hero page-hero-compact">
+                <h1>{{ page.title }}</h1>
+            </header>
             {% comment %} 收集所有 immigration 分类的文章 {% endcomment %}
             {% assign immigration_posts = "" | split: "" %}
             {% for post in site.posts %}
@@ -19,15 +22,14 @@ permalink: "/immigration.html"
             {% assign sorted_posts = immigration_posts | sort: 'date' | reverse %}
             
             {% for post in sorted_posts %}
-              <div class="mb-4 pb-3 border-bottom">
+              <div class="topic-post-item mb-4 pb-3 border-bottom">
                 <div class="row align-items-center">
                   <div class="col-md-3">
                     {% if post.image %}
                       <a href="{{ post.url | relative_url }}">
                         <img src="{% if post.image contains 'http' %}{{ post.image }}{% else %}{{ post.image | relative_url }}{% endif %}" 
                              alt="{{ post.title }}" 
-                             class="img-fluid rounded"
-                             style="width: 100%; height: 120px; object-fit: cover;">
+                             class="img-fluid rounded topic-post-image">
                       </a>
                     {% endif %}
                   </div>
@@ -57,22 +59,3 @@ permalink: "/immigration.html"
         </div>
     </div>
 </div>
-
-<style>
-  .immigration-post-item:hover {
-    background-color: #f8f9fa;
-    transition: background-color 0.3s ease;
-  }
-  
-  .immigration-post-item {
-    padding: 15px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .immigration-post-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-</style>
-

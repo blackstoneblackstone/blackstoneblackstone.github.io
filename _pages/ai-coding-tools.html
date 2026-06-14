@@ -3,9 +3,12 @@ title: "AI Coding"
 layout: default
 permalink: "/ai-coding-tools.html"
 ---
-<div class="container">
+<div class="container tool-index-page ai-coding-page">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <header class="page-hero page-hero-compact">
+                <h1>{{ page.title }}</h1>
+            </header>
             {% comment %} 收集所有第二个分类 {% endcomment %}
             {% assign subcategories = "" | split: "" %}
             {% for post in site.posts %}
@@ -133,21 +136,3 @@ permalink: "/ai-coding-tools.html"
     });
   });
 </script>
-
-<style>
-  .highlight-category {
-    background-color: rgba(255, 243, 205, 0.5);
-    transition: background-color 0.5s ease;
-    padding: 5px;
-    border-radius: 5px;
-  }
-  
-  .tool-card {
-    transition: transform 0.3s ease;
-  }
-  
-  .tool-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  }
-</style> 
